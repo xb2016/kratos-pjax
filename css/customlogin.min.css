@@ -1,0 +1,25 @@
+body,textarea{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,opensans,Optima,"Microsoft Yahei",sans-serif!important}
+input{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,opensans,Optima,"Microsoft Yahei",sans-serif!important}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#bbb}::-webkit-scrollbar-thumb:hover{background:#aaa}
+.login-action-login #login h1{height:24%}
+.login-action-register #login h1{height:13%}
+.login-action-lostpassword #login h1{height:24%}
+.login-action-rp #login h1{height:20%}
+#login{width:320px;background:rgba(0,0,0,.2);padding:0 20px 0 20px;top:0;right:15%;position:fixed;box-shadow:0 0 5px 0 #333;height:100%;overflow-y:auto}
+@media(max-width:470px){#login{right:0;left:0}}
+#login h1{position:relative;margin-bottom:20px}
+#login h1 a{background-size:200px 50px;background-position:top center;background-repeat:no-repeat;width:200px;margin:auto;height:50px;text-indent:-9999px;overflow:hidden;position:absolute;bottom:0;left:0;right:0;display:block}
+#login .description,#nav,#reg_passmail{color:#FFF}
+#login label{color:#FFF;font-size:14px}
+#login form{padding:24px;font-weight:400;background:rgba(255,255,255,.2);border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:#000 0 0 10px -1px}
+#login form .input,.login input[type=text]{color:#555;font-weight:200;font-size:17px;text-indent:3px;line-height:1.4;width:100%;padding:5px;margin-top:2px;margin-right:6px;margin-bottom:16px;border:2px solid #DCE4EC;background:#FFF!important;outline:0;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none}
+.login-action-register #login form .input,.login input[type=text]{margin-bottom:10px}
+#login form .forgetmenot{font-weight:400;float:none;margin-top:-10px}
+#login form#registerform p.submit{margin:-38px 0 30px}
+#login .button-primary{font-size:14px!important;font-weight:700;border-radius:0}
+#login #backtoblog,.login #nav{text-shadow:none;margin:0 20px 40px 0;padding:16px 0 0 20px}
+#login #backtoblog{float:left}
+#login #nav{float:right}
+#login #backtoblog a,.login #nav a{color:#FFF!important;text-decoration:none}
+#login #backtoblog a:hover,.login #nav a:hover{color:rgba(91,157,217,1)!important;text-decoration:none}
+#login .message,div.updated{background-color:#E0FFE1;border-color:#ACE655}
