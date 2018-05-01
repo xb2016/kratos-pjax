@@ -136,6 +136,103 @@ td,th{padding:0}
 .clearfix:after,.container:after,.nav:after,.row:after{clear:both}
 .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
 .container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+.dp-highlighter{font-family:verdana,Tahoma,Lucida Grande,Arial,sans-serif;font-size:13px;background-color:#fcfcfc;border:1px solid #e8e8e8;width:99%;word-break:break-all;white-space:normal;overflow:auto;margin:0 0 10px}
+.dp-highlighter span{font-size:13px}
+.dp-highlighter .bar{padding:2px}
+.dp-highlighter .collapsed .bar,.dp-highlighter .nogutter .bar{padding-left:0}
+.dp-highlighter ol{margin:0 0 1px 32px;padding:2px;color:#666;font-size:13px}
+.dp-highlighter.nogutter ol{list-style-type:none;margin-left:0}
+.dp-highlighter ol li,.dp-highlighter .columns div{border-left:2px solid #0196e3;padding-left:10px;line-height:18px}
+.dp-highlighter .nogutter ol li,.dp-highlighter .nogutter .columns div{border:0}
+.dp-highlighter .columns{color:gray;width:100%}
+.dp-highlighter .columns div{padding-bottom:5px}
+.dp-highlighter ol li span{color:Black}
+.dp-highlighter .collapsed ol{margin:0}
+.dp-highlighter .collapsed ol li{display:none}
+.dp-highlighter .printing{border:0}
+.dp-highlighter .printing .tools{display:none!important}
+.dp-highlighter .printing li{display:list-item!important}
+.dp-highlighter .tools{padding:3px 8px 3px 15px;border-bottom:1px solid #2b91af;font:9pt Verdana,Geneva,Arial,Helvetica,sans-serif;color:silver}
+.dp-highlighter .collapsed .tools{border-bottom:0}
+.dp-highlighter .tools a{font-size:9pt;color:gray;text-decoration:none;margin-right:10px}
+.dp-highlighter .tools a:hover{color:red;text-decoration:underline}
+.dp-about{background-color:#fff;margin:0;padding:0}
+.dp-about table{width:100%;height:100%;font-size:11px;font-family:Tahoma,Verdana,Arial,sans-serif!important}
+.dp-about td{padding:10px;vertical-align:top}
+.dp-about .copy{border-bottom:1px solid #aca899;height:95%}
+.dp-about .title{color:red;font-weight:700}
+.dp-about .para{margin:0 0 4px}
+.dp-about .footer{background-color:#eceadb;border-top:1px solid #fff;text-align:right}
+.dp-about .close{font-size:11px;font-family:Tahoma,Verdana,Arial,sans-serif!important;background-color:#eceadb;width:60px;height:22px}
+.dp-c .comment{color:green}
+.dp-c .string{color:blue}
+.dp-c .preprocessor{color:gray}
+.dp-c .keyword{color:blue}
+.dp-c .vars{color:#d00}
+.dp-vb .comment{color:green}
+.dp-vb .string{color:blue}
+.dp-vb .preprocessor{color:gray}
+.dp-vb .keyword{color:blue}
+.dp-sql .comment{color:green}
+.dp-sql .string{color:red}
+.dp-sql .keyword{color:#7f0055}
+.dp-sql .func{color:#ff1493}
+.dp-sql .op{color:blue}
+.dp-xml .cdata{color:#ff1493}
+.dp-xml .comments{color:green}
+.dp-xml .tag{font-weight:700;color:blue}
+.dp-xml .tag-name{color:#7f0055;font-weight:700}
+.dp-xml .attribute{color:red}
+.dp-xml .attribute-value{color:blue}
+.dp-delphi .comment{color:#008200;font-style:italic}
+.dp-delphi .string{color:blue}
+.dp-delphi .number{color:blue}
+.dp-delphi .directive{color:#008284}
+.dp-delphi .keyword{font-weight:700;color:navy}
+.dp-delphi .vars{color:#000}
+.dp-py .comment{color:green}
+.dp-py .string{color:red}
+.dp-py .docstring{color:green}
+.dp-py .keyword{color:blue;font-weight:700}
+.dp-py .builtins{color:#ff1493}
+.dp-py .magicmethods{color:gray}
+.dp-py .exceptions{color:brown}
+.dp-py .types{color:brown;font-style:italic}
+.dp-py .commonlibs{color:#8a2be2;font-style:italic}
+.dp-rb .comment{color:#c00}
+.dp-rb .string{color:#f0c}
+.dp-rb .symbol{color:#02b902}
+.dp-rb .keyword{color:#069}
+.dp-rb .variable{color:#6cf}
+.dp-css .comment{color:green}
+.dp-css .string{color:red}
+.dp-css .keyword{color:blue}
+.dp-css .colors{color:darkred}
+.dp-css .vars{color:#d00}
+.dp-j .comment{color:#3f7f5f}
+.dp-j .string{color:#2a00ff}
+.dp-j .keyword{color:#7f0055;font-weight:700}
+.dp-j .annotation{color:#646464}
+.dp-j .number{color:#c00000}
+.dp-cpp .comment{color:#e00}
+.dp-cpp .string{color:red}
+.dp-cpp .preprocessor{color:#cd00cd;font-weight:700}
+.dp-cpp .keyword{color:#5697d9;font-weight:700}
+.dp-cpp .datatypes{color:#2e8b57;font-weight:700}
+.dp-perl .comment{color:green}
+.dp-perl .string{color:red}
+.dp-perl .keyword{color:#7f0055}
+.dp-perl .func{color:#ff1493}
+.dp-perl .declarations{color:blue}
+.dp-css .vars{color:#d00}
+.dp-g .comment{color:#3f7f5f}
+.dp-g .string{color:#2a00ff}
+.dp-g .keyword{color:#7f0055;font-weight:700}
+.dp-g .type{color:#007f00;font-weight:700}
+.dp-g .modifier{color:#640064;font-weight:700}
+.dp-g .constant{color:red;font-weight:700}
+.dp-g .method{color:#ff6000;font-weight:700}
+.dp-g .number{color:#c00000}
 .form-control{padding:6px 12px;line-height:1.42857143;width:100%;color:#555;z-index:2;float:left}
 .form-group{margin-bottom:15px}
 .hidden{display:none!important}
