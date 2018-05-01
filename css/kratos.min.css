@@ -439,7 +439,7 @@ td,th{padding:0}
 .kratos-post-inner-new header .label{display:inline-block;padding:4px 6px;font-size:12px;font-weight:700;line-height:14px;color:#fff;vertical-align:baseline;white-space:nowrap;background-color:#51aded;margin-right:5px;position:relative;top:-3px;cursor:url(../images/pointer.cur),auto}
 .kratos-post-inner-new header .label .label-arrow{position:absolute;width:0;height:0;vertical-align:top;content:"";top:8px;right:-3px;border-left:4px solid #51aded;border-top:4px solid transparent;border-bottom:4px solid transparent}
 .kratos-post-inner-new header .label:hover{color:#fff!important}
-.kratos-post-content{word-break:break-all;word-wrap:break-word;margin:10px}
+.kratos-post-content,.kratos-post-content-l{word-break:break-all;word-wrap:break-word;margin:10px}
 .kratos-post-content p{margin-bottom:1em;font-size:16px;color:#333}
 .kratos-post-content img{height:auto;max-width:100%;display:block;margin:0 auto;border-radius:2px}
 .kratos-post-content embed{max-width:100%}
@@ -658,9 +658,8 @@ a.comment-reply-link:hover{color:#000;box-shadow:0 0 1px #505050}
 .page404 .back-p:hover{background:#489cd7;color:#fff!important}
 .page404 .back-index{margin-left:15px;padding:10px 20px;border:1px solid #f0f0f0;background-color:#fafafa;color:#767676;line-height:3}
 .page404 .back-index:hover{border-color:#0092ee;color:#0092ee}
-.linkpage ul{color:rgba(255,255,255,.15)}
 .linkpage ul:after{content:" ";clear:both;display:block}
-.linkpage li{float:left;width:48%;position:relative;transition:all .3s ease-out;border-radius:5px;line-height:1.3;height:90px;display:block}
+.linkpage li{float:left;width:48%;position:relative;transition:all .3s ease-out;border-radius:5px;line-height:1.3;height:90px;list-style:none}
 .linkpage h3{margin:15px -25px;padding:0 25px;border-left:5px solid #51aded;background-color:#f7f7f7;font-size:25px;line-height:40px}
 .linkpage li:hover{background:rgba(230,244,250,.5);cursor:url(../images/pointer.cur),auto}
 .linkpage li a{padding:0 10px 0 90px}
