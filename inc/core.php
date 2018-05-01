@@ -92,7 +92,7 @@ function kratos_excerpt_more($more){return '……';}
 add_filter('excerpt_more','kratos_excerpt_more');
 //Load scripts
 function kratos_theme_scripts(){  
-    if(kratos_option('js_out')) $dir = 'https://cdn.jsdelivr.net/gh/xb2016/theme-js@0.0.3'; else $dir = get_template_directory_uri();
+    if(kratos_option('js_out')) $dir = 'https://cdn.jsdelivr.net/gh/xb2016/theme-js@0.0.4'; else $dir = get_template_directory_uri();
     if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $dir.'/css/font-awesome.min.css';
     if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $dir.'/js/jquery.min.js';
     if(kratos_option('bs_url')) $bsdir = kratos_option('bs_url'); else $bsdir = $dir.'/js/bootstrap.min.js';

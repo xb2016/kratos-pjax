@@ -107,6 +107,10 @@
                 $('#offcanvas-menu').css('right','0px');
             }
         });
+        $('#offcanvas-menu a').on('click',function(){
+            $('.nav-toggle').removeClass('toon');
+            $('#offcanvas-menu').css('right','-240px');
+        });
         $('#offcanvas-menu').css('height',$(window).height());
         $('#offcanvas-menu').css('right','-240px');
         $(window).resize(function(){
