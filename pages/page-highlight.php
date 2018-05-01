@@ -18,7 +18,7 @@ get_header();get_header('abstract'); ?>
                     <div class="kratos-hentry kratos-post-inner clearfix">
                         <div class="kratos-post-content">
                             <h2 class="title-h2" style="text-align:center;font-size:20px">代码高亮转换</h2>
-                            <style>textarea{background:#fefefe;border:1px solid #B9B9B9}#wrapper{width:980px;margin:10px auto;padding:5px}#main_box{background:#fff;margin:10px 0 20px 0;padding:10px;border-top:3px solid #666;border-bottom:1px solid #666;border-left:1px solid #adadad;border-right:1px solid #adadad}#main_box h2{font-size:14px;margin:0 0 10px 10px}.options{margin:0 0 0 20px}.options_no{display:none}.render{float:right}button{color:#fff;background:#666;border:1px solid #fff;cursor:pointer}#preview{margin:0;color:#fff;width:100%;height:100%}.dp-highlighter {border:1px solid ##B9B9B9}</style>
+                            <style>textarea{background:#fefefe;border:1px solid #B9B9B9}#wrapper{width:980px;margin:10px auto;padding:5px}#main_box{background:#fff;margin:10px 0 20px 0;padding:10px;border-top:3px solid #666;border-bottom:1px solid #666;border-left:1px solid #adadad;border-right:1px solid #adadad}#main_box h2{font-size:14px;margin:0 0 10px 10px}.options{margin:0 0 0 20px}.options_no{display:none}.render{float:right}button{color:#fff;background:#666;border:1px solid #fff}#preview{margin:0;color:#fff;width:100%;height:100%}.dp-highlighter {border:1px solid ##B9B9B9}</style>
                             <script src="https://www.fczbl.vip/wp-content/themes/Kratos%28M%29/js/h/shCore.js"></script>
                             <script src="https://www.fczbl.vip/wp-content/themes/Kratos%28M%29/js/h/rendered.js"></script>
                             <div id="main_box">
