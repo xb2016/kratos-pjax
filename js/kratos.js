@@ -1,7 +1,7 @@
 (function(){
     'use strict';
     var shareMenu = function(){
-        $(".Share").click(function(){
+        $(document).on("click",".Share",function(){
             $(".share-wrap").fadeToggle("slow");
         });
     }
@@ -132,7 +132,7 @@
         });
     }
     var xControl = function(){
-        $('.xHeading').on('click',function(event){
+        $(document).on("click",".xHeading",function(event){
             var $this = $(this);
             $this.closest('.xControl').find('.xContent').slideToggle(300);
             if ($this.closest('.xControl').hasClass('active')){
@@ -144,7 +144,7 @@
         });
     }
     var donateConfig = function(){
-        $('.Donate').on('click',function(){
+        $(document).on("click",".Donate",function(){
             layer.open({
                 type:1,
                 area:['300px', '370px'],
@@ -173,11 +173,8 @@
             });
         }
     }
-    $.fn.kratos_pjax_reload = function() {
-        shareMenu();
+    $.fn.kratos_pjax_reload = function(){
         showPhotos();
-        xControl();
-        donateConfig();
         OwOcfg();
         sidebaraffix();
     }

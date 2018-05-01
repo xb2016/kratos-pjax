@@ -87,53 +87,14 @@ jQuery(document).ready(function($){
         if(e.which==3){showMessage("秘密通道:<br />    <a href=\"https://www.fczbl.vip\" title=\"首页\">首页</a>    <a href=\"http://pay.fczbl.vip/\" title=\"打赏\">打赏</a>    <a href=\"/wp-admin/\" title=\"后台\">后台</a> ",10000);}
     });
     $("#spig").bind("contextmenu",function(e){return false;});
-    $('h2 a').click(function(){
-        showMessage('加载<span style="color:#0099cc;">'+$(this).text()+'</span>中...请稍候');
-    });
-    $('h2 a').mouseover(function(){
-        showMessage('要看看<span style="color:#0099cc;">'+$(this).text()+'</span>么？');
-    });
-    $('.prev').mouseover(function(){
-        showMessage('要翻到上一页吗?');
-    });
-    $('.next').mouseover(function(){
-        showMessage('要翻到下一页吗?');
-    });
-    $('#index-links li a').mouseover(function(){
-        showMessage('去 <span style="color:#0099cc;">'+$(this).text()+'</span> 逛逛吧');
-    });
-    $('#submit').mouseover(function(){
-        showMessage('呐 首次评论需要审核，请耐心等待哦~');
-    });
     $('.search-box').mouseover(function(){
         showMessage('找不到想要的？试试搜索吧！');
     });
     $('#search').focus(function(){
         showMessage('输入你想搜索的关键词再按Enter键就可以搜索啦!');
     });
-    $('.nav-previous').mouseover(function(){
-        showMessage('点它可以后退哦！');
-    });
-    $('.nav-next').mouseover(function(){
-        showMessage('点它可以前进哦！');
-    });
-    $('.desc a h2,.desc a span,.color-logo a,.back-index').mouseover(function(){
+    $('.desc a h2,.desc a span,.color-logo a,.back-index,.waifu-tool .fa-home,#kratos-primary-menu .fa-home').mouseover(function(){
         showMessage('点它就可以回到首页啦！');
-    });
-    $('.comment-reply-link').mouseover(function(){
-        showMessage('要说点什么吗');
-    });
-    $('.Donate').mouseover(function(){
-        showMessage('要打赏我嘛？好期待啊~');
-    });
-    $('.Love').mouseover(function(){
-        showMessage('我是不是棒棒哒~快给我点赞吧！');
-    });
-    $('.must-log-in').mouseover(function(){
-        showMessage('登陆才可以继续哦~');
-    });
-    $('.Share').mouseover(function(){
-        showMessage('好东西要让更多人知道才行哦');
     });
     $('#footer p a i.fa-weibo').mouseover(function(){
         showMessage('微博？求关注喵！');
@@ -150,16 +111,55 @@ jQuery(document).ready(function($){
     $('#footer p a i.fa-github').mouseover(function(){
         showMessage('GayHub！我是新手！');
     });
-    $('.cd-gb-a').mouseover(function(){
-        showMessage('既然来了就留下点什么吧~');
-    });
     $('#wechat-img').mouseover(function(){
         showMessage('这是我的微信二维码~');
     });
     $('.gotop-box').mouseover(function(){
         showMessage('要回到开始的地方么？');
     });
-    $("#author").click(function () {
+    $(document).on("click","h2 a",function(){
+        showMessage('加载<span style="color:#0099cc;">'+$(this).text()+'</span>中...请稍候',600);
+    });
+    $(document).on("mouseover","h2 a",function(){
+        showMessage('要看看<span style="color:#0099cc;">'+$(this).text()+'</span>么？');
+    });
+    $(document).on("mouseover",".prev",function(){
+        showMessage('要翻到上一页吗?');
+    });
+    $(document).on("mouseover",".next",function(){
+        showMessage('要翻到下一页吗?');
+    });
+    $(document).on("mouseover",".kratos-post-content a",function(){
+        showMessage('去 <span style="color:#0099cc;">'+$(this).text()+'</span> 逛逛吧');
+    });
+    $(document).on("mouseover","#submit",function(){
+        showMessage('呐 首次评论需要审核，请耐心等待哦~');
+    });
+    $(document).on("mouseover",".OwO-logo",function(){
+        showMessage('要来一发表情吗？');
+    });
+    $(document).on("mouseover",".nav-previous",function(){
+        showMessage('点它可以后退哦！');
+    });
+    $(document).on("mouseover",".nav-next",function(){
+        showMessage('点它可以前进哦！');
+    });
+    $(document).on("mouseover",".comment-reply-link",function(){
+        showMessage('要说点什么吗');
+    });
+    $(document).on("mouseover",".Donate",function(){
+        showMessage('要打赏我嘛？好期待啊~');
+    });
+    $(document).on("mouseover",".Love",function(){
+        showMessage('我是不是棒棒哒~快给我点赞吧！');
+    });
+    $(document).on("mouseover",".must-log-in",function(){
+        showMessage('登录才可以继续哦~');
+    });
+    $(document).on("mouseover",".Share",function(){
+        showMessage('好东西要让更多人知道才行哦');
+    });
+    $(document).on("click","#author",function(){
         showMessage("留下你的尊姓大名！");
         $(".spig").animate({
             top:$("#author").offset().top-70,
@@ -170,7 +170,7 @@ jQuery(document).ready(function($){
             duration:1000
         });
     });
-    $("#email").click(function(){
+    $(document).on("click","#email",function(){
         showMessage("留下你的邮箱，不然就是无头像人士了！");
         $(".spig").animate({
             top:$("#email").offset().top-70,
@@ -181,7 +181,7 @@ jQuery(document).ready(function($){
             duration:1000
         });
     });
-    $("#url").click(function(){
+    $(document).on("click","#url",function(){
         showMessage("快快告诉我你的家在哪里，好让我去参观参观！");
         $(".spig").animate({
             top:$("#url").offset().top-70,
@@ -192,7 +192,7 @@ jQuery(document).ready(function($){
             duration:1000
         });
     });
-    $("#comment").click(function(){
+    $(document).on("click","#comment",function(){
         showMessage("一定要认真填写喵~");
         $(".spig").animate({
             top:$("#comment").offset().top-70,
