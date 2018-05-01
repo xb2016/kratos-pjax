@@ -40,13 +40,13 @@ function kratos_blog_thumbnail_new(){
         $img_count=count($img_src)-1;
         if(isset($img_src[$img_count]))
         $img_val = $img_src[$img_count];
-        if(!empty($img_val)){
+        if(!empty($img_val)&&!post_password_required()){
             echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" /></a>';
         }else if(!kratos_option('default_image')){
             $random = mt_rand(1,20);
             echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/images/thumb/thumb_'.$random.'.jpg" /></a>';
-        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'" /></a>';   
-    }  
+        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'" /></a>';
+    }
 }
 //Share the thumbnail fetching
 function share_post_image(){
