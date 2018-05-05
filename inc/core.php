@@ -77,7 +77,7 @@ function kratos_excerpt_more($more){return '……';}
 add_filter('excerpt_more','kratos_excerpt_more');
 //Load scripts
 function kratos_theme_scripts(){  
-    if(kratos_option('js_out')) $dir = 'https://cdn.jsdelivr.net/gh/xb2016/theme-js@0.0.4'; else $dir = get_template_directory_uri();
+    if(kratos_option('js_out')) $dir = 'https://cdn.jsdelivr.net/gh/xb2016/theme-js@0.0.5'; else $dir = get_template_directory_uri();
     if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $dir.'/css/font-awesome.min.css';
     if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $dir.'/js/jquery.min.js';
     if(kratos_option('bs_url')) $bsdir = kratos_option('bs_url'); else $bsdir = $dir.'/js/bootstrap.min.js';
@@ -85,12 +85,12 @@ function kratos_theme_scripts(){
         wp_enqueue_style('fontawe',$fadir,array(),'4.7.0');
         wp_enqueue_style('kratos',get_template_directory_uri().'/css/kratos.min.css',array(),KRATOS_VERSION);
         wp_enqueue_script('jquery',$jqdir,array(),'2.1.4');
-        wp_enqueue_script('layer',$dir.'/js/layer.min.js',array(),'3.1.0');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
-        wp_enqueue_script('kratos',$dir.'/js/kratos.js',array(),KRATOS_VERSION);
+        wp_enqueue_script('layer',$dir.'/js/layer.min.js',array(),'3.1.0');
+        wp_enqueue_script('OwO',$dir.'/js/OwO.min.js',array(),'1.0.1');
         wp_enqueue_script('pjax',$dir.'/js/pjax.min.js',array(),'0.0.7');
+        wp_enqueue_script('kratos',$dir.'/js/kratos.js',array(),KRATOS_VERSION);
     }
-    if(comments_open()) wp_enqueue_script('OwO',$dir.'/js/OwO.min.js',array(),'1.0.1');
     if(kratos_option('site_girl')=='l2d'&&!wp_is_mobile()){
         wp_enqueue_script('live2d',$dir.'/js/live2d.js',array(),'l2d');
         wp_enqueue_script('waifu',$dir.'/js/waifu-tips.js',array(),'1.3');
@@ -259,10 +259,10 @@ function kratos_banner(){
                 $output .= "</div>";
             };
             $output .= '</div>';
-            $output .= '<a class="left carousel-control" href="#slide" role="button" data-slide="prev">';
-            $output .= '<span class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></span></a>';
-            $output .= '<a class="right carousel-control" href="#slide" role="button" data-slide="next">';
-            $output .= '<span class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></span></a></div>';
+            $output .= '<span class="left carousel-control" href="#slide" role="button" data-slide="prev">';
+            $output .= '<span class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></span></span>';
+            $output .= '<span class="right carousel-control" href="#slide" role="button" data-slide="next">';
+            $output .= '<span class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></span></span></div>';
             update_option('kratos_banners',$output);
         }
     }
