@@ -376,10 +376,11 @@ td,th{padding:0}
 .nav-toggle.toon i::before{top:0;height:2px;-webkit-transform:rotateZ(45deg);transform:rotateZ(45deg)}
 .nav-toggle.toon i::after{bottom:0;height:2px;-webkit-transform:rotateZ(-45deg);transform:rotateZ(-45deg)}
 #kratos-header-section{padding:0;position:fixed;left:0;width:100%;z-index:2;background:rgba(40,42,44,.6)}
+#kratos-header-section:not(.color-banner) .sf-menu>li:hover>a{background:#eee;color:#666!important}
 #kratos-header-section .sf-menu *{list-style:none}
 #kratos-header-section .sf-menu{float:right;list-style:none;margin:0;padding:0}
 #kratos-header-section .sf-menu li{position:relative}
-#kratos-header-section .sf-menu>li{float:left}
+#kratos-header-section .sf-menu>li{float:left;transition-property:background-color;transition-duration:.2s}
 #kratos-header-section .sf-menu li:hover>ul{display:block}
 #kratos-header-section .sf-menu>li>ul:after{position:absolute;top:-8px;left:58px;border-right:8px solid transparent;border-bottom:8px solid #fff;border-left:8px solid transparent;content:''}
 #kratos-header-section .sub-menu{position:absolute;display:none;top:100%;z-index:99;width:135px;padding:10px 5px;background:#fff;border-radius:5px;left:-18px;-webkit-box-shadow:0 5px 15px rgba(0,0,0,.15);box-shadow:0 5px 15px rgba(0,0,0,.15)}
@@ -392,7 +393,7 @@ td,th{padding:0}
 #kratos-primary-menu>li>a:hover{color:#fff!important}
 #kratos-primary-menu>li>ul li{position:relative}
 #kratos-menu-wrap{float:left}
-#kratos-menu-wrap .sf-menu a{color:#fff;padding:7px 14px;font-weight:400;font-size:15px;border:none;display:block;position:relative}
+#kratos-menu-wrap .sf-menu a{color:#fff;padding:7px 16px;font-weight:400;font-size:15px;border:none;display:block;position:relative}
 .kratos-cover,.kratos-start{position:relative;height:800px}
 .kratos-cover.kratos-hero-2,.kratos-start.kratos-hero-2{height:320px}
 .kratos-overlay{position:absolute!important;width:100%;top:0;left:0;bottom:0;right:0;z-index:1;background:rgba(66,64,64,.2)}
@@ -569,7 +570,7 @@ a.comment-reply-link:hover{color:#000;box-shadow:0 0 1px #505050}
 .OwO .OwO-body .OwO-items-show{display:block}
 .OwO .OwO-body .OwO-bar{width:100%;height:30px;border-top:1px solid #ddd;background:#fff;border-radius:0 0 4px 4px;color:#444}
 .OwO .OwO-body .OwO-bar .OwO-packages{margin:0;padding:0;font-size:0}
-.OwO .OwO-body .OwO-bar .OwO-packages li{list-style-type:none;display:inline-block;line-height:30px;font-size:14px;padding:0 10px;margin-right:3px}
+.OwO .OwO-body .OwO-bar .OwO-packages li{list-style-type:none;display:inline-block;line-height:30px;font-size:14px;padding:0 10px;margin-right:3px;margin-top:0;background:#fff;box-shadow:unset}
 .OwO .OwO-body .OwO-bar .OwO-packages li:nth-child(1){border-radius:0 0 0 3px}
 .OwO .OwO-body .OwO-bar .OwO-packages li:hover{background:#eee}
 .OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active{background:#eee;-webkit-transition:.3s;transition:.3s}
