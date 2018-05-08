@@ -2,7 +2,7 @@
 /**
 Template Name: 代码高亮转换
 */
-get_header();get_header('abstract'); ?>
+get_header(); ?>
     <div id="container" class="container">
         <div class="row">
             <?php if(kratos_option('page_side_bar')=='left_side'&&!wp_is_mobile()){ ?>

@@ -1,4 +1,4 @@
-<?php get_header();get_header('abstract'); ?>
+<?php get_header(); ?>
     <div id="container" class="container">
         <div class="row">
             <?php if(kratos_option('home_side_bar')=='left_side'&&!wp_is_mobile()){ ?>
