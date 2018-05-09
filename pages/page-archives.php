@@ -50,6 +50,15 @@ get_header(); ?>
                         <div id="archives">
                         <h2 class="title-h2" style="text-align:center;font-size:18pt">文章归档</h2>
                         <p style="text-align:center"><span style="color:#999">当前共有<?php echo wp_count_posts()->publish; ?>篇公开文章，<?php echo wp_count_posts('page')->publish; ?>个公开页面。点击月份可展开文章~<a href="javascript:;" id="al_collapse" style="color:#999;display:none">[折叠全部]</a><a href="javascript:;" id="al_expand" style="color:#999">[展开全部]</a></span></p>
+                        <hr/>
+                        <h4>Tags</h4>
+                        <div class="arc-tag">
+                        <?php echo $arc_tags; ?>
+                        </div>
+                        <?php echo $output; ?>
+                        </div>
+                        <hr/>
+                        </div>
                         <script type="text/javascript">
                             $('#archives section#mon').each(function(){
                                 var num=$(this).find('.arc-t').size();
@@ -69,15 +78,6 @@ get_header(); ?>
                                 $('.mon_arc').show(400);$('#al_expand').hide();$('#al_collapse').show();
                             });
                         </script>
-                        <hr/>
-                        <h4>Tags</h4>
-                        <div class="arc-tag">
-                        <?php echo $arc_tags; ?>
-                        </div>
-                        <?php echo $output; ?>
-                        </div>
-                        <hr/>
-                        </div>
                         <?php if(kratos_option('page_cc')){ ?>
                         <div class="kratos-copyright text-center clearfix">
                             <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
