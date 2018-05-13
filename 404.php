@@ -15,7 +15,6 @@
     <?php wp_head();wp_print_scripts('jquery');?>
     <style><?php
         echo '#offcanvas-menu{background:rgba('.kratos_option('mobi_color').')}';
-        if(kratos_option('site_bw')) echo 'html{filter:grayscale(100%);-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;-webkit-filter:grayscale(1)}';
         if(kratos_option('background_mode')=='image'&&!wp_is_mobile()&&!kratos_option('site_bw')) echo '@media(min-width:768px){.kratos-hentry{background-color:rgba(253,253,253,.85)!important}body.custom-background{background-image:url('.kratos_option('background_index_image').');background-size:cover;background-attachment:fixed}}'; ?>
     </style>
   </head>

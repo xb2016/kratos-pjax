@@ -22,7 +22,7 @@
                                         echo (!kratos_option('social_linkedin'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
                                         echo (!kratos_option('social_github'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fa fa-github"></i></a>'; ?>
                                     </p>
-                                    <p> © <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved. | 本站已运行<span id=span_dt_dt>Loading...</span><br>Theme <a href="https://github.com/xb2016/kratos" target="_blank" rel="nofollow">Kratos</a> made by <a href="https://www.vtrois.com" target="_blank" rel="nofollow">Vtrois</a>
+                                    <p> © <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved. | 本站已运行<span id=span_dt_dt>Loading...</span><br>Theme <a href="https://github.com/xb2016/kratos-pjax" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.vtrois.com" target="_blank" rel="nofollow">Vtrois</a> Modified by <a href="https://www.fczbl.vip" target="_blank" rel="nofollow">MoeDog</a>
                                     <?php if(kratos_option('icp_num')) echo '<br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">'.kratos_option('icp_num').'</a>';
                                           if(kratos_option('gov_num')) echo '<br><a href="'.kratos_option('gov_link').'" rel="external nofollow" target="_blank"><i class="govimg"></i>'.kratos_option('gov_num').'</a>'; ?>
                                     </p>

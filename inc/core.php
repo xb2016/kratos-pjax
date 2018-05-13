@@ -76,24 +76,27 @@ add_filter('excerpt_length','kratos_excerpt_length');
 function kratos_excerpt_more($more){return '……';}
 add_filter('excerpt_more','kratos_excerpt_more');
 //Load scripts
-function kratos_theme_scripts(){  
-    if(kratos_option('js_out')) $dir = 'https://cdn.jsdelivr.net/gh/xb2016/theme-js@0.0.6'; else $dir = get_template_directory_uri();
-    if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $dir.'/css/font-awesome.min.css';
-    if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $dir.'/js/jquery.min.js';
-    if(kratos_option('bs_url')) $bsdir = kratos_option('bs_url'); else $bsdir = $dir.'/js/bootstrap.min.js';
+function kratos_theme_scripts(){
+    $url1 = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION;
+    $url2 = get_bloginfo('template_directory');
+    if(kratos_option('js_out')) $jsdir = $url1; else $jsdir = $url2;
+    if(kratos_option('owo_out')) $owodir = $url1; else $owodir = $url2;
+    if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $url2.'/css/font-awesome.min.css';
+    if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $url2.'/js/jquery.min.js';
+    if(kratos_option('bs_url')) $bsdir = kratos_option('bs_url'); else $bsdir = $url2.'/js/bootstrap.min.js';
     if(!is_admin()){
         wp_enqueue_style('fontawe',$fadir,array(),'4.7.0');
-        wp_enqueue_style('kratos',get_template_directory_uri().'/css/kratos.min.css',array(),KRATOS_VERSION);
+        wp_enqueue_style('kratos',$jsdir.'/css/kratos.min.css',array(),KRATOS_VERSION);
         wp_enqueue_script('jquery',$jqdir,array(),'2.1.4');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
-        wp_enqueue_script('layer',$dir.'/js/layer.min.js',array(),'3.1.0');
-        wp_enqueue_script('OwO',$dir.'/js/OwO.min.js',array(),'1.0.1');
-        wp_enqueue_script('pjax',$dir.'/js/pjax.min.js',array(),'0.0.7');
-        wp_enqueue_script('kratos',$dir.'/js/kratos.js',array(),KRATOS_VERSION);
+        wp_enqueue_script('layer',$jsdir.'/js/layer.min.js',array(),'3.1.0');
+        wp_enqueue_script('OwO',$jsdir.'/js/OwO.min.js',array(),'1.0.1');
+        wp_enqueue_script('pjax',$jsdir.'/js/pjax.min.js',array(),'0.0.7');
+        wp_enqueue_script('kratos',$jsdir.'/js/kratos.js',array(),KRATOS_VERSION);
     }
     if(kratos_option('site_girl')=='l2d'&&!wp_is_mobile()){
-        wp_enqueue_script('live2d',$dir.'/js/live2d.js',array(),'l2d');
-        wp_enqueue_script('waifu',$dir.'/js/waifu-tips.js',array(),'1.3');
+        wp_enqueue_script('live2d',$jsdir.'/js/live2d.js',array(),'l2d');
+        wp_enqueue_script('waifu',$jsdir.'/js/waifu-tips.js',array(),'1.3');
     }
     if(kratos_option('site_sa')&&!wp_is_mobile()){if(kratos_option('head_mode')=='pic') $site_sa_h = 55; else $site_sa_h = 103;}
     $d2kratos = array(
@@ -103,12 +106,13 @@ function kratos_theme_scripts(){
           'scan'=> kratos_option('paytext'),
         'alipay'=> kratos_option('alipayqr_url'),
         'wechat'=> kratos_option('wechatpayqr_url'),
+           'owo'=> $owodir,
        'site_sh'=> $site_sa_h
     );
     wp_localize_script('kratos','xb',$d2kratos);
 }
 add_action('wp_enqueue_scripts','kratos_theme_scripts');
-//Remove the head code
+//Remove code
 remove_action('wp_head','wp_print_head_scripts',9);
 remove_action('wp_head','wp_generator');
 remove_action('wp_head','rsd_link');
@@ -120,6 +124,8 @@ remove_action('wp_head','adjacent_posts_rel_link_wp_head',10,0);
 remove_action('wp_head','rel_canonical');
 remove_action('wp_head','feed_links',2);
 remove_action('wp_head','feed_links_extra',3);
+remove_action('wp_head','rest_output_link_wp_head',10);
+remove_action('wp_head','wp_oembed_add_discovery_links',10);
 remove_action('admin_print_scripts','print_emoji_detection_script');
 remove_action('admin_print_styles','print_emoji_styles');
 remove_action('wp_head','print_emoji_detection_script',7);
@@ -132,7 +138,38 @@ remove_filter('wp_mail','wp_staticize_emoji_for_email');
 add_filter('emoji_svg_url','__return_false');
 add_filter('show_admin_bar','__return_false');
 add_action('wp_enqueue_scripts','mt_enqueue_scripts',1);
+add_filter('rest_enabled','_return_false');
+add_filter('rest_jsonp_enabled','_return_false');
 function mt_enqueue_scripts(){wp_deregister_script('jquery');}
+function disable_embeds_init(){
+    global $wp;
+    $wp->public_query_vars = array_diff($wp->public_query_vars,array('embed'));
+    remove_action('rest_api_init','wp_oembed_register_route');
+    add_filter('embed_oembed_discover','__return_false');
+    remove_filter('oembed_dataparse','wp_filter_oembed_result',10);
+    remove_action('wp_head','wp_oembed_add_discovery_links');
+    remove_action('wp_head','wp_oembed_add_host_js');
+    add_filter('tiny_mce_plugins','disable_embeds_tiny_mce_plugin');
+    add_filter('rewrite_rules_array','disable_embeds_rewrites');
+}
+add_action('init','disable_embeds_init',9999);
+function disable_embeds_tiny_mce_plugin($plugins){return array_diff($plugins,array('wpembed'));}
+function disable_embeds_rewrites($rules){
+    foreach ($rules as $rule => $rewrite){
+        if(false !== strpos($rewrite,'embed=true')) unset($rules[$rule]);
+    }
+    return $rules;
+}
+function disable_embeds_remove_rewrite_rules(){
+    add_filter('rewrite_rules_array','disable_embeds_rewrites');
+    flush_rewrite_rules();
+}
+register_activation_hook(__FILE__,'disable_embeds_remove_rewrite_rules');
+function disable_embeds_flush_rewrite_rules(){
+    remove_filter('rewrite_rules_array','disable_embeds_rewrites');
+    flush_rewrite_rules();
+}
+register_deactivation_hook(__FILE__,'disable_embeds_flush_rewrite_rules');
 //Prohibit character escaping
 $qmr_work_tags = array('the_title','the_excerpt','single_post_title','comment_author','comment_text','link_description','bloginfo','wp_title','term_description','category_description','widget_title','widget_text');
 foreach($qmr_work_tags as $qmr_work_tag){remove_filter ($qmr_work_tag,'wptexturize');}
@@ -176,7 +213,7 @@ function kratos_description(){
     elseif(is_category()){$description = strip_tags(category_description());echo trim($description);}
     elseif(is_single()){ 
         if(get_the_excerpt()){echo get_the_excerpt();}
-        else{global $post;$description = trim(str_replace(array("\r\n","\r","\n","　"," ")," ",str_replace("\"","'",strip_tags($post->post_content ))));echo mb_substr($description,0,220,'utf-8');}
+        else{global $post;$description = trim(str_replace(array("\r\n","\r","\n","　"," ")," ",str_replace("\"","'",strip_tags(do_shortcode($post->post_content)))));echo mb_substr($description,0,220,'utf-8');}
     }
     elseif(is_search()){echo '“';the_search_query();echo '”为您找到结果 ';global $wp_query;echo $wp_query->found_posts;echo ' 个';}
     elseif(is_tag()){$description = strip_tags(tag_description());echo trim($description);}
