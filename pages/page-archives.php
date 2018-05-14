@@ -51,8 +51,6 @@ get_header(); ?>
                         <h2 class="title-h2" style="text-align:center;font-size:18pt">文章归档</h2>
                         <p style="text-align:center"><span style="color:#999">当前共有<?php echo wp_count_posts()->publish; ?>篇公开文章，<?php echo wp_count_posts('page')->publish; ?>个公开页面。点击月份可展开文章~<a href="javascript:;" id="al_collapse" style="color:#999;display:none">[折叠全部]</a><a href="javascript:;" id="al_expand" style="color:#999">[展开全部]</a></span></p>
                         <hr/>
-                        <h4>Visitors & Visits</h4>
-                        <div><?php echo wp_statistics_visitor('today',null,true).'  /  '.wp_statistics_visit('today'); ?></div>
                         <h4>Tags</h4>
                         <div class="arc-tag">
                         <?php echo $arc_tags; ?>
