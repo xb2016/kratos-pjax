@@ -39,8 +39,8 @@
                             <?php if(kratos_option('post_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>'; ?>
                                <a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
                             <?php if(kratos_option('post_share')) {
-                                echo '<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>';
-                                require_once( get_template_directory().'/inc/share.php');
+                                echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i> 分享</a>';
+                                require_once(get_template_directory().'/inc/share.php');
                             } ?>
                             </div>
                             <div class="footer-tag clearfix">
@@ -80,10 +80,9 @@
                     </div>
                 </aside>
             <?php } ?>
-        </div>
-        <div class="cd-tool text-center">
-            <?php if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div><?php } ?>
-        </div>
+        </div><?php
+        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php }
+        if(kratos_option('script_tongji')) echo '<script type="text/javascript">'.kratos_option('script_tongji').'</script>'; ?>
     </div>
 </div>
 <?php get_footer(); ?>

@@ -26,7 +26,6 @@
                                     <?php if(kratos_option('icp_num')) echo '<br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">'.kratos_option('icp_num').'</a>';
                                           if(kratos_option('gov_num')) echo '<br><a href="'.kratos_option('gov_link').'" rel="external nofollow" target="_blank"><i class="govimg"></i>'.kratos_option('gov_num').'</a>'; ?>
                                     </p>
-                                    <?php if (kratos_option('site_tongji')) echo '<p>'.kratos_option('site_tongji').'</p>'; ?>
                                 </div>
                             </div>
                         </div>
@@ -53,10 +52,8 @@
                 <span class="fa fa-info-circle"></span>
                 <span class="fa fa-close"></span>
             </div>
-        </div>
-        <?php }
+        </div><?php }
         wp_footer();
-        if(kratos_option('script_tongji')) echo '<script type="text/javascript">'.kratos_option('script_tongji').'</script>';
         if(kratos_option('site_snow')&&(!wp_is_mobile()||wp_is_mobile()&&kratos_option('snow_xb2016_mobile'))){ ?>
         <div id="xb_snow">
             <canvas id="Snow"></canvas>

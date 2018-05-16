@@ -256,7 +256,7 @@ function kratos_wp_title($title,$sep){
     $title .= get_bloginfo('name');
     $site_description = get_bloginfo('description','display');
     if($site_description&&(is_home()||is_front_page())) $title = "$title $sep $site_description";
-    if($paged>=2||$page>=2) $title = "$title $sep " . sprintf('第 %s 页',max($paged,$page));
+    if($paged>=2||$page>=2) $title = "$title $sep " . sprintf('Page %s',max($paged,$page));
     return $title;
 }
 add_filter('wp_title','kratos_wp_title',10,2);
@@ -371,38 +371,6 @@ function sig_allowed_html_tags_in_comments(){
    );
 }
 add_action('init','sig_allowed_html_tags_in_comments',10);
-//Compress
-function wp_compress_html(){
-    function wp_compress_html_main($buffer){
-        $initial=strlen($buffer);
-        $buffer=explode("<!--wp-compress-html-->",$buffer);
-        $count=count($buffer);
-        for($i=0;$i<=$count;$i++){
-            if(stristr($buffer[$i],'<!--wp-compress-html no compression-->')){
-                $buffer[$i]=(str_replace("<!--wp-compress-html no compression-->","",$buffer[$i]));
-            }else{
-                $buffer[$i]=(str_replace("\t"," ",$buffer[$i]));
-                $buffer[$i]=(str_replace("\n\n","\n",$buffer[$i]));
-                $buffer[$i]=(str_replace("\n","",$buffer[$i]));
-                $buffer[$i]=(str_replace("\r","",$buffer[$i]));
-                while(stristr($buffer[$i],'  ')) $buffer[$i]=(str_replace("  "," ",$buffer[$i]));
-                if(kratos_option('co_comp')) $buffer[$i]=preg_replace(array('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s','!/\*[^*]*\*+([^/][^*]*\*+)*/!'),'',$buffer[$i]);
-                if(kratos_option('xhtml_comp')&&strtolower(substr(ltrim($buffer[$i]),0,15))=='<!doctype html>') $buffer[$i]=str_replace(' />','>',$buffer[$i]);
-                if(kratos_option('html_relative')) $buffer[$i]=str_replace(array('href="https://'.$_SERVER['HTTP_HOST'].'/','href="http://'.$_SERVER['HTTP_HOST'].'/','href="//'.$_SERVER['HTTP_HOST'].'/'),'href="/',$buffer[$i]);
-                if(kratos_option('html_relative')) $buffer[$i]=str_replace(array("href='https://".$_SERVER['HTTP_HOST'].'/',"href='http://".$_SERVER['HTTP_HOST'].'/',"href='//".$_SERVER['HTTP_HOST'].'/'),"href='/",$buffer[$i]);
-                if(kratos_option('html_scheme')) $buffer[$i]=str_replace(array('href="http://','href="https://',"href='http://","href='https://"),array('href="//','href="//',"href='//","href='//"),$buffer[$i]);
-            }
-            $buffer_out.=$buffer[$i];
-       }
-    $final=strlen($buffer_out);
-    $savings=($initial-$final)/$initial*100;
-    $savings=round($savings,2);
-    $buffer_out.="\n<!--压缩前: $initial bytes; 压缩后: $final bytes; 节约：$savings% -->";
-    return $buffer_out;
-}
-ob_start("wp_compress_html_main");
-}
-if(!is_admin()&&kratos_option('site_comp')) add_action('init','wp_compress_html');
 //Hex2rgb
 function hex2rgb($hexColor){
     $color=str_replace('#','',$hexColor);

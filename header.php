@@ -16,16 +16,18 @@
 <html>
   <head>
     <title><?php wp_title('-',true,'right'); ?></title>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index,follow">
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="format-detection" content="telphone=no, email=no">
-    <meta name="description" itemprop="description" content="<?php kratos_description(); ?>">
+    <meta charset="<?php bloginfo('charset'); ?>" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta itemprop="name" content="<?php wp_title('-',true,'right'); ?>" />
+    <meta itemprop="image" content="<?php echo kratos_option('site_ico'); ?>" />
+    <meta name="description" itemprop="description" content="<?php kratos_description(); ?>" />
     <meta name="keywords" content="<?php kratos_keywords(); ?>">
-    <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
+    <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>" />
     <?php wp_head();wp_print_scripts('jquery');?>
     <style><?php
         echo '#offcanvas-menu{background:rgba('.kratos_option('mobi_color').')}';

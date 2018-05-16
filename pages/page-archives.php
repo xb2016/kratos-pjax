@@ -88,8 +88,8 @@ get_header(); ?>
                             <div class="post-like-donate text-center clearfix" id="post-like-donate"><?php
                                 if(kratos_option('page_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>';
                                 if(kratos_option('page_share')){
-                                    echo '<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>';
-                                    require_once( get_template_directory().'/inc/share.php');
+                                    echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i> 分享</a>';
+                                    require_once(get_template_directory().'/inc/share.php');
                                 } ?>
                             </div>
                         </footer>
@@ -108,5 +108,6 @@ get_header(); ?>
             <?php } ?>
         </div>
     </div>
+    <?php if(kratos_option('script_tongji')) echo '<script type="text/javascript">'.kratos_option('script_tongji').'</script>'; ?>
 </div>
 <?php get_footer(); ?>

@@ -32,7 +32,7 @@
             <?php }
                 if(have_posts()){
                     while(have_posts()){
-                        the_post();
+						the_post();
                         get_template_part('content',get_post_format());
                     }
                 }else{ ?>
@@ -50,6 +50,7 @@
             </aside>
             <?php } ?>
         </div>
+        <?php if(kratos_option('script_tongji')) echo '<script type="text/javascript">'.kratos_option('script_tongji').'</script>'; ?>
     </div>
 </div>
 <?php get_footer(); ?>

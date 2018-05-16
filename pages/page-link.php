@@ -50,10 +50,9 @@ get_header(); ?>
                 </div>
             </aside>
             <?php } ?>
-        </div>
-        <div class="cd-tool text-center">
-            <?php if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div><?php } ?>
-        </div>
+        </div><?php
+        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php }
+        if(kratos_option('script_tongji')) echo '<script type="text/javascript">'.kratos_option('script_tongji').'</script>'; ?>
     </div>
 </div>
 <?php get_footer(); ?>
