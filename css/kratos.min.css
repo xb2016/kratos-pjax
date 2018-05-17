@@ -526,9 +526,8 @@ td,th{padding:0}
 .comments-title{margin:0;font-size:24px;padding:30px;border:1px solid #e0e0e0;background-color:#fff}
 .commentmetadata a{color:#848484}
 .comment-body p{color:#333;margin-bottom:0}
-a.comment-reply-link:focus,a.comment-reply-link:hover{background-color:#666;color:#fff!important}
-a.comment-reply-link{text-decoration:none;padding:2px 5px;border-radius:2px;background-color:#999;color:#fff;font-size:12px;-webkit-transition:all .4s;transition:all .4s}
-a.comment-reply-link:hover{color:#000;box-shadow:0 0 1px #505050}
+a.comment-reply-link:hover,a.comment-reply-login:hover{background-color:#666;color:#fff!important}
+a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;border-radius:2px;background-color:#999;color:#fff;font-size:12px;-webkit-transition:all .4s;transition:all .4s}
 .comment-metadata a,.comments-area a.url{color:#444;text-decoration:none}
 .comment-respond{margin-top:15px;background-color:#fff;-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);box-shadow:0 1px 2px rgba(0,0,0,.1);border-radius:0;padding:20px 20px 8px 20px}
 #comments-nav{text-align:center;margin:0 0 15px}
@@ -546,6 +545,7 @@ a.comment-reply-link:hover{color:#000;box-shadow:0 0 1px #505050}
 #respond .has-feedback{position:relative}
 #respond .has-feedback .form-control:not(:first-child){padding-right:30px}
 #respond .form-control-feedback{position:absolute;right:0;z-index:2;display:block;width:34px;height:34px;text-align:center;pointer-events:none}
+#respond .must-log-in,.must-log-in a{color:#555}
 #comments img{max-width:100%}
 .comment-form .form-control-feedback{line-height:40px;color:#848484}
 .comment-form .input-group,.comment-form .btn-primary{width:100%}
