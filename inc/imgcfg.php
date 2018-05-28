@@ -220,3 +220,11 @@ function add_external_media_without_import(){
 	$input['id'] = $attachment_id;
 	return $input;
 }
+//a img
+function content_a_img($content){
+    $pattern = "/<a href=('|\")([^>]*).(bmp|gif|jpeg|jpg|png)('|\")(.*?)><img/i";
+    $replacement = '<a href=$1$2.$3$4 rel="nofollow" target="_blank"><img';
+    $content = preg_replace($pattern,$replacement,$content);
+    return $content;
+}
+add_filter('the_content','content_a_img');

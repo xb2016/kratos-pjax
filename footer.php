@@ -48,7 +48,6 @@
                 <span class="fa fa-comments"></span>
                 <span class="fa fa-drivers-license-o"></span>
                 <span class="fa fa-street-view"></span>
-                <span class="fa fa-camera"></span>
                 <span class="fa fa-info-circle"></span>
                 <span class="fa fa-close"></span>
             </div>

@@ -30,11 +30,6 @@ $('.waifu-tool .fa-close').click(function(){
     showMessage('愿你有一天能与重要的人重逢',2000);
     window.setTimeout(function(){$('.waifu').hide();},1000);
 });
-$('.waifu-tool .fa-camera').click(function(){
-    showMessage('照好了嘛，是不是很可爱呢？',8000);
-    window.Live2D.captureName = 'pic.png';
-    window.Live2D.captureFrame = true;
-});
 loadlive2d('live2d',xb.thome+'/inc/model/api.php?p=33');
 function showHitokoto(){
     $.post("https://www.fczbl.vip/api/hitokoto/",function(result){

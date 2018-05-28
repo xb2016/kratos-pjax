@@ -1,6 +1,5 @@
 <?php
-$ra1 = rand(1,12);
-$ra2 = rand(1,11);
+$ra = rand(1,14);
 if($_GET['p']==='22') $p = 2; else if($_GET['p']==='33') $p = 3; else $p = rand(2,3);
 if($p==2){$person = 22;$idle3 = 100;$tap1 = 150;$tap2 = 100;}else{$person = 33;$idle3 = 1000;$tap1 = 500;$tap2 = 200;}
 header("Content-type: application/json");
@@ -8,16 +7,16 @@ if($_GET['model']==='rand') echo '{
     "model":"'.$person.'/'.$person.'.v2.moc",
     "textures":[
         "'.$person.'/textures/texture_00.png",
-        "'.$person.'/textures/texture_01/'.$ra1.'.png",
-        "'.$person.'/textures/texture_02/'.$ra1.'.png",
-        "'.$person.'/textures/texture_03/'.$ra2.'.png"
+        "'.$person.'/textures/texture_01/'.$ra.'.png",
+        "'.$person.'/textures/texture_02/'.$ra.'.png",
+        "'.$person.'/textures/texture_03/'.$ra.'.png"
 '; else echo '{
     "model":"./'.$person.'/'.$person.'.v2.moc",
     "textures":[
         "'.$person.'/textures/texture_00.png",
         "'.$person.'/textures/texture_01/1.png",
         "'.$person.'/textures/texture_02/1.png",
-        "'.$person.'/textures/texture_03/11.png"
+        "'.$person.'/textures/texture_03/12.png"
 '; echo '    ],
     "hit_areas_custom":{
         "head_x":[-0.35, 0.6],
