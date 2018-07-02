@@ -522,7 +522,7 @@ function optionsframework_options(){
         'type'=>'checkbox');
     $options[] = array(
         'name'=>'SMTPSecure设置',
-        'desc'=>'若启用SMTPAuth服务则填写ssl，若不启用则留空',
+        'desc'=>'若启用SMTPAuth服务则填写ssl，若不启用则留空，office365的邮箱如果无法使用请填写STARTTLS试试',
         'id'=>'mail_smtpsecure',
         'std'=>'ssl',
         'type'=>'text');
