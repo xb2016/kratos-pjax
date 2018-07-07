@@ -33,7 +33,27 @@
                 </footer>
             </div>
         </div>
-        <?php if(kratos_option('ap_footer')){ ?>
+        <?php if(kratos_option('site_girl')=='spig'&&!wp_is_mobile()){ ?>
+        <div id="spig" class="spig">
+            <div id="message">Loading...</div>
+            <div id="mumu" class="mumu"></div>
+            <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ;?>/js/spig.js"></script>
+        </div>
+        <?php }elseif(kratos_option('site_girl')=='l2d'&&!wp_is_mobile()){ ?>
+        <div class="waifu">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" width="220" height="250" class="live2d"></canvas>
+            <div class="waifu-tool">
+                <span class="fa fa-home"></span>
+                <span class="fa fa-comments"></span>
+                <span class="fa fa-drivers-license-o"></span>
+                <span class="fa fa-street-view"></span>
+                <span class="fa fa-info-circle"></span>
+                <span class="fa fa-close"></span>
+            </div>
+        </div><?php }
+        wp_footer();
+        if(kratos_option('ap_footer')){ ?>
         <div class="aplayer-footer">
             <div class="ap-f" id="ap-f"></div>
             <script>
@@ -59,28 +79,7 @@
                 })
             })
             </script>
-        </div>
-        <?php } ?>
-        <?php if(kratos_option('site_girl')=='spig'&&!wp_is_mobile()){ ?>
-        <div id="spig" class="spig">
-            <div id="message">Loading...</div>
-            <div id="mumu" class="mumu"></div>
-            <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ;?>/js/spig.js"></script>
-        </div>
-        <?php }elseif(kratos_option('site_girl')=='l2d'&&!wp_is_mobile()){ ?>
-        <div class="waifu">
-            <div class="waifu-tips"></div>
-            <canvas id="live2d" width="220" height="250" class="live2d"></canvas>
-            <div class="waifu-tool">
-                <span class="fa fa-home"></span>
-                <span class="fa fa-comments"></span>
-                <span class="fa fa-drivers-license-o"></span>
-                <span class="fa fa-street-view"></span>
-                <span class="fa fa-info-circle"></span>
-                <span class="fa fa-close"></span>
-            </div>
         </div><?php }
-        wp_footer();
         if(kratos_option('site_snow')&&(!wp_is_mobile()||wp_is_mobile()&&kratos_option('snow_xb2016_mobile'))){ ?>
         <div id="xb_snow">
             <canvas id="Snow"></canvas>
