@@ -28,9 +28,10 @@ function danger($atts,$content=null,$code=""){
 }
 add_shortcode('danger','danger');
 function wymusic($atts,$content=null,$code=""){
+    extract(shortcode_atts(array("autoplay"=>'0'),$atts));
     $return = '<iframe class="" style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="//music.163.com/outchain/player?type=2&id=';
     $return .= $content;
-    $return .= '&auto='. kratos_option('wy_music') .'&height=66"></iframe>';
+    $return .= '&auto='.$autoplay.'&height=66"></iframe>';
     return $return;
 }
 add_shortcode('music','wymusic');
@@ -284,9 +285,10 @@ add_filter("mce_buttons_2","add_more_buttons");
 function fa_get_wpsmiliestrans(){
     global $wpsmiliestrans;
     $wpsmilies = array_unique($wpsmiliestrans);
+    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
     foreach($wpsmilies as $alt => $src_path){
         $traimgna = substr($alt,1,-1);
-        $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img src="'.get_bloginfo('template_directory').'/images/smilies/'.$traimgna.'.png"></a>';
+        $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img src="'.$owodir.'/images/smilies/'.$traimgna.'.png"></a>';
     }
     return $output;
 }
@@ -295,10 +297,8 @@ function fa_smilies_custom_button($context){
     $context .= '<style>.smilies-wrap{background:#fff;border: 1px solid #ccc;box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.24);padding: 10px;position: absolute;top: 60px;width: 380px;display:none}.smilies-wrap img{height:24px;width:24px;cursor:pointer;margin-bottom:5px} .is-active.smilies-wrap{display:block}</style><a id="REPLACE-media-button" style="position:relative" class="button REPLACE-smilies add_smilies" title="添加表情" data-editor="content" href="javascript:;">添加表情</a><div class="smilies-wrap">'. fa_get_wpsmiliestrans() .'</div><script>jQuery(document).ready(function(){jQuery(document).on("click", ".REPLACE-smilies",function() { if(jQuery(".smilies-wrap").hasClass("is-active")){jQuery(".smilies-wrap").removeClass("is-active");}else{jQuery(".smilies-wrap").addClass("is-active");}});jQuery(document).on("click", ".add-smily",function() { send_to_editor(" " + jQuery(this).data("smilies") + " ");jQuery(".smilies-wrap").removeClass("is-active");return false;});});</script>';
     return $context;
 }
-function appthemes_add_quicktags(){
-?>
-<style>.mce-container.mce-toolbar.mce-stack-layout-item{display:block!important}</style>
-<script type="text/javascript"> 
+function appthemes_add_quicktags(){ ?>
+<script type="text/javascript">
 QTags.addButton( 'hr分隔', 'hr分隔', '\n\n<hr />\n\n', '' );
 QTags.addButton( '内容标题', '内容标题', '[title]', '[/title]' );
 QTags.addButton( '蓝色字体', '蓝色字体', '<span style="color: #0000ff;">', '</span>' );
@@ -307,7 +307,7 @@ QTags.addButton( '展开/收缩', '展开/收缩', '[collapse title="标题内�
 QTags.addButton( '回复可见', '回复可见', '[hide reply_to_this="true"]', '[/hide]' );
 QTags.addButton( '本地下载', '本地下载', '[bdbtn]', '[/bdbtn]' );
 QTags.addButton( '云盘下载', '云盘下载', '[ypbtn]', '[/ypbtn]' );
-QTags.addButton( '网易云音乐', '网易云音乐', '[music]', '[/music]' );
+QTags.addButton( '网易云音乐', '网易云音乐', '[music  autoplay="0"]', '[/music]' );
 QTags.addButton( '绿色背景栏', '绿色背景栏', '[success]', '[/success]' );
 QTags.addButton( '蓝色背景栏', '蓝色背景栏', '[info]', '[/info]' );
 QTags.addButton( '黄色背景栏', '黄色背景栏', '[warning]', '[/warning]' );

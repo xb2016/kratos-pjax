@@ -261,7 +261,7 @@
                 title : '网易云音乐',
                 image : url+'/images/music.png',
                 onclick : function() {
-                     ed.selection.setContent('[music]' + ed.selection.getContent() + '[/music]');
+                     ed.selection.setContent('[music autoplay="0"]' + ed.selection.getContent() + '[/music]');
                 }
             });
         },

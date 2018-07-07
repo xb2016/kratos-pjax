@@ -68,8 +68,10 @@ return $o;
 }
 //Comments face
 add_filter('smilies_src','custom_smilies_src',1,10);
-function custom_smilies_src($img_src,$img,$siteurl){return get_bloginfo('template_directory').'/images/smilies/'.$img;}
-function disable_emojis_tinymce($plugins){return array_diff($plugins,array('wpemoji'));}
+function custom_smilies_src($img_src,$img,$siteurl){
+    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
+    return $owodir.'/images/smilies/'.$img;
+}
 function smilies_reset(){
     global $wpsmiliestrans,$wp_smiliessearch,$wp_version;
     if(!get_option('use_smilies')||$wp_version<4.2) return;

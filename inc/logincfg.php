@@ -102,17 +102,11 @@ $limit_login_my_error_shown = false;
 $limit_login_just_lockedout = false;
 $limit_login_nonempty_credentials = false;
 function limit_login_get_address($type_name = ''){
-    if(isset($_SERVER[REMOTE_ADDR])) return $_SERVER[REMOTE_ADDR];
+    if(@isset($_SERVER[REMOTE_ADDR])) return @$_SERVER[REMOTE_ADDR];
     return '';
-}
-function is_limit_login_ip_whitelisted($ip=null){
-    if(is_null($ip)) $ip = limit_login_get_address();
-    $whitelisted = apply_filters('limit_login_whitelist_ip',false,$ip);
-    return ($whitelisted===true);
 }
 function is_limit_login_ok(){
     $ip = limit_login_get_address();
-    if(is_limit_login_ip_whitelisted($ip)) return true;
     $lockouts = get_option('limit_login_lockouts');
     return (!is_array($lockouts)||!isset($lockouts[$ip])||time()>=$lockouts[$ip]);
 }
@@ -186,23 +180,15 @@ function limit_login_failed($username) {
         limit_login_cleanup($retries,null,$valid);
         return;
     }
-    $whitelisted = is_limit_login_ip_whitelisted($ip);
     $retries_long = kratos_option('allowed_retries')*kratos_option('allowed_lockouts');
-    if($whitelisted){
-        if($retries[$ip]>=$retries_long){
-            unset($retries[$ip]);
-            unset($valid[$ip]);
-        }
+    global $limit_login_just_lockedout;
+    $limit_login_just_lockedout = true;
+    if($retries[$ip]>=$retries_long){
+        $lockouts[$ip] = time()+kratos_option('long_duration');
+        unset($retries[$ip]);
+        unset($valid[$ip]);
     }else{
-        global $limit_login_just_lockedout;
-        $limit_login_just_lockedout = true;
-        if($retries[$ip]>=$retries_long){
-            $lockouts[$ip] = time()+kratos_option('long_duration');
-            unset($retries[$ip]);
-            unset($valid[$ip]);
-        }else{
-            $lockouts[$ip] = time()+kratos_option('lockout_duration');
-        }
+        $lockouts[$ip] = time()+kratos_option('lockout_duration');
     }
     limit_login_cleanup($retries,$lockouts,$valid);
     limit_login_notify_email($username);
@@ -243,7 +229,6 @@ function is_limit_login_multisite(){
 function limit_login_notify_email($user){
     if(!kratos_option('lockout_notify_m')) return;
     $ip = limit_login_get_address();
-    $whitelisted = is_limit_login_ip_whitelisted($ip);
     $retries = get_option('limit_login_retries');
     if(!is_array($retries)) $retries = array();
     if(isset($retries[$ip])&&(($retries[$ip]/kratos_option('allowed_retries'))%kratos_option('notify_email_after'))!=0) return;
@@ -258,23 +243,15 @@ function limit_login_notify_email($user){
         $time = round(kratos_option('lockout_duration')/60);
         $when = sprintf('%d 分钟',$time);
     }
-    $blogname = is_limit_login_multisite()?get_site_option('site_name'):get_option('blogname');
-    if($whitelisted){
-        $subject = sprintf('[%s] 失败登陆尝试，来自白名单 IP',$blogname);
-    } else {
-        $subject = sprintf('[%s] 登录失败次数过多',$blogname);
-    }
+    $blogname = htmlspecialchars_decode(get_option('blogname'),ENT_QUOTES);
+    $subject = '['.$blogname.'] 登录失败次数过多';
     $message = sprintf(__("失败登录次数：%d ，IP：%s",'limit-login')
                   ."\r\n\r\n",$count,$ip);
     if ($user != '') {
         $message .= sprintf(__("最后一次尝试登录的用户名：%s", 'limit-login')
                     ."\r\n\r\n",$user);
     }
-    if($whitelisted){
-        $message .= 'IP并没有被阻止，因为在白名单中';
-    } else {
-        $message .= sprintf('此 IP 已被封锁，封锁时长：%s',$when);
-    }
+    $message .= sprintf('此 IP 已被封锁，封锁时长：%s',$when);
     $admin_email = is_limit_login_multisite()?get_site_option('admin_email'):get_option('admin_email');
     @wp_mail($admin_email,$subject,$message);
 }
@@ -306,7 +283,6 @@ function limit_login_retries_remaining_msg(){
     return sprintf('<strong>错误</strong>：账号或密码有误，您还有<strong>%d</strong>次尝试机会。',$remaining);
 }
 function limit_login_get_message(){
-    if(is_limit_login_ip_whitelisted()) return '';
     if(!is_limit_login_ok()) return limit_login_error_msg();
     return limit_login_retries_remaining_msg();
 }

@@ -33,6 +33,34 @@
                 </footer>
             </div>
         </div>
+        <?php if(kratos_option('ap_footer')){ ?>
+        <div class="aplayer-footer">
+            <div class="ap-f" id="ap-f"></div>
+            <script>
+            $(function(){
+                $.ajax({
+                    url:"<?php echo kratos_option('ap_json'); ?>",
+                    success:function(e){
+                        var a = new APlayer({
+                            element:document.getElementById("ap-f"),
+                            autoplay:<?php if(kratos_option('ap_autoplay')) echo 'true'; else echo 'false'; ?>,
+                            fixed:true,
+                            loop:"<?php echo kratos_option('ap_loop'); ?>",
+                            order:"<?php echo kratos_option('ap_order'); ?>",
+                            listFolded:true,
+                            showlrc:3,
+                            theme:"#e6d0b2",
+                            listmaxheight:"200px",
+                            music:eval(e)
+                        });
+                        window.aplayers || (window.aplayers = []),
+                        window.aplayers.push(a)
+                    }
+                })
+            })
+            </script>
+        </div>
+        <?php } ?>
         <?php if(kratos_option('site_girl')=='spig'&&!wp_is_mobile()){ ?>
         <div id="spig" class="spig">
             <div id="message">Loading...</div>

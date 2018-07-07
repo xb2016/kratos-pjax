@@ -23,12 +23,10 @@
     <meta name="robots" content="index,follow" />
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="format-detection" content="telphone=no, email=no" />
-    <meta itemprop="name" content="<?php wp_title('-',true,'right'); ?>" />
-    <meta itemprop="image" content="<?php echo kratos_option('site_ico'); ?>" />
     <meta name="description" itemprop="description" content="<?php kratos_description(); ?>" />
     <meta name="keywords" content="<?php kratos_keywords(); ?>">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>" />
-    <?php wp_head();wp_print_scripts('jquery');?>
+    <?php wp_head();wp_print_scripts('theme-jq');?>
     <style><?php
         echo '#offcanvas-menu{background:rgba('.kratos_option('mobi_color').')}';
         if(kratos_option('background_mode')=='image'&&!wp_is_mobile()&&!kratos_option('site_bw')) echo '@media(min-width:768px){.pagination>li>a{background-color:rgba(255,255,255,.8)}.kratos-hentry,.navigation div,.comments-area .comment-list li,#kratos-widget-area .widget,.comment-respond{background-color:rgba(253,253,253,.85)!important}.comment-list .children li{background-color:rgba(255,253,232,.7)!important}body.custom-background{background-image:url('.kratos_option('background_index_image').');background-size:cover;background-attachment:fixed}}';
