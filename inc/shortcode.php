@@ -160,7 +160,7 @@ function youku($atts,$content=null,$code=""){
 add_shortcode('youku','youku');
 function tudou($atts,$content=null,$code=""){
     extract(shortcode_atts(array("code"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe src="http://www.tudou.com/programs/view/html5embed.action?type=1&code=';
+    $return = '<div class="video-container"><iframe src="https://www.tudou.com/programs/view/html5embed.action?type=1&code=';
     $return .= $content;
     $return .= '&lcode=';
     $return .= $code;
@@ -186,16 +186,16 @@ function youtube($atts,$content=null,$code=""){
 }
 add_shortcode('youtube','youtube');
 function pptv($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><iframe src="http://player.pptv.com/iframe/index.html#id=';
+    $return = '<div class="video-container"><iframe src="https://player.pptv.com/iframe/index.html#id=';
     $return .= $content;
     $return .= '&ctx=o%3Dv_share" allowtransparency="true" width="640" height="400" scrolling="no" frameborder="0" ></iframe></div>';
     return $return;
 }
 add_shortcode('pptv','pptv');
 function bilibili($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=';
+    $return = '<div class="video-container"><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="https://static.hdslb.com/miniloader.swf" flashvars="aid=';
     $return .= $content;
-    $return .= '&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed></div>';
+    $return .= '&page=1" pluginspage="https://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed></div>';
     return $return;
 }
 add_shortcode('bilibili','bilibili');
