@@ -19,8 +19,8 @@ get_header(); ?>
                         <div class="kratos-post-content">
                             <h2 class="title-h2" style="text-align:center;font-size:20px">代码高亮转换</h2>
                             <style>textarea{background:#fefefe;border:1px solid #B9B9B9}#wrapper{width:980px;margin:10px auto;padding:5px}#main_box{background:#fff;margin:10px 0 20px 0;padding:10px;border-top:3px solid #666;border-bottom:1px solid #666;border-left:1px solid #adadad;border-right:1px solid #adadad}#main_box h2{font-size:14px;margin:0 0 10px 10px}.options{margin:0 0 0 20px}.options_no{display:none}.render{float:right}button{color:#fff;background:#666;border:1px solid #fff}#preview{margin:0;color:#fff;width:100%;height:100%}.dp-highlighter {border:1px solid ##B9B9B9}</style>
-                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.1.0/js/h/shCore.js"></script>
-                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.1.0/js/h/rendered.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.2.5/js/h/shCore.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.2.5/js/h/rendered.js"></script>
                             <div id="main_box">
                                 <h2>输入源代码</h2>
                                 <textarea title="输入源代码." class="php" id="sourceCode" style="width: 100%" name="sourceCode" rows="6"></textarea>
@@ -37,19 +37,7 @@ get_header(); ?>
                                 <h2>HTML 预览</h2>
                                 <div id="preview"></div>
                             </div>
-                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.1.0/js/h/h.js" type="text/javascript"></script>
-						</div>
-                        <?php if(kratos_option('page_like_donate')||kratos_option('page_share')){ ?>
-                        <footer class="kratos-entry-footer clearfix">
-                            <div class="post-like-donate text-center clearfix" id="post-like-donate"><?php
-                                if(kratos_option('page_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>';
-                                if(kratos_option('page_share')){
-                                    echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i> 分享</a>';
-                                    require_once(get_template_directory().'/inc/share.php');
-                                } ?>
-                            </div>
-                        </footer>
-                        <?php } ?>
+                        </div>
                     </div>
                     <?php comments_template(); ?>
                 </article>
