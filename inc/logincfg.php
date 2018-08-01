@@ -101,9 +101,20 @@ if(kratos_option('login_limit')){
 $limit_login_my_error_shown = false;
 $limit_login_just_lockedout = false;
 $limit_login_nonempty_credentials = false;
-function limit_login_get_address($type_name = ''){
-    if(@isset($_SERVER[REMOTE_ADDR])) return @$_SERVER[REMOTE_ADDR];
-    return '';
+function limit_login_get_address(){
+    if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+        $cip = $_SERVER["HTTP_CLIENT_IP"];
+    }elseif(!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
+        $cip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+    }elseif(!empty($_SERVER["REMOTE_ADDR"])){
+        $cip = $_SERVER["REMOTE_ADDR"];
+    }else{
+        $cip = '';
+    }
+    preg_match("/[\d\.]{7,15}/",$cip,$cips);
+    $cip = isset($cips[0])?$cips[0]:'unknown';
+    unset($cips);
+    return $cip;
 }
 function is_limit_login_ok(){
     $ip = limit_login_get_address();
