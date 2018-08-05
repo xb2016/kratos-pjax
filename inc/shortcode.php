@@ -193,9 +193,15 @@ function pptv($atts,$content=null,$code=""){
 }
 add_shortcode('pptv','pptv');
 function bilibili($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="https://static.hdslb.com/miniloader.swf" flashvars="aid=';
+    extract(shortcode_atts(array("cid"=>'0'),$atts));
+    extract(shortcode_atts(array("page"=>'0'),$atts));
+    $return = '<div class="video-container"><iframe src="//player.bilibili.com/player.html?aid=';
     $return .= $content;
-    $return .= '&page=1" pluginspage="https://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed></div>';
+    $return .= '&cid=';
+    $return .= $cid;
+    $return .= '&page=';
+    $return .= $page;
+    $return .= '" allowtransparency="true" width="640" height="400" scrolling="no" frameborder="0" ></iframe></div>';
     return $return;
 }
 add_shortcode('bilibili','bilibili');
