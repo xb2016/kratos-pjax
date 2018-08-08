@@ -1,6 +1,6 @@
 <?php
 /**
-template name: 友情链接模板
+template name: 项目+友链模板
 */
 get_header(); ?>
     <div id="container" class="container">
@@ -17,6 +17,22 @@ get_header(); ?>
                 <article>
                     <div class="kratos-hentry kratos-post-inner clearfix">
                         <div class="kratos-post-content-l">
+                            <h2 class="title-h2" style="text-align:center;font-size:18pt">自己的项目</h2>
+                            <div class="linkpage">
+                                <hr/>
+                                <ul><?php
+                                $bookmarks = get_bookmarks();
+                                if(!empty($bookmarks)){
+                                    foreach($bookmarks as $bookmark){
+                                        if($bookmark->link_rel != 'me') continue;
+                                        $friendimg = $bookmark->link_image;
+                                        if(empty($friendimg)) $friendimg = get_template_directory().'/images/avatar.png';
+                                        echo '<li><a href="'.$bookmark->link_url.'" target="_blank" rel="nofollow"><img src="'.$friendimg.'"><h4>'.$bookmark->link_name.'</h4><p>'.$bookmark->link_description.'</p></a></li>';
+                                    }
+                                } ?>
+                                </ul>
+                                <hr/>
+                            </div>
                             <h2 class="title-h2" style="text-align:center;font-size:18pt">dalao们</h2>
                             <p style="text-align:center"><span style="color:#999999">dalao们的链接，每次刷新随机排序~</span></p>
                             <div class="linkpage">
@@ -25,6 +41,7 @@ get_header(); ?>
                                 $bookmarks = get_bookmarks(array('orderby'=>'rand'));
                                 if(!empty($bookmarks)){
                                     foreach($bookmarks as $bookmark){
+                                        if($bookmark->link_rel == 'me') continue;
                                         $friendimg = $bookmark->link_image;
                                         if(empty($friendimg)) $friendimg = get_template_directory().'/images/avatar.png';
                                         echo '<li><a href="'.$bookmark->link_url.'" target="_blank" rel="nofollow"><img src="'.$friendimg.'"><h4>'.$bookmark->link_name.'</h4><p>'.$bookmark->link_description.'</p></a></li>';

@@ -319,22 +319,6 @@
     });
     tinymce.PluginManager.add('vqq', tinymce.plugins.vqq);
 
-    tinymce.create('tinymce.plugins.pptv', {
-        init : function(ed, url) {
-            ed.addButton('pptv', {
-                title : 'PPTV',
-                image : url+'/images/pptv.png',
-                onclick : function() {
-                     ed.selection.setContent('[pptv]' + ed.selection.getContent() + '[/pptv]');
-                }
-            });
-        },
-        createControl : function(n, cm) {
-            return null;
-        },
-    });
-    tinymce.PluginManager.add('pptv', tinymce.plugins.pptv);
-
     tinymce.create('tinymce.plugins.bilibili', {
         init : function(ed, url) {
             ed.addButton('bilibili', {

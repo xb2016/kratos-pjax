@@ -170,7 +170,7 @@ function tudou($atts,$content=null,$code=""){
 add_shortcode('tudou','tudou');
 function vqq($atts,$content=null,$code=""){
     extract(shortcode_atts(array("auto"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="//v.qq.com/iframe/player.html?vid=';
+    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=';
     $return .= $content;
     $return .= '&tiny=0&auto=';
     $return .= $auto;
@@ -185,17 +185,10 @@ function youtube($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('youtube','youtube');
-function pptv($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><iframe src="https://player.pptv.com/iframe/index.html#id=';
-    $return .= $content;
-    $return .= '&ctx=o%3Dv_share" allowtransparency="true" width="640" height="400" scrolling="no" frameborder="0" ></iframe></div>';
-    return $return;
-}
-add_shortcode('pptv','pptv');
 function bilibili($atts,$content=null,$code=""){
     extract(shortcode_atts(array("cid"=>'0'),$atts));
-    extract(shortcode_atts(array("page"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe src="//player.bilibili.com/player.html?aid=';
+    extract(shortcode_atts(array("page"=>'1'),$atts));
+    $return = '<div class="video-container"><iframe src="https://player.bilibili.com/player.html?aid=';
     $return .= $content;
     $return .= '&cid=';
     $return .= $cid;
@@ -205,7 +198,6 @@ function bilibili($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('bilibili','bilibili');
-
 add_action('init','more_button_a');
 function more_button_a(){
    if(!current_user_can('edit_posts')&&!current_user_can('edit_pages')) return;

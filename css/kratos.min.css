@@ -810,6 +810,7 @@ h4{font-size:15px}
 .kratos-cover.kratos-cover_2.text-center,.kratos-overlay{display:none}
 #kratos-header-section{background:#16171a}
 #kratos-blog-post{padding:2em 0 1em;background:#f5f5f5!important}
+article .kratos-hentry.kratos-post-inner,.comments-area,.post-navigation{margin-left:-15px;margin-right:-15px}
 .kratos-post-meta span{font-size:9pt}
 .kratos-post-meta span i:not(:first-child){margin-left:5px}
 #kratos-menu-wrap,.kratos-post-inner-new header .label{display:none}

@@ -107,6 +107,7 @@ function kratos_theme_scripts(){
           'scan'=> kratos_option('paytext'),
         'alipay'=> kratos_option('alipayqr_url'),
         'wechat'=> kratos_option('wechatpayqr_url'),
+          'copy'=> kratos_option('copy_notice'),
            'owo'=> $owodir,
        'site_sh'=> $site_sa_h
     );

@@ -35,8 +35,8 @@ get_header(); ?>
                                 <h2>HTML 预览</h2>
                                 <div id="preview"></div>
                             </div>
-                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.2.5/js/h/shCore.js"></script>
-                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.2.5/js/h/rendered.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.2.6/js/h/shCore.js"></script>
+                            <script src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.2.6/js/h/rendered.js"></script>
                         </div>
                     </div>
                     <?php comments_template(); ?>

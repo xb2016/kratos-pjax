@@ -178,6 +178,8 @@
         }
     }
     $.fn.kratos_pjax_reload = function(){
+        $("#searchform").animate({width:"0"},200);
+        $("#searchform input").val('');
         showPhotos();
         OwOcfg();
         sidebaraffix();
@@ -211,7 +213,7 @@ function createtime(){
     document.getElementById("span_dt_dt").innerHTML = dnum+"天"+hnum+"小时"+mnum+"分"+snum+"秒";
 }
 setInterval("createtime()",250);
-document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
+if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
 window.onload = function(){
     var now = new Date().getTime();
     var page_load_time = now-performance.timing.navigationStart;
