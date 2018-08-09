@@ -26,7 +26,7 @@ get_header(); ?>
                                     foreach($bookmarks as $bookmark){
                                         if($bookmark->link_rel != 'me') continue;
                                         $friendimg = $bookmark->link_image;
-                                        if(empty($friendimg)) $friendimg = get_template_directory().'/images/avatar.png';
+                                        if(empty($friendimg)) $friendimg = get_stylesheet_directory_uri().'/images/avatar.png';
                                         echo '<li><a href="'.$bookmark->link_url.'" target="_blank" rel="nofollow"><img src="'.$friendimg.'"><h4>'.$bookmark->link_name.'</h4><p>'.$bookmark->link_description.'</p></a></li>';
                                     }
                                 } ?>
@@ -43,7 +43,7 @@ get_header(); ?>
                                     foreach($bookmarks as $bookmark){
                                         if($bookmark->link_rel == 'me') continue;
                                         $friendimg = $bookmark->link_image;
-                                        if(empty($friendimg)) $friendimg = get_template_directory().'/images/avatar.png';
+                                        if(empty($friendimg)) $friendimg = get_stylesheet_directory_uri().'/images/avatar.png';
                                         echo '<li><a href="'.$bookmark->link_url.'" target="_blank" rel="nofollow"><img src="'.$friendimg.'"><h4>'.$bookmark->link_name.'</h4><p>'.$bookmark->link_description.'</p></a></li>';
                                     }
                                 } ?>
