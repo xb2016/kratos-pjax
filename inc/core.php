@@ -77,7 +77,7 @@ function kratos_excerpt_more($more){return '……';}
 add_filter('excerpt_more','kratos_excerpt_more');
 //Load scripts
 function kratos_theme_scripts(){
-    $url1 = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION;
+    $url1 = 'https://cdn.jsdelivr.net/gh/showrbq/kratos-alpha@'.KRATOS_VERSION;
     $url2 = get_bloginfo('template_directory');
     if(kratos_option('js_out')) $jsdir = $url1; else $jsdir = $url2;
     if(kratos_option('owo_out')) $owodir = $url1; else $owodir = $url2;
@@ -89,13 +89,12 @@ function kratos_theme_scripts(){
         wp_enqueue_style('kratos',$jsdir.'/css/kratos.min.css',array(),KRATOS_VERSION);
         wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
-        wp_enqueue_script('layer',$jsdir.'/js/layer.min.js',array(),'3.1.0');
         wp_enqueue_script('OwO',$jsdir.'/js/OwO.min.js',array(),'1.0.1');
-        if(kratos_option('ap_footer')) wp_enqueue_script('aplayer',$jsdir.'/js/aplayer.min.js',array(),'1.10.1');
+        wp_enqueue_script('aplayer',$jsdir.'/js/aplayer.min.js',array(),'1.10.1');
         if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/js/pjax.min.js',array(),'0.0.7');
         wp_enqueue_script('kratos',$jsdir.'/js/kratos.js',array(),KRATOS_VERSION);
     }
-    if(kratos_option('site_girl')=='l2d'&&!wp_is_mobile()){
+    if(kratos_option('site_girl')&&!wp_is_mobile()){
         wp_enqueue_script('live2d',$jsdir.'/js/live2d.js',array(),'l2d');
         wp_enqueue_script('waifu',$jsdir.'/js/waifu-tips.js',array(),'1.3');
     }
@@ -197,7 +196,7 @@ add_filter('nav_menu_item_id','my_css_attributes_filter',100,1);
 add_filter('page_css_class','my_css_attributes_filter',100,1);
 function my_css_attributes_filter($var){return is_array($var)?array_intersect($var,array('current-menu-item','current-post-ancestor','current-menu-ancestor','current-menu-parent')):'';}
 //Add article type
-add_theme_support('post-formats',array('gallery','video'));
+add_theme_support('post-formats',array('status'));
 //Keywords Description set
 function kratos_keywords(){
     if(is_home()||is_front_page()){echo kratos_option('site_keywords');}
@@ -262,6 +261,16 @@ function kratos_wp_title($title,$sep){
     return $title;
 }
 add_filter('wp_title','kratos_wp_title',10,2);
+//More...
+function my_more_link($more_link,$more_link_text){return str_replace($more_link_text,'(More...)',$more_link);}
+add_filter('the_content_more_link','my_more_link',10,2);
+function remove_more_jump_link($link){
+    $offset = strpos($link,'#more-');
+    if($offset) $end = strpos($link,'"',$offset);
+    if($end) $link = substr_replace($link,'',$offset,$end-$offset);
+    return $link;
+}
+add_filter('the_content_more_link','remove_more_jump_link');
 //Banner
 function kratos_banner(){
     if(!$output = get_option('kratos_banners')){

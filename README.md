@@ -4,7 +4,7 @@
 
 This is a pjax version of Kratos(M). For the original version, please visit [https://github.com/xb2016/Kratos](https://github.com/xb2016/Kratos).
 
-Kratos: A clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). First created by Vtrois and modified by 小白-白. Stay up to date with the latest release and announcements on [Bulletin Board](https://github.com/xb2016/kratos-pjax/issues). 
+Kratos: A clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). First created by Vtrois and modified by 小白-白. Stay up to date with the latest release and announcements on [Bulletin Board](https://github.com/showrbq/kratos-alpha/issues). 
 
 ![Kratos Demo](https://img.fczbl.vip/images/2018/04/01/kratos.png)
 

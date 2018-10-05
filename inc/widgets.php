@@ -412,7 +412,7 @@ class kratos_widget_comments extends WP_Widget {
                 $output .= '<li class="comment-listitem">';
                 $output .= '<div class="comment-user">';
                 $output .= '<span class="comment-avatar">'.get_avatar($comment,50,null).'</span>';
-                $output .= '<span class="comment-author">'.$comment->comment_author.'</span>';
+                $output .= '<div class="comment-author" title="'.$comment->comment_author.'">'.$comment->comment_author.'</div>';
                 $output .= '<span class="comment-date">'.timeago($comment->comment_date_gmt).'</span>';
                 $output .= '</div>';
                 $output .= '<div class="comment-content-link"><a href="'.get_comment_link($comment->comment_ID).'"><div class="comment-content">'.convert_smilies(kratos_string_cut(strip_tags(get_comment_excerpt($comment->comment_ID)),30)).'</div></a></div>';

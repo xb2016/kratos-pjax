@@ -170,7 +170,7 @@ function tudou($atts,$content=null,$code=""){
 add_shortcode('tudou','tudou');
 function vqq($atts,$content=null,$code=""){
     extract(shortcode_atts(array("auto"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=';
+    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="https//v.qq.com/iframe/player.html?vid=';
     $return .= $content;
     $return .= '&tiny=0&auto=';
     $return .= $auto;
@@ -185,11 +185,20 @@ function youtube($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('youtube','youtube');
-function bilibili($atts,$content=null,$code=""){
-    extract(shortcode_atts(array("cid"=>'0'),$atts));
-    extract(shortcode_atts(array("page"=>'1'),$atts));
-    $return = '<div class="video-container"><iframe src="https://player.bilibili.com/player.html?aid=';
+function pptv($atts,$content=null,$code=""){
+    $return = '<div class="video-container"><iframe src="https://player.pptv.com/iframe/index.html#id=';
     $return .= $content;
+    $return .= '&ctx=o%3Dv_share" allowtransparency="true" width="640" height="400" scrolling="no" frameborder="0" ></iframe></div>';
+    return $return;
+}
+add_shortcode('pptv','pptv');
+function bilibili($atts,$content=null,$code=""){
+    $return = '<div class="video-container"><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="https://static.hdslb.com/miniloader.swf" flashvars="aid=';
+    extract(shortcode_atts(array("cid"=>'0'),$atts));
+    extract(shortcode_atts(array("page"=>'0'),$atts));
+    $return = '<div class="video-container"><iframe src="//player.bilibili.com/player.html?aid=';
+    $return .= $content;
+    $return .= '&page=1" pluginspage="https://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed></div>';
     $return .= '&cid=';
     $return .= $cid;
     $return .= '&page=';
@@ -198,6 +207,7 @@ function bilibili($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('bilibili','bilibili');
+
 add_action('init','more_button_a');
 function more_button_a(){
    if(!current_user_can('edit_posts')&&!current_user_can('edit_pages')) return;
@@ -283,7 +293,7 @@ add_filter("mce_buttons_2","add_more_buttons");
 function fa_get_wpsmiliestrans(){
     global $wpsmiliestrans;
     $wpsmilies = array_unique($wpsmiliestrans);
-    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
+    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/showrbq/kratos-alpha@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
     foreach($wpsmilies as $alt => $src_path){
         $traimgna = substr($alt,1,-1);
         $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img src="'.$owodir.'/images/smilies/'.$traimgna.'.png"></a>';
@@ -297,7 +307,8 @@ function fa_smilies_custom_button($context){
 }
 function appthemes_add_quicktags(){ ?>
 <script type="text/javascript">
-QTags.addButton( 'hr分隔', 'hr分隔', '\n\n<hr />\n\n', '' );
+QTags.addButton( 'pre', 'pre', '<pre>\n', '\n</pre>' );
+QTags.addButton( 'hr', 'hr', '\n\n<hr />\n\n', '' );
 QTags.addButton( '内容标题', '内容标题', '[title]', '[/title]' );
 QTags.addButton( '蓝色字体', '蓝色字体', '<span style="color: #0000ff;">', '</span>' );
 QTags.addButton( '红色字体', '红色字体', '<span style="color: #ff0000;">', '</span>' );
@@ -305,7 +316,7 @@ QTags.addButton( '展开/收缩', '展开/收缩', '[collapse title="标题内�
 QTags.addButton( '回复可见', '回复可见', '[hide reply_to_this="true"]', '[/hide]' );
 QTags.addButton( '本地下载', '本地下载', '[bdbtn]', '[/bdbtn]' );
 QTags.addButton( '云盘下载', '云盘下载', '[ypbtn]', '[/ypbtn]' );
-QTags.addButton( '网易云音乐', '网易云音乐', '[music  autoplay="0"]', '[/music]' );
+QTags.addButton( '网易云音乐', '网易云音乐', '[music autoplay="0"]', '[/music]' );
 QTags.addButton( '绿色背景栏', '绿色背景栏', '[success]', '[/success]' );
 QTags.addButton( '蓝色背景栏', '蓝色背景栏', '[info]', '[/info]' );
 QTags.addButton( '黄色背景栏', '黄色背景栏', '[warning]', '[/warning]' );

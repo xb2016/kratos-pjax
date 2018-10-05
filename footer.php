@@ -1,5 +1,5 @@
                 <footer>
-                    <div id="footer">
+                    <div id="footer"<?php echo ' style="background:rgba('.kratos_option('footer_color').')"'; ?>>
                         <div class="cd-tool text-center">
                             <div class="<?php if(kratos_option('cd_weixin')) echo 'gotop-box2 '; ?>gotop-box"><div class="gotop-btn"><span class="fa fa-chevron-up"></span></div></div>
                             <?php if(kratos_option('cd_weixin')) echo '<div id="wechat-img" class="wechat-img"><span class="fa fa-weixin"></span><div id="wechat-pic"><img src="'.kratos_option('weixin_image').'"></div></div>'; ?>
@@ -22,7 +22,7 @@
                                         echo (!kratos_option('social_linkedin'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_linkedin').'"><i class="fa fa-linkedin-square"></i></a>';
                                         echo (!kratos_option('social_github'))?'':'<a target="_blank" rel="nofollow" href="'.kratos_option('social_github').'"><i class="fa fa-github"></i></a>'; ?>
                                     </p>
-                                    <p> © <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved. | 本站已运行<span id=span_dt_dt>Loading...</span><br>Theme <a href="https://github.com/xb2016/kratos-pjax" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.vtrois.com" target="_blank" rel="nofollow">Vtrois</a> Modified by <a href="https://www.fczbl.vip" target="_blank" rel="nofollow">MoeDog</a>
+                                    <p> © <?php echo date('Y'); ?> <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved. | 本站已运行<span id=span_dt_dt>Loading...</span><br>Theme <a href="https://www.fczbl.vip/787.html" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.vtrois.com" target="_blank" rel="nofollow">Vtrois</a> Modified by <a href="https://www.fczbl.vip" target="_blank" rel="nofollow">MoeDog</a>
                                     <?php if(kratos_option('icp_num')) echo '<br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">'.kratos_option('icp_num').'</a>';
                                           if(kratos_option('gov_num')) echo '<br><a href="'.kratos_option('gov_link').'" rel="external nofollow" target="_blank"><i class="govimg"></i>'.kratos_option('gov_num').'</a>'; ?>
                                     </p>
@@ -33,13 +33,7 @@
                 </footer>
             </div>
         </div>
-        <?php if(kratos_option('site_girl')=='spig'&&!wp_is_mobile()){ ?>
-        <div id="spig" class="spig">
-            <div id="message">Loading...</div>
-            <div id="mumu" class="mumu"></div>
-            <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ;?>/js/spig.js"></script>
-        </div>
-        <?php }elseif(kratos_option('site_girl')=='l2d'&&!wp_is_mobile()){ ?>
+        <?php if(kratos_option('site_girl')&&!wp_is_mobile()){ ?>
         <div class="waifu">
             <div class="waifu-tips"></div>
             <canvas id="live2d" width="220" height="250" class="live2d"></canvas>

@@ -36,11 +36,15 @@
     var showlove = function(){
         $.fn.postLike = function(){
             if($(this).hasClass('done')){
-                layer.msg('您已经支持过了',function(){});
+                $("body").append('<div class="box-plugin site-notice"><div class="notice" style="animation:shake 0.5s;-webkit-animation:shake 0.5s"><span>您已经支持过了</span></div></div>');
+                $(".box-plugin").css({"display":"table"})
+                setTimeout('$(".box-plugin").remove()',1000)
                 return false;
             }else{
                 $(this).addClass('done');
-                layer.msg('感谢您的支持');
+                $("body").append('<div class="box-plugin site-notice"><div class="notice"><span>感谢您的支持</span></div></div>');
+                $(".box-plugin").fadeIn(500,function(){$(".box-plugin").css({"display":"table"})});
+                setTimeout('$(".box-plugin").fadeOut(500,function(){$(".box-plugin").remove()})',1000)
                 var id = $(this).data("id"),
                     action = $(this).data('action'),
                     rateHolder = $(this).children('.count');
@@ -74,6 +78,39 @@
             }
         });
     }
+    var showPhotos = function(){
+        $("p img").click(function(){
+            $("body").append('<div class="box-plugin"><div class="image-box-container"><img id="image-box-img"><img id="image-box-fake" onload="$(\'#image-box-img\').attr(\'src\',this.src);$(\'#image-box-loading\').hide();$(\'#image-box-img\').show();" onerror="this.src=\''+xb.thome+'/images/img-404.jpg\';" src="'+($(this).attr("data-src")||$(this).attr("src"))+'" style="display: none;"></div></div>');
+            var imgW=$(this).width(),imgH=$(this).height(),scrW=document.body.clientWidth,scrH=window.screen.availHeight;
+            var newW=$(this).width(),newH=$(this).height(),scale=imgW/imgH;
+            if(imgW>scrW){
+                newW=scrW;newH=newW/scale;
+                $(".box-plugin img").css({"height":""});
+                $(".box-plugin img").css({"width":newW});
+                if(newH>scrH){
+                    newH=scrH;newW=newH*scale;
+                    $(".box-plugin img").css({"width":""});
+                    $(".box-plugin img").css({"height":newH})
+                }
+            }else{
+                if(imgH>scrH){
+                    newH=scrH;
+                    newW=newH*scale;
+                    $(".box-plugin img").css({"width":""});
+                    $(".box-plugin img").css({"height":newH});
+                    if(newW>scrW){
+                        newW=scrW;newH=newW/scale;
+                        $(".box-plugin img").css({"height":""});
+                        $(".box-plugin img").css({"width":newW})
+                    }
+                }
+            }
+            $(".box-plugin").fadeIn(500,function(){$(".box-plugin").css({"display":"table"})});
+            $(".box-plugin img, .box-plugin, .image-box-container").bind("click",function(){
+                $(".box-plugin").fadeOut(400,function(){$(".box-plugin").remove()})
+            })
+        });
+    }
     var wechatpic = function(){
         $("#wechat-img").mouseout(function(){
             $("#wechat-pic")[0].style.display = 'none';
@@ -81,12 +118,6 @@
         $("#wechat-img").mouseover(function(){
             $("#wechat-pic")[0].style.display = 'block';
         })
-    }
-    var showPhotos = function(){
-        layer.photos({
-          photos:'.kratos-post-content',
-          anim: 0
-        });
     }
     var offcanvas = function(){
         var $clone = $('#kratos-menu-wrap').clone();
@@ -149,14 +180,11 @@
     }
     var donateConfig = function(){
         $(document).on("click",".Donate",function(){
-            layer.open({
-                type:1,
-                area:['300px', '370px'],
-                title:xb.donate,
-                resize:false,
-                scrollbar:false,
-                content:'<div class="donate-box"><div class="meta-pay text-center"><strong>'+xb.scan+'</strong></div><div class="qr-pay text-center"><img class="pay-img" id="alipay_qr" src="'+xb.alipay+'"><img class="pay-img d-none" id="wechat_qr" src="'+xb.wechat+'"></div><div class="choose-pay text-center mt-2"><input id="alipay" type="radio" name="pay-method" checked><label for="alipay" class="pay-button"><img src="'+xb.thome+'/images/alipay.png"></label><input id="wechatpay" type="radio" name="pay-method"><label for="wechatpay" class="pay-button"><img src="'+xb.thome+'/images/wechat.png"></label></div></div>'
-            });
+            $("body").append('<div class="donate-background"><div class="donate-page"><div class="donate-title"><div class="donate-t">打赏作者</div><div class="donate-c">×</div></div><div class="donate-content" style="height:328px"><div class="donate-box"><div class="meta-pay text-center"><strong>扫一扫支付</strong></div><div class="qr-pay text-center"><img class="pay-img" id="alipay_qr" src="'+xb.alipay+'"><img class="pay-img d-none" id="wechat_qr" src="'+xb.wechat+'"></div><div class="choose-pay text-center mt-2"><input id="alipay" name="pay-method" checked="" type="radio"><label for="alipay" class="pay-button"><img src="'+xb.thome+'/images/alipay.png"></label></input><input id="wechatpay" name="pay-method" type="radio"><label for="wechatpay" class="pay-button"><img src="'+xb.thome+'/images/wechat.png"></label></input></div></div></div></div></div>');
+            $(".donate-background").fadeIn(500,function(){$(".donate-background").css({"display":"table"})});
+            $(".donate-c").bind("click",function(){
+                $(".donate-background").fadeOut(400,function(){$(".donate-background").remove()})
+            })
             $(".choose-pay input[type='radio']").click(function(){
                 var id= $(this).attr("id");
                 if(id=='alipay'){$(".qr-pay #alipay_qr").removeClass('d-none');$(".qr-pay #wechat_qr").addClass('d-none')};
@@ -188,9 +216,9 @@
         shareMenu();
         showlove();
         gotop();
+        showPhotos();
         wechatpic();
         toSearch();
-        showPhotos();
         offcanvas();
         mobiClick();
         xControl();
@@ -199,6 +227,11 @@
         sidebaraffix();
     });
 }());
+
+
+
+
+
 var now = new Date();
 function createtime(){
     var grt = new Date(xb.ctime);
@@ -217,8 +250,8 @@ if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请�
 window.onload = function(){
     var now = new Date().getTime();
     var page_load_time = now-performance.timing.navigationStart;
-    console.clear();
-    console.log('项目托管:https://github.com/xb2016/kratos-pjax');
+    //console.clear();
+    console.log('项目托管:https://github.com/showrbq/kratos-alpha');
     console.log('%cwww.fczbl.vip','font-size:2em');
     console.log('%c页面加载完毕消耗了'+Math.round(performance.now()*100)/100+'ms','background:#fff;color:#333;text-shadow:0 0 2px #eee,0 0 3px #eee,0 0 3px #eee,0 0 2px #eee,0 0 3px #eee;');
 };

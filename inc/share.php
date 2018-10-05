@@ -35,7 +35,7 @@
                 <i class="fa fa-weixin"></i>
             </div>
             <div class="share-int">
-                <div class="qrcode"><img src="https://www.fczbl.vip/api/qr/?m=0&url=<?php the_permalink() ?>" width="150" height="150"></div>
+                <div class="qrcode"><img src="https://api.fczbl.vip/qr/?m=0&url=<?php the_permalink() ?>" width="150" height="150"></div>
                 <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
             </div>
         </a>

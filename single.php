@@ -12,6 +12,7 @@
                 <?php if(have_posts()){the_post();update_post_caches($posts); ?>
                 <article>
                     <div class="kratos-hentry kratos-post-inner clearfix">
+                    <?php if(!has_post_format('status')){ ?>
                         <header class="kratos-entry-header">
                             <h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
                             <div class="kratos-post-meta text-center">
@@ -53,16 +54,25 @@
                                 </div>
                             </div>
                         </footer>
+                    <?php }else{ ?>
+                        <div class="kratos-status kratos-status-post">
+                        <i class="fa fa-refresh"></i>
+                            <div class="kratos-status-inner">
+                                <header><?php the_content() ?></header>
+	                            <footer><?php echo get_the_date('Y年m月d日 H:i'); ?> • <?php comments_number('0','1','%'); ?>条评论 • <?php echo kratos_get_post_views(); ?>次阅读</footer>
+                            </div>
+                        </div>
+                    <?php } ?>
                     </div>
                     <nav class="navigation post-navigation clearfix" role="navigation">
                         <?php
-                        $prev_post = get_previous_post(TRUE);
+                        $prev_post = get_previous_post();
                         if(!empty($prev_post)){ ?>
                         <div class="nav-previous clearfix">
                             <a title="<?php echo $prev_post->post_title;?>" href="<?php echo get_permalink($prev_post->ID); ?>">&lt; 上一篇</a>
                         </div>
                         <?php }
-                        $next_post = get_next_post(TRUE);
+                        $next_post = get_next_post();
                         if(!empty($next_post)){ ?>
                         <div class="nav-next">
                             <a title="<?php echo $next_post->post_title; ?>" href="<?php echo get_permalink($next_post->ID); ?>">下一篇 &gt;</a>

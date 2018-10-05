@@ -32,7 +32,7 @@ $('.waifu-tool .fa-close').click(function(){
 });
 loadlive2d('live2d',xb.thome+'/inc/model/api.php?p=33&model=default');
 function showHitokoto(){
-    $.post("https://www.fczbl.vip/api/hitokoto/",function(result){
+    $.post("https://api.fczbl.vip/hitokoto/",function(result){
         showMessage(result);
     });
 }
