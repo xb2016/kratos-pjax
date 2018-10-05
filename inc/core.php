@@ -90,7 +90,7 @@ function kratos_theme_scripts(){
         wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
         wp_enqueue_script('OwO',$jsdir.'/js/OwO.min.js',array(),'1.0.1');
-        wp_enqueue_script('aplayer',$jsdir.'/js/aplayer.min.js',array(),'1.10.1');
+        if(kratos_option('ap_footer')) wp_enqueue_script('aplayer',$jsdir.'/js/aplayer.min.js',array(),'1.10.1');
         if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/js/pjax.min.js',array(),'0.0.7');
         wp_enqueue_script('kratos',$jsdir.'/js/kratos.js',array(),KRATOS_VERSION);
     }

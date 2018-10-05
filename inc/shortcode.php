@@ -170,7 +170,7 @@ function tudou($atts,$content=null,$code=""){
 add_shortcode('tudou','tudou');
 function vqq($atts,$content=null,$code=""){
     extract(shortcode_atts(array("auto"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="https//v.qq.com/iframe/player.html?vid=';
+    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=';
     $return .= $content;
     $return .= '&tiny=0&auto=';
     $return .= $auto;
@@ -185,20 +185,11 @@ function youtube($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('youtube','youtube');
-function pptv($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><iframe src="https://player.pptv.com/iframe/index.html#id=';
-    $return .= $content;
-    $return .= '&ctx=o%3Dv_share" allowtransparency="true" width="640" height="400" scrolling="no" frameborder="0" ></iframe></div>';
-    return $return;
-}
-add_shortcode('pptv','pptv');
 function bilibili($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="https://static.hdslb.com/miniloader.swf" flashvars="aid=';
-    extract(shortcode_atts(array("cid"=>'0'),$atts));
-    extract(shortcode_atts(array("page"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe src="//player.bilibili.com/player.html?aid=';
+	extract(shortcode_atts(array("cid"=>'0'),$atts));
+    extract(shortcode_atts(array("page"=>'1'),$atts));
+    $return = '<div class="video-container"><iframe src="https://player.bilibili.com/player.html?aid=';
     $return .= $content;
-    $return .= '&page=1" pluginspage="https://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed></div>';
     $return .= '&cid=';
     $return .= $cid;
     $return .= '&page=';
@@ -238,7 +229,6 @@ function register_button($buttons){
     array_push($buttons," ","tudou");
     array_push($buttons," ","vqq");
     array_push($buttons," ","youtube");
-    array_push($buttons," ","pptv");
     array_push($buttons," ","bilibili");
     return $buttons;
 }
@@ -267,7 +257,6 @@ function add_plugin($plugin_array){
     $plugin_array['tudou'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['vqq'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['youtube'] = get_bloginfo('template_url').'/inc/buttons/more.js';
-    $plugin_array['pptv'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['bilibili'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     return $plugin_array;
 }
@@ -328,4 +317,4 @@ QTags.addButton( '红色面板', '红色面板', '[dangerbox title="标题内容
 </script>
 <?php
 }
-add_action('admin_print_footer_scripts', 'appthemes_add_quicktags' );
+add_action('admin_print_footer_scripts', 'appthemes_add_quicktags');
