@@ -318,9 +318,6 @@ td,th{padding:0}
 .hide_notice a{color:#ff4b4b}
 .unhide{padding:8px;border:1px dashed #ff9a9a;margin-bottom:15px}
 .unhide .info{font-size:12px;color:red}
-.spig{display:block;width:130px;height:170px;position:absolute;bottom:300px;left:160px;z-index:9999}
-.spig #message{color:#191919;border:1px solid #c4c4c4;background:#ddd;-webkit-border-radius:5px;border-radius:5px;min-height:1em;padding:5px;top:-45px;position:absolute;text-align:center;width:auto!important;z-index:10000;-webkit-box-shadow:0 0 15px #eee;border-color:#eee;box-shadow:0 0 15px #eee;outline:0}
-.spig .mumu{width:130px;height:170px;cursor:url(../images/move.cur),auto;background:url(../images/spig.png) no-repeat}
 .waifu{position:fixed;left:0;top:0;width:230px;height:270px;z-index:2000;user-select:none;-webkit-user-select:none;-ms-user-select:none;-moz-user-select:none}
 .waifu-tips{opacity:0;width:220px;height:70px;margin:-20px 5px;padding:5px 7px;border:1px solid rgba(224,186,140,0.8);border-radius:12px;background-color:rgba(236,217,188,0.8);box-shadow:0 3px 15px 2px rgba(191,158,118,0.2);font-size:12px;line-height:20px;color:#555;text-overflow:ellipsis;overflow:hidden;position:absolute}
 .waifu-tool{display:none;color:#aaa;top:50px;right:0;font-size:16px;position:absolute}
@@ -351,24 +348,24 @@ td,th{padding:0}
 .nav-toggle.toon i::before{top:0;height:2px;-webkit-transform:rotateZ(45deg);transform:rotateZ(45deg)}
 .nav-toggle.toon i::after{bottom:0;height:2px;-webkit-transform:rotateZ(-45deg);transform:rotateZ(-45deg)}
 #kratos-header-section{padding:0;position:fixed;left:0;width:100%;z-index:2;background:rgba(40,42,44,.6)}
-#kratos-header-section .sf-menu>li:hover{background:rgba(120,120,120,.6)}
+#kratos-header-section .sf-menu>li:hover{background:rgba(120,120,120,.6)!important}
 #kratos-header-section .sf-menu *{list-style:none}
 #kratos-header-section .sf-menu{list-style:none;margin:0;padding:0}
 #kratos-header-section .sf-menu li{position:relative}
 #kratos-header-section .sf-menu>li{float:left;transition-property:background-color;transition-duration:.2s}
-#kratos-header-section .sf-menu li:hover>ul{display:block}
 #kratos-header-section .sub-menu{position:absolute;display:none;padding:0;background:rgba(93,93,93,.8);left:-16px;right:-16px}
 #kratos-header-section .sub-menu a{letter-spacing:0;text-transform:none;padding:10px 15px!important;line-height:20px;color:#fff!important}
 #kratos-header-section .sub-menu a:hover{background:#999}
 #kratos-header-section .sub-menu li a{text-align:center}
 #kratos-header-section .sub-menu>li>.sub-menu{left:100%;top:0;width:120px}
 #kratos-header-section .nav-header{position:relative;float:left;width:100%}
+#kratos-header-section.color-banner .sf-menu li:hover>ul{display:block}
 #kratos-header-section.color-banner .sf-menu>li>ul:after{position:absolute;top:-8px;left:49px;border-right:8px solid transparent;border-bottom:8px solid #fff;border-left:8px solid transparent;content:''}
 #kratos-header-section.color-banner .sub-menu{background:#fff;border-radius:5px;-webkit-box-shadow:0 5px 15px rgba(0,0,0,.15);box-shadow:0 5px 15px rgba(0,0,0,.15)}
 #kratos-header-section.color-banner .sub-menu a{color:#848484!important}
 #kratos-header-section.color-banner .sub-menu a:hover{background:#f2f2f2;border-radius:5px}
 #kratos-primary-menu>li>a:hover{color:#fff!important}
-#kratos-primary-menu>li>ul li{position:relative}
+#kratos-primary-menu>li>ul li{position:relative;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 #kratos-menu-wrap{float:left}
 #kratos-menu-wrap .sf-menu a{color:#fff;padding:7px 18px;font-weight:400;font-size:15px;border:none;display:block;position:relative}
 .kratos-cover,.kratos-start{position:relative;height:55px}
@@ -643,12 +640,6 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 .kratos-social-icons>a{padding:4px 14px;color:#51aded}
 .kratos-social-icons>a i{font-size:30px}
 .kratos-social-icons>a:active,.kratos-social-icons>a:focus,.kratos-social-icons>a:hover{text-decoration:none;color:#5a5a5a}
-.page404{padding:0 5%}
-.page404 .errtxt h5{color:#555}
-.page404 .back-p{margin-right:15px;padding:10px 20px;border:1px solid #51aded;background:#51aded;color:#fff;line-height:3}
-.page404 .back-p:hover{background:#489cd7;color:#fff!important}
-.page404 .back-index{margin-left:15px;padding:10px 20px;border:1px solid #f0f0f0;background-color:#fafafa;color:#767676;line-height:3}
-.page404 .back-index:hover{border-color:#0092ee;color:#0092ee}
 .linkpage ul:after{content:" ";clear:both;display:block}
 .linkpage li{float:left;width:48%;position:relative;transition:all .3s ease-out;border-radius:5px;line-height:1.3;height:90px;list-style:none}
 .linkpage h3{margin:15px -25px;padding:0 25px;border-left:5px solid #51aded;background-color:#f7f7f7;font-size:25px;line-height:40px}
@@ -744,8 +735,7 @@ h4{font-size:15px}
 .pagination li a{width:30px;padding:4px;margin-left:5px}
 #comments-nav a,#comments-nav span.current{padding:3px 8px;margin:2px}
 #archives .arc-t{width:97%}
-.waifu-tips,.waifu-tool{display:none!important}
-.waifu #live2d{left:0}
+.waifu{display:none!important}
 }
 @media(max-width:460px){
 .linkpage li{width:97%}

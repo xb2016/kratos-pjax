@@ -421,7 +421,7 @@ function user_agent_show(){
         $bcode = 'msie';
     }
     if($title&&$btitle){
-        if(kratos_option('owo_out')) $uapic = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@latest'; else $uapic = get_bloginfo('template_directory');
+        if(kratos_option('owo_out')) $uapic = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $uapic = get_bloginfo('template_directory');
         return '<div class="useragent"><img src="'.$uapic.'/images/ua/'.$bcode.'.png" style="margin-top:-5px;border:0px;vertical-align:middle;width:16px;height:16px"> '.$btitle.' <img src="'.$uapic.'/images/ua/'.$code.'.png" style="margin-top:-5px;border:0px;vertical-align:middle;width:16px;height:16px"> '.$title.' '.$version.'</div>';
     }else return null;
 }

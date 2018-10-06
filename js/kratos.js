@@ -155,7 +155,7 @@
             }
         });
     }
-    var mobiClick = function(){
+    var menus = function(){
         $(document).click(function(e){
             var container = $("#offcanvas-menu,.js-kratos-nav-toggle");
             if(!container.is(e.target)&&container.has(e.target).length===0){
@@ -165,6 +165,7 @@
                 }
             }
         });
+        $('#kratos-primary-menu li').hover(function(){$('ul',this).slideDown(200)},function(){$('ul',this).slideUp(300)});
     }
     var xControl = function(){
         $(document).on("click",".xHeading",function(event){
@@ -215,7 +216,7 @@
         sidebaraffix();
         gotop();
         offcanvas();
-        mobiClick();
+        menus();
         toSearch();
         xControl();
         showPhotos();
