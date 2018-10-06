@@ -77,7 +77,7 @@ function kratos_excerpt_more($more){return '……';}
 add_filter('excerpt_more','kratos_excerpt_more');
 //Load scripts
 function kratos_theme_scripts(){
-    $url1 = 'https://cdn.jsdelivr.net/gh/showrbq/kratos-alpha@'.KRATOS_VERSION;
+    $url1 = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION;
     $url2 = get_bloginfo('template_directory');
     if(kratos_option('js_out')) $jsdir = $url1; else $jsdir = $url2;
     if(kratos_option('owo_out')) $owodir = $url1; else $owodir = $url2;
@@ -90,9 +90,9 @@ function kratos_theme_scripts(){
         wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
         wp_enqueue_script('OwO',$jsdir.'/js/OwO.min.js',array(),'1.0.1');
+        wp_enqueue_script('kratos',$jsdir.'/js/kratos.js',array(),KRATOS_VERSION);
         if(kratos_option('ap_footer')) wp_enqueue_script('aplayer',$jsdir.'/js/aplayer.min.js',array(),'1.10.1');
         if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/js/pjax.min.js',array(),'0.0.7');
-        wp_enqueue_script('kratos',$jsdir.'/js/kratos.js',array(),KRATOS_VERSION);
     }
     if(kratos_option('site_girl')&&!wp_is_mobile()){
         wp_enqueue_script('live2d',$jsdir.'/js/live2d.js',array(),'l2d');
@@ -102,11 +102,11 @@ function kratos_theme_scripts(){
     $d2kratos = array(
          'thome'=> get_stylesheet_directory_uri(),
          'ctime'=> kratos_option('createtime'),
-        'donate'=> kratos_option('paytext_head'),
-          'scan'=> kratos_option('paytext'),
         'alipay'=> kratos_option('alipayqr_url'),
         'wechat'=> kratos_option('wechatpayqr_url'),
           'copy'=> kratos_option('copy_notice'),
+      'ajax_url'=> admin_url('admin-ajax.php'),
+         'order'=> get_option('comment_order'),
            'owo'=> $owodir,
        'site_sh'=> $site_sa_h
     );
@@ -382,20 +382,48 @@ function sig_allowed_html_tags_in_comments(){
    );
 }
 add_action('init','sig_allowed_html_tags_in_comments',10);
-//Hex2rgb
-function hex2rgb($hexColor){
-    $color=str_replace('#','',$hexColor);
-    if(strlen($color)>3){
-        $rgb=hexdec(substr($color,0,2)).','.hexdec(substr($color,2,2)).','.hexdec(substr($color,4,2));
-    }else{
-        $color=str_replace('#','',$hexColor);
-        $r=substr($color,0,1).substr($color,0,1);
-        $g=substr($color,1,1).substr($color,1,1);
-        $b=substr($color,2,1).substr($color,2,1);
-        $rgb=hexdec($r).','.hexdec($g).','.hexdec($b);
-    }
-    return $rgb;
+//Comment ajax
+function kratos_comment_err($a){
+    header('HTTP/1.0 500 Internal Server Error');
+    header('Content-Type: text/plain;charset=UTF-8');
+    echo $a;
+    exit;
 }
+function kratos_comment_callback(){
+    $comment = wp_handle_comment_submission(wp_unslash($_POST));
+    if(is_wp_error($comment)){
+        $data = $comment->get_error_data();
+        if(!empty($data)){
+            ravenclaw_comment_err($comment->get_error_message());
+        }else{
+            exit;
+        }
+    }
+    $user = wp_get_current_user();
+    do_action('set_comment_cookies',$comment,$user);
+    $GLOBALS['comment'] = $comment; ?>
+    <li <?php comment_class(); ?>>
+        <div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+            <div class="comment-author vcard">
+                <?php echo get_avatar($comment,$size='50')?>
+                <cite class="fn">
+                    <?php echo get_comment_author_link();?>
+                </cite>
+            </div>
+            <?php if('0'==$comment->comment_approved): ?>
+            <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+            <br />
+            <?php endif; ?>
+            <div class="comment-meta commentmetadata">
+                <?php echo get_comment_date('Y年n月j日 H:i'); ?>
+            </div>
+            <?php comment_text(); ?>
+        </div>
+    </li>
+    <?php die();
+}
+add_action('wp_ajax_nopriv_ajax_comment','kratos_comment_callback');
+add_action('wp_ajax_ajax_comment','kratos_comment_callback');
 //Sitemap - https://mkblog.cn
 function kratos_get_xml_sitemap(){
     ob_start();

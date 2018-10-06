@@ -186,7 +186,7 @@ function youtube($atts,$content=null,$code=""){
 }
 add_shortcode('youtube','youtube');
 function bilibili($atts,$content=null,$code=""){
-	extract(shortcode_atts(array("cid"=>'0'),$atts));
+    extract(shortcode_atts(array("cid"=>'0'),$atts));
     extract(shortcode_atts(array("page"=>'1'),$atts));
     $return = '<div class="video-container"><iframe src="https://player.bilibili.com/player.html?aid=';
     $return .= $content;
@@ -282,7 +282,7 @@ add_filter("mce_buttons_2","add_more_buttons");
 function fa_get_wpsmiliestrans(){
     global $wpsmiliestrans;
     $wpsmilies = array_unique($wpsmiliestrans);
-    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/showrbq/kratos-alpha@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
+    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
     foreach($wpsmilies as $alt => $src_path){
         $traimgna = substr($alt,1,-1);
         $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img src="'.$owodir.'/images/smilies/'.$traimgna.'.png"></a>';

@@ -309,8 +309,8 @@ td,th{padding:0}
 .xContent{display:none;border-top:1px solid #e6e6e6}
 .xContent .inner{padding:5px 15px;color:#333}
 .box-plugin,.donate-background{position:fixed;top:0;left:0;text-align:center;width:100%;height:100%;background:rgba(0,0,0,.4);z-index:9999;display:none}
-.box-plugin .image-box-container{position:absolute;top:50%;-webkit-transform:translate3D(0,-50%,0);transform:translate3D(0,-50%,0);width:100%;height:100%;text-align:center;display:-moz-box;-moz-box-align:center;-moz-box-pack:center;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;display:-ms-box;-ms-box-align:center;-ms-box-pack:center;display:box;box-align:center;box-pack:center}
-.box-plugin img{min-width:20%;max-width:100%;max-height:100%;cursor:zoom-out}
+.box-plugin .image-box-container{position:absolute;top:50%;-webkit-transform:translate3D(0,-50%,0);transform:translate3D(0,-50%,0);width:100%;height:100%;text-align:center;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;display:-ms-box;-ms-box-align:center;-ms-box-pack:center;display:box;box-align:center;box-pack:center}
+.box-plugin img{min-width:200px;max-width:100%;max-height:100%;cursor:zoom-out}
 .box-plugin.site-notice{background:0}
 .site-notice .notice{top:50%;position:absolute;width:100%}
 .site-notice span{padding:12px 25px;background-color:rgba(0,0,0,.6);color:#fff}
@@ -701,6 +701,7 @@ h4{font-size:15px}
 #kratos-header-section .sf-menu>li{flex:1}
 #kratos-menu-wrap .sf-menu i{display:none}
 #kratos-blog-post{background:#f5f5f5}
+.kratos-post-header-title{font-size:18px!important;margin:12px 20px}
 .kratos-post-meta span{font-size:9pt}
 .kratos-post-meta span i:not(:first-child){margin-left:5px}
 .kratos-post-inner-new header .label{display:none}
