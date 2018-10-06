@@ -426,16 +426,6 @@ function optionsframework_options(){
         'std'=>'0',
         'type'=>'checkbox');
     $options[] = array(
-        'name'=>'404页面-错误标题',
-        'id'=>'error_text1',
-        'std'=>'很抱歉，你访问的页面不存在',
-        'type'=>'text');
-    $options[] = array(
-        'name'=>'404页面-错误副标题',
-        'id'=>'error_text2',
-        'std'=>'可能是输入地址有误或该地址已被删除',
-        'type'=>'text');
-    $options[] = array(
         'name'=>'轮播设置',
         'type'=>'heading');
     $options[] = array(
@@ -510,7 +500,7 @@ function optionsframework_options(){
         'name'=>'发信人',
         'desc'=>'请填写发件人姓名',
         'id'=>'mail_name',
-        'std'=>'犬の窝-邮件通知',
+        'std'=>'Moe-dog Services Team',
         'type'=>'text');
     $options[] = array(
         'name'=>'邮件服务器',
@@ -546,7 +536,7 @@ function optionsframework_options(){
         'name'=>'SMTPSecure设置',
         'desc'=>'若启用SMTPAuth服务则填写ssl，若不启用则留空；office365的邮箱请填写STARTTLS',
         'id'=>'mail_smtpsecure',
-        'std'=>'ssl',
+        'std'=>'STARTTLS',
         'type'=>'text');
     $options[] = array(
         'name'=>'雪花设置',
