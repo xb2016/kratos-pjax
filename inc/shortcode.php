@@ -198,7 +198,6 @@ function bilibili($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('bilibili','bilibili');
-
 add_action('init','more_button_a');
 function more_button_a(){
    if(!current_user_can('edit_posts')&&!current_user_can('edit_pages')) return;

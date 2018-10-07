@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div id="container" class="container">
         <div class="row">
-            <?php if(kratos_option('home_side_bar')=='left_side'){ ?>
+            <?php if(kratos_option('home_side_bar')=='left_side'&&!wp_is_mobile()){ ?>
                 <aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                     <div id="sidebar" class="affix-top">
                         <?php dynamic_sidebar('sidebar_tool'); ?>
@@ -42,7 +42,7 @@
             <?php }
                 kratos_pages(3);wp_reset_query(); ?>
             </section>
-            <?php if(kratos_option('home_side_bar')=='right_side'){ ?>
+            <?php if(kratos_option('home_side_bar')=='right_side'&&!wp_is_mobile()){ ?>
             <aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar" class="affix-top">
                     <?php dynamic_sidebar('sidebar_tool'); ?>

@@ -43,10 +43,10 @@
                     <header id="kratos-header-section"<?php if(kratos_option('head_mode')!='pic') echo ' class="color-banner" style="background:rgba('.kratos_option('banner_color').')"'; ?>>
                         <div class="container">
                             <div class="nav-header">
-							    <?php if(kratos_option('head_mode')!='pic'): ?>
+                                <?php if(kratos_option('head_mode')!='pic'): ?>
                                 <div class="color-logo"><a href="<?php echo get_option('home'); ?>"><?php if(!kratos_option('banner_logo')) echo bloginfo('name'); else echo '<img src="'.kratos_option('banner_logo').'">'; ?></a></div>
                                 <?php endif; ?>
-								<?php $defaults = array('theme_location'=>'header_menu','container'=>'nav','container_id'=>'kratos-menu-wrap','menu_class'=>'sf-menu','menu_id'=>'kratos-primary-menu',);
+                                <?php $defaults = array('theme_location'=>'header_menu','container'=>'nav','container_id'=>'kratos-menu-wrap','menu_class'=>'sf-menu','menu_id'=>'kratos-primary-menu',);
                                 wp_nav_menu($defaults); ?>
                             </div>
                         </div>

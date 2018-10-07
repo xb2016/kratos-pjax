@@ -89,6 +89,7 @@ function kratos_theme_scripts(){
         wp_enqueue_style('kratos',$jsdir.'/css/kratos.min.css',array(),KRATOS_VERSION);
         wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
+        wp_enqueue_script('layer',$jsdir.'/js/layer.min.js',array(),'3.1.0');
         wp_enqueue_script('OwO',$jsdir.'/js/OwO.min.js',array(),'1.0.1');
         wp_enqueue_script('kratos',$jsdir.'/js/kratos.js',array(),KRATOS_VERSION);
         if(kratos_option('ap_footer')) wp_enqueue_script('aplayer',$jsdir.'/js/aplayer.min.js',array(),'1.10.1');
