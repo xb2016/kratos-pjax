@@ -639,7 +639,7 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 .widget_kratos_comments .comment-user{font-size:13px}
 .widget_kratos_comments .comment-avatar{float:left}
 .widget_kratos_comments .comment-avatar img{float:left;margin-right:8px;width:50px;height:50px;border-radius:50%;-webkit-box-shadow:0 .125rem 1.0625rem 0 rgba(0,0,0,.1);box-shadow:0 .125rem 1.0625rem 0 rgba(0,0,0,.1)}
-.widget_kratos_comments .comment-author{float:left;margin-right:10px;text-overflow:ellipsis;overflow:hidden;max-width:95px}
+.widget_kratos_comments .comment-author{float:left;margin-right:10px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;max-width:95px}
 .widget_kratos_comments .comment-content{font-size:14px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;width:75%}
 .widget_kratos_comments .wp-smiley{max-height:20px !important}
 .widget_archive li::before,.widget_categories li::before{font-family:fontawesome;font-size:15px}
