@@ -135,8 +135,8 @@
             }
         });
         $('#kratos-menu-wrap ul>li').hover(function(){
-            $(this).children('ul').slideDown(100)
-        },function(){$(this).children('ul').slideUp(200)});
+            $(this).children('ul').slideDown(150)
+        },function(){$(this).children('ul').stop(true,false).slideUp(200)});
     }
     var xControl = function(){
         $(document).on("click",".xHeading",function(event){

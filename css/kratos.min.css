@@ -695,10 +695,12 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 #archives .al_year:hover,#archives .al_mon:hover{cursor:url(../images/pointer.cur),auto}
 @media(max-width:1200px){
 .kratos-entry-content-new{height:80px;overflow:hidden;text-overflow:ellipsis}
-.widget{padding:10px 15px}
+.widget{padding:15px}
 .widget_kratos_about .photo-background{height:100px}
-.widget_kratos_about .textwidget{margin:10px 0}
+.widget_kratos_about .textwidget{margin:0 0 20px 0}
 .widget_kratos_ad{padding:3px}
+.widget_kratos_comments .comment-author{max-width:180px}
+.widget_kratos_comments .comment-date{display:none}
 .widget_kratos_poststab .nav-tabs>li>span{padding:4px 15px}
 .widget_kratos_poststab .list-group-item{padding:6px 0}
 }
