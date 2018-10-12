@@ -30,7 +30,7 @@ abbr[data-original-title],abbr[title]{cursor:help;border-bottom:1px dotted #777}
 address{margin-bottom:20px;font-style:normal;line-height:1.42857143}
 abbr[title]{border-bottom:1px dotted}
 article a{color:#333}
-audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline;max-width:100%}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 b,strong{font-weight:700}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
