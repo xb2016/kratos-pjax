@@ -84,7 +84,7 @@
     }
     var showPhotos = function(){
         layer.photos({
-          photos:'.kratos-post-content',
+          photos:'.kratos-post-content p,.kratos-status-post p',
           anim: 0
         });
     }
