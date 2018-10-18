@@ -607,7 +607,7 @@ function optionsframework_options(){
     $options[] = array(
         'name'=>'注册登录页面站点图标',
         'id'=>'login_logo',
-        'std'=>get_template_directory_uri().'/images/default-logo.png',
+        'std'=>'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION.'/images/default-logo.png',
         'type'=>'upload');
     $options[] = array(
         'name'=>'以下为用户注册部分的设置');

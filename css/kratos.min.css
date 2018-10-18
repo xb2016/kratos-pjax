@@ -20,7 +20,7 @@
 @keyframes rotate{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 :after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-::-webkit-selection{color:#fcfcfc;background:#262a30}::-moz-selection{color:#fcfcfc;background:#262a30}::selection{color:#fcfcfc;background:#262a30}
+::-webkit-selection{background:rgba(0,149,255,.2)}::-moz-selection{background:rgba(0,149,255,.2)}::selection{background:rgba(0,149,255,.2)}
 body::-webkit-scrollbar{width:10px}body::-webkit-scrollbar-thumb{background:#bbb}::-webkit-scrollbar-thumb:hover{background:#aaa}
 body{font-family:-apple-system,BlinkMacSystemFont,opensans,Optima,"Microsoft Yahei",sans-serif;line-height:1.8;font-size:16px;background:#f5f5f5;color:#848484;font-weight:300;cursor:url(../images/cursor.cur),default;overflow-x:hidden;margin:0}
 a{color:#51aded;text-decoration:none;-webkit-transition:.5s;transition:.5s}
@@ -459,7 +459,7 @@ td,th{padding:0}
 .kratos-post-inner-new header .label:hover{color:#fff!important}
 .kratos-post-content,.kratos-post-content-l{word-break:break-all;word-wrap:break-word;margin:10px}
 .kratos-post-content p{margin-bottom:1em;font-size:16px;color:#333}
-.kratos-post-content img,.kratos-status-post img{height:auto;max-width:100%;display:block;margin:0 auto;border-radius:2px}
+.kratos-post-content img,.kratos-status-post img{height:auto;max-width:100%;display:block}
 .kratos-post-content embed{max-width:100%}
 .kratos-entry-header{margin-bottom:15px}
 .kratos-entry-title{margin:0 0 15px;font-size:30px}
@@ -682,17 +682,22 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 .linkpage li a h4:hover{color:#51aded}
 .linkpage li a h4,.linkpage li a p{cursor:url(../images/pointer.cur),auto;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;line-height:1.4}
 .linkpage li a p{font-size:12px;color:#999;padding-left:90px}
-#archives .arc-tag{margin-bottom:15px}
+#archives .arc-tag{margin:20px 0}
 #archives .arc-tag a{-webkit-box-shadow:0 1px 4px rgba(0,0,0,.1);box-shadow:0 1px 4px rgba(0,0,0,.1);border:1px solid #fff;border-radius:15px;color:rgba(51,51,51,0.78);margin:4px 8px 0 0;font-weight:500;display:inline-block;padding:0 12px;background:rgba(255,255,255,.5);}
 #archives .arc-tag a::before{content:"# ";color:#e8a6a6}
 #archives h4{margin:5px 0}
-#archives #mon{margin:0 20px}
-#archives .al_mon{color:#444}
-#archives .arc-t{width:30%;float:left;position:relative;background:rgba(255, 253, 243, 0.8);margin:5px 15px 10px 3px;border-radius:5px;-webkit-box-shadow:0 2px 4px rgba(192,192,192,0.4);box-shadow:0 2px 4px rgba(192,192,192,0.4)}
-#archives .arc-tile{line-height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;position:relative;padding:10px 14px;-webkit-box-shadow:0 1px 4px rgba(0,0,0,.04);box-shadow:0 1px 4px rgba(0,0,0,.04);}
-#archives .arc-tile a{color:#777}
-#archives .arc-tile span{font-size:14px;float:right;color:#000}
-#archives .al_year:hover,#archives .al_mon:hover{cursor:url(../images/pointer.cur),auto}
+.posts-collapse{position:relative;margin-left:55px;z-index:0}
+.posts-collapse .collection-title{position:relative;margin:20px 0}
+.posts-collapse .collection-title h2{margin-left:20px;font-size:28px;color:#555;line-height:1.5}
+.posts-collapse .post-header{position:relative}
+.posts-collapse .post-title{margin:0 0 13px 70px;font-size:17px;line-height:inherit}
+.posts-collapse .post-title span{color:#666;-webkit-transition:.5s;transition:.5s}
+.posts-collapse .post-title span:hover{color:#333}
+.posts-collapse .post-meta{position:absolute;font-size:13px;font-weight:400;left:20px;top:3px;color:#00a7e0}
+.posts-collapse::after{content:" ";position:absolute;top:20px;left:0;margin-left:-2px;width:4px;height:calc(100% - 35px);background:#f5f5f5;z-index:-1}
+.posts-collapse .collection-title::before{content:" ";position:absolute;left:0;top:50%;margin-left:-5px;margin-top:-5px;width:10px;height:10px;background:#bbb;border-radius:50%}
+.posts-collapse .post-header::before{content:" ";position:absolute;left:0;top:12px;width:8px;height:8px;margin-left:-4px;background:#bbb;border-radius:50%;border:1px solid #fff;transition-duration:.2s;transition-timing-function:ease-in-out;transition-property:background}
+.posts-collapse .post-header:hover::before{background:#222}
 @media(max-width:1200px){
 .kratos-entry-content-new{height:80px;overflow:hidden;text-overflow:ellipsis}
 .widget{padding:15px}
@@ -747,7 +752,10 @@ h4{font-size:15px}
 .kratos-post-meta-new a{margin-right:10px}
 .downbtn{padding:9px 1pc;font-size:14px}
 .hide_notice,.info{font-size:11px}
-#archives .arc-t{width:45%}
+.posts-collapse{margin-left:15px}
+.posts-collapse .collection-title{margin:16px 0}
+.posts-collapse .collection-title h2{font-weight:800;font-size:20px}
+.posts-collapse .post-title{font-size:16px}
 }
 @media(max-width:767px){
 .visible-xs{display:block!important}

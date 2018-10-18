@@ -1,3 +1,4 @@
+//functions
 (function(){
     'use strict';
     var shareMenu = function(){
@@ -49,7 +50,7 @@
                     um_id:id,
                     um_action:action
                 };
-                $.post("/wp-admin/admin-ajax.php",ajax_data,function(data){
+                $.post(xb.ajax_url,ajax_data,function(data){
                     $(rateHolder).html(data);
                 });
                 return false;
@@ -180,10 +181,9 @@
             });
         }
     }
+    //pjax reload
     $.fn.kratos_pjax_reload = function(){
         sidebaraffix();
-        $("#searchform").animate({width:"0"},200);
-        $("#searchform input").val('');
         showPhotos();
         OwOcfg();
     }
@@ -202,6 +202,87 @@
         wechatpic();
     });
 }());
+//comment ajax
+jQuery(document).ready(function(jQuery) {
+    var __cancel = jQuery('#cancel-comment-reply-link'),
+    __cancel_text = __cancel.text(),
+    __list = 'comment-list';
+    jQuery(document).on("submit","#commentform",function(){
+        jQuery.ajax({
+            url:xb.ajax_url,
+            data:jQuery(this).serialize()+"&action=ajax_comment",
+            type:jQuery(this).attr('method'),
+            beforeSend:addComment.createButterbar("正在提交"),
+            error:function(request){
+                var t = addComment;
+                t.createButterbar(request.responseText)
+            },
+            success:function(data){
+                jQuery('textarea').each(function(){this.value = ''});
+                var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
+                if(parent!='0'){
+                    jQuery('#respond').before('<ol class="children">'+data+'</ol>')
+                }else if(!jQuery('.'+__list).length){
+                    jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
+                }else{
+                    if(xb.order=='asc'){
+                        jQuery('.'+__list).append(data)
+                    }else{
+                        jQuery('.'+__list).prepend(data)
+                    }
+                }
+                t.createButterbar("提交成功");
+                cancel.style.display = 'none';
+                cancel.onclick = null;
+                t.I('comment_parent').value = '0';
+                if(temp&&respond){
+                    temp.parentNode.insertBefore(respond,temp);
+                    temp.parentNode.removeChild(temp)
+                }
+            }
+        });
+        return false
+    });
+    addComment = {
+        moveForm:function(commId,parentId,respondId){
+            var t = this,div,comm = t.I(commId),respond = t.I(respondId),cancel = t.I('cancel-comment-reply-link'),parent = t.I('comment_parent'),post = t.I('comment_post_ID');
+            __cancel.text(__cancel_text);
+            t.respondId = respondId;
+            if(!t.I('wp-temp-form-div')){
+                div = document.createElement('div');
+                div.id = 'wp-temp-form-div';
+                div.style.display = 'none';
+                respond.parentNode.insertBefore(div,respond)
+            }!comm?(temp = t.I('wp-temp-form-div'),t.I('comment_parent').value = '0',temp.parentNode.insertBefore(respond,temp),temp.parentNode.removeChild(temp)):comm.parentNode.insertBefore(respond,comm.nextSibling);
+            jQuery("body").animate({
+                scrollTop:jQuery('#respond').offset().top-180
+            },400);
+            parent.value = parentId;
+            cancel.style.display = '';
+            cancel.onclick = function(){
+                var t = addComment,temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId);
+                t.I('comment_parent').value = '0';
+                if(temp&&respond){
+                    temp.parentNode.insertBefore(respond,temp);
+                    temp.parentNode.removeChild(temp)
+                }
+                this.style.display = 'none';
+                this.onclick = null;
+                return false
+            };
+            try{t.I('comment').focus()}catch(e){}
+            return false
+        },
+        I:function(e){
+            return document.getElementById(e)
+        },
+        createButterbar:function(message){
+            var t = this;
+            layer.msg(message)
+        }
+    }
+});
+//time
 var now = new Date();
 function createtime(){
     var grt = new Date(xb.ctime);
@@ -216,7 +297,9 @@ function createtime(){
     document.getElementById("span_dt_dt").innerHTML = dnum+"天"+hnum+"小时"+mnum+"分"+snum+"秒";
 }
 setInterval("createtime()",250);
+//copy
 if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
+//console
 window.onload = function(){
     var now = new Date().getTime();
     var page_load_time = now-performance.timing.navigationStart;

@@ -5,7 +5,7 @@ Template Name: 无标题页面模版
 get_header(); ?>
     <div id="container" class="container">
         <div class="row">
-            <?php if(kratos_option('page_side_bar')=='left_side'&&!wp_is_mobile()){ ?>
+            <?php if(kratos_option('page_side_bar')=='left_side'){ ?>
                 <aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                     <div id="sidebar" class="affix-top">
                         <?php dynamic_sidebar('sidebar_tool'); ?>
@@ -44,7 +44,7 @@ get_header(); ?>
                 </article>
             <?php } ?>
             </section>
-            <?php if(kratos_option('page_side_bar')=='right_side'&&!wp_is_mobile()){ ?>
+            <?php if(kratos_option('page_side_bar')=='right_side'){ ?>
             <aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar" class="affix-top">
                     <?php dynamic_sidebar('sidebar_tool'); ?>
@@ -52,8 +52,7 @@ get_header(); ?>
             </aside>
             <?php } ?>
         </div><?php
-        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php }
-        if(kratos_option('script_tongji')) echo '<script type="text/javascript">'.kratos_option('script_tongji').'</script>'; ?>
+        if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php } ?>
     </div>
 </div>
 <?php get_footer(); ?>

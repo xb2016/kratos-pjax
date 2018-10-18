@@ -21,7 +21,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1,maximum-scale=1">
     <meta name="format-detection" content="telphone=no,email=no">
-    <link rel="apple-touch-icon" href="<?php echo kratos_option('site_ico'); ?>">
     <link rel="icon" type="image/x-icon" href="<?php echo kratos_option('site_ico'); ?>">
     <meta name="keywords" content="<?php kratos_keywords(); ?>">
     <meta name="description" content="<?php kratos_description(); ?>">

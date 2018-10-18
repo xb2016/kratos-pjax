@@ -5,37 +5,37 @@ function user_agent_show(){
     $useragent = $comment->comment_agent;
     $title = $version = $code = null;
     if(preg_match('/iPad/i',$useragent)){
-		$title = 'iPad';
-		if(preg_match('/CPU\ OS\ ([._0-9a-zA-Z]+)/i',$useragent,$regmatch)) $version = 'iOS '.str_replace('_','.',$regmatch[1]);
-		$code = 'ipad';
-	}elseif(preg_match('/iPod/i',$useragent)){
-		$title = 'iPod';
-		if(preg_match('/iPhone\ OS\ ([._0-9a-zA-Z]+)/i',$useragent,$regmatch)) $version = 'iOS '.str_replace('_','.',$regmatch[1]);
-		$code = 'iphone';
-	}elseif(preg_match('/iPhone/i',$useragent)&&!preg_match('/Windows Phone/i',$useragent)){
-		$title = 'iPhone';
-		if(preg_match('/iPhone\ OS\ ([._0-9a-zA-Z]+)/i',$useragent,$regmatch)) $version = 'iOS '.str_replace('_', '.', $regmatch[1]);
-		$code = 'iphone';
-	}elseif(preg_match('/Windows Phone OS 7/i',$useragent)||preg_match('/ZuneWP7/i',$useragent)||preg_match('/WP7/i',$useragent)){
-		$title = 'Windows Phone';
-		$version = '7';
-		$code = 'wp7';
-	}elseif(preg_match('/Windows Phone OS 8\.1/i',$useragent)||preg_match('/Windows Phone 8\.1/i',$useragent)||preg_match('/WP8\.1/i',$useragent)){
-		$title = 'Windows Phone';
-		$version = '8.1';
-		$code = 'wp7';
-	}elseif(preg_match('/Windows Phone OS 8/i',$useragent)||preg_match('/Windows Phone 8/i',$useragent)||preg_match('/WP8/i',$useragent)){
-		$title = 'Windows Phone';
-		$version = '8';
-		$code = 'wp7';
-	}elseif(preg_match('/Windows Phone 10/i',$useragent)||preg_match('/WP10/i',$useragent)){
-		$title = 'Windows Phone';
-		$version = '10';
-		$code = 'wp10';
-	}elseif(preg_match('/wp-windowsphone/i',$useragent)){
-		$title = 'Windows Phone';
-		$code = 'windowsphone';
-	}elseif(preg_match('/Android/i',$useragent)){
+        $title = 'iPad';
+        if(preg_match('/CPU\ OS\ ([._0-9a-zA-Z]+)/i',$useragent,$regmatch)) $version = 'iOS '.str_replace('_','.',$regmatch[1]);
+        $code = 'ipad';
+    }elseif(preg_match('/iPod/i',$useragent)){
+        $title = 'iPod';
+        if(preg_match('/iPhone\ OS\ ([._0-9a-zA-Z]+)/i',$useragent,$regmatch)) $version = 'iOS '.str_replace('_','.',$regmatch[1]);
+        $code = 'iphone';
+    }elseif(preg_match('/iPhone/i',$useragent)&&!preg_match('/Windows Phone/i',$useragent)){
+        $title = 'iPhone';
+        if(preg_match('/iPhone\ OS\ ([._0-9a-zA-Z]+)/i',$useragent,$regmatch)) $version = 'iOS '.str_replace('_', '.', $regmatch[1]);
+        $code = 'iphone';
+    }elseif(preg_match('/Windows Phone OS 7/i',$useragent)||preg_match('/ZuneWP7/i',$useragent)||preg_match('/WP7/i',$useragent)){
+        $title = 'Windows Phone';
+        $version = '7';
+        $code = 'wp7';
+    }elseif(preg_match('/Windows Phone OS 8\.1/i',$useragent)||preg_match('/Windows Phone 8\.1/i',$useragent)||preg_match('/WP8\.1/i',$useragent)){
+        $title = 'Windows Phone';
+        $version = '8.1';
+        $code = 'wp7';
+    }elseif(preg_match('/Windows Phone OS 8/i',$useragent)||preg_match('/Windows Phone 8/i',$useragent)||preg_match('/WP8/i',$useragent)){
+        $title = 'Windows Phone';
+        $version = '8';
+        $code = 'wp7';
+    }elseif(preg_match('/Windows Phone 10/i',$useragent)||preg_match('/WP10/i',$useragent)){
+        $title = 'Windows Phone';
+        $version = '10';
+        $code = 'wp10';
+    }elseif(preg_match('/wp-windowsphone/i',$useragent)){
+        $title = 'Windows Phone';
+        $code = 'windowsphone';
+    }elseif(preg_match('/Android/i',$useragent)){
         $title = 'Android';
         if(preg_match('/Android[\ |\/]?([.0-9a-zA-Z]+)/i',$useragent,$regmatch)) $version = $regmatch[1];
         $code = 'android';
@@ -321,9 +321,9 @@ function user_agent_show(){
         $btitle = 'SlimBrowser';
         $bcode = 'slimbrowser';
     }elseif(preg_match('#SAMSUNG-(S.H-[a-zA-Z0-9_/.]+)#i',$useragent)){
-		$btitle = "Samsung";
-		$bcode = "samsung";
-	}elseif(preg_match('/Songbird/i',$useragent)){
+        $btitle = "Samsung";
+        $bcode = "samsung";
+    }elseif(preg_match('/Songbird/i',$useragent)){
         $btitle = 'Songbird';
         $bcode = 'songbird';
     }elseif(preg_match('/TheWorld/i',$useragent)){
