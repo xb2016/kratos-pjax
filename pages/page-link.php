@@ -17,8 +17,8 @@ get_header(); ?>
                 <article>
                     <div class="kratos-hentry kratos-post-inner clearfix">
                         <div class="kratos-post-content-l">
-                            <h2 class="title-h2" style="text-align:center;font-size:18pt">dalao们</h2>
-                            <p style="text-align:center"><span style="color:#999999">dalao们的链接，每次刷新随机排序~</span></p>
+                            <h2 class="title-h2" style="text-align:center;font-size:18pt"><?php _e('dalao们','moedog'); ?></h2>
+                            <p style="text-align:center"><span style="color:#999999"><?php _e('dalao们的链接，每次刷新随机排序~','moedog'); ?></span></p>
                             <div class="linkpage">
                                 <hr/>
                                 <ul><?php
@@ -26,7 +26,7 @@ get_header(); ?>
                                 if(!empty($bookmarks)){
                                     foreach($bookmarks as $bookmark){
                                         $friendimg = $bookmark->link_image;
-                                        if(empty($friendimg)) $friendimg = get_stylesheet_directory_uri().'/images/avatar.png';
+                                        if(empty($friendimg)) $friendimg = get_stylesheet_directory_uri().'/static/images/avatar.png';
                                         echo '<li><a href="'.$bookmark->link_url.'" target="_blank" rel="nofollow"><img src="'.$friendimg.'"><h4>'.$bookmark->link_name.'</h4><p>'.$bookmark->link_description.'</p></a></li>';
                                     }
                                 } ?>

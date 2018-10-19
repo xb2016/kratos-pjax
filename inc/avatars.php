@@ -39,20 +39,20 @@ class kratos_local_avatars{
     public function edit_user_profile($profileuser){ ?>
     <table class="form-table">
         <tr>
-            <th><label for="kratos-local-avatar">上传头像</label></th>
+            <th><label for="kratos-local-avatar"><?php _e('上传头像','moedog'); ?></label></th>
             <td style="width: 50px;" valign="top">
                 <?php echo get_avatar($profileuser->ID); ?>
             </td>
             <td><?php
                 if(kratos_option('lo_ava')||current_user_can('upload_files')){ ?>
                     <input type="file" name="kratos-local-avatar" id="kratos-local-avatar" /><br /><?php
-                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">尚未设置本地头像，请点击“浏览”按钮上传本地头像。</span>';
+                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">'.__('尚未设置本地头像，请点击“浏览”按钮上传本地头像。','moedog').'</span>';
                     else echo '
-                            <input type="checkbox" name="kratos-local-avatar-erase" value="1" /> 移除本地头像<br />
-                            <span class="description">如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头像。</span>';      
+                            <input type="checkbox" name="kratos-local-avatar-erase" value="1" /> '.__('移除本地头像','moedog').'<br />
+                            <span class="description">'.__('如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头像。','moedog').'</span>';      
                 }else{
-                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">尚未设置本地头像，请在 Gravatar.com 网站设置头像。</span>';
-                    else echo '<span class="description">你没有本地头像上传权限，如需要修改本地头像，请联系站点管理员。</span>';
+                    if(empty($profileuser->kratos_local_avatar)) echo '<span class="description">'.__('尚未设置本地头像，请在 Gravatar.com 网站设置头像。','moedog').'</span>';
+                    else echo '<span class="description">'.__('你没有本地头像上传权限，如需要修改本地头像，请联系站点管理员。','moedog').'</span>';
                 } ?>
             </td>
         </tr>
@@ -70,14 +70,14 @@ class kratos_local_avatars{
             );
             if(!function_exists('wp_handle_upload')) require_once(ABSPATH.'wp-admin/includes/file.php');
             $this->avatar_delete($user_id);
-            if(strstr($_FILES['kratos-local-avatar']['name'],'.php')) wp_die('.php不能出现在文件名中！');
+            if(strstr($_FILES['kratos-local-avatar']['name'],'.php')) wp_die(__('.php不能出现在文件名中！','moedog'));
             $this->user_id_being_edited = $user_id;
             $avatar = wp_handle_upload($_FILES['kratos-local-avatar'],array('mimes'=>$mimes,'test_form'=>false,'unique_filename_callback'=>array($this,'unique_filename_callback')));
             if(empty($avatar['file'])){
                 switch($avatar['error']){
                     case 'File type does not meet security guidelines. Try another.':
-                        add_action('user_profile_update_errors',create_function('$a','$a->add("avatar_error",请上传jpg,gif,png,bmp,tif格式文件！");'));break;
-                    default: add_action('user_profile_update_errors',create_function('$a','$a->add("avatar_error","<strong>上传头像过程中出现以下错误：</strong> '.esc_attr($avatar['error']).'");'));
+                        add_action('user_profile_update_errors',create_function('$a','$a->add("avatar_error",'.__('请上传jpg,gif,png,bmp,tif格式文件！','moedog').'");'));break;
+                    default: add_action('user_profile_update_errors',create_function('$a','$a->add("avatar_error","<strong>'.__('上传头像过程中出现以下错误：','moedog').'</strong> '.esc_attr($avatar['error']).'");'));
                 }
                 return;
             }

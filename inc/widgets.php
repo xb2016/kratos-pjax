@@ -7,7 +7,7 @@ function most_comm_posts($days=30,$nums=5){
     $result = $wpdb->get_results("SELECT comment_count,ID,post_title,post_date FROM $wpdb->posts WHERE post_date BETWEEN '$daysago' AND '$today' and post_type='post' and post_status='publish' ORDER BY comment_count DESC LIMIT 0 ,$nums");
     $output = '';
     if(empty($result)){
-        $output = '<li>暂时没有数据</li>';
+        $output = '<li>'.__('暂时没有数据','moedog').'</li>';
     }else{
         foreach($result as $topten){
             $postid = $topten->ID;
@@ -29,15 +29,15 @@ function most_comm_posts($days=30,$nums=5){
 function timeago($ptime){
     $ptime = strtotime($ptime);
     $etime = time()-$ptime;
-    if($etime<1) return'刚刚';
+    if($etime<1) return __('刚刚','moedog');
     $interval = array(
-        12*30*24*60*60 => ' 年前 ('.date('m月d日',$ptime).')',
-        30*24*60*60 => ' 个月前 ('.date('m月d日',$ptime).')',
-        7*24*60*60 => ' 周前 ('.date('m月d日',$ptime).')',
-        24*60*60 => ' 天前 ('.date('m月d日',$ptime).')',
-        60*60 => ' 小时前 ('.date('m月d日',$ptime).')',
-        60 => ' 分钟前 ('.date('m月d日',$ptime).')',
-        1 => ' 秒前 ('.date('m月d日',$ptime).')',
+        12*30*24*60*60 => __(' 年前','moedog').' ('.date(__('m月d日','moedog'),$ptime).')',
+        30*24*60*60 => __(' 个月前','moedog').' ('.date(__('m月d日','moedog'),$ptime).')',
+        7*24*60*60 => __(' 周前','moedog').' ('.date(__('m月d日','moedog'),$ptime).')',
+        24*60*60 => __(' 天前','moedog').' ('.date(__('m月d日','moedog'),$ptime).')',
+        60*60 => __(' 小时前','moedog').' ('.date(__('m月d日','moedog'),$ptime).')',
+        60 => __(' 分钟前','moedog').' ('.date(__('m月d日','moedog'),$ptime).')',
+        1 => __(' 秒前','moedog').' ('.date(__('m月d日','moedog'),$ptime).')',
     );
     foreach($interval as $secs=>$str){
         $d=$etime/$secs;
@@ -71,7 +71,7 @@ function kratos_string_cut($string, $sublen, $start = 0, $code = 'UTF-8') {
 }
 function kratos_widgets_init(){
     register_sidebar(array(
-        'name'=>'侧边栏工具',
+        'name'=>__('侧边栏工具','moedog'),
         'id'=>'sidebar_tool',
         'before_widget'=>'<aside id="%1$s" class="widget %2$s clearfix">',
         'after_widget'=>'</aside>',
@@ -99,8 +99,8 @@ class kratos_widget_ad extends WP_Widget {
     function __construct() {
         $widget_ops = array(
             'classname'  => 'widget_kratos_ad',
-            'name'       => '广告位',
-            'description'=> 'Kratos主题特色组件 - 广告位'
+            'name'       => __('广告位','moedog'),
+            'description'=> __('Kratos主题特色组件 - 广告位','moedog')
         );
         parent::__construct(false,false,$widget_ops);
     }
@@ -128,20 +128,17 @@ class kratos_widget_ad extends WP_Widget {
         @$aurl = esc_attr($instance['aurl']);
         @$imgurl = esc_attr($instance['imgurl']); ?>
             <p>
-                <label for="<?php echo $this->get_field_id('title'); ?>">
-                    标题：
+                <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('标题(可留空)：','moedog'); ?>
                     <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
                 </label>
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id('aurl'); ?>">
-                    链接：
+                <label for="<?php echo $this->get_field_id('aurl'); ?>"><?php _e('链接：','moedog'); ?>
                     <input class="widefat" id="<?php echo $this->get_field_id('aurl'); ?>" name="<?php echo $this->get_field_name('aurl'); ?>" type="text" value="<?php echo $aurl; ?>" />
                 </label>
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id('imgurl'); ?>">
-                    图片：
+                <label for="<?php echo $this->get_field_id('imgurl'); ?>"><?php _e('图片：','moedog'); ?>
                     <input class="widefat" id="<?php echo $this->get_field_id('imgurl'); ?>" name="<?php echo $this->get_field_name('imgurl'); ?>" type="text" value="<?php echo $imgurl; ?>" />
                 </label>
             </p><?php
@@ -151,8 +148,8 @@ class kratos_widget_about extends WP_Widget {
     function __construct() {
         $widget_ops = array(
             'classname'  => 'widget_kratos_about',
-            'name'       => '个人简介',
-            'description'=> 'Kratos主题特色组件 - 个人简介'
+            'name'       => __('个人简介','moedog'),
+            'description'=> __('Kratos主题特色组件 - 个人简介','moedog')
         );
         parent::__construct(false,false,$widget_ops);
     }
@@ -164,7 +161,7 @@ class kratos_widget_about extends WP_Widget {
         echo $before_widget;
         if(!is_home()) $redirect = get_permalink(); else $redirect = get_bloginfo('home');?>
         <div class="photo-background">
-            <div class="photo-background" style="background:url(<?php if(!empty($bkimgurl)) echo $bkimgurl; else echo bloginfo('template_url')."/images/about.jpg"; ?>) no-repeat center center;-webkit-background-size:cover;background-size:cover"></div>
+            <div class="photo-background" style="background:url(<?php if(!empty($bkimgurl)) echo $bkimgurl; else echo bloginfo('template_url')."/static/images/about.jpg"; ?>) no-repeat center center;-webkit-background-size:cover;background-size:cover"></div>
         </div>
         <?php if(current_user_can('manage_options')){ ?>
         <div class="photo-wrapper clearfix">
@@ -175,14 +172,14 @@ class kratos_widget_about extends WP_Widget {
         <div class="textwidget">
             <div class="widget-admin text-center">
                 <p>
-                    <a href="<?php echo admin_url('/post-new.php'); ?>"><i class="fa fa-pencil"></i> 撰写文章 </a>
-                    <a class="widget-admin-center" href="<?php echo admin_url('/post-new.php?post_type=page'); ?>"><i class="fa fa-plus"></i> 新建页面 </a>
-                    <a href="<?php echo admin_url('/edit-comments.php'); ?>"><i class="fa fa-comments"></i> 查看评论</a>
+                    <a href="<?php echo admin_url('/post-new.php'); ?>"><i class="fa fa-pencil"></i> <?php _e('撰写文章','moedog'); ?> </a>
+                    <a class="widget-admin-center" href="<?php echo admin_url('/post-new.php?post_type=page'); ?>"><i class="fa fa-plus"></i> <?php _e('新建页面','moedog'); ?> </a>
+                    <a href="<?php echo admin_url('/edit-comments.php'); ?>"><i class="fa fa-comments"></i> <?php _e('查看评论','moedog'); ?></a>
                 </p>
                 <p>
-                    <a href="<?php echo admin_url('/options-general.php'); ?>"><i class="fa fa-cogs"></i> 站点设置 </a>
-                    <a class="widget-admin-center" href="<?php echo admin_url('/themes.php?page=kratos'); ?>"><i class="fa fa-cog"></i> 主题设置 </a>
-                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fa fa-sign-out"></i> 退出登录</a>
+                    <a href="<?php echo admin_url('/options-general.php'); ?>"><i class="fa fa-cogs"></i> <?php _e('站点设置','moedog'); ?> </a>
+                    <a class="widget-admin-center" href="<?php echo admin_url('/themes.php?page=kratos'); ?>"><i class="fa fa-cog"></i> <?php _e('主题设置','moedog'); ?> </a>
+                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fa fa-sign-out"></i> <?php _e('退出登录','moedog'); ?></a>
                 </p>
             </div>
         </div>
@@ -195,16 +192,16 @@ class kratos_widget_about extends WP_Widget {
         <div class="textwidget">
             <div class="widget-admin text-center">
                 <p>
-                    <a href="<?php echo admin_url('/profile.php'); ?>"><i class="fa fa-pencil"></i> 个人资料 </a>
-                    <a href="<?php echo admin_url('/'); ?>"><i class="fa fa-dashboard"></i> 仪表盘 </a>
-                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fa fa-sign-out"></i> 退出登录</a>
+                    <a href="<?php echo admin_url('/profile.php'); ?>"><i class="fa fa-pencil"></i> <?php _e('个人资料','moedog'); ?> </a>
+                    <a href="<?php echo admin_url('/'); ?>"><i class="fa fa-dashboard"></i> <?php _e('仪表盘','moedog'); ?> </a>
+                    <a href="<?php echo wp_logout_url($redirect); ?>"><i class="fa fa-sign-out"></i> <?php _e('退出登录','moedog'); ?></a>
                 </p>
             </div>
         </div>
         <?php }else{ ?>
         <div class="photo-wrapper clearfix">
             <div class="photo-wrapper-tip text-center">
-                <a href="<?php echo wp_login_url($redirect); ?>" rel="nofollow"><img class="about-photo" src="<?php if(!empty($imgurl)) echo $imgurl; else echo bloginfo('template_url')."/images/photo.jpg"; ?>" alt=""/></a>
+                <a href="<?php echo wp_login_url($redirect); ?>" rel="nofollow"><img class="about-photo" src="<?php if(!empty($imgurl)) echo $imgurl; else echo bloginfo('template_url')."/static/images/photo.jpg"; ?>" alt=""/></a>
             </div>
         </div>
         <div class="textwidget">
@@ -219,20 +216,17 @@ class kratos_widget_about extends WP_Widget {
         @$bkimgurl = esc_attr($instance['bkimgurl']);
         @$profile = esc_attr($instance['profile']); ?>
         <p>
-            <label for="<?php echo $this->get_field_id('imgurl'); ?>">
-                头像地址：
+            <label for="<?php echo $this->get_field_id('imgurl'); ?>"><?php _e('头像地址：','moedog'); ?>
                 <input class="widefat" id="<?php echo $this->get_field_id('imgurl'); ?>" name="<?php echo $this->get_field_name('imgurl'); ?>" type="text" value="<?php echo $imgurl; ?>" />
             </label>
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('profile'); ?>">
-                简介内容：
+            <label for="<?php echo $this->get_field_id('profile'); ?>"><?php _e('简介内容：','moedog'); ?>
                 <textarea class="widefat" rows="4" id="<?php echo $this->get_field_id('profile'); ?>" name="<?php echo $this->get_field_name('profile'); ?>" ><?php echo $profile; ?></textarea>
             </label>
         </p> 
         <p>
-            <label for="<?php echo $this->get_field_id('bkimgurl'); ?>">
-                卡片背景：
+            <label for="<?php echo $this->get_field_id('bkimgurl'); ?>"><?php _e('卡片背景：','moedog'); ?>
                 <input class="widefat" id="<?php echo $this->get_field_id('bkimgurl'); ?>" name="<?php echo $this->get_field_name('bkimgurl'); ?>" type="text" value="<?php echo $bkimgurl; ?>" />
             </label>
         </p><?php 
@@ -241,8 +235,8 @@ class kratos_widget_about extends WP_Widget {
 class kratos_widget_tags extends WP_Widget {
     function __construct() {
         $widget_ops = array(
-            'name'       => '标签聚合',
-            'description'=> 'Kratos主题特色组件 - 标签聚合'
+            'name'       => __('标签聚合','moedog'),
+            'description'=> __('Kratos主题特色组件 - 标签聚合','moedog')
         );
         parent::__construct(false,false,$widget_ops);
     }
@@ -284,31 +278,31 @@ class kratos_widget_tags extends WP_Widget {
     }
     function form($instance){
         global $wpdb;
-        $instance = wp_parse_args((array) $instance,array('title'=>'标签聚合','number'=>'20','orderby'=>'count','order'=>'RAND'));
+        $instance = wp_parse_args((array) $instance,array('title'=>__('标签聚合','moedog'),'number'=>'20','orderby'=>'count','order'=>'RAND'));
         $title =  esc_attr($instance['title']);
         $number = intval($instance['number']);
         $orderby =  esc_attr($instance['orderby']);
         $order =  esc_attr($instance['order']); ?>
         <p>
-            <label for='<?php echo $this->get_field_id("title"); ?>'>标题：<input type='text' class='widefat' name='<?php echo $this->get_field_name("title"); ?>' id='<?php echo $this->get_field_id("title"); ?>' value="<?php echo $title; ?>"/></label>
+            <label for='<?php echo $this->get_field_id("title"); ?>'><?php _e('标题：','moedog'); ?><input type='text' class='widefat' name='<?php echo $this->get_field_name("title"); ?>' id='<?php echo $this->get_field_id("title"); ?>' value="<?php echo $title; ?>"/></label>
         </p>
         <p>
-            <label for='<?php echo $this->get_field_id("number"); ?>'>数量：<input type='text' name='<?php echo $this->get_field_name("number"); ?>' id='<?php echo $this->get_field_id("number"); ?>' value="<?php echo $number; ?>"/></label>
+            <label for='<?php echo $this->get_field_id("number"); ?>'><?php _e('数量：','moedog'); ?><input type='text' name='<?php echo $this->get_field_name("number"); ?>' id='<?php echo $this->get_field_id("number"); ?>' value="<?php echo $number; ?>"/></label>
         </p>
         <p>
-            <label for='<?php echo $this->get_field_id("orderby"); ?>'>类型：
+            <label for='<?php echo $this->get_field_id("orderby"); ?>'><?php _e('类型：','moedog'); ?>
                 <select name="<?php echo $this->get_field_name("orderby"); ?>" id='<?php echo $this->get_field_id("orderby"); ?>'>
-                    <option value="count" <?php echo ($orderby=='count')?'selected':''; ?>>数量</option>
-                    <option value="name" <?php echo ($orderby=='name')?'selected':''; ?>>名字</option>
+                    <option value="count" <?php echo ($orderby=='count')?'selected':''; ?>><?php _e('数量','moedog'); ?></option>
+                    <option value="name" <?php echo ($orderby=='name')?'selected':''; ?>><?php _e('名字','moedog'); ?></option>
                 </select>
             </label>
         </p>
         <p>
-            <label for='<?php echo $this->get_field_id("order"); ?>'>排序：
+            <label for='<?php echo $this->get_field_id("order"); ?>'><?php _e('排序：','moedog'); ?>
                 <select name="<?php echo $this->get_field_name("order"); ?>" id='<?php echo $this->get_field_id("order"); ?>'>
-                    <option value="DESC" <?php echo ($order=='DESC')?'selected':''; ?>>降序</option>
-                    <option value="ASC" <?php echo ($order=='ASC')?'selected':''; ?>>升序</option>
-                    <option value="RAND" <?php echo ($order=='RAND')?'selected':''; ?>>随机</option>
+                    <option value="DESC" <?php echo ($order=='DESC')?'selected':''; ?>><?php _e('降序','moedog'); ?></option>
+                    <option value="ASC" <?php echo ($order=='ASC')?'selected':''; ?>><?php _e('升序','moedog'); ?></option>
+                    <option value="RAND" <?php echo ($order=='RAND')?'selected':''; ?>><?php _e('随机','moedog'); ?></option>
                 </select>
             </label>
         </p>
@@ -319,8 +313,8 @@ class kratos_widget_posts extends WP_Widget {
     function __construct() {
         $widget_ops = array(
             'classname'  => 'kratos_widget_posts',
-            'name'       => '文章聚合',
-            'description'=> 'Kratos主题特色组件 - 文章聚合'
+            'name'       => __('文章聚合','moedog'),
+            'description'=> __('Kratos主题特色组件 - 文章聚合','moedog')
         );
         parent::__construct(false,false,$widget_ops);
     }
@@ -330,14 +324,14 @@ class kratos_widget_posts extends WP_Widget {
         $number = (!empty($instance['number']))?intval($instance['number']):5; ?>
         <aside class="widget widget_kratos_poststab">
             <ul id="tabul" class="nav nav-tabs nav-justified visible-lg">
-                <li class="active"><span href="#newest" data-toggle="tab">最新文章</span></li>
-                <li><span href="#hot" data-toggle="tab">热点文章</span></li>
-                <li><span href="#rand" data-toggle="tab">随机文章</span></li>
+                <li class="active"><span href="#newest" data-toggle="tab"><?php _e('最新文章','moedog'); ?></span></li>
+                <li><span href="#hot" data-toggle="tab"><?php _e('热点文章','moedog'); ?></span></li>
+                <li><span href="#rand" data-toggle="tab"><?php _e('随机文章','moedog'); ?></span></li>
             </ul>
             <ul id="tabul" class="nav nav-tabs nav-justified visible-md">
-                <li class="active"><span href="#newest" data-toggle="tab">最新</span></li>
-                <li><span href="#hot" data-toggle="tab">热点</span></li>
-                <li><span href="#rand" data-toggle="tab">随机</span></li>
+                <li class="active"><span href="#newest" data-toggle="tab"><?php _e('最新','moedog'); ?></span></li>
+                <li><span href="#hot" data-toggle="tab"><?php _e('热点','moedog'); ?></span></li>
+                <li><span href="#rand" data-toggle="tab"><?php _e('随机','moedog'); ?></span></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="newest">
@@ -379,7 +373,7 @@ class kratos_widget_posts extends WP_Widget {
         $instance = wp_parse_args((array) $instance,array('number'=>'5'));
         $number = intval($instance['number']); ?>
         <p>
-            <label for='<?php echo $this->get_field_id("number"); ?>'>每项展示数量：<input type='text' name='<?php echo $this->get_field_name("number"); ?>' id='<?php echo $this->get_field_id("number"); ?>' value="<?php echo $number; ?>"/></label>
+            <label for='<?php echo $this->get_field_id("number"); ?>'><?php _e('每项展示数量：','moedog'); ?><input type='text' name='<?php echo $this->get_field_name("number"); ?>' id='<?php echo $this->get_field_id("number"); ?>' value="<?php echo $number; ?>"/></label>
         </p>
         <input type="hidden" id="<?php echo $this->get_field_id('submit'); ?>" name="<?php echo $this->get_field_name('submit'); ?>" value="1" /><?php
     }
@@ -388,8 +382,8 @@ class kratos_widget_comments extends WP_Widget {
     function __construct() {
         $widget_ops = array(
             'classname'  => 'widget_kratos_comments',
-            'name'       => '最近评论',
-            'description'=> 'Kratos主题特色组件 - 最近评论'
+            'name'       => __('最近评论','moedog'),
+            'description'=> __('Kratos主题特色组件 - 最近评论','moedog')
         );
         parent::__construct(false,false,$widget_ops);
     }
@@ -430,17 +424,15 @@ class kratos_widget_comments extends WP_Widget {
         return $instance;
     }
     public function form($instance){
-        $title = !empty($instance['title'])?$instance['title']:'最近评论';
+        $title = !empty($instance['title'])?$instance['title']:__('最近评论','moedog');
         $number = !empty($instance['number'])?absint($instance['number']):5; ?>
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>">
-                标题：
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('标题：','moedog'); ?>
                 <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
             </label>
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('number'); ?>">
-                显示数量：
+            <label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('显示数量：','moedog'); ?>
                 <input class="tiny-text" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="number" step="1" min="1" max="99" value="<?php echo $number; ?>" size="3" />
             </label>
         </p><?php

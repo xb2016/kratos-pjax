@@ -26,15 +26,15 @@ class Options_Framework_Media_Uploader {
 		if ( $value ) {
 			$class = ' has-file';
 		}
-		$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('No file chosen', 'theme-textdomain') .'" />' . "\n";
+		$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('未选择任何文件', 'moedog') .'" />' . "\n";
 		if ( function_exists( 'wp_enqueue_media' ) ) {
 			if ( ( $value == '' ) ) {
-				$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'theme-textdomain' ) . '" />' . "\n";
+				$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( '上传', 'moedog' ) . '" />' . "\n";
 			} else {
-				$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( 'Remove', 'theme-textdomain' ) . '" />' . "\n";
+				$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( '移除', 'moedog' ) . '" />' . "\n";
 			}
 		} else {
-			$output .= '<p><i>' . __( 'Upgrade your version of WordPress for full media support.', 'theme-textdomain' ) . '</i></p>';
+			$output .= '<p><i>' . __( '请更新您的 WordPress 版本以获取完整的媒体文件支持。', 'moedog' ) . '</i></p>';
 		}
 		if ( $_desc != '' ) {
 			$output .= '<span class="of-metabox-desc">' . $_desc . '</span>' . "\n";
@@ -51,7 +51,7 @@ class Options_Framework_Media_Uploader {
 					$title = $parts[$i];
 				}
 				$output .= '';
-				$title = __( 'View File', 'theme-textdomain' );
+				$title = __( '查看文件', 'moedog' );
 				$output .= '<div class="no-image"><span class="file_link"><a href="' . $value . '" target="_blank" rel="external">'.$title.'</a></span></div>';
 			}
 		}
@@ -67,8 +67,8 @@ class Options_Framework_Media_Uploader {
 		wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_DIRECTORY .'js/media-uploader.js', array( 'jquery' ), Options_Framework::VERSION );
 		wp_enqueue_script( 'of-media-uploader' );
 		wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
-			'upload' => __( 'Upload', 'theme-textdomain' ),
-			'remove' => __( 'Remove', 'theme-textdomain' )
+			'upload' => __( '上传', 'moedog' ),
+			'remove' => __( '移除', 'moedog' )
 		) );
 	}
 }

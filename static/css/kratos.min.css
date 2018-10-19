@@ -759,7 +759,7 @@ h4{font-size:15px}
 }
 @media(max-width:767px){
 .visible-xs{display:block!important}
-.hidden-xs{display:none!important}	
+.hidden-xs{display:none!important}
 }
 @media(max-width:530px){
 .container{padding:0}

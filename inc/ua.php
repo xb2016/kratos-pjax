@@ -422,7 +422,7 @@ function user_agent_show(){
     }
     if($title&&$btitle){
         if(kratos_option('owo_out')) $uapic = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $uapic = get_bloginfo('template_directory');
-        return '<div class="useragent"><img src="'.$uapic.'/images/ua/'.$bcode.'.png" style="margin-top:-5px;border:0px;vertical-align:middle;width:16px;height:16px"> '.$btitle.' <img src="'.$uapic.'/images/ua/'.$code.'.png" style="margin-top:-5px;border:0px;vertical-align:middle;width:16px;height:16px"> '.$title.' '.$version.'</div>';
+        return '<div class="useragent"><img src="'.$uapic.'/static/images/ua/'.$bcode.'.png" style="margin-top:-5px;border:0px;vertical-align:middle;width:16px;height:16px"> '.$btitle.' <img src="'.$uapic.'/static/images/ua/'.$code.'.png" style="margin-top:-5px;border:0px;vertical-align:middle;width:16px;height:16px"> '.$title.' '.$version.'</div>';
     }else return null;
 }
 function user_agent_display_comment(){

@@ -11,7 +11,7 @@ function kratos_photo_thumbnail(){
         if($n>0){ 
             echo '<img src="'.$strResult[1][0].'" class="img-responsive" />';  
         }else {
-            echo '<img src="'.get_bloginfo('template_url').'/images/thumb/thumb_1.jpg" class="img-responsive" />';  
+            echo '<img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_1.jpg" class="img-responsive" />';  
         }  
     }  
 }
@@ -44,7 +44,7 @@ function kratos_blog_thumbnail_new(){
             echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" /></a>';
         }else if(!kratos_option('default_image')){
             $random = mt_rand(1,20);
-            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/images/thumb/thumb_'.$random.'.jpg" /></a>';
+            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_'.$random.'.jpg" /></a>';
         }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'" /></a>';
     }
 }
@@ -75,8 +75,8 @@ add_action('admin_post_add_external_media_without_import','admin_post_add_extern
 function add_submenu(){
     add_submenu_page(
         'upload.php',
-        '从URL添加',
-        '从URL添加',
+        __('从URL添加','moedog'),
+        __('从URL添加','moedog'),
         'manage_options',
         'add-from-url',
         'print_submenu_page'
@@ -87,13 +87,13 @@ function post_upload_ui(){
     wp_enqueue_script('emwi',get_template_directory_uri().'/inc/theme-options/js/media.js');
     $media_library_mode = get_user_option('media_library_mode',get_current_user_id()); ?>
     <div id="emwi-in-upload-ui">
-      <div class="row1">或</div>
+      <div class="row1"><?php _e('或','moedog'); ?></div>
       <div class="row2">
         <?php if('grid' === $media_library_mode): ?>
-          <button id="emwi-show" class="button button-large">从URL导入</button>
+          <button id="emwi-show" class="button button-large"><?php _e('从URL导入','moedog'); ?></button>
           <?php print_media_new_panel( true ); ?>
         <?php else : ?>
-          <a class="button button-large" href="<?php echo esc_url(admin_url('/upload.php?page=add-from-url')); ?>">从URL导入</a>
+          <a class="button button-large" href="<?php echo esc_url(admin_url('/upload.php?page=add-from-url')); ?>"><?php _e('从URL导入','moedog'); ?></a>
         <?php endif; ?>
       </div>
     </div><?php
@@ -108,29 +108,29 @@ function print_media_new_panel($is_in_upload_ui){
     wp_enqueue_script('emwi',get_template_directory_uri().'/inc/theme-options/js/media.js'); ?>
     <div id="emwi-media-new-panel" <?php if($is_in_upload_ui): ?>style="display:none"<?php endif; ?>>
       <div class="url-row">
-        <label>从URL添加媒体项目</label>
+        <label><?php _e('从URL添加媒体项目','moedog'); ?></label>
         <span id="emwi-url-input-wrapper">
           <input id="emwi-url" name="url" type="url" required placeholder="Image URL" value="<?php echo esc_url($_GET['url']); ?>">
         </span>
       </div>
       <div id="emwi-hidden" <?php if($is_in_upload_ui||empty($_GET['error'])): ?>style="display: none"<?php endif; ?>>
-        <div><span id="emwi-error"><?php echo esc_html($_GET['error']); ?></span>请手动指定图像大小与格式</div>
+        <div><span id="emwi-error"><?php echo esc_html($_GET['error']); ?></span><?php _e('请手动指定图像大小与格式','moedog'); ?></div>
         <div id="emwi-properties">
-          <label>宽</label>
+          <label><?php _e('宽','moedog'); ?></label>
           <input id="emwi-width" name="width" type="number" value="<?php echo esc_html($_GET['width']); ?>">
-          <label>高</label>
+          <label><?php _e('高','moedog'); ?></label>
           <input id="emwi-height" name="height" type="number" value="<?php echo esc_html($_GET['height']); ?>">
-          <label>MIME类型</label>
+          <label><?php _e('MIME类型','moedog'); ?></label>
           <input id="emwi-mime-type" name="mime-type" type="text" value="<?php echo esc_html($_GET['mime-type']); ?>">
         </div>
       </div>
       <div id="emwi-buttons-row">
         <input type="hidden" name="action" value="add_external_media_without_import">
         <span class="spinner"></span>
-        <input type="button" id="emwi-clear" class="button" value="清除">
-        <input type="submit" id="emwi-add" class="button button-primary" value="添加">
+        <input type="button" id="emwi-clear" class="button" value="<?php _e('清除','moedog'); ?>">
+        <input type="submit" id="emwi-add" class="button button-primary" value="<?php _e('添加','moedog'); ?>">
         <?php if($is_in_upload_ui): ?>
-          <input type="button" id="emwi-cancel" class="button" value="取消">
+          <input type="button" id="emwi-cancel" class="button" value="<?php _e('取消','moedog'); ?>">
         <?php endif; ?>
       </div>
     </div><?php
@@ -141,7 +141,7 @@ function wp_ajax_add_external_media_without_import(){
         if($attachment = wp_prepare_attachment_for_js($info['id'])){
             wp_send_json_success($attachment);
         }else{
-            $info['error'] = '相关JS加载失败';
+            $info['error'] = __('相关JS加载失败','moedog');
             wp_send_json_error($info);
         }
     }else{
@@ -171,13 +171,13 @@ function sanitize_and_validate_input(){
     $width_str = $input['width'];
     $width_int = intval($width_str);
     if(!empty($width_str)&&$width_int<=0){
-        $input['error'] = '图像大小不合法';
+        $input['error'] = __('图像大小不合法','moedog');
         return $input;
     }
     $height_str = $input['height'];
     $height_int = intval($height_str);
     if(!empty($height_str)&&$height_int<=0){
-        $input['error'] = '图像大小不合法';
+        $input['error'] = __('图像大小不合法','moedog');
         return $input;
     }
     $input['width'] = $width_int;
@@ -200,7 +200,7 @@ function add_external_media_without_import(){
                     $input['mime-type'] = $response['headers']['content-type'];
                 }
             }
-            $input['error'] = '无法获取图像大小';
+            $input['error'] = __('无法获取图像大小','moedog');
             return $input;
         }
         if(empty($width)) $width = $image_size[0];

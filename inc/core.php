@@ -17,14 +17,14 @@ if(!function_exists('optionsframework_init')){
 }
 function kratos_options_menu_filter($menu){
   $menu['mode'] = 'menu';
-  $menu['page_title'] = '主题设置';
-  $menu['menu_title'] = '主题设置';
+  $menu['page_title'] = __('主题设置','moedog');
+  $menu['menu_title'] = __('主题设置','moedog');
   $menu['menu_slug'] = 'kratos';
   return $menu;
 }
 add_filter('optionsframework_menu','kratos_options_menu_filter');
 //The menu navigation registration
-function kratos_register_nav_menu(){register_nav_menus(array('header_menu'=>'顶部菜单'));}
+function kratos_register_nav_menu(){register_nav_menus(array('header_menu'=>__('顶部菜单','moedog')));}
 add_action('after_setup_theme','kratos_register_nav_menu');
 //Highlighting the active menu
 function kratos_active_menu_class($classes){
@@ -81,23 +81,23 @@ function kratos_theme_scripts(){
     $url2 = get_bloginfo('template_directory');
     if(kratos_option('js_out')) $jsdir = $url1; else $jsdir = $url2;
     if(kratos_option('owo_out')) $owodir = $url1; else $owodir = $url2;
-    if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $url2.'/css/font-awesome.min.css';
-    if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $url2.'/js/jquery.min.js';
-    if(kratos_option('bs_url')) $bsdir = kratos_option('bs_url'); else $bsdir = $url2.'/js/bootstrap.min.js';
+    if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $url2.'/static/css/font-awesome.min.css';
+    if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $url2.'/static/js/jquery.min.js';
+    if(kratos_option('bs_url')) $bsdir = kratos_option('bs_url'); else $bsdir = $url2.'/static/js/bootstrap.min.js';
     if(!is_admin()){
         wp_enqueue_style('fontawe',$fadir,array(),'4.7.0');
-        wp_enqueue_style('kratos',$jsdir.'/css/kratos.min.css',array(),KRATOS_VERSION);
+        wp_enqueue_style('kratos',$jsdir.'/static/css/kratos.min.css',array(),KRATOS_VERSION);
         wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
-        wp_enqueue_script('layer',$jsdir.'/js/layer.min.js',array(),'3.1.0');
-        wp_enqueue_script('OwO',$jsdir.'/js/OwO.min.js',array(),'1.0.1');
-        wp_enqueue_script('kratos',$jsdir.'/js/kratos.js',array(),KRATOS_VERSION);
-        if(kratos_option('ap_footer')) wp_enqueue_script('aplayer',$jsdir.'/js/aplayer.min.js',array(),'1.10.1');
-        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/js/pjax.min.js',array(),'0.0.7');
+        wp_enqueue_script('layer',$jsdir.'/static/js/layer.min.js',array(),'3.1.0');
+        wp_enqueue_script('OwO',$jsdir.'/static/js/OwO.min.js',array(),'1.0.1');
+        wp_enqueue_script('kratos',$jsdir.'/static/js/kratos.js',array(),KRATOS_VERSION);
+        if(kratos_option('ap_footer')) wp_enqueue_script('aplayer',$jsdir.'/static/js/aplayer.min.js',array(),'1.10.1');
+        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/static/js/pjax.min.js',array(),'0.0.7');
     }
     if(kratos_option('site_girl')&&!wp_is_mobile()){
-        wp_enqueue_script('live2d',$jsdir.'/js/live2d.js',array(),'l2d');
-        wp_enqueue_script('waifu',$jsdir.'/js/waifu-tips.js',array(),'1.3');
+        wp_enqueue_script('live2d',$jsdir.'/static/js/live2d.js',array(),'l2d');
+        wp_enqueue_script('waifu',$jsdir.'/static/js/waifu-tips.js',array(),'1.3');
     }
     if(kratos_option('site_sa')&&!wp_is_mobile()){if(kratos_option('head_mode')=='pic') $site_sa_h = 61; else $site_sa_h = 103;}
     $d2kratos = array(
@@ -196,6 +196,11 @@ add_filter('nav_menu_css_class','my_css_attributes_filter',100,1);
 add_filter('nav_menu_item_id','my_css_attributes_filter',100,1);
 add_filter('page_css_class','my_css_attributes_filter',100,1);
 function my_css_attributes_filter($var){return is_array($var)?array_intersect($var,array('current-menu-item','current-post-ancestor','current-menu-ancestor','current-menu-parent')):'';}
+//Languages
+function kratos_theme_languages(){
+  load_theme_textdomain('moedog',get_template_directory().'/languages');
+}
+add_action('after_setup_theme','kratos_theme_languages');
 //Add article type
 add_theme_support('post-formats',array('status'));
 //Keywords Description set
@@ -217,7 +222,7 @@ function kratos_description(){
         if(get_the_excerpt()){echo get_the_excerpt();}
         else{global $post;$description = trim(str_replace(array("\r\n","\r","\n","　"," ")," ",str_replace("\"","'",strip_tags(do_shortcode($post->post_content)))));echo mb_substr($description,0,220,'utf-8');}
     }
-    elseif(is_search()){echo '“';the_search_query();echo '”为您找到结果 ';global $wp_query;echo $wp_query->found_posts;echo ' 个';}
+    elseif(is_search()){echo '“';the_search_query();global $wp_query;echo '”'.sprintf(__('为您找到结果 %s 个','moedog'),$wp_query->found_posts);}
     elseif(is_tag()){$description = strip_tags(tag_description());echo trim($description);}
     else{$description = strip_tags(term_description());echo trim($description);}
 }
@@ -338,11 +343,11 @@ function insert_last_login($login){
 }
 add_filter('manage_users_columns','add_user_additional_column');
 function add_user_additional_column($columns){
-    $columns['user_nickname'] = '昵称';
-    $columns['user_url'] = '网站';
-    $columns['reg_time'] = '注册时间';
-    $columns['last_login'] = '上次登录';
-    $columns['last_login_ip'] = '登录IP';
+    $columns['user_nickname'] = __('昵称','moedog');
+    $columns['user_url'] = __('网站','moedog');
+    $columns['reg_time'] = __('注册时间','moedog');
+    $columns['last_login'] = __('上次登录','moedog');
+    $columns['last_login_ip'] = __('登录IP','moedog');
     unset($columns['name']);
     return $columns;
 }
@@ -412,11 +417,11 @@ function kratos_comment_callback(){
                 </cite>
             </div>
             <?php if('0'==$comment->comment_approved): ?>
-            <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+            <em class="comment-awaiting-moderation"><?php _e('您的评论正在等待审核。','moedog') ?></em>
             <br />
             <?php endif; ?>
             <div class="comment-meta commentmetadata">
-                <?php echo get_comment_date('Y年n月j日 H:i'); ?>
+                <?php echo get_comment_date();echo get_comment_date(' H:i'); ?>
             </div>
             <?php comment_text(); ?>
         </div>
@@ -491,7 +496,7 @@ function kratos_get_html_sitemap(){
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta name="description" content="<?php bloginfo('name'); ?>站点地图">
     <meta name="keywords" content="<?php bloginfo('name'); ?>,站点地图,sitemap">
-    <title><?php bloginfo('name'); ?> | 站点地图</title>
+    <title><?php bloginfo('name'); ?> | <?php _e('站点地图','moedog'); ?></title>
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
     <style>
@@ -558,7 +563,7 @@ function kratos_get_html_sitemap(){
     <?php endif; ?>
 </div><!-- .container -->
 <footer class="page-footer">
-    最后更新于 <?php echo get_lastpostdate('blog'); ?>
+    <?php _e('最后更新于','moedog'); ?> <?php echo get_lastpostdate('blog'); ?>
     <!-- 本页基于 mk-sitemap 插件 - https://mkblog.cn/ -->
 </footer>
 </body>

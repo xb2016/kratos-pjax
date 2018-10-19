@@ -14,30 +14,30 @@
                 elseif(is_category()){
             if(kratos_option('show_head_cat')){ ?>
                 <div class="kratos-hentry clearfix">
-                    <h1 class="kratos-post-header-title">分类：<?php echo single_cat_title('',false); ?></h1>
+                    <h1 class="kratos-post-header-title"><?php _e('分类：','moedog');echo single_cat_title('',false); ?></h1>
                     <h1 class="kratos-post-header-title"><?php echo category_description(); ?></h1>
                 </div>    
             <?php }
                 }elseif(is_tag()){
             if(kratos_option('show_head_tag')){ ?>
                 <div class="kratos-hentry clearfix">
-                    <h1 class="kratos-post-header-title">标签：<?php echo single_cat_title('',false); ?></h1>
+                    <h1 class="kratos-post-header-title"><?php _e('标签：','moedog');echo single_cat_title('',false); ?></h1>
                     <h1 class="kratos-post-header-title"><?php echo category_description(); ?></h1>
                 </div>
             <?php }
                 }elseif(is_search()){ ?>
                 <div class="kratos-hentry clearfix">
-                    <h1 class="kratos-post-header-title">搜索结果：<?php the_search_query(); ?></h1>
+                    <h1 class="kratos-post-header-title"><?php _e('搜索结果：','moedog');the_search_query(); ?></h1>
                 </div>                
             <?php }
                 if(have_posts()){
                     while(have_posts()){
                         the_post();
-                        get_template_part('content',get_post_format());
+                        get_template_part('/inc/content-templates/content',get_post_format());
                     }
                 }else{ ?>
             <div class="kratos-hentry clearfix">
-                    <h1 class="kratos-post-header-title">很抱歉，没有找到任何内容。</h1>
+                    <h1 class="kratos-post-header-title"><?php _e('很抱歉，没有找到任何内容。','moedog'); ?></h1>
             </div>
             <?php }
                 kratos_pages(3);wp_reset_query(); ?>

@@ -162,31 +162,31 @@ function of_sanitize_font_face( $value ) {
 add_filter( 'of_font_face', 'of_sanitize_font_face' );
 function of_recognized_background_repeat() {
 	$default = array(
-		'no-repeat' => __( 'No Repeat', 'theme-textdomain' ),
-		'repeat-x'  => __( 'Repeat Horizontally', 'theme-textdomain' ),
-		'repeat-y'  => __( 'Repeat Vertically', 'theme-textdomain' ),
-		'repeat'    => __( 'Repeat All', 'theme-textdomain' ),
+		'no-repeat' => __( '不重复', 'moedog' ),
+		'repeat-x'  => __( '水平重复', 'moedog' ),
+		'repeat-y'  => __( '垂直重复', 'moedog' ),
+		'repeat'    => __( '全部重复', 'moedog' ),
 		);
 	return apply_filters( 'of_recognized_background_repeat', $default );
 }
 function of_recognized_background_position() {
 	$default = array(
-		'top left'      => __( 'Top Left', 'theme-textdomain' ),
-		'top center'    => __( 'Top Center', 'theme-textdomain' ),
-		'top right'     => __( 'Top Right', 'theme-textdomain' ),
-		'center left'   => __( 'Middle Left', 'theme-textdomain' ),
-		'center center' => __( 'Middle Center', 'theme-textdomain' ),
-		'center right'  => __( 'Middle Right', 'theme-textdomain' ),
-		'bottom left'   => __( 'Bottom Left', 'theme-textdomain' ),
-		'bottom center' => __( 'Bottom Center', 'theme-textdomain' ),
-		'bottom right'  => __( 'Bottom Right', 'theme-textdomain')
+		'top left'      => __( '上部左边', 'moedog' ),
+		'top center'    => __( '上部中间', 'moedog' ),
+		'top right'     => __( '上部右边', 'moedog' ),
+		'center left'   => __( '中部左边', 'moedog' ),
+		'center center' => __( '中部中间', 'moedog' ),
+		'center right'  => __( '中部右边', 'moedog' ),
+		'bottom left'   => __( '下部左边', 'moedog' ),
+		'bottom center' => __( '下部中间', 'moedog' ),
+		'bottom right'  => __( '下部右边', 'moedog')
 		);
 	return apply_filters( 'of_recognized_background_position', $default );
 }
 function of_recognized_background_attachment() {
 	$default = array(
-		'scroll' => __( 'Scroll Normally', 'theme-textdomain' ),
-		'fixed'  => __( 'Fixed in Place', 'theme-textdomain')
+		'scroll' => __( '正常滚动', 'moedog' ),
+		'fixed'  => __( '固定', 'moedog')
 		);
 	return apply_filters( 'of_recognized_background_attachment', $default );
 }
@@ -218,10 +218,10 @@ function of_recognized_font_faces() {
 }
 function of_recognized_font_styles() {
 	$default = array(
-		'normal'      => __( 'Normal', 'theme-textdomain' ),
-		'italic'      => __( 'Italic', 'theme-textdomain' ),
-		'bold'        => __( 'Bold', 'theme-textdomain' ),
-		'bold italic' => __( 'Bold Italic', 'theme-textdomain' )
+		'normal'      => __( '常规', 'moedog' ),
+		'italic'      => __( '斜体', 'moedog' ),
+		'bold'        => __( '粗体', 'moedog' ),
+		'bold italic' => __( '斜粗体', 'moedog' )
 		);
 	return apply_filters( 'of_recognized_font_styles', $default );
 }

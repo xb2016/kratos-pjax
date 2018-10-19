@@ -18,7 +18,7 @@
             <div class="text">
                 <h1>404</h1>
                 <h2>Not Found</h2>
-                <p>欸？我的萝莉怎么不见了？！</p>
+                <p><?php _e('欸？我的萝莉怎么不见了？！','moedog'); ?></p>
             </div>
         </div>
         <div class="footer">

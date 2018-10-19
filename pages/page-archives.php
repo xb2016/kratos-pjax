@@ -21,7 +21,7 @@ while($the_query->have_posts()):
         $year = $year_tmp;
         $output .= '<div class="collection-title"><h2 class="archive-year" id="archive-year-'.$year.'">'.$year.'</h2></div>';
     }
-    $output .= '<article class="post post-type-normal" itemtype="http://schema.org/Article"><header class="post-header"><h2 class="post-title"><a class="post-title-link" href="'.get_permalink().'" itemprop="url"><span itemprop="name">'.get_the_title().'</span></a></h2><div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="'.get_the_time().'" content="'.get_the_time('y-m-d').'">'.get_the_time('m-d').'</time></div></header></article>';
+    $output .= '<article class="post post-type-normal" itemtype="http://schema.org/Article"><header class="post-header"><h2 class="post-title"><a class="post-title-link" href="'.get_permalink().'" itemprop="url"><span itemprop="name">'.get_the_title().'</span></a></h2><div class="post-meta"><time class="post-time" itemprop="dateCreated">'.get_the_time('m-d').'</time></div></header></article>';
 endwhile;
 get_header(); ?>
     <div id="container" class="container">
@@ -39,15 +39,15 @@ get_header(); ?>
                     <div class="kratos-hentry kratos-post-inner clearfix">
                         <div class="kratos-post-content">
                             <div id="archives">
-                                <h2 class="title-h2" style="text-align:center;font-size:18pt">文章归档</h2>
-                                <p style="text-align:center"><span style="color:#999">当前共有<?php echo wp_count_posts()->publish; ?>篇公开日志，<?php echo wp_count_posts('page')->publish; ?>个公开页面。 (゜-゜)つロ 干杯~</span></p>
+                                <h2 class="title-h2" style="text-align:center;font-size:18pt"><?php _e('文章归档','moedog'); ?></h2>
+                                <p style="text-align:center"><span style="color:#999"><?php _e('当前共有','moedog');echo wp_count_posts()->publish;_e('篇公开日志，','moedog');echo wp_count_posts('page')->publish;_e('个公开页面。 (゜-゜)つロ 干杯~','moedog'); ?></span></p>
                             <hr/>
-                                <h4>Tags</h4>
+                                <h4><?php _e('Tags','moedog'); ?></h4>
                                 <div class="arc-tag">
                                 <?php echo $arc_tags; ?>
                                 </div>
                             <hr/>
-                                <h4>Archives</h4>
+                                <h4><?php _e('Archives','moedog'); ?></h4>
                                 <div id="posts" class="posts-collapse">
                                 <?php echo $output; ?>
                                 </div>
@@ -57,9 +57,9 @@ get_header(); ?>
                         <?php if(kratos_option('page_like_donate')||kratos_option('page_share')){ ?>
                         <footer class="kratos-entry-footer clearfix">
                             <div class="post-like-donate text-center clearfix" id="post-like-donate"><?php
-                                if(kratos_option('page_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>';
+                                if(kratos_option('page_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> '.__('打赏','moedog').'</a>';
                                 if(kratos_option('page_share')){
-                                    echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i> 分享</a>';
+                                    echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i> '.__('分享','moedog').'</a>';
                                     require_once(get_template_directory().'/inc/share.php');
                                 } ?>
                             </div>
