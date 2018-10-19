@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kratos-pjax\n"
 "POT-Creation-Date: 2018-10-20 00:40+0800\n"
-"PO-Revision-Date: 2018-10-20 00:42+0800\n"
+"PO-Revision-Date: 2018-10-19 20:18+0100\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language: en_US\n"
@@ -23,77 +23,74 @@ msgstr ""
 
 #: 404.php:21
 msgid "欸？我的萝莉怎么不见了？！"
-msgstr "Sorry, the page you visited does not exist"
+msgstr "Sorry, the page you’re looking for can’t be found."
 
 #: comments.php:9 inc/post.php:163
 msgid "上一页"
-msgstr "Page Up"
+msgstr "Previous"
 
 #: comments.php:9 inc/post.php:192
 msgid "下一页"
-msgstr "Page Down"
+msgstr "Next"
 
 #: comments.php:14 inc/core.php:346 inc/logincfg.php:46
 msgid "昵称"
-msgstr "Nickname"
+msgstr "Name"
 
 #: comments.php:15
 msgid "邮箱"
-msgstr "E-mail"
+msgstr "Email"
 
 #: comments.php:16 inc/core.php:347
 msgid "网站"
-msgstr "Website"
+msgstr "URL"
 
 #: comments.php:23
 msgid "电子邮件地址不会被公开。必填项已用 * 标注"
 msgstr ""
-"E-mail addresses will not be made public.The required items are marked with *"
+"Your Email address will not be published. All fields with a '*' are required."
 
 #: comments.php:24
 msgid "|´・ω・)ノ还不快点说点什么呀poi~"
-msgstr "|´・ω・)ノJust write down what you want to say~"
+msgstr "|´・ω・)ノAdd a comment..."
 
 #: footer.php:25
 msgid "本站已运行"
-msgstr "Survived for "
+msgstr "Already running for "
 
 #: inc/avatars.php:42
 msgid "上传头像"
-msgstr "Upload Avatar"
+msgstr "Upload Profile Photo"
 
 #: inc/avatars.php:49
 msgid "尚未设置本地头像，请点击“浏览”按钮上传本地头像。"
 msgstr ""
-"You haven't set up your local avatar, click the \"browse\" button to upload "
-"your local avatar."
+"You haven't set up your profile photo, click the \"browse\" button to upload your "
+"profile Photo."
 
 #: inc/avatars.php:51
 msgid "移除本地头像"
-msgstr "Remove the local avatar"
+msgstr "Remove the profile photo"
 
 #: inc/avatars.php:52
 msgid ""
-"如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本"
-"地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头"
-"像。"
+"如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本地头"
+"像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头像。"
 msgstr ""
-"If you need to change your local avatar, please upload your avatar again. To "
-"remove a local avatar, select the \"Remove local avatar\" box above and "
-"update your profile. <br/> After you remove a local avatar, we'll use your "
-"Gravatar."
+"If you need to change your profile photo, please re-upload your profile photo. To "
+"remove a profile photo, select the \"Remove profile photo\" box above then update "
+"your profile. <br/> After you remove the profile photo, we'll use your Gravatar "
+"instead."
 
 #: inc/avatars.php:54
 msgid "尚未设置本地头像，请在 Gravatar.com 网站设置头像。"
-msgstr ""
-"If you haven't set up your local avatar now, please set your avatar on "
-"gravatar.com."
+msgstr "If you haven't set up your profile photo, please set it up on gravatar.com."
 
 #: inc/avatars.php:55
 msgid "你没有本地头像上传权限，如需要修改本地头像，请联系站点管理员。"
 msgstr ""
-"You don't have the permission to upload local avatar, if you need to modify "
-"the local avatar, please contact the site admin."
+"You don't have the permission to upload profile photo, if you need to modify the "
+"profile photo, please contact the site admin."
 
 #: inc/avatars.php:73
 msgid ".php不能出现在文件名中！"
@@ -105,32 +102,32 @@ msgstr "Please upload jpg,gif,png,bmp,tif format file!"
 
 #: inc/avatars.php:80
 msgid "上传头像过程中出现以下错误："
-msgstr "The following error occurred during the upload of Avatar:"
+msgstr "The following error has occurred when uploading the profile photo:"
 
-#: inc/content-templates/content-status.php:6
-#: inc/content-templates/content.php:15 inc/content-templates/content.php:45
-#: inc/single-templates/single-status.php:16 inc/single-templates/single.php:17
+#: inc/content-templates/content-status.php:6 inc/content-templates/content.php:15
+#: inc/content-templates/content.php:45 inc/single-templates/single-status.php:16
+#: inc/single-templates/single.php:17
 msgid "条评论"
 msgstr " Comments"
 
-#: inc/content-templates/content-status.php:6
-#: inc/content-templates/content.php:18 inc/content-templates/content.php:48
-#: inc/single-templates/single-status.php:16 inc/single-templates/single.php:18
+#: inc/content-templates/content-status.php:6 inc/content-templates/content.php:18
+#: inc/content-templates/content.php:48 inc/single-templates/single-status.php:16
+#: inc/single-templates/single.php:18
 msgid "次阅读"
 msgstr " Views"
 
 #: inc/content-templates/content.php:8 inc/content-templates/content.php:36
 msgid "—置顶"
-msgstr " - Sticky"
+msgstr " - Top"
 
 #: inc/content-templates/content.php:19 inc/content-templates/content.php:49
 #: inc/single-templates/single.php:20
 msgid "人点赞"
-msgstr " Stars"
+msgstr " Likes"
 
 #: inc/content-templates/content.php:53
 msgid "阅读全文"
-msgstr "Read All"
+msgstr "Read more"
 
 #: inc/core.php:20 inc/core.php:21
 #: inc/theme-options/includes/class-options-framework-admin.php:26
@@ -141,7 +138,7 @@ msgstr "Theme Settings"
 
 #: inc/core.php:27
 msgid "顶部菜单"
-msgstr "Top Menu"
+msgstr "Top Menu Bar"
 
 #: inc/core.php:225
 #, php-format
@@ -162,7 +159,7 @@ msgstr "Login IP"
 
 #: inc/core.php:420
 msgid "您的评论正在等待审核。"
-msgstr "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting review."
 
 #: inc/core.php:499 options.php:33
 msgid "站点地图"
@@ -170,7 +167,7 @@ msgstr "Site Map"
 
 #: inc/core.php:566
 msgid "最后更新于"
-msgstr "Last updated on "
+msgstr "Latest update on "
 
 #: inc/imgcfg.php:78 inc/imgcfg.php:79
 msgid "从URL添加"
@@ -218,11 +215,11 @@ msgstr "Cancel"
 
 #: inc/imgcfg.php:144
 msgid "相关JS加载失败"
-msgstr "Related JS load failed"
+msgstr "Related Javascript fails to load"
 
 #: inc/imgcfg.php:174 inc/imgcfg.php:180
 msgid "图像大小不合法"
-msgstr "Image size is not legal"
+msgstr "The image size is inappropriate"
 
 #: inc/imgcfg.php:203
 msgid "无法获取图像大小"
@@ -242,15 +239,15 @@ msgstr "Repeat Password"
 
 #: inc/logincfg.php:63
 msgid "人机验证："
-msgstr "Verification: "
+msgstr "Captcha: "
 
 #: inc/logincfg.php:71
 msgid "<strong>错误</strong>：昵称一栏不能为空。"
-msgstr "<strong> ERROR </strong>: The nickname cannot be empty."
+msgstr "<strong> ERROR </strong>: The name cannot be empty."
 
 #: inc/logincfg.php:72
 msgid "<strong>错误</strong>：两次输入的密码不一致。"
-msgstr "<strong> ERROR </strong>: The password doesn't match."
+msgstr "<strong> ERROR </strong>: Those passwords didn't match."
 
 #: inc/logincfg.php:73
 msgid "<strong>错误</strong>：密码长度必须大于8位。"
@@ -258,7 +255,7 @@ msgstr "<strong> ERROR </strong>: Password length must be greater than 8."
 
 #: inc/logincfg.php:74
 msgid "<strong>错误</strong>：验证码错误，请重试。"
-msgstr "<strong> ERROR </strong>: The captcha is wrong, please try again."
+msgstr "<strong> ERROR </strong>: Captcha failed, please try again."
 
 #: inc/logincfg.php:248
 #, php-format
@@ -272,7 +269,7 @@ msgstr "%d minutes"
 
 #: inc/logincfg.php:256
 msgid "登录失败次数过多"
-msgstr "Login failed too many times"
+msgstr "Login failure too many times"
 
 #: inc/logincfg.php:257
 #, php-format
@@ -282,7 +279,7 @@ msgstr "Number of failed logins: %d, ip: %s"
 #: inc/logincfg.php:260
 #, php-format
 msgid "最后一次尝试登录的用户名：%s"
-msgstr "User name last attempted login: %s"
+msgstr "User name last attempted to login: %s"
 
 #: inc/logincfg.php:263
 #, php-format
@@ -291,7 +288,7 @@ msgstr "This IP has been blocked, block duration: %s"
 
 #: inc/logincfg.php:270
 msgid "<strong>错误</strong>：登录失败次数过多，"
-msgstr "<strong> ERROR </strong>: Too many logon failures, "
+msgstr "<strong> ERROR </strong>: Too many login failures, "
 
 #: inc/logincfg.php:272
 msgid "请稍候再试。"
@@ -309,11 +306,10 @@ msgstr "please try again in %d minutes."
 
 #: inc/logincfg.php:292
 #, php-format
-msgid ""
-"<strong>错误</strong>：账号或密码有误，您还有<strong>%d</strong>次尝试机会。"
+msgid "<strong>错误</strong>：账号或密码有误，您还有<strong>%d</strong>次尝试机会。"
 msgstr ""
-"<strong> ERROR </strong>: Incorrect user name or password, you have <strong>"
-"%d</strong> attempts."
+"<strong> ERROR </strong>: Incorrect user name or password, you have <strong>%d</"
+"strong> attempts."
 
 #: inc/post.php:58
 msgid "这是一篇受保护的文章，请输入阅读密码！"
@@ -329,7 +325,7 @@ msgstr "Submit"
 
 #: inc/post.php:162
 msgid "首页"
-msgstr "First Page"
+msgstr "Home Page"
 
 #: inc/post.php:193
 msgid "尾页"
@@ -345,7 +341,7 @@ msgstr "Local Download"
 
 #: inc/shortcode.php:48 inc/shortcode.php:306
 msgid "云盘下载"
-msgstr "Cloud Disk Download"
+msgstr "Cloud Drive Download"
 
 #: inc/shortcode.php:81 inc/shortcode.php:115 inc/shortcode.php:125
 #: inc/shortcode.php:135 inc/shortcode.php:145 inc/shortcode.php:303
@@ -357,20 +353,19 @@ msgstr "Title"
 #: inc/shortcode.php:101
 #, php-format
 msgid ""
-"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本文发表评论才能阅读隐"
-"藏内容"
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本文发表评论才能阅读隐藏内容"
 msgstr ""
-"Please <a Href= \"%s\" rel= \"nofollow\" > login </a> and post a comment in "
-"this article to read the hidden content"
+"Please <a href= \"%s\" rel= \"nofollow\" > login </a> and post a comment in this "
+"article to read the hidden content"
 
 #: inc/shortcode.php:108
 #, php-format
 msgid ""
-"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本站任一文章发表评论才"
-"能阅读隐藏内容"
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本站任一文章发表评论才能阅读"
+"隐藏内容"
 msgstr ""
-"Please <a Href= \"%s\" rel= \"nofollow\" > login </a> and post a comment in "
-"any article to read the hidden content"
+"Please <a Href= \"%s\" rel= \"nofollow\" > login </a> and post a comment in any "
+"article to read the hidden content"
 
 #: inc/shortcode.php:110
 msgid "以下为隐藏内容："
@@ -378,7 +373,7 @@ msgstr "The following are hidden content:"
 
 #: inc/shortcode.php:293
 msgid "添加表情"
-msgstr "Add Emoticons"
+msgstr "Add Emoji"
 
 #: inc/shortcode.php:300
 msgid "内容标题"
@@ -398,7 +393,7 @@ msgstr "Expand/Shrink"
 
 #: inc/shortcode.php:304
 msgid "回复可见"
-msgstr "Reply to see"
+msgstr "Reply to read"
 
 #: inc/shortcode.php:307
 msgid "网易云音乐"
@@ -447,10 +442,10 @@ msgstr "Next"
 #: inc/single-templates/single.php:31 page.php:21 pages/page-notitle.php:22
 msgid ""
 "本作品采用 <a rel=\"license nofollow\" target=\"_blank\" href=\"http://"
-"creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0 国际"
-"许可协议</a> 进行许可"
+"creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0 国际许可协"
+"议</a> 进行许可"
 msgstr ""
-"This work is licensed under a <a rel=\"license nofollow\" target=\"_blank\" "
+"This work is released under the <a rel=\"license nofollow\" target=\"_blank\" "
 "href=\"http://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons "
 "Attribution-ShareAlike 4.0 International License</a>"
 
@@ -461,7 +456,7 @@ msgstr "Donate"
 
 #: inc/single-templates/single.php:37
 msgid "点赞"
-msgstr "Star"
+msgstr "Like"
 
 #: inc/single-templates/single.php:39 page.php:29 pages/page-archives.php:62
 #: pages/page-notitle.php:30
@@ -479,8 +474,8 @@ msgstr "[Notice] Your comment has been approved"
 #: inc/smtp.php:40
 msgid "您有一条留言通过了管理员的审核并显示在文章页面，摘要信息请见下表。"
 msgstr ""
-"You have a comment passed the admin's review and displayed in the article "
-"page, summary information please see the following table."
+"You have a comment passed the admin's review and displayed in the article page, "
+"please see the following table for summary information."
 
 #: inc/smtp.php:44
 msgid "文章"
@@ -509,8 +504,7 @@ msgstr "[Notice] Your comment has a new reply"
 #: inc/smtp.php:90
 msgid "您有一条留言有了新的回复，摘要信息请见下表。"
 msgstr ""
-"Your comment have a new reply, summary information please see the table "
-"below."
+"Your comment has a new reply, please see the table below for summary information."
 
 #: inc/smtp.php:94
 msgid "原文"
@@ -536,7 +530,7 @@ msgstr "Password Reset Notification"
 #, php-format
 msgid "有人要求重设您在[%s]的密码，若不是您本人请求，请忽略本邮件。"
 msgstr ""
-"Someone required to reset your password in [%s], if you do not request it, "
+"Someone required to reset your password in [%s], if you haven't requested it, "
 "ignore this message."
 
 #: inc/smtp.php:133
@@ -557,7 +551,7 @@ msgstr "Password Reset Address"
 
 #: inc/smtp.php:133 inc/smtp.php:149
 msgid "单击访问"
-msgstr "Click To Access"
+msgstr "Click to Access"
 
 #: inc/smtp.php:133 inc/smtp.php:144 inc/smtp.php:149
 msgid "如果您的账号有异常，请您在第一时间和我们取得联系哦~"
@@ -588,8 +582,8 @@ msgstr "The password you set"
 #, php-format
 msgid "欢迎您注册[%s]，请使用下面的信息登录并修改密码！"
 msgstr ""
-"Welcome to register for [%s], please use the information below to sign in "
-"and change your password."
+"Welcome to register for [%s], please use the information below to sign in and "
+"change your password."
 
 #: inc/smtp.php:149
 msgid "您的注册信息"
@@ -613,19 +607,19 @@ msgstr "Save Settings"
 
 #: inc/theme-options/includes/class-options-framework-admin.php:83
 msgid "恢复默认"
-msgstr "Restore Default"
+msgstr "Reset to default"
 
 #: inc/theme-options/includes/class-options-framework-admin.php:83
 msgid "您是否要恢复默认设置？"
-msgstr "Do you want to restore the default settings?"
+msgstr "Do you want to reset to the default settings?"
 
 #: inc/theme-options/includes/class-options-framework-admin.php:95
 msgid "恢复默认设置成功"
-msgstr "Restore Default Settings Successfully"
+msgstr "Reset successful"
 
 #: inc/theme-options/includes/class-options-framework-admin.php:124
 msgid "保存成功"
-msgstr "Saved Successfully"
+msgstr "Save successful"
 
 #: inc/theme-options/includes/class-options-media-uploader.php:29
 msgid "未选择任何文件"
@@ -643,7 +637,7 @@ msgstr "Remove"
 
 #: inc/theme-options/includes/class-options-media-uploader.php:37
 msgid "请更新您的 WordPress 版本以获取完整的媒体文件支持。"
-msgstr "Please update your WordPress version for full media support."
+msgstr "Please update your WordPress version for a full media support."
 
 #: inc/theme-options/includes/class-options-media-uploader.php:54
 msgid "查看文件"
@@ -651,7 +645,7 @@ msgstr "View Files"
 
 #: inc/theme-options/includes/class-options-sanitization.php:165
 msgid "不重复"
-msgstr "Do not repeat"
+msgstr "No repeat"
 
 #: inc/theme-options/includes/class-options-sanitization.php:166
 msgid "水平重复"
@@ -727,7 +721,7 @@ msgstr "Italic Bold"
 
 #: inc/widgets.php:10
 msgid "暂时没有数据"
-msgstr "No data at this moment"
+msgstr "No data at the moment"
 
 #: inc/widgets.php:32
 msgid "刚刚"
@@ -776,7 +770,7 @@ msgstr "Advertising"
 
 #: inc/widgets.php:103
 msgid "Kratos主题特色组件 - 广告位"
-msgstr "Display picture ads at your site"
+msgstr "Featured  Component - Advertising"
 
 #: inc/widgets.php:131
 msgid "标题(可留空)："
@@ -888,7 +882,7 @@ msgstr "Article Cloud"
 
 #: inc/widgets.php:317
 msgid "Kratos主题特色组件 - 文章聚合"
-msgstr "Your site latest, hot, random articles"
+msgstr "Featured Component - Featured Articles"
 
 #: inc/widgets.php:327
 msgid "最新文章"
@@ -896,7 +890,7 @@ msgstr "Latest"
 
 #: inc/widgets.php:328
 msgid "热点文章"
-msgstr "Hot"
+msgstr "Hottest"
 
 #: inc/widgets.php:329
 msgid "随机文章"
@@ -904,7 +898,7 @@ msgstr "Random"
 
 #: inc/widgets.php:332
 msgid "最新"
-msgstr "Newest"
+msgstr "Latest"
 
 #: inc/widgets.php:333
 msgid "热点"
@@ -920,7 +914,7 @@ msgstr "Recent Comments"
 
 #: inc/widgets.php:386
 msgid "Kratos主题特色组件 - 最近评论"
-msgstr "Your site recently commented on the presentation"
+msgstr "Featured Component - Recent Comments"
 
 #: inc/widgets.php:435
 msgid "显示数量："
@@ -944,7 +938,7 @@ msgstr "Sorry, nothing was found."
 
 #: options.php:13
 msgid "站点配置"
-msgstr "Site Cfg"
+msgstr "Site Configrations"
 
 #: options.php:16
 msgid "站点图标"
@@ -952,11 +946,11 @@ msgstr "Site Icon"
 
 #: options.php:21
 msgid "Gravatar头像服务器地址"
-msgstr "Gravatar Server Address"
+msgstr "Gravatar Server URL"
 
 #: options.php:22
 msgid "不确定请勿更改"
-msgstr "Do NOT change this if you are not sure"
+msgstr "DO NOT change this if you are uncertain"
 
 #: options.php:27
 msgid "PJAX"
@@ -969,8 +963,7 @@ msgstr "Enable page Pjax loading"
 #: options.php:34
 msgid "是否启用站点地图(更新文章时生成，需要/目录的写权限)"
 msgstr ""
-"Enable site map (generated when an article is updated, write permission "
-"required)"
+"Enable site map (generated when an article is updated, write permission required)"
 
 #: options.php:39
 msgid "背景类型"
@@ -978,8 +971,7 @@ msgstr "Background Type"
 
 #: options.php:40
 msgid "选择您喜欢的背景类型并修改其对应选项"
-msgstr ""
-"Choose your preferred background type and modify its corresponding options"
+msgstr "Choose your preferred background type and modify its related options"
 
 #: options.php:46 options.php:255
 msgid "纯色"
@@ -991,13 +983,11 @@ msgstr "Image"
 
 #: options.php:49
 msgid "背景颜色"
-msgstr "Background Color"
+msgstr "Background Colour"
 
 #: options.php:50
 msgid "整个站点背景颜色控制(背景类型选择为纯色才有效)"
-msgstr ""
-"Entire site background color control (background type selected as solid "
-"color)"
+msgstr "Global background colour control (background type selected as solid colour)"
 
 #: options.php:55
 msgid "背景图片"
@@ -1005,8 +995,7 @@ msgstr "Background Image"
 
 #: options.php:56
 msgid "整个站点背景图片控制(背景类型选择为图片才有效)"
-msgstr ""
-"Entire site background picture control (background type selected as image)"
+msgstr "Entire site background picture control (background type selected as image)"
 
 #: options.php:61
 msgid "主页布局"
@@ -1023,7 +1012,7 @@ msgstr "Article List Layout"
 #: options.php:72
 msgid "选择你喜欢的列表布局，默认显示新式列表布局"
 msgstr ""
-"Choose your favorite list layout and display the new list layout by default"
+"Choose your preffered list layout and display the new list layout by default"
 
 #: options.php:80
 msgid "分类页面"
@@ -1043,23 +1032,23 @@ msgstr "Enable the name of the label page and introduction features"
 
 #: options.php:92
 msgid "头像本地上传"
-msgstr "Avatar Local Upload"
+msgstr "Profile Photo Uploads"
 
 #: options.php:93
 msgid "是否允许普通用户上传本地头像"
-msgstr "Allow normal users to upload local avatars"
+msgstr "Allow normal users to upload profile photos"
 
 #: options.php:98
 msgid "侧边栏随动"
-msgstr "Side Bar Follower"
+msgstr "Side Bar Floating"
 
 #: options.php:99
 msgid "是否启用侧边栏小工具随动功能"
-msgstr "Enable sidebar gadget follow-up function"
+msgstr "Enable sidebar widget floating"
 
 #: options.php:104
 msgid "评论UA"
-msgstr "Comment UA"
+msgstr "Comment UserAgent"
 
 #: options.php:105
 msgid "是否在评论区显示评论者UA信息"
@@ -1075,11 +1064,11 @@ msgstr "Enable pop-up reminders after copying article content"
 
 #: options.php:116
 msgid "页面伪静态"
-msgstr "Page Pseudo-Static"
+msgstr "URL Rewrite"
 
 #: options.php:117
 msgid "是否启用自定义页面伪静态功能"
-msgstr "Enable custom page pseudo-static functionality"
+msgstr "Enable URL Rewrite for custom page"
 
 #: options.php:122
 msgid "组件配置"
@@ -1103,7 +1092,7 @@ msgstr "Custom bootstrap link, leave blank to load from local"
 
 #: options.php:137
 msgid "自定义jQuery"
-msgstr "Customizing jQuery"
+msgstr "Customize jQuery"
 
 #: options.php:138
 msgid "自定义jQuery链接，留空将从本地加载"
@@ -1115,15 +1104,15 @@ msgstr "Other JS and CSS"
 
 #: options.php:144
 msgid "从jsdelivr加载主题其它JS与CSS"
-msgstr "Load other JS and CSS files from JSDELIVR"
+msgstr "Load other JS and CSS files from jsDelivr"
 
 #: options.php:149
 msgid "表情包"
-msgstr "Emoticons Pack"
+msgstr "Emoji"
 
 #: options.php:150
 msgid "从jsdelivr加载主题表情包"
-msgstr "Load theme emoticon packs from JSDELIVR"
+msgstr "Load theme emoji from jsDelivr"
 
 #: options.php:155
 msgid "特色图片(仅针对新式布局)"
@@ -1132,25 +1121,24 @@ msgstr "Featured Images (for modern layouts only)"
 #: options.php:156
 msgid "选择你喜欢的默认特色图片(留空使用随机图片20张)"
 msgstr ""
-"Choose your favorite default featured picture (leave blank to use 20 photos-"
-"random)"
+"Choose your favourite default featured picture (leave blank to use 20 random "
+"pictures)"
 
 #: options.php:160
 msgid "APlayer全局播放器"
-msgstr "Aplayer-Global Music Player"
+msgstr "APlayer - Global Music Player"
 
 #: options.php:161
 msgid "启用页面左下角播放器(建议开启PJAX使用)"
-msgstr "It is recommended to turns PJAX on"
+msgstr "Turn on PJAX is suggestted"
 
 #: options.php:166
 msgid "歌单JSON地址"
-msgstr "Song list JSON address"
+msgstr "JSON address for the song list"
 
 #: options.php:167
 msgid ""
-"借助API可解析网易云歌单，如https://api.fczbl.vip/163/?"
-"type=playlist&id=2003373695"
+"借助API可解析网易云歌单，如https://api.fczbl.vip/163/?type=playlist&id=2003373695"
 msgstr ""
 "Use the API to parse Netease Music, such as https://api.fczbl.vip/163/?"
 "type=playlist&id=2003373695"
@@ -1161,11 +1149,11 @@ msgstr "Auto Play"
 
 #: options.php:173
 msgid "启用APlayer自动播放，个人不喜欢"
-msgstr "Enable Aplayer AutoPlay, personal dislike"
+msgstr "Enable APlayer AutoPlay, personal dislike"
 
 #: options.php:178
 msgid "循环模式"
-msgstr "Cycle Mode"
+msgstr "Loop Mode"
 
 #: options.php:184
 msgid "全部循环"
@@ -1173,7 +1161,7 @@ msgstr "All loops"
 
 #: options.php:185
 msgid "单曲循环"
-msgstr "Single cycle"
+msgstr "Single loop"
 
 #: options.php:186
 msgid "未定义"
@@ -1209,7 +1197,7 @@ msgstr "WeChat QR Code URL"
 
 #: options.php:210
 msgid "上传你的微信二维码图片，尺寸要大于等于150px"
-msgstr "Upload your WeChat QR code image, size is greater than 150px"
+msgstr "Upload your WeChat QR code image, the size must greater than 150px"
 
 #: options.php:215
 msgid "微信收款码"
@@ -1217,7 +1205,8 @@ msgstr "WeChat Pay"
 
 #: options.php:216
 msgid "上传你的微信收款二维码图片，图片尺寸要大于200px"
-msgstr "Upload your WeChat Pay QR code image, image size greater than 200px"
+msgstr ""
+"Upload your WeChat Pay QR code image, the image size must greater than 200px"
 
 #: options.php:221
 msgid "支付婊收款码"
@@ -1225,15 +1214,15 @@ msgstr "AliPay"
 
 #: options.php:222
 msgid "上传你的支付婊收款二维码图片，图片尺寸要大于200px"
-msgstr "Upload your AliPay QR code image, image size greater than 200px"
+msgstr "Upload your AliPay QR code image, the image size must greater than 200px"
 
 #: options.php:227
 msgid "SEO配置"
-msgstr "SEO Cfg"
+msgstr "SEO Config"
 
 #: options.php:230
 msgid "关键词"
-msgstr "Key Words"
+msgstr "Keywords"
 
 #: options.php:231
 msgid "每个关键词之间用英文逗号分割"
@@ -1245,7 +1234,7 @@ msgstr "Site Description"
 
 #: options.php:240
 msgid "站点统计(不要包括SCRIPT标签)"
-msgstr "Site Statistics Code (do not include script tags)"
+msgstr "Site Statistics Code (don't include script tags)"
 
 #: options.php:245
 msgid "顶部配置"
@@ -1305,7 +1294,7 @@ msgstr "Image logo"
 
 #: options.php:291
 msgid "高40px，宽最大200px，不设置将显示文字Logo"
-msgstr "Height 40px, Width max 200px, not set will display text logo"
+msgstr "Height 40px, Width 200px maxium, not set will display text logo"
 
 #: options.php:295
 msgid "底部配置"
@@ -1317,7 +1306,7 @@ msgstr "Site Build Time"
 
 #: options.php:299
 msgid "输入你的建站时间，格式MM/DD/YYYY hh:mm:ss"
-msgstr "Format mm/dd/yyyy hh:mm:ss"
+msgstr "Enter the start time for your site, like mm/dd/yyyy hh:mm:ss"
 
 #: options.php:304
 msgid "Footer颜色"
@@ -1334,8 +1323,8 @@ msgstr "MIIT Record Information"
 #: options.php:311
 msgid "输入您的工信部备案号，针对国际版没有备案信息栏目的功能"
 msgstr ""
-"Enter your MIIT record number, for the international version does not have "
-"the function of the Record information column"
+"Enter your MIIT record number, for the international version only the function of "
+"the Record information column  is disabled"
 
 #: options.php:315
 msgid "公安网备案信息"
@@ -1357,8 +1346,8 @@ msgstr "Enter the link address of your Public security network for filing"
 msgid "新浪微博"
 msgstr "Sina Weibo"
 
-#: options.php:326 options.php:332 options.php:338 options.php:344
-#: options.php:350 options.php:356
+#: options.php:326 options.php:332 options.php:338 options.php:344 options.php:350
+#: options.php:356
 msgid "连接前要带有 http:// 或者 https:// "
 msgstr "http:// or https:// required."
 
@@ -1380,7 +1369,7 @@ msgstr "Linkedin"
 
 #: options.php:355
 msgid "GayHub"
-msgstr "Github"
+msgstr "GitHub"
 
 #: options.php:361
 msgid "Mail"
@@ -1465,8 +1454,8 @@ msgstr "Attention:"
 #: options.php:439
 msgid "图片宽度建议大于750px，所有图片比例须一致"
 msgstr ""
-"Picture width recommended greater than 750px, all picture proportions must "
-"be consistent"
+"Picture width recommended greater than 750px, all picture proportions must be "
+"consistent"
 
 #: options.php:441
 msgid "轮播图片-1"
@@ -1476,8 +1465,7 @@ msgstr "Carousel Pictures-1"
 msgid "轮播链接-1"
 msgstr "Link-1"
 
-#: options.php:446 options.php:456 options.php:466 options.php:476
-#: options.php:486
+#: options.php:446 options.php:456 options.php:466 options.php:476 options.php:486
 msgid "链接可以留空"
 msgstr "Links can be left blank"
 
@@ -1578,11 +1566,10 @@ msgid "SMTPSecure设置"
 msgstr "SmtpSecure Settings"
 
 #: options.php:537
-msgid ""
-"若启用SMTPAuth服务则填写ssl，若不启用则留空；office365的邮箱请填写STARTTLS"
+msgid "若启用SMTPAuth服务则填写ssl，若不启用则留空；office365的邮箱请填写STARTTLS"
 msgstr ""
-"If the SmtpAuth service is enabled, fill in the SSL, leave blank if not "
-"enabled, OFFICE365 's mailbox please fill in STARTTLS"
+"If the SmtpAuth service is enabled, fill in the SSL, leave blank if not enabled, "
+"OFFICE365 's mailbox please fill in STARTTLS"
 
 #: options.php:542
 msgid "雪花设置"
@@ -1598,19 +1585,19 @@ msgstr "Enable the site Snowflake feature"
 
 #: options.php:551
 msgid "移动端是否显示"
-msgstr "Whether the mobile side is displayed"
+msgstr "If displays at mobile-end"
 
 #: options.php:552
 msgid "配置移动端是否显示，默认是"
-msgstr "Configure whether the mobile side is displayed, default is on"
+msgstr "Configure if displays at mobile-end, default is on"
 
 #: options.php:557
 msgid "雪花数量"
-msgstr "Snowflakes Number"
+msgstr "Snowflakes Amount"
 
 #: options.php:558
 msgid "数值越大雪花数量越多，默认150"
-msgstr "The larger the number, the more snowflakes, the default 150"
+msgstr "The larger the amount, the more snowflakes, the default 150"
 
 #: options.php:563
 msgid "雪花大小"
@@ -1619,8 +1606,7 @@ msgstr "Snowflake Size"
 #: options.php:564
 msgid "为基准值，数值越大雪花越大，默认2"
 msgstr ""
-"As the base value, the larger the value, the larger the snowflake, the "
-"default 2"
+"As the base value, the larger the value, the larger the snowflake, the default 2"
 
 #: options.php:569
 msgid "雪花距离"
@@ -1702,8 +1688,7 @@ msgstr "Domain Name Restriction Mode"
 
 #: options.php:622
 msgid "如果不想限制邮箱，请将此部分设置保持默认。"
-msgstr ""
-"If you don't want to restrict the mailbox, leave this section to default."
+msgstr "If you don't want to restrict the mailbox, leave this section to default."
 
 #: options.php:628
 msgid "白名单模式"
@@ -1749,8 +1734,8 @@ msgstr "User Login Restrictions"
 #: options.php:651
 msgid "是否启用登录限制功能(只有启用此项，下面的设置才有效)"
 msgstr ""
-"Whether the login restrictions feature is enabled (only if this is enabled, "
-"the following settings are valid)"
+"Whether the login restrictions feature is enabled (only if this is enabled, the "
+"following settings are valid)"
 
 #: options.php:656
 msgid "登录尝试机会"
@@ -1806,8 +1791,7 @@ msgstr "Email Alerts"
 
 #: options.php:693
 msgid "是否启用锁定邮件提醒功能(请在下方设置提醒阈值)"
-msgstr ""
-"Enable the Lock MailTips feature (please set reminder thresholds below)"
+msgstr "Enable the Lock MailTips feature (please set reminder thresholds below)"
 
 #: options.php:698
 msgid "锁定提醒阈值"
@@ -1863,13 +1847,13 @@ msgstr "https://github.com/xb2016/kratos-pjax"
 
 #. Description of the plugin/theme
 msgid ""
-"Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可"
-"以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为"
-"小白-白(www.fczbl.vip)的二次开发版本。"
+"Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可以通"
+"过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为小白-白"
+"(www.fczbl.vip)的二次开发版本。"
 msgstr ""
-"Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可"
-"以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为"
-"小白-白(www.fczbl.vip)的二次开发版本。"
+"Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可以通"
+"过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为小白-白"
+"(www.fczbl.vip)的二次开发版本。"
 
 #. Author of the plugin/theme
 msgid "Vtrois(Modified by 小白-白)"
