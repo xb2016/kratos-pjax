@@ -1,6 +1,7 @@
 <?php
 if($_GET['p']==='22') $p = 2; else if($_GET['p']==='33') $p = 3; else $p = mt_rand(2,3);
-if($p==2){$person = 22;$idle3 = 100;$tap1 = 150;$tap2 = 100;$ra = mt_rand(1,14);}else{$person = 33;$idle3 = 1000;$tap1 = 500;$tap2 = 200;$ra = mt_rand(1,14);}
+//第15个模型含有R18内容，如需关闭，请将下面 mt_rand(1,15) 改成 mt_rand(1,14)
+if($p==2){$person = 22;$idle3 = 100;$tap1 = 150;$tap2 = 100;$ra = mt_rand(1,15);}else{$person = 33;$idle3 = 1000;$tap1 = 500;$tap2 = 200;$ra = mt_rand(1,15);}
 header("Content-type: application/json");
 if($_GET['model']==='rand') echo '{
     "model":"'.$person.'/'.$person.'.v2.moc",
