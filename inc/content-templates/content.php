@@ -21,7 +21,7 @@
         </div>
     </header>
     <div class="kratos-entry-content clearfix">
-    <p><?php echo wp_trim_words(get_the_excerpt(),110); ?></p>
+    <p><?php echo wp_trim_words(get_the_excerpt(),kratos_option('w_num')); ?></p>
     </div>
 </div>
 <?php }else{ ?>
@@ -36,7 +36,7 @@
             <h2 class="kratos-entry-title-new"><a href="<?php the_permalink() ?>"><?php the_title() ?></a><?php if(is_sticky()) _e('—置顶','moedog'); ?></h2>
         </header>
         <div class="kratos-entry-content-new">
-            <p><?php echo wp_trim_words(get_the_excerpt(),110); ?></p>
+            <p><?php echo wp_trim_words(get_the_excerpt(),kratos_option('w_num')); ?></p>
         </div>
     </div>
     <div class="kratos-post-meta-new">
