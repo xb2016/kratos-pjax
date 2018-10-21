@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2018-10-20 11:15+0800\n"
-"PO-Revision-Date: 2018-10-20 23:40+0100\n"
+"POT-Creation-Date: 2018-10-21 13:29+0800\n"
+"PO-Revision-Date: 2018-10-21 13:39+0800\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language: en_US\n"
@@ -67,7 +67,7 @@ msgstr "Upload Profile Photo"
 msgid "尚未设置本地头像，请点击“浏览”按钮上传本地头像。"
 msgstr ""
 "You haven't set up your profile photo, click the \"browse\" button to upload "
-"your profile Photo."
+"your profile photo."
 
 #: inc/avatars.php:51
 msgid "移除本地头像"
@@ -101,7 +101,7 @@ msgstr ". PHP cannot appear in the file name!"
 
 #: inc/avatars.php:79
 msgid "请上传jpg,gif,png,bmp,tif格式文件！"
-msgstr "Please upload jpg,gif,png,bmp,tif format file!"
+msgstr "Please upload jpg, gif, png, bmp, tif format file!"
 
 #: inc/avatars.php:80
 msgid "上传头像过程中出现以下错误："
@@ -121,7 +121,7 @@ msgstr " Views"
 
 #: inc/content-templates/content.php:8 inc/content-templates/content.php:36
 msgid "—置顶"
-msgstr " - Top"
+msgstr " - Sticky"
 
 #: inc/content-templates/content.php:19 inc/content-templates/content.php:49
 #: inc/single-templates/single.php:20
@@ -130,7 +130,7 @@ msgstr " Likes"
 
 #: inc/content-templates/content.php:53
 msgid "阅读全文"
-msgstr "Read more"
+msgstr "Read More"
 
 #: inc/core.php:20 inc/core.php:21
 #: inc/theme-options/includes/class-options-framework-admin.php:26
@@ -174,7 +174,7 @@ msgstr "Latest update on "
 
 #: inc/imgcfg.php:78 inc/imgcfg.php:79
 msgid "从URL添加"
-msgstr "Add from URL"
+msgstr "Add From URL"
 
 #: inc/imgcfg.php:90
 msgid "或"
@@ -182,7 +182,7 @@ msgstr "or"
 
 #: inc/imgcfg.php:93 inc/imgcfg.php:96
 msgid "从URL导入"
-msgstr "Import from URL"
+msgstr "Import From URL"
 
 #: inc/imgcfg.php:111
 msgid "从URL添加媒体项目"
@@ -218,7 +218,7 @@ msgstr "Cancel"
 
 #: inc/imgcfg.php:144
 msgid "相关JS加载失败"
-msgstr "Related Javascript fails to load"
+msgstr "Related JavaScript fails to load"
 
 #: inc/imgcfg.php:174 inc/imgcfg.php:180
 msgid "图像大小不合法"
@@ -230,7 +230,7 @@ msgstr "Unable to get image size"
 
 #: inc/logincfg.php:38
 msgid "错误"
-msgstr "Error"
+msgstr "ERROR"
 
 #: inc/logincfg.php:52
 msgid "密码"
@@ -250,7 +250,7 @@ msgstr "<strong> ERROR </strong>: The name cannot be empty."
 
 #: inc/logincfg.php:72
 msgid "<strong>错误</strong>：两次输入的密码不一致。"
-msgstr "<strong> ERROR </strong>: Those passwords didn't match."
+msgstr "<strong> ERROR </strong>: The passwords you entered must be the same."
 
 #: inc/logincfg.php:73
 msgid "<strong>错误</strong>：密码长度必须大于8位。"
@@ -272,7 +272,7 @@ msgstr "%d minutes"
 
 #: inc/logincfg.php:256
 msgid "登录失败次数过多"
-msgstr "Login failure too many times"
+msgstr "There have been too many login failures"
 
 #: inc/logincfg.php:257
 #, php-format
@@ -496,7 +496,7 @@ msgstr "Operation"
 
 #: inc/smtp.php:53
 msgid "查看留言"
-msgstr "View"
+msgstr "View Comment"
 
 #: inc/smtp.php:58 inc/smtp.php:110
 msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。"
@@ -740,7 +740,7 @@ msgstr "years ago"
 #: inc/widgets.php:34 inc/widgets.php:35 inc/widgets.php:36 inc/widgets.php:37
 #: inc/widgets.php:38 inc/widgets.php:39 inc/widgets.php:40
 msgid "m月d日"
-msgstr "m-d"
+msgstr "y-m-d"
 
 #: inc/widgets.php:35
 msgid " 个月前"
@@ -776,7 +776,7 @@ msgstr "Advertising"
 
 #: inc/widgets.php:103
 msgid "Kratos主题特色组件 - 广告位"
-msgstr "Featured  Component - Advertising"
+msgstr "Display picture ads at your site"
 
 #: inc/widgets.php:131
 msgid "标题(可留空)："
@@ -846,7 +846,7 @@ msgstr "Tag Cloud"
 msgid "Kratos主题特色组件 - 标签聚合"
 msgstr "The tags of your site article is displayed"
 
-#: inc/widgets.php:287 inc/widgets.php:430
+#: inc/widgets.php:287 inc/widgets.php:434
 msgid "标题："
 msgstr "Title:"
 
@@ -888,7 +888,7 @@ msgstr "Article Cloud"
 
 #: inc/widgets.php:317
 msgid "Kratos主题特色组件 - 文章聚合"
-msgstr "Featured Component - Featured Articles"
+msgstr "Your site latest, hot, random articles"
 
 #: inc/widgets.php:327
 msgid "最新文章"
@@ -914,17 +914,21 @@ msgstr "Hot"
 msgid "每项展示数量："
 msgstr "Number of impressions per item:"
 
-#: inc/widgets.php:385 inc/widgets.php:427
+#: inc/widgets.php:385 inc/widgets.php:430
 msgid "最近评论"
 msgstr "Recent Comments"
 
 #: inc/widgets.php:386
 msgid "Kratos主题特色组件 - 最近评论"
-msgstr "Featured Component - Recent Comments"
+msgstr "Your site recently commented on the presentation"
 
-#: inc/widgets.php:435
+#: inc/widgets.php:439
 msgid "显示数量："
 msgstr "Display Quantity:"
+
+#: inc/widgets.php:445
+msgid "不显示管理员(用户ID为1)评论"
+msgstr "Do NOT display admin's (user id=1) comments"
 
 #: index.php:17
 msgid "分类："
@@ -964,7 +968,7 @@ msgstr "PJAX"
 
 #: options.php:28
 msgid "是否启用页面PJAX加载"
-msgstr "Enable page Pjax loading"
+msgstr "Enable page PJAX loading"
 
 #: options.php:34
 msgid "是否启用站点地图(更新文章时生成，需要/目录的写权限)"
@@ -1025,11 +1029,13 @@ msgstr ""
 
 #: options.php:80
 msgid "主页文章摘要字数"
-msgstr ""
+msgstr "Word Count Limit For The Abstract"
 
 #: options.php:81
 msgid "中文建议110，英文建议40，搭配文章内的more标签使用"
 msgstr ""
+"Chinese: 110, English: 40, also you can use \"more\" tag on the article "
+"instead."
 
 #: options.php:86
 msgid "分类页面"
@@ -1175,15 +1181,15 @@ msgstr "Loop Mode"
 
 #: options.php:190
 msgid "全部循环"
-msgstr "All loops"
+msgstr "All"
 
 #: options.php:191
 msgid "单曲循环"
-msgstr "Single loop"
+msgstr "Single"
 
 #: options.php:192
 msgid "未定义"
-msgstr "Not defined"
+msgstr "None"
 
 #: options.php:194
 msgid "播放顺序"

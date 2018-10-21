@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2018-10-20 12:15+0800\n"
+"POT-Creation-Date: 2018-10-21 13:29+0800\n"
 "PO-Revision-Date: 2018-10-19 21:59+0800\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: 小白-白 (Moedog) <xb@fczbl.vip>\n"
@@ -818,7 +818,7 @@ msgstr ""
 msgid "Kratos主题特色组件 - 标签聚合"
 msgstr ""
 
-#: inc/widgets.php:287 inc/widgets.php:430
+#: inc/widgets.php:287 inc/widgets.php:434
 msgid "标题："
 msgstr ""
 
@@ -886,7 +886,7 @@ msgstr ""
 msgid "每项展示数量："
 msgstr ""
 
-#: inc/widgets.php:385 inc/widgets.php:427
+#: inc/widgets.php:385 inc/widgets.php:430
 msgid "最近评论"
 msgstr ""
 
@@ -894,8 +894,12 @@ msgstr ""
 msgid "Kratos主题特色组件 - 最近评论"
 msgstr ""
 
-#: inc/widgets.php:435
+#: inc/widgets.php:439
 msgid "显示数量："
+msgstr ""
+
+#: inc/widgets.php:445
+msgid "不显示管理员(用户ID为1)评论"
 msgstr ""
 
 #: index.php:17
