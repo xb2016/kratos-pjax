@@ -17,7 +17,8 @@ input{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,opensans,Optim
 #login form .forgetmenot{font-weight:400;float:none;margin-top:-10px}
 #login form#registerform p.submit{margin:-38px 0 30px}
 #login .button-primary{font-size:14px!important;font-weight:700;border-radius:0}
-#login #backtoblog,.login #nav{text-shadow:none;margin:0 20px 40px 0;padding:16px 0 0 20px}
+#login #nav{text-shadow:none;margin:16px 20px 0 0;padding:0}
+#login #backtoblog{text-shadow:none;margin:16px 0 40px 16px;padding:0}
 #login #backtoblog{float:left}
 #login #nav{float:right}
 #login #backtoblog a,.login #nav a{color:#FFF!important;text-decoration:none}

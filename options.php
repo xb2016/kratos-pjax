@@ -77,6 +77,12 @@ function optionsframework_options(){
             'old_layout'=>$imagepath.'old-layout.png',
             'new_layout'=>$imagepath.'new-layout.png'));
     $options[] = array(
+        'name'=>__('主页文章摘要字数','moedog'),
+        'desc'=>__('中文建议110，英文建议40，搭配文章内的more标签使用','moedog'),
+        'id'=>'w_num',
+        'std'=>'110',
+        'type'=>'text');
+    $options[] = array(
         'name'=>__('分类页面','moedog'),
         'desc' =>__('是否启用分类页面的名称以及简介功能','moedog'),
         'id'=>'show_head_cat',
