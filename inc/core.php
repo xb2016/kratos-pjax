@@ -599,7 +599,7 @@ function comment_author_link_window(){
 add_filter('get_comment_author_link','comment_author_link_window');
 //Notice
 function kratos_admin_notice(){
-    $noticeinfo = wp_remote_retrieve_body(wp_remote_get('https://api.fczbl.vip/kratos_notice.txt'));
+    $noticeinfo = wp_remote_retrieve_body(wp_remote_get('https://api.fczbl.vip/kratos_notice/?v='.KRATOS_VERSION));
     if(!is_wp_error($noticeinfo)&&$noticeinfo){ ?>
     <style type="text/css">.about-description a{text-decoration:none}</style>
     <div class="notice notice-info">
