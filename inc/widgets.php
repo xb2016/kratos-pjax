@@ -392,8 +392,10 @@ class kratos_widget_comments extends WP_Widget {
         $output = '';
         $title = isset($instance['title'])?$instance['title']:'最近评论';
         $number = isset($instance['number'])?absint($instance['number']):5;
+        $show_admin = !empty($instance['show_admin'])?'1':'0';
         $comments = get_comments(apply_filters('widget_comments_args',array(
             'number' => $number,
+            'author__not_in' => $show_admin,
             'status' => 'approve',
             'type' => 'comment',
             'post_status' => 'publish'
@@ -421,11 +423,13 @@ class kratos_widget_comments extends WP_Widget {
         $instance = $old_instance;
         $instance['title'] = sanitize_text_field($new_instance['title']);
         $instance['number'] = absint($new_instance['number']);
+        $instance['show_admin'] = !empty($new_instance['show_admin'])?1:0;
         return $instance;
     }
     public function form($instance){
         $title = !empty($instance['title'])?$instance['title']:__('最近评论','moedog');
-        $number = !empty($instance['number'])?absint($instance['number']):5; ?>
+        $number = !empty($instance['number'])?absint($instance['number']):5;
+        $show_admin = isset($instance['show_admin'])?(bool)$instance['show_admin']:false; ?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('标题：','moedog'); ?>
                 <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
@@ -435,6 +439,10 @@ class kratos_widget_comments extends WP_Widget {
             <label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('显示数量：','moedog'); ?>
                 <input class="tiny-text" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="number" step="1" min="1" max="99" value="<?php echo $number; ?>" size="3" />
             </label>
+        </p>
+        <p>
+            <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('show_admin'); ?>" name="<?php echo $this->get_field_name('show_admin'); ?>"<?php checked($show_admin); ?> />
+            <label for="<?php echo $this->get_field_id('show_admin'); ?>"><?php _e('不显示管理员(用户ID为1)评论','moedog'); ?></label>
         </p><?php
     }
 }
