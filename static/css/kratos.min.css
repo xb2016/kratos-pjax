@@ -400,8 +400,8 @@ td,th{padding:0}
 #kratos-header-section .sub-menu>li>.sub-menu{left:100%;top:0}
 #kratos-header-section .nav-header{position:relative;float:left;width:100%}
 #kratos-header-section.color-banner .sf-menu li:hover>ul{display:block}
-#kratos-header-section.color-banner .sf-menu>li>ul:after{position:absolute;top:-8px;left:49px;border-right:8px solid transparent;border-bottom:8px solid #fff;border-left:8px solid transparent;content:''}
-#kratos-header-section.color-banner .sub-menu{background:#fff;border-radius:5px;-webkit-box-shadow:0 5px 15px rgba(0,0,0,.15);box-shadow:0 5px 15px rgba(0,0,0,.15)}
+#kratos-header-section.color-banner .sf-menu>li>ul:after{position:absolute;top:-8px;left:45px;border-right:8px solid transparent;border-bottom:8px solid #fff;border-left:8px solid transparent;content:''}
+#kratos-header-section.color-banner .sub-menu{background:#fff;left:-18px;right:-18px;min-width:100px;border-radius:5px;-webkit-box-shadow:0 5px 15px rgba(0,0,0,.15);box-shadow:0 5px 15px rgba(0,0,0,.15)}
 #kratos-header-section.color-banner .sub-menu a{color:#848484!important}
 #kratos-header-section.color-banner .sub-menu a:hover{background:#f2f2f2;border-radius:5px}
 .kratos-cover,.kratos-start{position:relative;height:55px}
