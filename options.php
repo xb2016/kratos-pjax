@@ -18,6 +18,17 @@ function optionsframework_options(){
         'std'=>'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION.'/static/images/favicon.ico',
         'type'=>'upload');
     $options[] = array(
+        'name'=>__('通知设置','moedog'),
+        'desc'=>__('选择后台主题通知 (更新/帮助等) 的出现位置','moedog'),
+        'id'=>'kratos_notice',
+        'std'=>'global',
+        'type'=>'select',
+        'class'=>'mini',
+        'options'=>array(
+            'global'=>__('后台全局','moedog'),
+            'welcome'=>__('仪表盘首页','moedog'),
+            'none'=>__('隐藏全部[不建议]','moedog')));
+    $options[] = array(
         'name'=>__('Gravatar头像服务器地址','moedog'),
         'desc'=>__('不确定请勿更改','moedog'),
         'id'=>'gravatar_url',

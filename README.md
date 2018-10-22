@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<a href="https://www.fczbl.vip"><img alt="Author" style="border-radius:4px" src="https://img.shields.io/badge/Author-Moedog-blue.svg?style=flat-square"></a>
+<a href="https://www.fczbl.vip"><img alt="Author" src="https://img.shields.io/badge/Author-Moedog-blue.svg?style=flat-square"></a>
 <a href="https://github.com/xb2016/kratos-pjax/releases"><img alt="Version" height="20" src="https://badge.fury.io/gh/xb2016%2Fkratos-pjax.svg"></a>
 <img alt="License" src="https://img.shields.io/badge/license-GPL3-red.svg"/>
 </p>
@@ -38,7 +38,7 @@ We encourage everyone to help with localization. The following is how to do:
 
 - **Translators**
   - **zh_CN** [Moedog](https://github.com/xb2016)
-  - **en_US** [Moedog](https://github.com/xb2016), [Focus Chen](https://github.com/hifocus)
+  - **en_US** [Moedog](https://github.com/xb2016), [hifocus](https://github.com/hifocus)
 
 ## Donate
 

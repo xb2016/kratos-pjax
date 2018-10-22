@@ -135,7 +135,7 @@
                 }
             }
         });
-        $('#kratos-menu-wrap ul>li').hover(function(){
+        $('#kratos-header-section:not(.color-banner) ul>li').hover(function(){
             $(this).children('ul').slideDown(150)
         },function(){$(this).children('ul').stop(true,false).slideUp(200)});
     }
