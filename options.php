@@ -140,7 +140,7 @@ function optionsframework_options(){
         'type'=>'heading');
     $options[] = array(
         'name'=>__('自定义Font Awesome','moedog'),
-        'desc'=>__('自定义Font Awesome字体库链接，留空将从本地加载','moedog'),
+        'desc'=>__('自定义Font Awesome 4.7字体库链接，留空将从本地加载','moedog'),
         'id'=>'fa_url',
         'std'=>'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION.'/static/css/font-awesome.min.css',
         'type'=>'text');

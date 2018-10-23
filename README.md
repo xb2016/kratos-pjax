@@ -16,6 +16,10 @@
 
 This is a **secondary development** version of Kratos. For the original version, please visit [https://github.com/Vtrois/Kratos](https://github.com/Vtrois/Kratos).
 
+## Before start
+
+Star this project please, thank you!
+
 ## Supports
 
 **Docs**
