@@ -16,7 +16,6 @@ function optionsframework_init() {
 	$options_framework_admin->init();
 	$options_framework_media_uploader = new Options_Framework_Media_Uploader;
 	$options_framework_media_uploader->init();
-
 }
 add_action( 'init', 'optionsframework_init', 20 );
 endif;

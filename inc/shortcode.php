@@ -29,7 +29,7 @@ function danger($atts,$content=null,$code=""){
 add_shortcode('danger','danger');
 function wymusic($atts,$content=null,$code=""){
     extract(shortcode_atts(array("autoplay"=>'0'),$atts));
-    $return = '<iframe class="" style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="//music.163.com/outchain/player?type=2&id=';
+    $return = '<iframe style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height="86" src="https://music.163.com/outchain/player?type=2&id=';
     $return .= $content;
     $return .= '&auto='.$autoplay.'&height=66"></iframe>';
     return $return;
@@ -152,7 +152,7 @@ function dangerbox($atts,$content=null,$code=""){
 }
 add_shortcode('dangerbox','dangerbox');
 function youku($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><iframe height="498" width="750" src="http://player.youku.com/embed/';
+    $return = '<div class="video-container"><iframe height="498" width="100%" src="https://player.youku.com/embed/';
     $return .= $content;
     $return .= '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
     return $return;
@@ -170,7 +170,7 @@ function tudou($atts,$content=null,$code=""){
 add_shortcode('tudou','tudou');
 function vqq($atts,$content=null,$code=""){
     extract(shortcode_atts(array("auto"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="https://v.qq.com/iframe/player.html?vid=';
+    $return = '<div class="video-container"><iframe frameborder="0" width="100%" height="498" src="https://v.qq.com/iframe/player.html?vid=';
     $return .= $content;
     $return .= '&tiny=0&auto=';
     $return .= $auto;
@@ -179,7 +179,7 @@ function vqq($atts,$content=null,$code=""){
 }
 add_shortcode('vqq','vqq');
 function youtube($atts,$content=null,$code=""){
-    $return = '<div class="video-container"><iframe height="498" width="750" src="https://www.youtube.com/embed/';
+    $return = '<div class="video-container"><iframe height="498" width="100%" src="https://www.youtube.com/embed/';
     $return .= $content;
     $return .= '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
     return $return;
@@ -194,7 +194,7 @@ function bilibili($atts,$content=null,$code=""){
     $return .= $cid;
     $return .= '&page=';
     $return .= $page;
-    $return .= '" allowtransparency="true" width="640" height="400" scrolling="no" frameborder="0" ></iframe></div>';
+    $return .= '" allowtransparency="true" width="100%" height="498" scrolling="no" frameborder="0" ></iframe></div>';
     return $return;
 }
 add_shortcode('bilibili','bilibili');
@@ -216,6 +216,7 @@ function more_button_b(){
 }
 function register_button($buttons){
     array_push($buttons," ","title");
+    array_push($buttons," ","highlight");
     array_push($buttons," ","accordion");
     array_push($buttons," ","hide");
     array_push($buttons," ","kbd");
@@ -244,6 +245,7 @@ function register_button_b($buttons){
 }
 function add_plugin($plugin_array){
     $plugin_array['title'] = get_bloginfo('template_url').'/inc/buttons/more.js';
+    $plugin_array['highlight'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['accordion'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['hide'] = get_bloginfo('template_url').'/inc/buttons/more.js';
     $plugin_array['kbd'] = get_bloginfo('template_url').'/inc/buttons/more.js';
@@ -297,6 +299,7 @@ function appthemes_add_quicktags(){ ?>
 <script type="text/javascript">
 QTags.addButton( 'pre', 'pre', '<pre>\n', '\n</pre>' );
 QTags.addButton( 'hr', 'hr', '\n\n<hr />\n\n', '' );
+QTags.addButton( '<?php _e('代码高亮','moedog'); ?>', '<?php _e('代码高亮','moedog'); ?>', '<pre><code class="">', '</code></pre>' );
 QTags.addButton( '<?php _e('内容标题','moedog'); ?>', '<?php _e('内容标题','moedog'); ?>', '[title]', '[/title]' );
 QTags.addButton( '<?php _e('蓝色字体','moedog'); ?>', '<?php _e('蓝色字体','moedog'); ?>', '<span style="color: #0000ff;">', '</span>' );
 QTags.addButton( '<?php _e('红色字体','moedog'); ?>', '<?php _e('红色字体','moedog'); ?>', '<span style="color: #ff0000;">', '</span>' );

@@ -34,7 +34,7 @@
             <footer class="kratos-entry-footer clearfix">
                 <div class="post-like-donate text-center clearfix" id="post-like-donate">
                 <?php if(kratos_option('post_like_donate')) echo '<a href="javascript:;" class="Donate"><i class="fa fa-bitcoin"></i> '.__('打赏','moedog').'</a>'; ?>
-                   <a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> <?php _e('点赞','moedog'); ?></a>
+                   <a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID() ?>" class="Love<?php if(isset($_COOKIE['love_'.$post->ID])) echo ' done';?>"><i class="fa fa-thumbs-o-up"></i> <?php _e('点赞','moedog'); ?></a>
                 <?php if(kratos_option('post_share')) {
                     echo '<a href="javascript:;" class="Share"><i class="fa fa-share-alt"></i> '.__('分享','moedog').'</a>';
                     require_once(get_template_directory().'/inc/share.php');

@@ -150,6 +150,7 @@ function smilies_reset(){
       ':bad:' => 'bad.png',
        ':ok:' => 'ok.png',
      ':stop:' => 'stop.png',
+   ':hahaha:' => 'hahaha.png',
     );
 }
 smilies_reset();

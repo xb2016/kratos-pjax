@@ -9,16 +9,13 @@ class Options_Framework_Admin {
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
 			add_action( 'admin_init', array( $this, 'settings_init' ) );
 			add_action( 'wp_before_admin_bar_render', array( $this, 'optionsframework_admin_bar' ) );
-
 		}
-
     }
     function settings_init() {
 		$options_framework = new Options_Framework;
 	    $name = $options_framework->get_option_name();
 		register_setting( 'optionsframework', $name, array ( $this, 'validate_options' ) );
 		add_action( 'optionsframework_after_validate', array( $this, 'save_options_notice' ) );
-
     }
 	static function menu_settings() {
 		$menu = array(
@@ -30,7 +27,6 @@ class Options_Framework_Admin {
             'parent_slug' => 'themes.php',
             'icon_url' => 'dashicons-admin-generic',
             'position' => '61'
-
 		);
 		return apply_filters( 'optionsframework_menu', $menu );
 	}
@@ -43,7 +39,6 @@ class Options_Framework_Admin {
             $menu['menu_slug'],
             array( $this, 'options_page' )
         );
-
 	}
 	function enqueue_admin_styles( $hook ) {
 		if ( $this->options_screen != $hook )

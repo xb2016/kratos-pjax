@@ -89,12 +89,12 @@ mark{padding:.4px 4px;background-color:#9e9e9e;color:#000}
 ol,p,ul{margin:0 0 1em 0;font-size:16px;color:#333}
 ol ol,ol ul,ul ol,ul ul{margin-bottom:0}
 optgroup{font-weight:700}
-pre{overflow:auto;display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
-pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
+pre{overflow:auto;display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.5;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc}
+pre code{border:none;margin:-10px;background-color:transparent}
 ruby{background:#f2f2f2;margin:0 2px;padding:0 2px;border-radius:4px}
 select{cursor:url(../images/pointer.cur),auto}
 select[multiple],select[size]{height:auto}
-output{display:block;padding-top:7px;font-size:14px;line-height:1.42857143;color:#555}
+output{display:block;padding-top:7px;font-size:14px;line-height:1.5;color:#555}
 small{font-size:85%}
 sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
 sup{top:-.5em}
@@ -246,6 +246,28 @@ td,th{padding:0}
 .form-control{padding:6px 12px;line-height:1.42857143;width:100%;color:#555;z-index:2;float:left}
 .form-group{margin-bottom:15px}
 .hidden{display:none!important}
+.hljs{display:block;overflow-x:auto;background:#1e1e1e;color:#dcdcdc;padding:15px}
+.hljs-keyword,.hljs-literal,.hljs-symbol,.hljs-name{color:#569cd6}
+.hljs-link{color:#569cd6;text-decoration:underline}
+.hljs-built_in,.hljs-type{color:#4ec9b0}
+.hljs-number,.hljs-class{color:#b8d7a3}
+.hljs-string,.hljs-meta-string{color:#d69d85}
+.hljs-regexp,.hljs-template-tag{color:#9a5334}
+.hljs-subst,.hljs-function,.hljs-title,.hljs-params,.hljs-formula{color:#dcdcdc}
+.hljs-comment,.hljs-quote{color:#57a64a;font-style:italic}
+.hljs-doctag{color:#608b4e}
+.hljs-meta,.hljs-meta-keyword,.hljs-tag{color:#9b9b9b}
+.hljs-variable,.hljs-template-variable{color:#bd63c5}
+.hljs-attr,.hljs-attribute,.hljs-builtin-name{color:#9cdcfe}
+.hljs-section{color:gold}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:bold}
+.hljs-bullet,.hljs-selector-tag,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#d7ba7d}
+.hljs-addition{background-color:#144212;display:inline-block;width:100%}
+.hljs-deletion{background-color:#600;display:inline-block;width:100%}
+.input-group{display:table;border-collapse:separate}
+.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;width:1%;white-space:nowrap;vertical-align:middle;display:table-cell}
+.input-group-addon:first-child{border-right:0}
 .layui-layer,.layui-layer-shade{position:fixed;pointer-events:auto}
 .layui-layer-shade{top:0;left:0;width:100%;height:100%}
 .layui-layer{top:150px;left:0;margin:0;padding:0;background-color:#fff;-webkit-background-clip:content;border-radius:2px;box-shadow:1px 1px 50px rgba(0,0,0,.3);-webkit-overflow-scrolling:touch}
@@ -284,9 +306,6 @@ td,th{padding:0}
 .layui-layer-btn a{color:#fff;font-weight:400}
 .layui-layer-btn1{float:right}
 .layer-anim-close{-webkit-animation-name:layer-bounceOut;animation-name:layer-bounceOut;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.2s;animation-duration:.2s}
-.input-group{display:table;border-collapse:separate}
-.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;width:1%;white-space:nowrap;vertical-align:middle;display:table-cell}
-.input-group-addon:first-child{border-right:0}
 #nprogress{pointer-events:none}
 #nprogress .bar{background:#29d;position:fixed;z-index:1031;top:0;left:0;width:100%;height:2px}
 #nprogress .peg{display:block;position:absolute;right:0;width:100px;height:100%;box-shadow:0 0 10px #29d,0 0 5px #29d;opacity:1.0;-webkit-transform:rotate(3deg) translate(0px,-4px);-ms-transform:rotate(3deg) translate(0px,-4px);transform:rotate(3deg) translate(0px,-4px)}
@@ -435,7 +454,7 @@ td,th{padding:0}
 .post-navigation .nav-previous{float:left;text-align:left;max-width:50%;background-color:#fff;box-shadow:0 1px 5px rgba(0,0,0,.1);padding:7px 18px}
 .post-navigation .nav-next{float:right;text-align:right;max-width:50%;background-color:#fff;box-shadow:0 1px 5px rgba(0,0,0,.1);padding:7px 18px}
 .kratos-post-meta span{font-size:13px;color:#777}
-.kratos-post-meta .fa-thumbs-o-up,.kratos-post-meta i:not(:first-child){margin-left:12px}
+.kratos-hentry.kratos-post-inner .kratos-post-meta .fa-thumbs-o-up,.kratos-post-meta i:not(:first-child){margin-left:12px}
 .kratos-status{margin:15px 15px 15px 38px;border-left:1px dotted #ccc;font-style:italic;position:relative}
 .kratos-status.kratos-status-post{margin:0 15px 0 38px}
 .kratos-status .fa-refresh{position: absolute;top:50%;left:-7px;margin:-9px 0 0}
@@ -454,9 +473,9 @@ td,th{padding:0}
 .kratos-post-inner{padding:25px 20px 18px 20px}
 .kratos-post-inner.kratos-hentry{padding:25px 10px 18px 10px}
 .kratos-post-inner div:last-child.kratos-copyright{margin-bottom:20px}
-.kratos-post-inner-new{margin-left:255px;height:175px;padding:21px 20px 0 3px;overflow:hidden}
+.kratos-post-inner-new{margin-left:255px;height:168px;padding:21px 20px 0 3px;overflow:hidden}
 .kratos-post-inner-new header .label{display:inline-block;padding:4px 6px;font-size:12px;font-weight:700;line-height:14px;color:#fff;vertical-align:baseline;white-space:nowrap;background-color:#51aded;margin-right:5px;position:relative;top:-3px;cursor:url(../images/pointer.cur),auto}
-.kratos-post-inner-new header .label .label-arrow{position:absolute;width:0;height:0;vertical-align:top;content:"";top:8px;right:-3px;border-left:4px solid #51aded;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.kratos-post-inner-new header .label:after{position:absolute;width:0;height:0;vertical-align:top;content:"";top:8px;right:-3px;border-left:4px solid #51aded;border-top:4px solid transparent;border-bottom:4px solid transparent}
 .kratos-post-inner-new header .label:hover{color:#fff!important}
 .kratos-post-content,.kratos-post-content-l{word-break:break-all;word-wrap:break-word;margin:10px}
 .kratos-post-content p{margin-bottom:1em;font-size:16px;color:#333}

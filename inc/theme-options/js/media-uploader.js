@@ -29,7 +29,6 @@ jQuery(document).ready(function($){
 					optionsframework_remove_file( $(this).parents('.section') );
 				});
 			});
-
 		}
 		optionsframework_upload.open();
 	}

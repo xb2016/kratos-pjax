@@ -1,4 +1,51 @@
 <?php
+//Banner
+function kratos_banner(){
+    if(!$output = get_option('kratos_banners')){
+        $output = '';
+        $kratos_banner_on = kratos_option("kratos_banner")&&kratos_option("kratos_banner1")?1:0;
+        if($kratos_banner_on){
+            for($i=1; $i<6; $i++){
+                $kratos_banner{$i} = kratos_option("kratos_banner{$i}")?kratos_option("kratos_banner{$i}"):"";
+                $kratos_banner_url{$i} = kratos_option("kratos_banner_url{$i}")?kratos_option("kratos_banner_url{$i}"):"";
+                if($kratos_banner{$i}){
+                    $banners[] = $kratos_banner{$i};
+                    $banners_url[] = $kratos_banner_url{$i};
+                }
+            }
+            $count = count($banners);
+            $output .= '<div id="slide" class="carousel slide" data-ride="carousel">';
+            $output .= '<ol class="carousel-indicators">';
+            for($i=0;$i<$count;$i++){
+                $output .= '<li data-target="#slide" data-slide-to="'.$i.'"';
+                if($i==0) $output .= 'class="active"';
+                $output .= '></li>';
+            };
+            $output .='</ol>';
+            $output .= '<div class="carousel-inner" role="listbox">';
+            for($i=0;$i<$count;$i++){
+                $output .= '<div class="item';
+                if($i==0) $output .= ' active';
+                $output .= '">';
+                if(!empty($banners_url[$i])){
+                    $output .= '<a href="'.$banners_url[$i].'"><img src="'.$banners[$i].'"/></a>';
+                }else{
+                    $output .= '<img src="'.$banners[$i].'"/>';
+                }
+                $output .= "</div>";
+            };
+            $output .= '</div>';
+            $output .= '<span class="left carousel-control" href="#slide" role="button" data-slide="prev">';
+            $output .= '<span class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></span></span>';
+            $output .= '<span class="right carousel-control" href="#slide" role="button" data-slide="next">';
+            $output .= '<span class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></span></span></div>';
+            update_option('kratos_banners',$output);
+        }
+    }
+    echo $output;
+}
+function clear_banner(){update_option('kratos_banners','');}
+add_action('optionsframework_after_validate','clear_banner');
 //Photo Thumbnails
 function kratos_photo_thumbnail(){  
     global $post;  
@@ -9,9 +56,9 @@ function kratos_photo_thumbnail(){
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim',$content,$strResult,PREG_PATTERN_ORDER);  
         $n = count($strResult[1]);  
         if($n>0){ 
-            echo '<img src="'.$strResult[1][0].'" class="img-responsive" />';  
+            echo '<img src="'.$strResult[1][0].'" class="img-responsive">';  
         }else {
-            echo '<img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_1.jpg" class="img-responsive" />';  
+            echo '<img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_1.jpg" class="img-responsive">';  
         }  
     }  
 }
@@ -22,7 +69,7 @@ function kratos_blog_thumbnail(){
     $img_id = get_post_thumbnail_id();
     $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
     $img_url = $img_url[0];
-    if(has_post_thumbnail()) echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" /></a>';
+    if(has_post_thumbnail()) echo '<a href="'.get_permalink().'"><img src="'.$img_url.'"></a>';
 }
 add_filter('add_image_size',create_function('','return 1;'));
 add_theme_support("post-thumbnails");
@@ -32,7 +79,7 @@ function kratos_blog_thumbnail_new(){
     $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
     $img_url = $img_url[0];
     if(has_post_thumbnail()){
-        echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" /></a>';
+        echo '<a href="'.get_permalink().'"><img src="'.$img_url.'"></a>';
     }else{
         $content = $post->post_content;
         $img_preg = "/<img(.*?)src=\"(.+?)\".*?>/";
@@ -41,11 +88,11 @@ function kratos_blog_thumbnail_new(){
         if(isset($img_src[$img_count]))
         $img_val = $img_src[$img_count];
         if(!empty($img_val)&&!post_password_required()){
-            echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" /></a>';
+            echo '<a href="'.get_permalink().'"><img src="'.$img_val.'"></a>';
         }else if(!kratos_option('default_image')){
             $random = mt_rand(1,20);
-            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_'.$random.'.jpg" /></a>';
-        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'" /></a>';
+            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_'.$random.'.jpg"></a>';
+        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'"></a>';
     }
 }
 //Share the thumbnail fetching

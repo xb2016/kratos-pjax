@@ -35,7 +35,6 @@ jQuery(document).ready(function($) {
 			var selected = $(this).attr('href');
 			$group.hide();
 			$(selected).fadeIn();
-
 		});
 	}
 });

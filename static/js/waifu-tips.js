@@ -25,6 +25,11 @@ $('.waifu-tool .fa-street-view').click(function (){
 $('.waifu-tool .fa-info-circle').click(function (){
     window.open('https://www.fczbl.vip/946.html');
 });
+$('.waifu-tool .fa-camera').click(function (){
+    showMessage('照好了嘛，是不是很可爱呢？',5000);
+    window.Live2D.captureName = model_p+'.png';
+    window.Live2D.captureFrame = true;
+});
 $('.waifu-tool .fa-close').click(function(){
     sessionStorage.setItem('waifu-dsiplay','none');
     showMessage('愿你有一天能与重要的人重逢',2000);

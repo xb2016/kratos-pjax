@@ -28,7 +28,8 @@
     <?php wp_head();wp_print_scripts('theme-jq'); ?>
     <style><?php
         if(kratos_option('background_mode')=='image'&&!wp_is_mobile()&&!kratos_option('site_bw')) echo '@media(min-width:768px){.pagination>li>a{background-color:rgba(255,255,255,.8)}.kratos-hentry,.navigation div,.comments-area .comment-list li,#kratos-widget-area .widget,.comment-respond{background-color:rgba(253,253,253,.85)!important}.comment-list .children li{background-color:rgba(255,253,232,.7)!important}body.custom-background{background-image:url('.kratos_option('background_index_image').');background-size:cover;background-attachment:fixed}}';
-        if(kratos_option('head_mode')=='pic') echo '.affix{top:61px}';else echo '#offcanvas-menu{background:rgba('.kratos_option('mobi_color').')}'; ?>
+        if(kratos_option('head_mode')=='pic') echo '.affix{top:61px}';else echo '#offcanvas-menu{background:rgba('.kratos_option('mobi_color').')}';
+        if(kratos_option('add_css')) echo kratos_option('add_css'); ?>
     </style>
   </head>
     <?php flush(); ?>

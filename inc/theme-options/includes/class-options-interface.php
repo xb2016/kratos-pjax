@@ -228,7 +228,6 @@ class Options_Framework_Interface {
 				$output .= '</select>';
 				$output .= '<select class="of-background of-background-attachment" name="' . esc_attr( $option_name . '[' . $value['id'] . '][attachment]' ) . '" id="' . esc_attr( $value['id'] . '_attachment' ) . '">';
 				$attachments = of_recognized_background_attachment();
-
 				foreach ($attachments as $key => $attachment) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['attachment'], $key, false ) . '>' . esc_html( $attachment ) . '</option>';
 				}
@@ -298,5 +297,4 @@ class Options_Framework_Interface {
 			echo '</div>';
 		}
 	}
-
 }

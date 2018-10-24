@@ -80,17 +80,19 @@ function kratos_theme_scripts(){
     $url1 = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION;
     $url2 = get_bloginfo('template_directory');
     if(kratos_option('js_out')) $jsdir = $url1; else $jsdir = $url2;
+    if(kratos_option('css_out')) $cssdir = $url1; else $cssdir = $url2;
     if(kratos_option('owo_out')) $owodir = $url1; else $owodir = $url2;
     if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $url2.'/static/css/font-awesome.min.css';
     if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $url2.'/static/js/jquery.min.js';
     if(kratos_option('bs_url')) $bsdir = kratos_option('bs_url'); else $bsdir = $url2.'/static/js/bootstrap.min.js';
     if(!is_admin()){
         wp_enqueue_style('fontawe',$fadir,array(),'4.7.0');
-        wp_enqueue_style('kratos',$jsdir.'/static/css/kratos.min.css',array(),KRATOS_VERSION);
+        wp_enqueue_style('kratos',$cssdir.'/static/css/kratos.min.css',array(),KRATOS_VERSION);
         wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
         wp_enqueue_script('bootstrap',$bsdir,array(),'3.3');
         wp_enqueue_script('layer',$jsdir.'/static/js/layer.min.js',array(),'3.1.0');
         wp_enqueue_script('OwO',$jsdir.'/static/js/OwO.min.js',array(),'1.0.1');
+        wp_enqueue_script('highlight',$jsdir.'/static/js/highlight.min.js',array(),'9.13.1');
         wp_enqueue_script('kratos',$jsdir.'/static/js/kratos.js',array(),KRATOS_VERSION);
         if(kratos_option('ap_footer')) wp_enqueue_script('aplayer',$jsdir.'/static/js/aplayer.min.js',array(),'1.10.1');
         if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/static/js/pjax.min.js',array(),'0.0.7');
@@ -277,53 +279,6 @@ function remove_more_jump_link($link){
     return $link;
 }
 add_filter('the_content_more_link','remove_more_jump_link');
-//Banner
-function kratos_banner(){
-    if(!$output = get_option('kratos_banners')){
-        $output = '';
-        $kratos_banner_on = kratos_option("kratos_banner")?kratos_option("kratos_banner"):0;
-        if($kratos_banner_on){
-            for($i=1; $i<6; $i++){
-                $kratos_banner{$i} = kratos_option("kratos_banner{$i}")?kratos_option("kratos_banner{$i}"):"";
-                $kratos_banner_url{$i} = kratos_option("kratos_banner_url{$i}")?kratos_option("kratos_banner_url{$i}"):"";
-                if($kratos_banner{$i}){
-                    $banners[] = $kratos_banner{$i};
-                    $banners_url[] = $kratos_banner_url{$i};
-                }
-            }
-            $count = count($banners);
-            $output .= '<div id="slide" class="carousel slide" data-ride="carousel">';
-            $output .= '<ol class="carousel-indicators">';
-            for($i=0;$i<$count;$i++){
-                $output .= '<li data-target="#slide" data-slide-to="'.$i.'"';
-                if($i==0) $output .= 'class="active"';
-                $output .= '></li>';
-            };
-            $output .='</ol>';
-            $output .= '<div class="carousel-inner" role="listbox">';
-            for($i=0;$i<$count;$i++){
-                $output .= '<div class="item';
-                if($i==0) $output .= ' active';
-                $output .= '">';
-                if(!empty($banners_url[$i])){
-                    $output .= '<a href="'.$banners_url[$i].'"><img src="'.$banners[$i].'"/></a>';
-                }else{
-                    $output .= '<img src="'.$banners[$i].'"/>';
-                }
-                $output .= "</div>";
-            };
-            $output .= '</div>';
-            $output .= '<span class="left carousel-control" href="#slide" role="button" data-slide="prev">';
-            $output .= '<span class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></span></span>';
-            $output .= '<span class="right carousel-control" href="#slide" role="button" data-slide="next">';
-            $output .= '<span class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></span></span></div>';
-            update_option('kratos_banners',$output);
-        }
-    }
-    echo $output;
-}
-function clear_banner(){update_option('kratos_banners','');}
-add_action('optionsframework_after_validate','clear_banner');
 //More users' info
 function get_client_ip(){
     if(getenv("HTTP_CLIENT_IP")&&strcasecmp(getenv("HTTP_CLIENT_IP"),"unknown")) $ip = getenv("HTTP_CLIENT_IP");
@@ -438,7 +393,7 @@ function kratos_get_xml_sitemap(){
     <!-- generated-on=<?php echo get_lastpostdate('blog'); ?> -->
     <url>
         <loc><?php echo get_home_url(); ?></loc>
-        <lastmod><?php echo gmdate('Y-m-d\TH:i:s+00:00',strtotime(get_lastpostmodified(GMT))); ?></lastmod>
+        <lastmod><?php echo gmdate('Y-m-d\TH:i:s+00:00',strtotime(get_lastpostmodified('GMT'))); ?></lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url><?php
@@ -515,6 +470,7 @@ function kratos_get_html_sitemap(){
     .container{max-width:900px;margin:0 auto;position:relative;padding:5px}
     .page-title{font-weight:600;font-size:30px;text-align:center;padding:40px;position:relative}
     .page-title:after{content:"";border-bottom:3px #bdbdbd solid;position:absolute;left:50%;top:50%;padding-top:60px;transform:translate(-50%,-50%);width:60px;z-index:-1}
+    .page-title:hover>a{color:#848484}
     .section-title{font-weight:500;font-size:16px;position:relative;margin:15px 0 10px;color:#fff;background:#565555;display:inline-block;padding:5px 8px;border-radius:5px}
     .post-lists li{padding:4px 0}
     .post-lists li>a{display:block}
@@ -529,8 +485,10 @@ function kratos_get_html_sitemap(){
     if(count($posts)): ?>
     <h2 class="section-title">文章 / Article</h2>
     <ul class="sitemap-lists post-lists clear-fix">
-        <?php foreach($posts as $post): ?>
-        <li><a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title; ?>" target="_blank"><?php echo $post->post_title; ?></a></li>
+        <?php foreach($posts as $post) : 
+                $title = $post->post_title;
+                $title = htmlspecialchars($title); ?>
+        <li><a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul><?php
     endif;
@@ -538,8 +496,10 @@ function kratos_get_html_sitemap(){
     if(count($pages)): ?>
     <h2 class="section-title">页面 / Page</h2>
     <ul class="sitemap-lists post-lists clear-fix">
-        <?php foreach($pages as $page): ?>
-        <li><a href="<?php echo get_page_link($page->ID); ?>" title="<?php echo $page->post_title; ?>" target="_blank"><?php echo $page->post_title; ?></a></li>
+        <?php foreach($pages as $page) : 
+                $title = $page->post_title;
+                $title = htmlspecialchars($title); ?>
+        <li><a href="<?php echo get_page_link($page->ID); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul><?php
     endif;
@@ -547,8 +507,10 @@ function kratos_get_html_sitemap(){
     if(count($categorys)): ?>
     <h2 class="section-title">分类 / Category</h2>
     <ul class="sitemap-lists category-lists clear-fix">
-        <?php foreach ($categorys as $category) : ?>
-        <li><a href="<?php echo get_term_link($category,$category->slug); ?>" title="<?php echo $category->name; ?>" target="_blank"><?php echo $category->name; ?></a></li>
+        <?php foreach ($categorys as $category) : 
+                $title = $category->name;
+                $title = htmlspecialchars($title); ?>
+        <li><a href="<?php echo get_term_link($category, $category->slug); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul><?php
     endif;
@@ -556,8 +518,10 @@ function kratos_get_html_sitemap(){
     if(count($tags)): ?>
     <h2 class="section-title">标签 / Tag</h2>
     <ul class="sitemap-lists tag-lists clear-fix">
-        <?php foreach($tags as $tag): ?>
-        <li><a href="<?php echo get_term_link($tag,$tag->slug); ?>" title="<?php echo $tag->name; ?>" target="_blank"><?php echo $tag->name; ?></a></li>
+        <?php foreach ($tags as $tag) : 
+                $title = $tag->name;
+                $title = htmlspecialchars($title); ?>
+        <li><a href="<?php echo get_term_link($tag, $tag->slug); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul>
     <?php endif; ?>
@@ -578,7 +542,6 @@ function kratos_sitemap_refresh(){
     file_put_contents(ABSPATH.'sitemap.xml',$sitemap_xml);
     file_put_contents(ABSPATH.'sitemap.html',$sitemap_html);
 }
-
 if(kratos_option('sitemap')&&defined('ABSPATH')){
     add_action('publish_post','kratos_sitemap_refresh');
     add_action('save_post','kratos_sitemap_refresh');
