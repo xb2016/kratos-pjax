@@ -140,7 +140,7 @@
                 title : '代码高亮',
                 image : url+'/images/highlight.png',
                 onclick : function() {
-                     ed.selection.setContent('<pre><code class="">' + ed.selection.getContent() + '</code></pre>');
+                     ed.selection.setContent('<pre class="hl"><code class="">' + ed.selection.getContent() + '</code></pre>');
                 }
             });
         },

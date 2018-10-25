@@ -299,7 +299,7 @@ function appthemes_add_quicktags(){ ?>
 <script type="text/javascript">
 QTags.addButton( 'pre', 'pre', '<pre>\n', '\n</pre>' );
 QTags.addButton( 'hr', 'hr', '\n\n<hr />\n\n', '' );
-QTags.addButton( '<?php _e('代码高亮','moedog'); ?>', '<?php _e('代码高亮','moedog'); ?>', '<pre><code class="">', '</code></pre>' );
+QTags.addButton( '<?php _e('代码高亮','moedog'); ?>', '<?php _e('代码高亮','moedog'); ?>', '<pre class="hl"><code class="">', '</code></pre>' );
 QTags.addButton( '<?php _e('内容标题','moedog'); ?>', '<?php _e('内容标题','moedog'); ?>', '[title]', '[/title]' );
 QTags.addButton( '<?php _e('蓝色字体','moedog'); ?>', '<?php _e('蓝色字体','moedog'); ?>', '<span style="color: #0000ff;">', '</span>' );
 QTags.addButton( '<?php _e('红色字体','moedog'); ?>', '<?php _e('红色字体','moedog'); ?>', '<span style="color: #ff0000;">', '</span>' );
