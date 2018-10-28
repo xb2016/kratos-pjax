@@ -188,8 +188,8 @@
         OwOcfg();
     }
     $(function(){
-        sidebaraffix();
         gotop();
+        sidebaraffix();
         offcanvas();
         menu();
         toSearch();

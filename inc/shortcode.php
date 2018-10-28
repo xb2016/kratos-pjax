@@ -297,6 +297,7 @@ function fa_smilies_custom_button($context){
 }
 function appthemes_add_quicktags(){ ?>
 <script type="text/javascript">
+try{
 QTags.addButton( 'pre', 'pre', '<pre>\n', '\n</pre>' );
 QTags.addButton( 'hr', 'hr', '\n\n<hr />\n\n', '' );
 QTags.addButton( '<?php _e('代码高亮','moedog'); ?>', '<?php _e('代码高亮','moedog'); ?>', '<pre class="hl"><code class="">', '</code></pre>' );
@@ -316,6 +317,7 @@ QTags.addButton( '<?php _e('绿色面板','moedog'); ?>', '<?php _e('绿色面�
 QTags.addButton( '<?php _e('蓝色面板','moedog'); ?>', '<?php _e('蓝色面板','moedog'); ?>', '[infobox title="<?php _e('标题内容','moedog'); ?>"]', '[/infobox]' );
 QTags.addButton( '<?php _e('黄色面板','moedog'); ?>', '<?php _e('黄色面板','moedog'); ?>', '[warningbox title="<?php _e('标题内容','moedog'); ?>"]', '[/warningbox]' );
 QTags.addButton( '<?php _e('红色面板','moedog'); ?>', '<?php _e('红色面板','moedog'); ?>', '[dangerbox title="<?php _e('标题内容','moedog'); ?>"]', '[/dangerbox]' );
+}catch(err){}
 </script>
 <?php
 }
