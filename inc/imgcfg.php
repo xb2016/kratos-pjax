@@ -46,22 +46,6 @@ function kratos_banner(){
 }
 function clear_banner(){update_option('kratos_banners','');}
 add_action('optionsframework_after_validate','clear_banner');
-//Photo Thumbnails
-function kratos_photo_thumbnail(){  
-    global $post;  
-    if(has_post_thumbnail()){  
-       the_post_thumbnail(array(750,),array('class'=>'img-responsive'));
-    }else{ 
-        $content = $post->post_content;  
-        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim',$content,$strResult,PREG_PATTERN_ORDER);  
-        $n = count($strResult[1]);  
-        if($n>0){ 
-            echo '<img src="'.$strResult[1][0].'" class="img-responsive">';  
-        }else {
-            echo '<img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_1.jpg" class="img-responsive">';  
-        }  
-    }  
-}
 //Post Thumbnails
 if(function_exists('add_image_size')) add_image_size('kratos-thumb',750);
 function kratos_blog_thumbnail(){

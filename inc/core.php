@@ -548,10 +548,10 @@ function comment_author_link_window(){
     global $comment;
     $url = get_comment_author_url();
     $author = get_comment_author();
-    if(empty($url)||'http://'==$url||'https://'==$url)
+    if(empty($url)||"http://"==$url||"https://"==$url)
         $return = $author;
     else
-        $return = "<a href='".$url."' target='_blank'>".$author."</a>"; 
+        $return = '<a href="'.$url.'" target="_blank" rel="nofollow">'.$author.'</a>';
     return $return;
 }
 add_filter('get_comment_author_link','comment_author_link_window');
