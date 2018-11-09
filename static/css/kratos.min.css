@@ -49,7 +49,6 @@ blockquote.pull-right{padding-right:15px;padding-left:0;text-align:right;border-
 caption{padding-top:8px;padding-bottom:8px;color:#777;text-align:left}
 cite{font-style:normal}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
-code{padding:2px 4px;font-size:90%;color:#333;background-color:#f8f8f8;border-radius:0;border:1px solid #e1e1e1;margin:0 5px}
 dfn{font-style:italic}
 dl{margin-top:0;margin-bottom:20px}
 dd,dt{line-height:1.42857143}
@@ -247,25 +246,6 @@ td,th{padding:0}
 .form-control{padding:6px 12px;line-height:1.42857143;width:100%;color:#555;z-index:2;float:left}
 .form-group{margin-bottom:15px}
 .hidden{display:none!important}
-.hljs{display:block;overflow-x:auto;background:#1e1e1e;color:#dcdcdc;padding:15px}
-.hljs-keyword,.hljs-literal,.hljs-symbol,.hljs-name{color:#569cd6}
-.hljs-link{color:#569cd6;text-decoration:underline}
-.hljs-built_in,.hljs-type{color:#4ec9b0}
-.hljs-number,.hljs-class{color:#b8d7a3}
-.hljs-string,.hljs-meta-string{color:#d69d85}
-.hljs-regexp,.hljs-template-tag{color:#9a5334}
-.hljs-subst,.hljs-function,.hljs-title,.hljs-params,.hljs-formula{color:#dcdcdc}
-.hljs-comment,.hljs-quote{color:#57a64a;font-style:italic}
-.hljs-doctag{color:#608b4e}
-.hljs-meta,.hljs-meta-keyword,.hljs-tag{color:#9b9b9b}
-.hljs-variable,.hljs-template-variable{color:#bd63c5}
-.hljs-attr,.hljs-attribute,.hljs-builtin-name{color:#9cdcfe}
-.hljs-section{color:gold}
-.hljs-emphasis{font-style:italic}
-.hljs-strong{font-weight:bold}
-.hljs-bullet,.hljs-selector-tag,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#d7ba7d}
-.hljs-addition{background-color:#144212;display:inline-block;width:100%}
-.hljs-deletion{background-color:#600;display:inline-block;width:100%}
 .input-group{display:table;border-collapse:separate}
 .input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;width:1%;white-space:nowrap;vertical-align:middle;display:table-cell}
 .input-group-addon:first-child{border-right:0}
