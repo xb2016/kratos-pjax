@@ -203,8 +203,6 @@
         wechatpic();
     });
 }());
-//Prism
-self.Prism.highlightAll(event);
 //comment ajax
 jQuery(document).ready(function(jQuery) {
     var __cancel = jQuery('#cancel-comment-reply-link'),
