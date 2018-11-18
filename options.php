@@ -289,6 +289,10 @@ function optionsframework_options(){
         'std'=>'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION.'/static/images/background.jpg',
         'type'=>'upload');
     $options[] = array(
+        'name'=>__('移动端顶部图片(可留空)','moedog'),
+        'id'=>'background_image_mobi',
+        'type'=>'upload');
+    $options[] = array(
         'name'=>__('图片文字-1(可做文字标题)','moedog'),
         'id'=>'background_image_text1',
         'std'=>'Kratos',

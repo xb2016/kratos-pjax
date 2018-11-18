@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2018-10-28 14:32+0800\n"
-"PO-Revision-Date: 2018-10-28 14:32+0800\n"
+"POT-Creation-Date: 2018-11-18 19:32+0800\n"
+"PO-Revision-Date: 2018-11-18 19:34+0800\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language: en_US\n"
@@ -168,59 +168,59 @@ msgstr "Site Map"
 msgid "最后更新于"
 msgstr "Latest update on "
 
-#: inc/imgcfg.php:125 inc/imgcfg.php:126
+#: inc/imgcfg.php:109 inc/imgcfg.php:110
 msgid "从URL添加"
 msgstr "Add From URL"
 
-#: inc/imgcfg.php:137
+#: inc/imgcfg.php:121
 msgid "或"
 msgstr "or"
 
-#: inc/imgcfg.php:140 inc/imgcfg.php:143
+#: inc/imgcfg.php:124 inc/imgcfg.php:127
 msgid "从URL导入"
 msgstr "Import From URL"
 
-#: inc/imgcfg.php:158
+#: inc/imgcfg.php:142
 msgid "从URL添加媒体项目"
 msgstr "Add a media item from URL"
 
-#: inc/imgcfg.php:164
+#: inc/imgcfg.php:148
 msgid "请手动指定图像大小与格式"
 msgstr "Please specify the image size and format manually"
 
-#: inc/imgcfg.php:166
+#: inc/imgcfg.php:150
 msgid "宽"
 msgstr "Width"
 
-#: inc/imgcfg.php:168
+#: inc/imgcfg.php:152
 msgid "高"
 msgstr "Hight"
 
-#: inc/imgcfg.php:170
+#: inc/imgcfg.php:154
 msgid "MIME类型"
 msgstr "MIME Type"
 
-#: inc/imgcfg.php:177
+#: inc/imgcfg.php:161
 msgid "清除"
 msgstr "Clear"
 
-#: inc/imgcfg.php:178
+#: inc/imgcfg.php:162
 msgid "添加"
 msgstr "Add"
 
-#: inc/imgcfg.php:180
+#: inc/imgcfg.php:164
 msgid "取消"
 msgstr "Cancel"
 
-#: inc/imgcfg.php:191
+#: inc/imgcfg.php:175
 msgid "相关JS加载失败"
 msgstr "Related JavaScript fails to load"
 
-#: inc/imgcfg.php:221 inc/imgcfg.php:227
+#: inc/imgcfg.php:205 inc/imgcfg.php:211
 msgid "图像大小不合法"
 msgstr "The image size is inappropriate"
 
-#: inc/imgcfg.php:250
+#: inc/imgcfg.php:234
 msgid "无法获取图像大小"
 msgstr "Unable to get image size"
 
@@ -1311,564 +1311,568 @@ msgid "顶部图片"
 msgstr "Head Picture"
 
 #: options.php:292
+msgid "移动端顶部图片(可留空)"
+msgstr "Mobile-side Head Picture (can be left blank)"
+
+#: options.php:296
 msgid "图片文字-1(可做文字标题)"
 msgstr "Picture Text-1 (text title)"
 
-#: options.php:297
+#: options.php:301
 msgid "图片文字-2(可做站点描述)"
 msgstr "Picture Text-2 (site description)"
 
-#: options.php:302
+#: options.php:306
 msgid "移动端菜单显示模式"
 msgstr "Mobile-side Menu display mode"
 
-#: options.php:308
+#: options.php:312
 msgid "顶部"
 msgstr "Top bar"
 
-#: options.php:309
+#: options.php:313
 msgid "侧栏"
 msgstr "Side bar"
 
-#: options.php:311
+#: options.php:315
 msgid "以下为纯色Header设置"
 msgstr "The following is a solid color header setting"
 
-#: options.php:312
+#: options.php:316
 msgid "只有顶部显示模式为纯色才有效。"
 msgstr "Require Head Display Mode: solid color"
 
-#: options.php:314
+#: options.php:318
 msgid "Nav Bar颜色"
 msgstr "Nav Bar Color"
 
-#: options.php:315
+#: options.php:319
 msgid "请使用RGBA格式表示，默认22,23,26,.9"
 msgstr "Please use RGBA format, default 22,23,26,.9"
 
-#: options.php:320
+#: options.php:324
 msgid "移动端侧边栏菜单颜色"
 msgstr "Mobile Side Sidebar Menu Color"
 
-#: options.php:321
+#: options.php:325
 msgid "请使用RGBA格式表示，默认42,42,42,.9"
 msgstr "Please use RGBA format, default 42,42,42,.9"
 
-#: options.php:326
+#: options.php:330
 msgid "图片Logo"
 msgstr "Image logo"
 
-#: options.php:327
+#: options.php:331
 msgid "高40px，宽最大200px，不设置将显示文字Logo"
 msgstr "Height 40px, Width 200px maxium, not set will display text logo"
 
-#: options.php:331
+#: options.php:335
 msgid "底部配置"
 msgstr "Site Bottom"
 
-#: options.php:334
+#: options.php:338
 msgid "建站时间"
 msgstr "Site Build Time"
 
-#: options.php:335
+#: options.php:339
 msgid "输入你的建站时间，格式MM/DD/YYYY hh:mm:ss"
 msgstr "Enter the start time for your site, like mm/dd/yyyy hh:mm:ss"
 
-#: options.php:340
+#: options.php:344
 msgid "Footer颜色"
 msgstr "Footer Color"
 
-#: options.php:341
+#: options.php:345
 msgid "请使用RGBA格式表示，默认35,40,45,1"
 msgstr "Please use RGBA format, default 35,40,45,1"
 
-#: options.php:346
+#: options.php:350
 msgid "工信部备案信息"
 msgstr "MIIT Record Information"
 
-#: options.php:347
+#: options.php:351
 msgid "输入您的工信部备案号，针对国际版没有备案信息栏目的功能"
 msgstr ""
 "Enter your MIIT record number, for the international version only the "
 "function of the Record information column  is disabled"
 
-#: options.php:351
+#: options.php:355
 msgid "公安网备案信息"
 msgstr "Public Security Network record information"
 
-#: options.php:352
+#: options.php:356
 msgid "输入您的公安网备案号"
 msgstr "Enter your police network record number"
 
-#: options.php:356
+#: options.php:360
 msgid "公安网备案连接"
 msgstr "Public Security Network record URL"
 
-#: options.php:357
+#: options.php:361
 msgid "输入您的公安网备案的链接地址"
 msgstr "Enter the link address of your Public security network for filing"
 
-#: options.php:361
+#: options.php:365
 msgid "新浪微博"
 msgstr "Sina Weibo"
 
-#: options.php:362 options.php:368 options.php:374 options.php:380
-#: options.php:386 options.php:392
+#: options.php:366 options.php:372 options.php:378 options.php:384
+#: options.php:390 options.php:396
 msgid "连接前要带有 http:// 或者 https:// "
 msgstr "http:// or https:// required."
 
-#: options.php:367
+#: options.php:371
 msgid "腾讯微博"
 msgstr "Tencent Weibo"
 
-#: options.php:373
+#: options.php:377
 msgid "Twitter"
 msgstr "Twitter"
 
-#: options.php:379
+#: options.php:383
 msgid "FaceBook"
 msgstr "Facebook"
 
-#: options.php:385
+#: options.php:389
 msgid "LinkedIn"
 msgstr "Linkedin"
 
-#: options.php:391
+#: options.php:395
 msgid "GayHub"
 msgstr "GitHub"
 
-#: options.php:397
+#: options.php:401
 msgid "Mail"
 msgstr "Mail"
 
-#: options.php:398
+#: options.php:402
 msgid "连接前要带有mailto: "
 msgstr "mailto: required."
 
-#: options.php:403
+#: options.php:407
 msgid "文章设置"
 msgstr "Articles"
 
-#: options.php:406
+#: options.php:410
 msgid "文章页面布局"
 msgstr "Article Page Layout"
 
-#: options.php:407
+#: options.php:411
 msgid "选择[文章]页面布局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
 msgstr "Select the [Article] page layout, display the right column by default"
 
-#: options.php:416 options.php:447
+#: options.php:420 options.php:451
 msgid "版权声明"
 msgstr "Copyright"
 
-#: options.php:417 options.php:448
+#: options.php:421 options.php:452
 msgid "是否启用 CC BY-SA 4.0 声明"
 msgstr "Enable the CC BY-SA 4.0 declaration"
 
-#: options.php:422 options.php:453
+#: options.php:426 options.php:457
 msgid "分享按钮"
 msgstr "Share Button"
 
-#: options.php:423
+#: options.php:427
 msgid "是否启用文章分享功能"
 msgstr "Enable the article sharing feature"
 
-#: options.php:428 options.php:459
+#: options.php:432 options.php:463
 msgid "打赏按钮"
 msgstr "Donate Button"
 
-#: options.php:429
+#: options.php:433
 msgid "是否启用文章打赏功能"
 msgstr "Enable the article donate feature"
 
-#: options.php:434
+#: options.php:438
 msgid "页面设置"
 msgstr "Pages"
 
-#: options.php:437
+#: options.php:441
 msgid "页面布局"
 msgstr "Page Layout"
 
-#: options.php:438
+#: options.php:442
 msgid "选择[页面]布局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
 msgstr "Select [Page] layout, display right column by default"
 
-#: options.php:454
+#: options.php:458
 msgid "是否启用页面分享功能"
 msgstr "Enable the page sharing feature"
 
-#: options.php:460
+#: options.php:464
 msgid "是否启用页面打赏功能"
 msgstr "Enable the pagedonate feature"
 
-#: options.php:465
+#: options.php:469
 msgid "轮播设置"
 msgstr "Carousel"
 
-#: options.php:468
+#: options.php:472
 msgid "主页轮播"
 msgstr "Home Page Carousel"
 
-#: options.php:469
+#: options.php:473
 msgid "是否启用轮播功能"
 msgstr "Enable the Carousel feature"
 
-#: options.php:474
+#: options.php:478
 msgid "注意："
 msgstr "Attention:"
 
-#: options.php:475
+#: options.php:479
 msgid "图片宽度建议大于750px，所有图片比例须一致"
 msgstr ""
 "Picture width recommended greater than 750px, all picture proportions must "
 "be consistent"
 
-#: options.php:477
+#: options.php:481
 msgid "轮播图片-1"
 msgstr "Carousel Pictures-1"
 
-#: options.php:481
+#: options.php:485
 msgid "轮播链接-1"
 msgstr "Link-1"
 
-#: options.php:482 options.php:492 options.php:502 options.php:512
-#: options.php:522
+#: options.php:486 options.php:496 options.php:506 options.php:516
+#: options.php:526
 msgid "链接可以留空"
 msgstr "Links can be left blank"
 
-#: options.php:487
+#: options.php:491
 msgid "轮播图片-2"
 msgstr "Carousel Pictures-2"
 
-#: options.php:491
+#: options.php:495
 msgid "链接2"
 msgstr "Link 2"
 
-#: options.php:497
+#: options.php:501
 msgid "轮播图片-3"
 msgstr "Carousel Pictures-3"
 
-#: options.php:501
+#: options.php:505
 msgid "链接3"
 msgstr "Link 3"
 
-#: options.php:507
+#: options.php:511
 msgid "轮播图片-4"
 msgstr "Carousel Pictures-4"
 
-#: options.php:511
+#: options.php:515
 msgid "链接4"
 msgstr "Link 4"
 
-#: options.php:517
+#: options.php:521
 msgid "轮播图片-5"
 msgstr "Carousel Pictures-5"
 
-#: options.php:521
+#: options.php:525
 msgid "链接5"
 msgstr "Link 5"
 
-#: options.php:527
+#: options.php:531
 msgid "邮件设置"
 msgstr "Mail"
 
-#: options.php:530
+#: options.php:534
 msgid "SMTP服务"
 msgstr "SMTP Service"
 
-#: options.php:531
+#: options.php:535
 msgid "是否启用SMTP邮件发送服务"
 msgstr "Enable the SMTP mail delivery service"
 
-#: options.php:536
+#: options.php:540
 msgid "发信人"
 msgstr "Sender"
 
-#: options.php:537
+#: options.php:541
 msgid "请填写发件人姓名"
 msgstr "Please fill in the sender's name."
 
-#: options.php:542
+#: options.php:546
 msgid "邮件服务器"
 msgstr "Mail Server"
 
-#: options.php:543
+#: options.php:547
 msgid "请填写SMTP服务器地址"
 msgstr "Please fill in the SMTP server address"
 
-#: options.php:548
+#: options.php:552
 msgid "服务器端口"
 msgstr "Server Port"
 
-#: options.php:549
+#: options.php:553
 msgid "请填写SMTP服务器端口"
 msgstr "Please fill in the SMTP server port"
 
-#: options.php:554
+#: options.php:558
 msgid "邮箱帐号"
 msgstr "Email Account"
 
-#: options.php:555
+#: options.php:559
 msgid "请填写邮箱账号"
 msgstr "Please fill in your email account"
 
-#: options.php:560
+#: options.php:564
 msgid "邮箱密码"
 msgstr "Email Password"
 
-#: options.php:561
+#: options.php:565
 msgid "请填写邮箱密码"
 msgstr "Please fill in the email password"
 
-#: options.php:566
+#: options.php:570
 msgid "启用SMTPAuth服务"
 msgstr "Enable the SmtpAuth service"
 
-#: options.php:567
+#: options.php:571
 msgid "是否启用SMTPAuth服务"
 msgstr "Enable the SmtpAuth service"
 
-#: options.php:572
+#: options.php:576
 msgid "SMTPSecure设置"
 msgstr "SmtpSecure Settings"
 
-#: options.php:573
+#: options.php:577
 msgid ""
 "若启用SMTPAuth服务则填写ssl，若不启用则留空；office365的邮箱请填写STARTTLS"
 msgstr ""
 "If the SmtpAuth service is enabled, fill in the SSL, leave blank if not "
 "enabled, OFFICE365 's mailbox please fill in STARTTLS"
 
-#: options.php:578
+#: options.php:582
 msgid "雪花设置"
 msgstr "Snowflakes"
 
-#: options.php:581
+#: options.php:585
 msgid "站点雪花"
 msgstr "Site Snowflakes"
 
-#: options.php:582
+#: options.php:586
 msgid "是否启用站点雪花功能"
 msgstr "Enable the site Snowflake feature"
 
-#: options.php:587
+#: options.php:591
 msgid "移动端是否显示"
 msgstr "If displays at mobile-end"
 
-#: options.php:588
+#: options.php:592
 msgid "配置移动端是否显示，默认是"
 msgstr "Configure if displays at mobile-end, default is on"
 
-#: options.php:593
+#: options.php:597
 msgid "雪花数量"
 msgstr "Snowflakes Amount"
 
-#: options.php:594
+#: options.php:598
 msgid "数值越大雪花数量越多，默认150"
 msgstr "The larger the amount, the more snowflakes, the default 150"
 
-#: options.php:599
+#: options.php:603
 msgid "雪花大小"
 msgstr "Snowflake Size"
 
-#: options.php:600
+#: options.php:604
 msgid "为基准值，数值越大雪花越大，默认2"
 msgstr ""
 "As the base value, the larger the value, the larger the snowflake, the "
 "default 2"
 
-#: options.php:605
+#: options.php:609
 msgid "雪花距离"
 msgstr "Snowflake Distance"
 
-#: options.php:606
+#: options.php:610
 msgid "雪花距离鼠标指针的最小值，小于这个距离的雪花将受到鼠标的排斥，默认100"
 msgstr ""
 "Snowflake distance The minimum value of the mouse pointer, less than this "
 "distance of snowflakes will be rejected by the mouse, the default 100"
 
-#: options.php:611
+#: options.php:615
 msgid "雪花速度"
 msgstr "Snowflake Speed"
 
-#: options.php:612
+#: options.php:616
 msgid "为基准值，数值越大雪花速度越快，默认0.5"
 msgstr ""
 "As the base value, the larger the value, the faster the snowflake speed, the "
 "default 0.5"
 
-#: options.php:617
+#: options.php:621
 msgid "雪花横移度"
 msgstr "Snowflake Transverse Shift Degree"
 
-#: options.php:618
+#: options.php:622
 msgid "为基准值，数值越大雪花横移幅度越大，0为竖直下落，默认1"
 msgstr ""
 "As the base value, the larger the value, the greater the snowflake shift "
 "amplitude, 0 is the vertical drop, the default 1"
 
-#: options.php:623
+#: options.php:627
 msgid "雪花颜色"
 msgstr "Snowflake Color"
 
-#: options.php:624
+#: options.php:628
 msgid "请用RGB格式表示，默认255,255,255"
 msgstr "Please indicate in RGB format, default 255,255,255"
 
-#: options.php:629
+#: options.php:633
 msgid "雪花不透明度"
 msgstr "Snowflake Opacity"
 
-#: options.php:630
+#: options.php:634
 msgid "为基准值，范围0~1，1为不透明，默认0.3"
 msgstr "As the reference value, the range 0~1,1 to opaque, the default 0.3"
 
-#: options.php:635
+#: options.php:639
 msgid "注册登录设置"
 msgstr "Register/Login"
 
-#: options.php:638
+#: options.php:642
 msgid "注册登录页面背景"
 msgstr "Register/Login Page Background"
 
-#: options.php:639
+#: options.php:643
 msgid "因为默认使用了Bing每日美图API，所以这里只能手动写链接了..."
 msgstr "Write down the URL"
 
-#: options.php:644
+#: options.php:648
 msgid "注册登录页面站点图标"
 msgstr "Register/Login Page Site Icon"
 
-#: options.php:649
+#: options.php:653
 msgid "以下为用户注册部分的设置"
 msgstr "The following is the settings for the User Registration Section"
 
-#: options.php:651
+#: options.php:655
 msgid "使用密码注册"
 msgstr "Register With Password"
 
-#: options.php:652
+#: options.php:656
 msgid "是否允许用户输入密码注册(免邮箱验证)"
 msgstr "Allow user to enter password registration (email-free verification)"
 
-#: options.php:657
+#: options.php:661
 msgid "域名限制模式"
 msgstr "Domain Name Restriction Mode"
 
-#: options.php:658
+#: options.php:662
 msgid "如果不想限制邮箱，请将此部分设置保持默认。"
 msgstr ""
 "If you don't want to restrict the mailbox, leave this section to default."
 
-#: options.php:664
+#: options.php:668
 msgid "白名单模式"
 msgstr "Whitelist Mode"
 
-#: options.php:665
+#: options.php:669
 msgid "黑名单模式"
 msgstr "Blacklist Mode"
 
-#: options.php:667
+#: options.php:671
 msgid "域名白名单列表(一行一个)"
 msgstr "Domain Whitelist (one per line)"
 
-#: options.php:672
+#: options.php:676
 msgid "域名黑名单列表(一行一个)"
 msgstr "Domain Blacklist (one per line)"
 
-#: options.php:677
+#: options.php:681
 msgid "错误信息"
 msgstr "Error Message"
 
-#: options.php:678
+#: options.php:682
 msgid "用户域名被阻止时的提示信息"
 msgstr "Message when a user domain name is blocked"
 
-#: options.php:680
+#: options.php:684
 msgid "本站禁止此域名的邮箱注册，请更换邮箱再试。"
 msgstr "Domain not allowed, please use another email address."
 
-#: options.php:683
+#: options.php:687
 msgid "以下为用户登录限制部分设置"
 msgstr "The following are the user Login Restrictions Section settings"
 
-#: options.php:684
+#: options.php:688
 msgid "默认不启用，但是建议手动启用此功能"
 msgstr ""
 "Not enabled by default, but it is recommended to enable this feature manually"
 
-#: options.php:686
+#: options.php:690
 msgid "用户登录限制"
 msgstr "User Login Restrictions"
 
-#: options.php:687
+#: options.php:691
 msgid "是否启用登录限制功能(只有启用此项，下面的设置才有效)"
 msgstr ""
 "Whether the login restrictions feature is enabled (only if this is enabled, "
 "the following settings are valid)"
 
-#: options.php:692
+#: options.php:696
 msgid "登录尝试机会"
 msgstr "Logon Attempt Opportunities"
 
-#: options.php:693
+#: options.php:697
 msgid "允许输错密码的次数，默认3"
 msgstr "Number of password errors allowed, default 3"
 
-#: options.php:698
+#: options.php:702
 msgid "初始锁定时间"
 msgstr "Initial Lockout Time"
 
-#: options.php:699
+#: options.php:703
 msgid "单位秒，不应小于60，默认1200(20分钟)"
 msgstr "Unit seconds, should not be less than 60, default 1200 (20 minutes)"
 
-#: options.php:704
+#: options.php:708
 msgid "增加锁定时间所需锁定次数"
 msgstr "Increase the number of locks required to lock time"
 
-#: options.php:705
+#: options.php:709
 msgid "默认3次"
 msgstr "Default 3 times"
 
-#: options.php:710
+#: options.php:714
 msgid "增加后的锁定时间"
 msgstr "Lock-in time after increase"
 
-#: options.php:711
+#: options.php:715
 msgid "单位秒，不应小于3600，默认86400(24小时)"
 msgstr "Unit seconds, should not be less than 3600, default 86400 (24 hours)"
 
-#: options.php:716
+#: options.php:720
 msgid "自动清除锁定IP的时间"
 msgstr "Automatically clears the time that the IP is locked"
 
-#: options.php:717
+#: options.php:721
 msgid "单位秒，默认43200(12小时)"
 msgstr "Units per second, default 43200 (12 hours)"
 
-#: options.php:722
+#: options.php:726
 msgid "控制Cookie登录"
 msgstr "Control Cookie Login"
 
-#: options.php:723
+#: options.php:727
 msgid "是否控制Cookie登录"
 msgstr "Control cookie login"
 
-#: options.php:728
+#: options.php:732
 msgid "邮件提醒"
 msgstr "Email Alerts"
 
-#: options.php:729
+#: options.php:733
 msgid "是否启用锁定邮件提醒功能(请在下方设置提醒阈值)"
 msgstr ""
 "Enable the Lock MailTips feature (please set reminder thresholds below)"
 
-#: options.php:734
+#: options.php:738
 msgid "锁定提醒阈值"
 msgstr "Lock Reminder Threshold Value"
 
-#: options.php:735
+#: options.php:739
 msgid "默认2次(启用上方的邮件提醒功能才有效)"
 msgstr "Default 2 times (enable email alerts above to work)"
 
@@ -1933,6 +1937,9 @@ msgstr "Vtrois(Modified by 小白-白)"
 #. Author URI of the plugin/theme
 msgid "https://www.vtrois.com/"
 msgstr "https://www.vtrois.com/"
+
+#~ msgid "服务与项目"
+#~ msgstr "Services and Projects"
 
 #~ msgid "自定义Bootstrap(JS)"
 #~ msgstr "Custom Bootstrap (JS)"

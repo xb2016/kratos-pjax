@@ -350,7 +350,7 @@ function kratos_comment_callback(){
     if(is_wp_error($comment)){
         $data = $comment->get_error_data();
         if(!empty($data)){
-            ravenclaw_comment_err($comment->get_error_message());
+            kratos_comment_err($comment->get_error_message());
         }else{
             exit;
         }
@@ -555,7 +555,7 @@ function comment_author_link_window(){
     return $return;
 }
 add_filter('get_comment_author_link','comment_author_link_window');
-//Notice ***PLEASE DO NEVER CHANGE THIS 请不要修改此内容***
+//Notice ***PLEASE DO NOT EDIT THIS 请不要修改此内容***
 function kratos_admin_notice(){
     $noticeinfo = wp_remote_retrieve_body(wp_remote_get('https://api.fczbl.vip/kratos_notice/?v='.KRATOS_VERSION));
     if(!is_wp_error($noticeinfo)&&$noticeinfo){ ?>

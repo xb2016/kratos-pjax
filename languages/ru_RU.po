@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2018-10-28 14:32+0800\n"
-"PO-Revision-Date: 2018-11-03 08:03+0700\n"
+"POT-Creation-Date: 2018-11-18 19:32+0800\n"
+"PO-Revision-Date: 2018-11-18 19:32+0800\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: JuniorDEV (Pesetsu) <pesetsuu@gmail.com>\n"
 "Language: ru_RU\n"
@@ -15,9 +15,9 @@ msgstr ""
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;"
-"esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;"
-"__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -45,6 +45,10 @@ msgstr "Email адрес"
 msgid "网站"
 msgstr "URL"
 
+#: comments.php:23
+msgid "电子邮件地址不会被公开。必填项已用 * 标注"
+msgstr ""
+
 #: comments.php:24
 msgid "|´・ω・)ノ还不快点说点什么呀poi~"
 msgstr "|´・ω・)ノ Добавить комментарий ..."
@@ -57,9 +61,28 @@ msgstr "Уже работает для"
 msgid "上传头像"
 msgstr "Загрузить фото профиля"
 
+#: inc/avatars.php:49
+msgid "尚未设置本地头像，请点击“浏览”按钮上传本地头像。"
+msgstr ""
+
 #: inc/avatars.php:51
 msgid "移除本地头像"
 msgstr "Удалить фотографию профиля"
+
+#: inc/avatars.php:52
+msgid ""
+"如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本"
+"地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头"
+"像。"
+msgstr ""
+
+#: inc/avatars.php:54
+msgid "尚未设置本地头像，请在 Gravatar.com 网站设置头像。"
+msgstr ""
+
+#: inc/avatars.php:55
+msgid "你没有本地头像上传权限，如需要修改本地头像，请联系站点管理员。"
+msgstr ""
 
 #: inc/avatars.php:73
 msgid ".php不能出现在文件名中！"
@@ -73,14 +96,19 @@ msgstr "Загрузите файл jpg, gif, png, bmp, tif!"
 msgid "上传头像过程中出现以下错误："
 msgstr "При загрузке фотографии профиля произошла следующая ошибка:"
 
+#: inc/content-templates/content-status.php:6
+#: inc/content-templates/content.php:15 inc/content-templates/content.php:46
 #: inc/single-templates/single-status.php:16 inc/single-templates/single.php:17
 msgid "条评论"
 msgstr "Комментарии"
 
+#: inc/content-templates/content-status.php:6
+#: inc/content-templates/content.php:18 inc/content-templates/content.php:49
 #: inc/single-templates/single-status.php:16 inc/single-templates/single.php:18
 msgid "次阅读"
 msgstr "Мнения"
 
+#: inc/content-templates/content.php:19 inc/content-templates/content.php:50
 #: inc/single-templates/single.php:20
 msgid "人点赞"
 msgstr "Лайки"
@@ -89,6 +117,9 @@ msgstr "Лайки"
 msgid "阅读全文"
 msgstr "Читать дальше"
 
+#: inc/core.php:20 inc/core.php:21
+#: inc/theme-options/includes/class-options-framework-admin.php:23
+#: inc/theme-options/includes/class-options-framework-admin.php:24
 #: inc/widgets.php:181
 msgid "主题设置"
 msgstr "Настройки темы"
@@ -97,6 +128,7 @@ msgstr "Настройки темы"
 msgid "顶部菜单"
 msgstr "Верхняя панель меню"
 
+#: inc/core.php:222
 #, php-format
 msgid "为您找到结果 %s 个"
 msgstr "Найдено %s  результатов для вас"
@@ -125,59 +157,59 @@ msgstr "Карта сайта"
 msgid "最后更新于"
 msgstr "Последние обновления"
 
-#: inc/imgcfg.php:125 inc/imgcfg.php:126
+#: inc/imgcfg.php:109 inc/imgcfg.php:110
 msgid "从URL添加"
 msgstr "Добавить из URL"
 
-#: inc/imgcfg.php:137
+#: inc/imgcfg.php:121
 msgid "或"
 msgstr "или же"
 
-#: inc/imgcfg.php:140 inc/imgcfg.php:143
+#: inc/imgcfg.php:124 inc/imgcfg.php:127
 msgid "从URL导入"
 msgstr "Импорт из URL-адреса"
 
-#: inc/imgcfg.php:158
+#: inc/imgcfg.php:142
 msgid "从URL添加媒体项目"
 msgstr "Загрузить картинку из URL-адреса"
 
-#: inc/imgcfg.php:164
+#: inc/imgcfg.php:148
 msgid "请手动指定图像大小与格式"
 msgstr "Указать размер и формат изображения вручную."
 
-#: inc/imgcfg.php:166
+#: inc/imgcfg.php:150
 msgid "宽"
 msgstr "Ширина"
 
-#: inc/imgcfg.php:168
+#: inc/imgcfg.php:152
 msgid "高"
 msgstr "Высота"
 
-#: inc/imgcfg.php:170
+#: inc/imgcfg.php:154
 msgid "MIME类型"
 msgstr "Тип MIME"
 
-#: inc/imgcfg.php:177
+#: inc/imgcfg.php:161
 msgid "清除"
 msgstr "Очистить"
 
-#: inc/imgcfg.php:178
+#: inc/imgcfg.php:162
 msgid "添加"
 msgstr "Добавить"
 
-#: inc/imgcfg.php:180
+#: inc/imgcfg.php:164
 msgid "取消"
 msgstr "Отменить"
 
-#: inc/imgcfg.php:191
+#: inc/imgcfg.php:175
 msgid "相关JS加载失败"
 msgstr "Связанный JavaScript не загружается"
 
-#: inc/imgcfg.php:221 inc/imgcfg.php:227
+#: inc/imgcfg.php:205 inc/imgcfg.php:211
 msgid "图像大小不合法"
 msgstr "Размер изображения не подходит"
 
-#: inc/imgcfg.php:250
+#: inc/imgcfg.php:234
 msgid "无法获取图像大小"
 msgstr "Не удалось получить размер изображения"
 
@@ -201,6 +233,10 @@ msgstr "Капча:"
 msgid "<strong>错误</strong>：昵称一栏不能为空。"
 msgstr "<strong>Ошибка</strong>: имя не может быть пустым."
 
+#: inc/logincfg.php:72
+msgid "<strong>错误</strong>：两次输入的密码不一致。"
+msgstr ""
+
 #: inc/logincfg.php:73
 msgid "<strong>错误</strong>：密码长度必须大于8位。"
 msgstr "<strong>Ошибка</strong>:  Длина пароля должна быть больше 8 символов."
@@ -209,10 +245,12 @@ msgstr "<strong>Ошибка</strong>:  Длина пароля должна б�
 msgid "<strong>错误</strong>：验证码错误，请重试。"
 msgstr "<strong>Ошибка</strong>: Капча введена неверно, повторите попытку."
 
+#: inc/logincfg.php:248
 #, php-format
 msgid "%d 小时"
 msgstr "%d  часов"
 
+#: inc/logincfg.php:253
 #, php-format
 msgid "%d 分钟"
 msgstr "%d  минут"
@@ -221,14 +259,17 @@ msgstr "%d  минут"
 msgid "登录失败次数过多"
 msgstr "Слишком много ошибок входа в систему"
 
+#: inc/logincfg.php:257
 #, php-format
 msgid "失败登录次数：%d ，IP：%s"
 msgstr "Количество неудавшихся логинов: %d , ip: %s"
 
+#: inc/logincfg.php:260
 #, php-format
 msgid "最后一次尝试登录的用户名：%s"
 msgstr "Имя пользователя, последнее занятое логином: %s"
 
+#: inc/logincfg.php:263
 #, php-format
 msgid "此 IP 已被封锁，封锁时长：%s"
 msgstr "Этот IP заблокирован, длительность блока: %s"
@@ -241,13 +282,21 @@ msgstr "<strong>Ошибка</strong>:  Слишком много ошибок �
 msgid "请稍候再试。"
 msgstr "Повторите попытку позже."
 
+#: inc/logincfg.php:278
 #, php-format
 msgid "请在 %d 小时后重试。"
 msgstr "Повторите попытку в %d  часов."
 
+#: inc/logincfg.php:280
 #, php-format
 msgid "请在 %d 分钟后重试。"
 msgstr "Повторите попытку через %d  минут."
+
+#: inc/logincfg.php:292
+#, php-format
+msgid ""
+"<strong>错误</strong>：账号或密码有误，您还有<strong>%d</strong>次尝试机会。"
+msgstr ""
 
 #: inc/post.php:58
 msgid "这是一篇受保护的文章，请输入阅读密码！"
@@ -281,9 +330,26 @@ msgstr "Загрузка с сайта"
 msgid "云盘下载"
 msgstr "Загрузка с облака"
 
+#: inc/shortcode.php:81 inc/shortcode.php:115 inc/shortcode.php:125
+#: inc/shortcode.php:135 inc/shortcode.php:145 inc/shortcode.php:307
+#: inc/shortcode.php:316 inc/shortcode.php:317 inc/shortcode.php:318
 #: inc/shortcode.php:319
 msgid "标题内容"
 msgstr "Заголовок"
+
+#: inc/shortcode.php:101
+#, php-format
+msgid ""
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本文发表评论才能阅读隐"
+"藏内容"
+msgstr ""
+
+#: inc/shortcode.php:108
+#, php-format
+msgid ""
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本站任一文章发表评论才"
+"能阅读隐藏内容"
+msgstr ""
 
 #: inc/shortcode.php:110
 msgid "以下为隐藏内容："
@@ -361,6 +427,14 @@ msgstr "Предыдущий"
 msgid "下一篇"
 msgstr "Следующий"
 
+#: inc/single-templates/single.php:31 page.php:21 pages/page-notitle.php:22
+msgid ""
+"本作品采用 <a rel=\"license nofollow\" target=\"_blank\" href=\"http://"
+"creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0 国际"
+"许可协议</a> 进行许可"
+msgstr ""
+
+#: inc/single-templates/single.php:36 page.php:27 pages/page-archives.php:60
 #: pages/page-notitle.php:28
 msgid "打赏"
 msgstr "Задонатить"
@@ -369,6 +443,7 @@ msgstr "Задонатить"
 msgid "点赞"
 msgstr "Лайк"
 
+#: inc/single-templates/single.php:39 page.php:29 pages/page-archives.php:62
 #: pages/page-notitle.php:30
 msgid "分享"
 msgstr "Поделиться"
@@ -380,6 +455,10 @@ msgstr "Последнее изменение:"
 #: inc/smtp.php:30
 msgid "[通知]您的留言已经通过审核"
 msgstr "[Уведомление] Ваш комментарий одобрен"
+
+#: inc/smtp.php:40
+msgid "您有一条留言通过了管理员的审核并显示在文章页面，摘要信息请见下表。"
+msgstr ""
 
 #: inc/smtp.php:44
 msgid "文章"
@@ -405,6 +484,10 @@ msgstr "Это сообщение отправляется автоматиче�
 msgid "[通知]您的留言有了新的回复"
 msgstr "[Уведомление] Ваш комментарий имеет новый ответ"
 
+#: inc/smtp.php:90
+msgid "您有一条留言有了新的回复，摘要信息请见下表。"
+msgstr ""
+
 #: inc/smtp.php:94
 msgid "原文"
 msgstr "Оригинал"
@@ -424,6 +507,11 @@ msgstr "Посмотреть сообщение"
 #: inc/smtp.php:133
 msgid "密码重设通知"
 msgstr "Уведомление о сбросе пароля"
+
+#: inc/smtp.php:133
+#, php-format
+msgid "有人要求重设您在[%s]的密码，若不是您本人请求，请忽略本邮件。"
+msgstr ""
 
 #: inc/smtp.php:133
 msgid "密码重设信息"
@@ -453,9 +541,12 @@ msgstr "Если ваш аккаунт ненормален, свяжитесь 
 msgid "注册成功通知"
 msgstr "Уведомление об успехе регистрации"
 
+#: inc/smtp.php:144
 #, php-format
 msgid "欢迎您注册[%s]，下面是您的账号信息，请妥善保管！"
-msgstr "Добро пожаловать для регистрации на [ %s ], вот ваша информация о вашей учетной записи."
+msgstr ""
+"Добро пожаловать для регистрации на [ %s ], вот ваша информация о вашей "
+"учетной записи."
 
 #: inc/smtp.php:144
 msgid "您的详细注册信息"
@@ -468,6 +559,11 @@ msgstr "Логин Пароль"
 #: inc/smtp.php:144
 msgid "您设定的密码"
 msgstr "Установленный вами пароль"
+
+#: inc/smtp.php:149
+#, php-format
+msgid "欢迎您注册[%s]，请使用下面的信息登录并修改密码！"
+msgstr ""
 
 #: inc/smtp.php:149
 msgid "您的注册信息"
@@ -509,10 +605,12 @@ msgstr "Сохранено успешно"
 msgid "未选择任何文件"
 msgstr "Не выбрано файлов"
 
+#: inc/theme-options/includes/class-options-media-uploader.php:31
 #: inc/theme-options/includes/class-options-media-uploader.php:69
 msgid "上传"
 msgstr "Загрузить"
 
+#: inc/theme-options/includes/class-options-media-uploader.php:33
 #: inc/theme-options/includes/class-options-media-uploader.php:70
 msgid "移除"
 msgstr "Удалить"
@@ -610,35 +708,36 @@ msgid "刚刚"
 msgstr "Прямо сейчас"
 
 #: inc/widgets.php:34
-msgid "年前"
+msgid " 年前"
 msgstr "много лет назад"
 
+#: inc/widgets.php:34 inc/widgets.php:35 inc/widgets.php:36 inc/widgets.php:37
 #: inc/widgets.php:38 inc/widgets.php:39 inc/widgets.php:40
 msgid "m月d日"
 msgstr "м-д"
 
 #: inc/widgets.php:35
-msgid "个月前"
-msgstr "несколько месяцев назад"
+msgid " 个月前"
+msgstr ""
 
 #: inc/widgets.php:36
-msgid "周前"
+msgid " 周前"
 msgstr "недели назад"
 
 #: inc/widgets.php:37
-msgid "天前"
+msgid " 天前"
 msgstr "дней назад"
 
 #: inc/widgets.php:38
-msgid "小时前"
+msgid " 小时前"
 msgstr "несколько часов назад"
 
 #: inc/widgets.php:39
-msgid "分钟前"
+msgid " 分钟前"
 msgstr "минут назад"
 
 #: inc/widgets.php:40
-msgid "秒前"
+msgid " 秒前"
 msgstr "секунд назад"
 
 #: inc/widgets.php:74
@@ -865,6 +964,10 @@ msgstr "PJAX"
 msgid "是否启用页面PJAX加载"
 msgstr "Включить загрузку страницы PJAX"
 
+#: options.php:45
+msgid "是否启用站点地图(更新文章时生成，需要/目录的写权限)"
+msgstr ""
+
 #: options.php:50
 msgid "背景类型"
 msgstr "Тип фона"
@@ -885,9 +988,17 @@ msgstr "Изображение"
 msgid "背景颜色"
 msgstr "Цвет фона"
 
+#: options.php:61
+msgid "整个站点背景颜色控制(背景类型选择为纯色才有效)"
+msgstr ""
+
 #: options.php:66
 msgid "背景图片"
 msgstr "Изображение на заднем плане"
+
+#: options.php:67
+msgid "整个站点背景图片控制(背景类型选择为图片才有效)"
+msgstr ""
 
 #: options.php:72
 msgid "主页布局"
@@ -901,9 +1012,17 @@ msgstr "Выберите макет [Главная], по умолчанию п
 msgid "文章列表布局"
 msgstr "Макет списка статей"
 
+#: options.php:83
+msgid "选择你喜欢的列表布局，默认显示新式列表布局"
+msgstr ""
+
 #: options.php:91
 msgid "主页文章摘要字数"
 msgstr "Ограничение количества слов для абстракции"
+
+#: options.php:92
+msgid "中文建议110，英文建议40，搭配文章内的more标签使用"
+msgstr ""
 
 #: options.php:97
 msgid "分类页面"
@@ -969,6 +1088,10 @@ msgstr "Компоненты"
 msgid "自定义Font Awesome"
 msgstr "Пользовательский шрифт Awesome"
 
+#: options.php:143
+msgid "自定义Font Awesome 4.7字体库链接，留空将从本地加载"
+msgstr ""
+
 #: options.php:148
 msgid "自定义jQuery"
 msgstr "Настроить jQuery"
@@ -1013,6 +1136,10 @@ msgstr "Загрузить тему emoji из jsDelivr"
 msgid "特色图片(仅针对新式布局)"
 msgstr "Избранные изображения (только для современных макетов)"
 
+#: options.php:183
+msgid "选择你喜欢的默认特色图片(留空使用随机图片20张)"
+msgstr ""
+
 #: options.php:187
 msgid "APlayer全局播放器"
 msgstr "APlayer - мировой музыкальный проигрыватель"
@@ -1024,6 +1151,12 @@ msgstr "Включить PJAX предлагается"
 #: options.php:193
 msgid "歌单JSON地址"
 msgstr "Адрес JSON для списка песен"
+
+#: options.php:194
+msgid ""
+"借助API可解析网易云歌单，如https://api.fczbl.vip/163/?"
+"type=playlist&id=2003373695"
+msgstr ""
 
 #: options.php:199
 msgid "自动播放"
@@ -1080,15 +1213,24 @@ msgstr "URL-адрес QR-кода WeChat/WhatsApp"
 #: options.php:237
 msgid "上传你的微信二维码图片，尺寸要大于等于150px"
 msgstr ""
-"Загрузите изображение вашего QR-кода WeChat/WhatsApp, размер должен быть больше 150 пикселей"
+"Загрузите изображение вашего QR-кода WeChat/WhatsApp, размер должен быть "
+"больше 150 пикселей"
 
 #: options.php:242
 msgid "微信收款码"
 msgstr "WeChat/Viber Pay"
 
+#: options.php:243
+msgid "上传你的微信收款二维码图片，图片尺寸要大于200px"
+msgstr ""
+
 #: options.php:248
 msgid "支付婊收款码"
 msgstr "AliPay"
+
+#: options.php:249
+msgid "上传你的支付婊收款二维码图片，图片尺寸要大于200px"
+msgstr ""
 
 #: options.php:254
 msgid "SEO配置"
@@ -1131,502 +1273,567 @@ msgid "顶部图片"
 msgstr "Головное изображение"
 
 #: options.php:292
+msgid "移动端顶部图片(可留空)"
+msgstr ""
+
+#: options.php:296
 msgid "图片文字-1(可做文字标题)"
 msgstr "Изображение Текст-1 (текст)"
 
-#: options.php:297
+#: options.php:301
 msgid "图片文字-2(可做站点描述)"
 msgstr "Изображение Текст-2 (описание сайта)"
 
-#: options.php:302
+#: options.php:306
 msgid "移动端菜单显示模式"
 msgstr "Режим отображения меню на мобильной стороне"
 
-#: options.php:308
+#: options.php:312
 msgid "顶部"
 msgstr "Верхняя панель"
 
-#: options.php:309
+#: options.php:313
 msgid "侧栏"
 msgstr "Боковая панель"
 
-#: options.php:311
+#: options.php:315
 msgid "以下为纯色Header设置"
 msgstr "Сплошной фон шапки"
 
-#: options.php:312
+#: options.php:316
 msgid "只有顶部显示模式为纯色才有效。"
 msgstr "Требовать режим отображения заголовка: сплошной цвет."
 
-#: options.php:314
+#: options.php:318
 msgid "Nav Bar颜色"
 msgstr "Цвет панели навигации"
 
-#: options.php:315
+#: options.php:319
 msgid "请使用RGBA格式表示，默认22,23,26,.9"
 msgstr "Пожалуйста, используйте формат RGBA, по умолчанию 22,23,26,.9"
 
-#: options.php:320
+#: options.php:324
 msgid "移动端侧边栏菜单颜色"
 msgstr "Цвет меню боковой боковой боковой панели"
 
-#: options.php:321
+#: options.php:325
 msgid "请使用RGBA格式表示，默认42,42,42,.9"
 msgstr "Пожалуйста, используйте формат RGBA, по умолчанию 42,42,42,.9"
 
-#: options.php:326
+#: options.php:330
 msgid "图片Logo"
 msgstr "Логотип логотипа"
 
-#: options.php:327
-msgid "高40px，宽最大200px，不设置将显示文字Logo"
-msgstr "Высота 40px, ширина 200px maxium, не установлена, отобразит текст логотипа"
-
 #: options.php:331
+msgid "高40px，宽最大200px，不设置将显示文字Logo"
+msgstr ""
+"Высота 40px, ширина 200px maxium, не установлена, отобразит текст логотипа"
+
+#: options.php:335
 msgid "底部配置"
 msgstr "Нижняя часть сайта"
 
-#: options.php:334
+#: options.php:338
 msgid "建站时间"
 msgstr "Время сборки сайта"
 
-#: options.php:335
+#: options.php:339
 msgid "输入你的建站时间，格式MM/DD/YYYY hh:mm:ss"
 msgstr "Введите время начала вашего сайта, например mm/dd/yyyy hh:mm:ss"
 
-#: options.php:340
+#: options.php:344
 msgid "Footer颜色"
 msgstr "Нижний колонтитул"
 
-#: options.php:341
+#: options.php:345
 msgid "请使用RGBA格式表示，默认35,40,45,1"
 msgstr "Пожалуйста, используйте формат RGBA, по умолчанию 35,40,45,1"
 
-#: options.php:346
+#: options.php:350
 msgid "工信部备案信息"
 msgstr "Информация о записи MIIT"
 
 #: options.php:351
+msgid "输入您的工信部备案号，针对国际版没有备案信息栏目的功能"
+msgstr ""
+
+#: options.php:355
 msgid "公安网备案信息"
 msgstr "Информация о записи в сети общественной безопасности"
 
-#: options.php:352
+#: options.php:356
 msgid "输入您的公安网备案号"
 msgstr "Введите номер вашей полицейской сети"
 
-#: options.php:356
+#: options.php:360
 msgid "公安网备案连接"
 msgstr "URL-адрес сетевой записи общественной безопасности"
 
-#: options.php:357
+#: options.php:361
 msgid "输入您的公安网备案的链接地址"
 msgstr "Введите адрес ссылки вашей сети общественной безопасности для подачи"
 
-#: options.php:361
+#: options.php:365
 msgid "新浪微博"
 msgstr "Weibo/ВКонтакте"
 
-#: options.php:386 options.php:392
-msgid "连接前要带有 http:// 或者 https://"
+#: options.php:366 options.php:372 options.php:378 options.php:384
+#: options.php:390 options.php:396
+msgid "连接前要带有 http:// 或者 https:// "
 msgstr "Введите http:// или https://"
 
-#: options.php:367
+#: options.php:371
 msgid "腾讯微博"
 msgstr "Weibo/ВКонтакте"
 
-#: options.php:373
+#: options.php:377
 msgid "Twitter"
 msgstr "Twitter"
 
-#: options.php:379
+#: options.php:383
 msgid "FaceBook"
 msgstr "Facebook"
 
-#: options.php:385
+#: options.php:389
 msgid "LinkedIn"
 msgstr "Linkedin"
 
-#: options.php:391
+#: options.php:395
 msgid "GayHub"
 msgstr "GitHub"
 
-#: options.php:397
+#: options.php:401
 msgid "Mail"
 msgstr "Email"
 
-#: options.php:398
-msgid "连接前要带有mailto:"
+#: options.php:402
+#, fuzzy
+#| msgid "连接前要带有mailto:"
+msgid "连接前要带有mailto: "
 msgstr "Введите mailto:"
 
-#: options.php:403
+#: options.php:407
 msgid "文章设置"
 msgstr "посты"
 
-#: options.php:406
+#: options.php:410
 msgid "文章页面布局"
 msgstr "Макет страницы поста"
 
-#: options.php:407
+#: options.php:411
 msgid "选择[文章]页面布局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
-msgstr "Выберите макет страницы [Article], показывая правый столбец по умолчанию"
+msgstr ""
+"Выберите макет страницы [Article], показывая правый столбец по умолчанию"
 
-#: options.php:416 options.php:447
+#: options.php:420 options.php:451
 msgid "版权声明"
 msgstr "Авторское право"
 
-#: options.php:417 options.php:448
+#: options.php:421 options.php:452
 msgid "是否启用 CC BY-SA 4.0 声明"
 msgstr "Включить объявление CC BY-SA 4.0"
 
-#: options.php:422 options.php:453
+#: options.php:426 options.php:457
 msgid "分享按钮"
 msgstr "Кнопка Share"
 
-#: options.php:423
+#: options.php:427
 msgid "是否启用文章分享功能"
 msgstr "Включить функцию совместного доступа к посту"
 
-#: options.php:428 options.php:459
+#: options.php:432 options.php:463
 msgid "打赏按钮"
 msgstr "Кнопка доната"
 
-#: options.php:429
+#: options.php:433
 msgid "是否启用文章打赏功能"
 msgstr "Включить функцию доната поста"
 
-#: options.php:434
+#: options.php:438
 msgid "页面设置"
 msgstr "Страницы"
 
-#: options.php:437
+#: options.php:441
 msgid "页面布局"
 msgstr "Макет страницы"
 
-#: options.php:438
+#: options.php:442
 msgid "选择[页面]布局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
 msgstr "Выберите макет [Page], по умолчанию отобразите правую колонку"
 
-#: options.php:454
+#: options.php:458
 msgid "是否启用页面分享功能"
 msgstr "Включить функцию совместного доступа к странице"
 
-#: options.php:460
+#: options.php:464
 msgid "是否启用页面打赏功能"
 msgstr "Включить функцию pagedonate"
 
-#: options.php:465
+#: options.php:469
 msgid "轮播设置"
 msgstr "Слайдер"
 
-#: options.php:468
+#: options.php:472
 msgid "主页轮播"
 msgstr "Слайдер на главной"
 
-#: options.php:469
+#: options.php:473
 msgid "是否启用轮播功能"
 msgstr "Включить функцию слайдера"
 
-#: options.php:474
+#: options.php:478
 msgid "注意："
 msgstr "Внимание:"
 
-#: options.php:477
+#: options.php:479
+msgid "图片宽度建议大于750px，所有图片比例须一致"
+msgstr ""
+
+#: options.php:481
 msgid "轮播图片-1"
 msgstr "Слайдер Картинки-1"
 
-#: options.php:481
+#: options.php:485
 msgid "轮播链接-1"
 msgstr "Ссылка 1"
 
-#: options.php:522
+#: options.php:486 options.php:496 options.php:506 options.php:516
+#: options.php:526
 msgid "链接可以留空"
 msgstr "Ссылки могут быть опущены"
 
-#: options.php:487
+#: options.php:491
 msgid "轮播图片-2"
 msgstr "Слайдер Картинки-2"
 
-#: options.php:491
+#: options.php:495
 msgid "链接2"
 msgstr "Ссылка 2"
 
-#: options.php:497
+#: options.php:501
 msgid "轮播图片-3"
 msgstr "Слайдер Картинки-3"
 
-#: options.php:501
+#: options.php:505
 msgid "链接3"
 msgstr "Ссылка 3"
 
-#: options.php:507
+#: options.php:511
 msgid "轮播图片-4"
 msgstr "Слайдер Картинки-4"
 
-#: options.php:511
+#: options.php:515
 msgid "链接4"
 msgstr "Ссылка 4"
 
-#: options.php:517
+#: options.php:521
 msgid "轮播图片-5"
 msgstr "Слайдер Картинки-5"
 
-#: options.php:521
+#: options.php:525
 msgid "链接5"
 msgstr "Ссылка 5"
 
-#: options.php:527
+#: options.php:531
 msgid "邮件设置"
 msgstr "Email"
 
-#: options.php:530
+#: options.php:534
 msgid "SMTP服务"
 msgstr "Служба SMTP"
 
-#: options.php:531
+#: options.php:535
 msgid "是否启用SMTP邮件发送服务"
 msgstr "Включить службу доставки почты SMTP"
 
-#: options.php:536
+#: options.php:540
 msgid "发信人"
 msgstr "Отправитель"
 
-#: options.php:537
+#: options.php:541
 msgid "请填写发件人姓名"
 msgstr "Заполните имя отправителя"
 
-#: options.php:542
+#: options.php:546
 msgid "邮件服务器"
 msgstr "Почтовый сервер"
 
-#: options.php:543
+#: options.php:547
 msgid "请填写SMTP服务器地址"
 msgstr "Укажите адрес SMTP-сервера"
 
-#: options.php:548
+#: options.php:552
 msgid "服务器端口"
 msgstr "Порт сервера"
 
-#: options.php:549
+#: options.php:553
 msgid "请填写SMTP服务器端口"
 msgstr "Заполните порт сервера SMTP"
 
-#: options.php:554
+#: options.php:558
 msgid "邮箱帐号"
 msgstr "Адрес электронной почты"
 
-#: options.php:555
+#: options.php:559
 msgid "请填写邮箱账号"
 msgstr "Пожалуйста, заполните свою учетную запись электронной почты"
 
-#: options.php:560
+#: options.php:564
 msgid "邮箱密码"
 msgstr "Пароль от email"
 
-#: options.php:561
+#: options.php:565
 msgid "请填写邮箱密码"
 msgstr "Пожалуйста, введите пароль от email"
 
-#: options.php:566
+#: options.php:570
 msgid "启用SMTPAuth服务"
 msgstr "Включить службу SmtpAuth"
 
-#: options.php:567
+#: options.php:571
 msgid "是否启用SMTPAuth服务"
 msgstr "Включить службу SmtpAuth"
 
-#: options.php:572
+#: options.php:576
 msgid "SMTPSecure设置"
 msgstr "Настройки SmtpSecure"
 
-#: options.php:578
+#: options.php:577
+msgid ""
+"若启用SMTPAuth服务则填写ssl，若不启用则留空；office365的邮箱请填写STARTTLS"
+msgstr ""
+
+#: options.php:582
 msgid "雪花设置"
 msgstr "Снежинки"
 
-#: options.php:581
+#: options.php:585
 msgid "站点雪花"
 msgstr "Снежинки на сайте"
 
-#: options.php:582
+#: options.php:586
 msgid "是否启用站点雪花功能"
 msgstr "Включить функцию \"снежинки\""
 
-#: options.php:587
+#: options.php:591
 msgid "移动端是否显示"
 msgstr "Показывать на мобильных устройствах"
 
-#: options.php:588
+#: options.php:592
 msgid "配置移动端是否显示，默认是"
 msgstr "Настроить показ на мобильном, по умолчанию включено"
 
-#: options.php:593
+#: options.php:597
 msgid "雪花数量"
 msgstr "Снежинки Количество"
 
-#: options.php:594
+#: options.php:598
 msgid "数值越大雪花数量越多，默认150"
 msgstr "Чем больше сумма, тем больше снежинок, по умолчанию 150"
 
-#: options.php:599
+#: options.php:603
 msgid "雪花大小"
 msgstr "Размер снежинки"
 
-#: options.php:605
+#: options.php:604
+#, fuzzy
+#| msgid "数值越大雪花数量越多，默认150"
+msgid "为基准值，数值越大雪花越大，默认2"
+msgstr "Чем больше сумма, тем больше снежинок, по умолчанию 150"
+
+#: options.php:609
 msgid "雪花距离"
 msgstr "Расстояние снежинки"
 
-#: options.php:611
+#: options.php:610
+msgid "雪花距离鼠标指针的最小值，小于这个距离的雪花将受到鼠标的排斥，默认100"
+msgstr ""
+
+#: options.php:615
 msgid "雪花速度"
 msgstr "Скорость снежинки"
 
-#: options.php:617
+#: options.php:616
+msgid "为基准值，数值越大雪花速度越快，默认0.5"
+msgstr ""
+
+#: options.php:621
 msgid "雪花横移度"
 msgstr "Степень поперечного сдвига снежинки"
 
-#: options.php:623
+#: options.php:622
+msgid "为基准值，数值越大雪花横移幅度越大，0为竖直下落，默认1"
+msgstr ""
+
+#: options.php:627
 msgid "雪花颜色"
 msgstr "Цвет снежинки"
 
-#: options.php:624
+#: options.php:628
 msgid "请用RGB格式表示，默认255,255,255"
 msgstr "Пожалуйста, укажите в формате RGB, по умолчанию 255 255 255"
 
-#: options.php:629
+#: options.php:633
 msgid "雪花不透明度"
 msgstr "Непрозрачность снежинки"
 
-#: options.php:630
+#: options.php:634
 msgid "为基准值，范围0~1，1为不透明，默认0.3"
-msgstr "В качестве опорного значения, в диапазоне 0 ~ 1,1 до непрозрачного, по умолчанию 0,3"
+msgstr ""
+"В качестве опорного значения, в диапазоне 0 ~ 1,1 до непрозрачного, по "
+"умолчанию 0,3"
 
-#: options.php:635
+#: options.php:639
 msgid "注册登录设置"
 msgstr "Регистрация Войти"
 
-#: options.php:638
+#: options.php:642
 msgid "注册登录页面背景"
 msgstr "История регистрации/входа в систему"
 
-#: options.php:639
+#: options.php:643
 msgid "因为默认使用了Bing每日美图API，所以这里只能手动写链接了..."
 msgstr ""
-"Поскольку Bing Daily Mito API используется по умолчанию, вы можете только вручную писать "
-"ссылки здесь ..."
+"Поскольку Bing Daily Mito API используется по умолчанию, вы можете только "
+"вручную писать ссылки здесь ..."
 
-#: options.php:644
+#: options.php:648
 msgid "注册登录页面站点图标"
 msgstr "Регистрация/Вход в систему"
 
-#: options.php:649
+#: options.php:653
 msgid "以下为用户注册部分的设置"
 msgstr "Ниже приведены настройки раздела «Регистрация пользователя»"
 
-#: options.php:651
+#: options.php:655
 msgid "使用密码注册"
 msgstr "Регистрация с паролем"
 
-#: options.php:652
+#: options.php:656
 msgid "是否允许用户输入密码注册(免邮箱验证)"
-msgstr "Разрешить пользователю вводить регистрацию пароля (проверка по электронной почте)"
+msgstr ""
+"Разрешить пользователю вводить регистрацию пароля (проверка по электронной "
+"почте)"
 
-#: options.php:657
+#: options.php:661
 msgid "域名限制模式"
 msgstr "Режим ограничения имен доменов"
 
-#: options.php:664
+#: options.php:662
+msgid "如果不想限制邮箱，请将此部分设置保持默认。"
+msgstr ""
+
+#: options.php:668
 msgid "白名单模式"
 msgstr "Режим белого списка"
 
-#: options.php:665
+#: options.php:669
 msgid "黑名单模式"
 msgstr "Черный список"
 
-#: options.php:667
+#: options.php:671
 msgid "域名白名单列表(一行一个)"
 msgstr "Белый список доменов (по одному в строке)"
 
-#: options.php:672
+#: options.php:676
 msgid "域名黑名单列表(一行一个)"
 msgstr "Черный список доменов (по одному в строке)"
 
-#: options.php:677
+#: options.php:681
 msgid "错误信息"
 msgstr "Сообщение об ошибке"
 
-#: options.php:678
+#: options.php:682
 msgid "用户域名被阻止时的提示信息"
 msgstr "Сообщение, когда заблокировано доменное имя пользователя"
 
-#: options.php:680
+#: options.php:684
 msgid "本站禁止此域名的邮箱注册，请更换邮箱再试。"
 msgstr "Домен не разрешен, используйте другой адрес электронной почты."
 
-#: options.php:683
+#: options.php:687
 msgid "以下为用户登录限制部分设置"
-msgstr "Ниже перечислены настройки раздела «Пользовательские ограничения доступа»"
+msgstr ""
+"Ниже перечислены настройки раздела «Пользовательские ограничения доступа»"
 
-#: options.php:686
+#: options.php:688
+msgid "默认不启用，但是建议手动启用此功能"
+msgstr ""
+
+#: options.php:690
 msgid "用户登录限制"
 msgstr "Ограничения на вход пользователя"
 
-#: options.php:692
+#: options.php:691
+msgid "是否启用登录限制功能(只有启用此项，下面的设置才有效)"
+msgstr ""
+
+#: options.php:696
 msgid "登录尝试机会"
 msgstr "Возможности входа в систему"
 
-#: options.php:693
+#: options.php:697
 msgid "允许输错密码的次数，默认3"
 msgstr "Количество допустимых ошибок паролей, по умолчанию 3"
 
-#: options.php:698
+#: options.php:702
 msgid "初始锁定时间"
 msgstr "Начальное время блокировки"
 
-#: options.php:699
+#: options.php:703
 msgid "单位秒，不应小于60，默认1200(20分钟)"
-msgstr "Единицы секунды, не должны быть меньше 60, по умолчанию 1200 (20 минут)"
+msgstr ""
+"Единицы секунды, не должны быть меньше 60, по умолчанию 1200 (20 минут)"
 
-#: options.php:704
+#: options.php:708
 msgid "增加锁定时间所需锁定次数"
 msgstr "Увеличьте количество блокировок, необходимых для блокировки времени"
 
-#: options.php:705
+#: options.php:709
 msgid "默认3次"
 msgstr "По умолчанию 3 раза"
 
-#: options.php:710
+#: options.php:714
 msgid "增加后的锁定时间"
 msgstr "Время блокировки после увеличения"
 
-#: options.php:711
+#: options.php:715
 msgid "单位秒，不应小于3600，默认86400(24小时)"
-msgstr "Единицы секунды не должны быть меньше 3600, по умолчанию 86400 (24 часа)"
+msgstr ""
+"Единицы секунды не должны быть меньше 3600, по умолчанию 86400 (24 часа)"
 
-#: options.php:716
+#: options.php:720
 msgid "自动清除锁定IP的时间"
 msgstr "Автоматически очищает время блокировки IP-адреса"
 
-#: options.php:717
+#: options.php:721
 msgid "单位秒，默认43200(12小时)"
 msgstr "Единицы в секунду, по умолчанию 43200 (12 часов)"
 
-#: options.php:722
+#: options.php:726
 msgid "控制Cookie登录"
 msgstr "Управление паролем cookie"
 
-#: options.php:723
+#: options.php:727
 msgid "是否控制Cookie登录"
 msgstr "Управление файлом cookie"
 
-#: options.php:728
+#: options.php:732
 msgid "邮件提醒"
 msgstr "Уведомления по электронной почте"
 
-#: options.php:734
+#: options.php:733
+msgid "是否启用锁定邮件提醒功能(请在下方设置提醒阈值)"
+msgstr ""
+
+#: options.php:738
 msgid "锁定提醒阈值"
 msgstr "Значение порога блокировки напоминания"
 
-#: options.php:735
+#: options.php:739
 msgid "默认2次(启用上方的邮件提醒功能才有效)"
-msgstr "По умолчанию 2 раза (активировать оповещения по электронной почте выше)"
+msgstr ""
+"По умолчанию 2 раза (активировать оповещения по электронной почте выше)"
 
 #: pages/page-archives.php:42
 msgid "文章归档"
@@ -1672,19 +1879,38 @@ msgstr "Kratos-pjax"
 msgid "https://github.com/xb2016/kratos-pjax"
 msgstr "https://github.com/xb2016/kratos-pjax"
 
+#. Description of the plugin/theme
+msgid ""
+"Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可"
+"以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为"
+"小白-白(www.fczbl.vip)的二次开发版本。"
+msgstr ""
+"Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可"
+"以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为"
+"小白-白(www.fczbl.vip)的二次开发版本。"
+
 #. Author of the plugin/theme
 msgid "Vtrois(Modified by 小白-白)"
-msgstr "Vtrois (Мод by  小白 - 白)"
+msgstr "Vtrois (Мод by 小白-白)"
 
 #. Author URI of the plugin/theme
 msgid "https://www.vtrois.com/"
 msgstr "https://www.vtrois.com/"
 
+#~ msgid "服务与项目"
+#~ msgstr "Мои проекты"
+
+#~ msgid "个月前"
+#~ msgstr "несколько месяцев назад"
+
+#~ msgid "小时前"
+#~ msgstr "несколько часов назад"
+
+#~ msgid "分钟前"
+#~ msgstr "минут назад"
+
 #~ msgid "自定义Bootstrap(JS)"
 #~ msgstr "Custom Bootstrap (JS)"
-
-#~ msgid "自定义Bootstrap链接，留空将从本地加载"
-#~ msgstr "Custom bootstrap link, leave blank to load from local"
 
 #~ msgid "其它JS与CSS"
 #~ msgstr "Other JS and CSS"
