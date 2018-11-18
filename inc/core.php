@@ -557,16 +557,14 @@ function comment_author_link_window(){
 add_filter('get_comment_author_link','comment_author_link_window');
 //Notice ***PLEASE DO NOT EDIT THIS 请不要修改此内容***
 function kratos_admin_notice(){
+    global $noticeinfo;
     $noticeinfo = wp_remote_retrieve_body(wp_remote_get('https://api.fczbl.vip/kratos_notice/?v='.KRATOS_VERSION));
-    if(!is_wp_error($noticeinfo)&&$noticeinfo){ ?>
-    <style type="text/css">.about-description a{text-decoration:none}</style>
-    <div class="notice notice-info">
-        <p class="about-description"><?php echo $noticeinfo; ?></p>
-    </div><?php
-    }
+    if(!is_wp_error($noticeinfo)&&$noticeinfo) $noticeinfo = '<style type="text/css">.about-description a{text-decoration:none}</style><div class="notice notice-info"><p class="about-description">'.$noticeinfo.'</p></div>';
+    if(kratos_option('kratos_notice')=='global') echo $noticeinfo;
 }
-if(kratos_option('kratos_notice')=="welcome"){
-    add_action('welcome_panel','kratos_admin_notice');
-}elseif(kratos_option('kratos_notice')!="none"){
-    add_action('admin_notices','kratos_admin_notice');
+function kratos_welcome_notice(){
+    global $noticeinfo;
+    echo $noticeinfo;
 }
+add_action('admin_notices','kratos_admin_notice');
+if(kratos_option('kratos_notice')=="welcome") add_action('welcome_panel','kratos_welcome_notice');
