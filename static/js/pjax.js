@@ -55,16 +55,20 @@ function ajax(reqUrl,msg,getData){
         url: reqUrl,
         type: "GET",
         data: getData,
-        cache: false,
-        dataType: "html",
+        beforeSend: function(){
+            history.replaceState({
+                url: window.document.location.href,
+                title: window.document.title,
+                html: $(document).find("#container").html(),
+            },window.document.title,document.location.href)
+        },
         success: function(data){
             document.title = $(data).filter("title").text();
-            var state = {
+            window.history.pushState({
                 url: reqUrl,
                 title: $(data).filter("title").text(),
                 html: $(data).find("#container").html()
-            };
-            window.history.pushState(state,$(data).filter("title").text(),reqUrl);
+            },$(data).filter("title").text(),reqUrl);
             if(msg=="pagelink"){
                 $("#container").html($(data).find("#container").html());
                 var anchor = window.location.hash.substring(location.hash.indexOf("#")+1);

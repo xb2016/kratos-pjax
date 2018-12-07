@@ -6,13 +6,13 @@
   /___//_/|_/ \____//_/|_| \____/
 
 -->
-<html>
+<html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1,maximum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="format-detection" content="telphone=no,email=no">
     <meta name="keywords" content="<?php kratos_keywords(); ?>">
     <meta name="description" itemprop="description" content="<?php kratos_description(); ?>">

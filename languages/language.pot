@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2018-11-18 19:32+0800\n"
+"POT-Creation-Date: 2018-12-07 10:42+0800\n"
 "PO-Revision-Date: 2018-10-19 21:59+0800\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: 小白-白 (Moedog) <xb@fczbl.vip>\n"
@@ -157,59 +157,59 @@ msgstr ""
 msgid "最后更新于"
 msgstr ""
 
-#: inc/imgcfg.php:109 inc/imgcfg.php:110
+#: inc/imgcfg.php:110 inc/imgcfg.php:111
 msgid "从URL添加"
 msgstr ""
 
-#: inc/imgcfg.php:121
+#: inc/imgcfg.php:122
 msgid "或"
 msgstr ""
 
-#: inc/imgcfg.php:124 inc/imgcfg.php:127
+#: inc/imgcfg.php:125 inc/imgcfg.php:128
 msgid "从URL导入"
 msgstr ""
 
-#: inc/imgcfg.php:142
+#: inc/imgcfg.php:143
 msgid "从URL添加媒体项目"
 msgstr ""
 
-#: inc/imgcfg.php:148
+#: inc/imgcfg.php:149
 msgid "请手动指定图像大小与格式"
 msgstr ""
 
-#: inc/imgcfg.php:150
+#: inc/imgcfg.php:151
 msgid "宽"
 msgstr ""
 
-#: inc/imgcfg.php:152
+#: inc/imgcfg.php:153
 msgid "高"
 msgstr ""
 
-#: inc/imgcfg.php:154
+#: inc/imgcfg.php:155
 msgid "MIME类型"
 msgstr ""
 
-#: inc/imgcfg.php:161
+#: inc/imgcfg.php:162
 msgid "清除"
 msgstr ""
 
-#: inc/imgcfg.php:162
+#: inc/imgcfg.php:163
 msgid "添加"
 msgstr ""
 
-#: inc/imgcfg.php:164
+#: inc/imgcfg.php:165
 msgid "取消"
 msgstr ""
 
-#: inc/imgcfg.php:175
+#: inc/imgcfg.php:176
 msgid "相关JS加载失败"
 msgstr ""
 
-#: inc/imgcfg.php:205 inc/imgcfg.php:211
+#: inc/imgcfg.php:206 inc/imgcfg.php:212
 msgid "图像大小不合法"
 msgstr ""
 
-#: inc/imgcfg.php:234
+#: inc/imgcfg.php:235
 msgid "无法获取图像大小"
 msgstr ""
 

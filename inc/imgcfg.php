@@ -53,7 +53,7 @@ function kratos_blog_thumbnail(){
     $img_id = get_post_thumbnail_id();
     $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
     $img_url = $img_url[0];
-    if(has_post_thumbnail()) echo '<a href="'.get_permalink().'"><img src="'.$img_url.'"></a>';
+    if(has_post_thumbnail()) echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" alt="'.get_the_title().'"></a>';
 }
 add_filter('add_image_size',create_function('','return 1;'));
 add_theme_support("post-thumbnails");
@@ -62,8 +62,9 @@ function kratos_blog_thumbnail_new(){
     $img_id = get_post_thumbnail_id();
     $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
     $img_url = $img_url[0];
+    $title = get_the_title();
     if(has_post_thumbnail()){
-        echo '<a href="'.get_permalink().'"><img src="'.$img_url.'"></a>';
+        echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" alt="'.$title.'"></a>';
     }else{
         $content = $post->post_content;
         $img_preg = "/<img(.*?)src=\"(.+?)\".*?>/";
@@ -72,11 +73,11 @@ function kratos_blog_thumbnail_new(){
         if(isset($img_src[$img_count]))
         $img_val = $img_src[$img_count];
         if(!empty($img_val)&&!post_password_required()){
-            echo '<a href="'.get_permalink().'"><img src="'.$img_val.'"></a>';
+            echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" alt="'.$title.'"></a>';
         }else if(!kratos_option('default_image')){
             $random = mt_rand(1,20);
-            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_'.$random.'.jpg"></a>';
-        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'"></a>';
+            echo '<a href="'.get_permalink().'"><img src="'.get_bloginfo('template_url').'/static/images/thumb/thumb_'.$random.'.jpg" alt="'.$title.'"></a>';
+        }else echo '<a href="'.get_permalink().'"><img src="'.kratos_option('default_image').'" alt="'.$title.'"></a>';
     }
 }
 //Share the thumbnail fetching
