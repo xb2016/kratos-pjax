@@ -459,6 +459,7 @@ td,th{padding:0}
 .kratos-status.kratos-status-post{margin:0 15px 0 38px}
 .kratos-status .fa-refresh{position: absolute;top:50%;left:-7px;margin:-9px 0 0}
 .kratos-status-inner{margin-left:30px}
+.kratos-status-inner img{max-width:100%}
 .kratos-status-inner p{margin:0;color:#777;font-size:18px;line-height:1.5;font-weight:400}
 .kratos-status-inner p a{color:#777}
 .kratos-status-inner footer{font-size:12px;color:#aaa}

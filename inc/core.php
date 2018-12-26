@@ -169,6 +169,10 @@ function disable_embeds_flush_rewrite_rules(){
     flush_rewrite_rules();
 }
 register_deactivation_hook(__FILE__,'disable_embeds_flush_rewrite_rules');
+if(!kratos_option('use_gutenberg')){
+    add_filter('use_block_editor_for_post','__return_false');
+    remove_action('wp_enqueue_scripts','wp_common_block_scripts_and_styles');
+}
 //Prohibit character escaping
 $qmr_work_tags = array('the_title','the_excerpt','single_post_title','comment_author','comment_text','link_description','bloginfo','wp_title','term_description','category_description','widget_title','widget_text');
 foreach($qmr_work_tags as $qmr_work_tag){remove_filter ($qmr_work_tag,'wptexturize');}
