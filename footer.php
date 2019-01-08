@@ -1,5 +1,8 @@
                 <footer>
                     <div id="footer"<?php echo ' style="background:rgba('.kratos_option('footer_color').')"'; ?>>
+                    <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> &raquo; RSS 2.0" href="<?php echo site_url('feed'); ?>" /> 
+<link rel="alternate" type="application/rdf+xml" title="<?php echo get_bloginfo('name'); ?> &raquo; RSS 1.0" href="<?php echo site_url('feed/rss'); ?>" /> 
+<link rel="alternate" type="application/atom+xml" title="<?php echo get_bloginfo('name'); ?> &raquo; ATOM 1.0" href="<?php echo site_url('feed/atom'); ?>" />
                         <div class="cd-tool text-center">
                             <div class="<?php if(kratos_option('cd_weixin')) echo 'gotop-box2 '; ?>gotop-box"><div class="gotop-btn"><span class="fa fa-chevron-up"></span></div></div>
                             <?php if(kratos_option('cd_weixin')) echo '<div id="wechat-img" class="wechat-img"><span class="fa fa-weixin"></span><div id="wechat-pic"><img src="'.kratos_option('weixin_image').'"></div></div>'; ?>
