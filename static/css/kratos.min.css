@@ -101,14 +101,12 @@ sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
 sup{top:-.5em}
 sub{bottom:-.25em}
 svg:not(:root){overflow:hidden}
-table,table tbody tr th{text-align:center!important}
-table{background-color:transparent}
-th{text-align:left}
+table{border-spacing:0;border-collapse:collapse;background-color:transparent}
 table col[class*=col-]{position:static;display:table-column;float:none}
 table td[class*=col-],table th[class*=col-]{position:static;display:table-cell;float:none}
-textarea{overflow:auto}
-table{border-spacing:0;border-collapse:collapse}
+th{text-align:left}
 td,th{padding:0}
+textarea{overflow:auto}
 .aplayer{background:#fff;font-family:Arial,Helvetica,sans-serif;margin:5px;box-shadow:0 2px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);border-radius:2px;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;line-height:normal;position:relative}
 .aplayer *{box-sizing:content-box}
 .aplayer svg{width:100%;height:100%}
