@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2019-04-17 14:01+0800\n"
+"POT-Creation-Date: 2019-04-17 15:37+0800\n"
 "PO-Revision-Date: 2018-10-19 21:59+0800\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: 小白-白 (Moedog) <xb@fczbl.vip>\n"
@@ -54,7 +54,7 @@ msgid "|´・ω・)ノ还不快点说点什么呀poi~"
 msgstr ""
 
 #: footer.php:15
-msgid "本站已运行"
+msgid "已在风雨中度过"
 msgstr ""
 
 #: inc/avatars.php:42
@@ -453,7 +453,7 @@ msgid "最后编辑："
 msgstr ""
 
 #: inc/smtp.php:30
-msgid "[通知]您的留言已经通过审核"
+msgid "[通知] 您的留言已经通过审核"
 msgstr ""
 
 #: inc/smtp.php:40
@@ -481,7 +481,7 @@ msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略�
 msgstr ""
 
 #: inc/smtp.php:80
-msgid "[通知]您的留言有了新的回复"
+msgid "[通知] 您的留言有了新的回复"
 msgstr ""
 
 #: inc/smtp.php:90

@@ -479,14 +479,14 @@ function kratos_get_html_sitemap(){
 </head>
 <body>
 <div class="container">
-    <h1 class="page-title"><a href="<?php bloginfo('url'); ?>" target="_blank">SiteMap</a></h1><?php
+    <h1 class="page-title"><a href="<?php echo get_option('home').'/sitemap.xml'; ?>" target="_blank">Sitemap</a></h1><?php
     $posts = get_posts('numberposts=-1&orderby=post_date&order=DESC');
     if(count($posts)): ?>
     <h2 class="section-title">文章 / Article</h2>
     <ul class="sitemap-lists post-lists clear-fix">
         <?php foreach($posts as $post) : 
                 $title = $post->post_title;
-                $title = htmlspecialchars($title); ?>
+                $title = htmlspecialchars_decode($title,ENT_QUOTES); ?>
         <li><a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul><?php
@@ -497,7 +497,7 @@ function kratos_get_html_sitemap(){
     <ul class="sitemap-lists post-lists clear-fix">
         <?php foreach($pages as $page) : 
                 $title = $page->post_title;
-                $title = htmlspecialchars($title); ?>
+                $title = htmlspecialchars_decode($title,ENT_QUOTES); ?>
         <li><a href="<?php echo get_page_link($page->ID); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul><?php
@@ -508,7 +508,7 @@ function kratos_get_html_sitemap(){
     <ul class="sitemap-lists category-lists clear-fix">
         <?php foreach ($categorys as $category) : 
                 $title = $category->name;
-                $title = htmlspecialchars($title); ?>
+                $title = htmlspecialchars_decode($title,ENT_QUOTES); ?>
         <li><a href="<?php echo get_term_link($category, $category->slug); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul><?php
@@ -519,7 +519,7 @@ function kratos_get_html_sitemap(){
     <ul class="sitemap-lists tag-lists clear-fix">
         <?php foreach ($tags as $tag) : 
                 $title = $tag->name;
-                $title = htmlspecialchars($title); ?>
+                $title = htmlspecialchars_decode($title,ENT_QUOTES); ?>
         <li><a href="<?php echo get_term_link($tag, $tag->slug); ?>" title="<?php echo $title; ?>" target="_blank"><?php echo $title; ?></a></li>
         <?php endforeach; ?>
     </ul>

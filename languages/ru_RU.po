@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2019-04-17 14:11+0800\n"
-"PO-Revision-Date: 2019-04-17 14:12+0800\n"
+"POT-Creation-Date: 2019-04-17 15:40+0800\n"
+"PO-Revision-Date: 2019-04-17 15:40+0800\n"
 "Last-Translator: Moedog <xb@fczbl.vip>\n"
 "Language-Team: JuniorDEV (Pesetsu) <pesetsuu@gmail.com>\n"
 "Language: ru_RU\n"
@@ -54,7 +54,7 @@ msgid "|´・ω・)ノ还不快点说点什么呀poi~"
 msgstr "|´・ω・)ノ Добавить комментарий ..."
 
 #: footer.php:15
-msgid "本站已运行"
+msgid "已在风雨中度过"
 msgstr "Уже работает для"
 
 #: inc/avatars.php:42
@@ -453,7 +453,9 @@ msgid "最后编辑："
 msgstr "Последнее изменение:"
 
 #: inc/smtp.php:30
-msgid "[通知]您的留言已经通过审核"
+#, fuzzy
+#| msgid "[通知]您的留言已经通过审核"
+msgid "[通知] 您的留言已经通过审核"
 msgstr "[Уведомление] Ваш комментарий одобрен"
 
 #: inc/smtp.php:40
@@ -481,7 +483,9 @@ msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略�
 msgstr "Это сообщение отправляется автоматически системой."
 
 #: inc/smtp.php:80
-msgid "[通知]您的留言有了新的回复"
+#, fuzzy
+#| msgid "[通知]您的留言有了新的回复"
+msgid "[通知] 您的留言有了新的回复"
 msgstr "[Уведомление] Ваш комментарий имеет новый ответ"
 
 #: inc/smtp.php:90
