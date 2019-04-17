@@ -25,11 +25,6 @@
                 <i class="fa fa-twitter"></i>
             </div>
         </a>
-        <a href="javascript:;" class="share-plain googleplus style-plain" onclick="share('googleplus');" rel="nofollow">
-            <div class="icon-wrap">
-                <i class="fa fa-google-plus"></i>
-            </div>
-        </a>
         <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
             <div class="icon-wrap">
                 <i class="fa fa-weixin"></i>
@@ -47,7 +42,6 @@
         var qzoneShareURL="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
         var facebookShareURL="https://www.facebook.com/sharer/sharer.php?";
         var twitterShareURL="https://twitter.com/intent/tweet?";
-        var googleplusShareURL="https://plus.google.com/share?";
         var host_url="<?php the_permalink(); ?>";
         var title='<?php  echo str_replace("%22","%2522",rawurlencode('【'.get_the_title().'】')); ?>';
         var qqtitle='<?php echo rawurlencode('【'.get_the_title().'】'); ?>';
@@ -65,8 +59,6 @@
              _URL=facebookShareURL+"u="+host_url;
         }else if(obj=="twitter"){
              _URL=twitterShareURL+"text="+title+excerpt+"&url="+host_url;
-        }else if(obj=="googleplus"){
-             _URL=googleplusShareURL+"url="+host_url;
         }
         window.open(_URL);
     }

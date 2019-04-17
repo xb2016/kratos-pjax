@@ -1,8 +1,8 @@
 <?php
 //Custom login
 function custom_login(){
-    echo '<style>body{background:#92C1D1 url('.kratos_option('login_bak').') fixed center top no-repeat!important;background-size:cover!important}.login h1 a{background-image:url('.kratos_option('login_logo').')!important}</style>';
     echo '<link rel="stylesheet" id="wp-admin-css" href="'.get_bloginfo('template_directory').'/static/css/customlogin.min.css" type="text/css" />';
+    echo '<style>body{background:#92C1D1 url('.kratos_option('login_bak').') fixed center top no-repeat!important;background-size:cover!important}.login h1 a{background-image:url('.kratos_option('login_logo').')!important}</style>';
 }
 add_action('login_head','custom_login');
 //Register domain limit
@@ -61,7 +61,7 @@ function kratos_show_extra_register_fields(){ ?>
     $num1=rand(10,89);$num2=rand(0,9); ?>
     <p>
         <label for="are_you_human"><?php _e('人机验证：','moedog');echo $num1.' + '.$num2.' = ?'; ?><br/>
-            <input id="are_you_human" class="input" type="text" name="are_you_human" value="" size="25" />
+            <input id="are_you_human" class="input" autocomplete="off" type="text" name="are_you_human" value="" size="25" />
             <input type="hidden" name="num1" value="<?php echo $num1; ?>">
             <input type="hidden" name="num2" value="<?php echo $num2; ?>">
         </label>

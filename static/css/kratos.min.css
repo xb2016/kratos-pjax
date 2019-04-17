@@ -599,7 +599,7 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 .OwO .OwO-logo:hover span{display:inline-block;-webkit-animation:a 5s infinite ease-in-out;animation:a 5s infinite ease-in-out}
 .OwO .OwO-body{display:none;position:absolute;width:400px;background:#fff;border:1px solid #ddd;z-index:3;top:26px;border-radius:0 4px 4px 4px}
 .OwO .OwO-body .OwO-items{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:none;overflow:auto;padding:10px;margin:0;font-size:0}
-.OwO .OwO-body .OwO-items .OwO-item{list-style-type:none;background:#f7f7f7;padding:5px 10px;border-radius:5px;display:inline-block;font-size:12px;line-height:14px;margin:5px 6px;-webkit-transition:.3s;transition:.3s}
+.OwO .OwO-body .OwO-items .OwO-item{list-style-type:none;background:#f7f7f7;padding:5px 10px;border-radius:5px;box-shadow:none;-webkit-box-shadow:none;display:inline-block;font-size:12px;line-height:14px;margin:5px 6px;-webkit-transition:.3s;transition:.3s}
 .OwO .OwO-body .OwO-items .OwO-item:hover{background:#eee;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);-webkit-animation:a 5s infinite ease-in-out;animation:a 5s infinite ease-in-out}
 .OwO .OwO-body .OwO-items-emoji .OwO-item{font-size:20px;line-height:19px}
 .OwO .OwO-body .OwO-items-image .OwO-item{box-sizing:border-box}

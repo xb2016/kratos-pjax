@@ -75,9 +75,9 @@ class kratos_local_avatars{
             $avatar = wp_handle_upload($_FILES['kratos-local-avatar'],array('mimes'=>$mimes,'test_form'=>false,'unique_filename_callback'=>array($this,'unique_filename_callback')));
             if(empty($avatar['file'])){
                 switch($avatar['error']){
-                    case 'File type does not meet security guidelines. Try another.':
-                        add_action('user_profile_update_errors',create_function('$a','$a->add("avatar_error",'.__('请上传jpg,gif,png,bmp,tif格式文件！','moedog').'");'));break;
-                    default: add_action('user_profile_update_errors',create_function('$a','$a->add("avatar_error","<strong>'.__('上传头像过程中出现以下错误：','moedog').'</strong> '.esc_attr($avatar['error']).'");'));
+                    case 'Sorry, this file type is not permitted for security reasons.':
+                        wp_die(__('请上传jpg,gif,png,bmp,tif格式文件！','moedog'));break;
+                    default: wp_die('<strong>'.__('上传头像过程中出现以下错误：','moedog').'</strong> '.esc_attr($avatar['error']));
                 }
                 return;
             }

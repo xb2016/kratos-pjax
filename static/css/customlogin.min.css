@@ -5,7 +5,12 @@ input{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,opensans,Optim
 .login-action-register #login h1{height:13%}
 .login-action-lostpassword #login h1{height:24%}
 .login-action-rp #login h1{height:20%}
+.login-action-resetpass #login h1{height:30%}
+.login .password-input-wrapper{display:block}
+.login .password-input-wrapper .password-input{width:86%!important}
+.login .password-input-wrapper .button.button-secondary{display:block;border-radius:0;position:absolute;height:37px;right:45px;margin-top:-53px;padding:8px}
 #login{width:320px;background:rgba(0,0,0,.2);padding:0 20px 0 20px;top:0;right:15%;position:fixed;box-shadow:0 0 5px 0 #333;height:100%;overflow-y:auto}
+@media(max-width:782px){.login .password-input-wrapper .button.button-secondary{right:0}}
 @media(max-width:470px){#login{right:0;left:0}}
 #login h1{position:relative;margin-bottom:20px}
 #login h1 a{background-size:200px 50px;background-position:top center;background-repeat:no-repeat;width:200px;margin:auto;height:50px;text-indent:-9999px;overflow:hidden;position:absolute;bottom:0;left:0;right:0;display:block}

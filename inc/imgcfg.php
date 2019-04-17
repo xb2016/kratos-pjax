@@ -55,7 +55,7 @@ function kratos_blog_thumbnail(){
     $img_url = $img_url[0];
     if(has_post_thumbnail()) echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" alt="'.get_the_title().'"></a>';
 }
-add_filter('add_image_size',create_function('','return 1;'));
+add_filter('add_image_size',function(){return 1;});
 add_theme_support("post-thumbnails");
 function kratos_blog_thumbnail_new(){
     global $post;

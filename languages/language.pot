@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos-pjax\n"
-"POT-Creation-Date: 2018-12-26 21:18+0800\n"
+"POT-Creation-Date: 2019-04-17 14:01+0800\n"
 "PO-Revision-Date: 2018-10-19 21:59+0800\n"
 "Last-Translator: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "Language-Team: 小白-白 (Moedog) <xb@fczbl.vip>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -37,7 +37,7 @@ msgstr ""
 msgid "昵称"
 msgstr ""
 
-#: comments.php:15
+#: comments.php:15 inc/smtp.php:146 inc/smtp.php:196
 msgid "邮箱"
 msgstr ""
 
@@ -45,15 +45,15 @@ msgstr ""
 msgid "网站"
 msgstr ""
 
-#: comments.php:23
+#: comments.php:24
 msgid "电子邮件地址不会被公开。必填项已用 * 标注"
 msgstr ""
 
-#: comments.php:24
+#: comments.php:25
 msgid "|´・ω・)ノ还不快点说点什么呀poi~"
 msgstr ""
 
-#: footer.php:25
+#: footer.php:15
 msgid "本站已运行"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "错误"
 msgstr ""
 
-#: inc/logincfg.php:52
+#: inc/logincfg.php:52 inc/smtp.php:197
 msgid "密码"
 msgstr ""
 
@@ -318,7 +318,7 @@ msgstr ""
 msgid "尾页"
 msgstr ""
 
-#: inc/share.php:39
+#: inc/share.php:34
 msgid "打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮"
 msgstr ""
 
@@ -468,7 +468,7 @@ msgstr ""
 msgid "内容"
 msgstr ""
 
-#: inc/smtp.php:46 inc/smtp.php:97
+#: inc/smtp.php:46 inc/smtp.php:97 inc/smtp.php:147 inc/smtp.php:198
 msgid "操作"
 msgstr ""
 
@@ -476,7 +476,7 @@ msgstr ""
 msgid "查看留言"
 msgstr ""
 
-#: inc/smtp.php:58 inc/smtp.php:110
+#: inc/smtp.php:58 inc/smtp.php:110 inc/smtp.php:159 inc/smtp.php:211
 msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。"
 msgstr ""
 
@@ -504,78 +504,31 @@ msgstr ""
 msgid "查看回复"
 msgstr ""
 
-#: inc/smtp.php:133
-msgid "密码重设通知"
+#: inc/smtp.php:141
+msgid "您正在请求重置密码，摘要信息如下表。"
 msgstr ""
 
-#: inc/smtp.php:133
-#, php-format
-msgid "有人要求重设您在[%s]的密码，若不是您本人请求，请忽略本邮件。"
+#: inc/smtp.php:145 inc/smtp.php:195
+msgid "账号"
 msgstr ""
 
-#: inc/smtp.php:133
-msgid "密码重设信息"
+#: inc/smtp.php:154
+msgid "立即重置"
 msgstr ""
 
-#: inc/smtp.php:133 inc/smtp.php:144 inc/smtp.php:149
-msgid "用户名"
-msgstr ""
-
-#: inc/smtp.php:133 inc/smtp.php:144 inc/smtp.php:149
-msgid "登录邮箱"
-msgstr ""
-
-#: inc/smtp.php:133
-msgid "密码重设地址"
-msgstr ""
-
-#: inc/smtp.php:133 inc/smtp.php:149
-msgid "单击访问"
-msgstr ""
-
-#: inc/smtp.php:133 inc/smtp.php:144 inc/smtp.php:149
-msgid "如果您的账号有异常，请您在第一时间和我们取得联系哦~"
-msgstr ""
-
-#: inc/smtp.php:144 inc/smtp.php:149
-msgid "注册成功通知"
-msgstr ""
-
-#: inc/smtp.php:144
-#, php-format
-msgid "欢迎您注册[%s]，下面是您的账号信息，请妥善保管！"
-msgstr ""
-
-#: inc/smtp.php:144
-msgid "您的详细注册信息"
-msgstr ""
-
-#: inc/smtp.php:144
-msgid "登录密码"
-msgstr ""
-
-#: inc/smtp.php:144
+#: inc/smtp.php:177
 msgid "您设定的密码"
 msgstr ""
 
-#: inc/smtp.php:149
-#, php-format
-msgid "欢迎您注册[%s]，请使用下面的信息登录并修改密码！"
+#: inc/smtp.php:191
+msgid "恭喜您注册成功，请使用下面的信息登录并修改密码。"
 msgstr ""
 
-#: inc/smtp.php:149
-msgid "您的注册信息"
+#: inc/smtp.php:206
+msgid "立即登录"
 msgstr ""
 
-#: inc/smtp.php:149
-msgid "临时密码"
-msgstr ""
-
-#: inc/smtp.php:149
-msgid "登录地址"
-msgstr ""
-
-#: inc/smtp.php:152
+#: inc/smtp.php:220
 msgid "欢迎注册"
 msgstr ""
 
