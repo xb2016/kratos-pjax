@@ -20,6 +20,8 @@ This is a **secondary development** version of Kratos. For the original version,
 
 Star this project please, thank you!
 
+此外，需要注意的是，这只是一个**自用性质**的主题，而我需要的功能基本都已加进主题了，写的也很乱，所以可能无法兼容部分功能强大的插件。有关插件兼容问题和自定义修改问题就**不用**再联系我了，**请自行取舍**。关于主题定制问题请基于原主题，联系主题原作者，谢谢。
+
 ## Supports
 
 **Docs**
@@ -74,4 +76,4 @@ I accept donations through: Alipay / Wechat Pay / QQ Pay , thank you!
 
 **Kratos-pjax** © [Vtrois](https://github.com/Vtrois), [Moedog](https://github.com/xb2016), Released under the [GPL-3.0](./LICENSE) License.<br>
 
-> Blog [fczbl.vip](https://www.fczbl.vip) · GitHub [@xb2016](https://github.com/xb2016) · Twitter [@fczbl](https://twitter.com/fczbl) · QQGroup [51880737](https://jq.qq.com/?_wv=1027&k=5iwrHo3)
+> Blog [fczbl.vip](https://www.fczbl.vip) · GitHub [@xb2016](https://github.com/xb2016) · Twitter [@moesdog](https://twitter.com/moesdog) · Telegram [@xb2016](https://t.me/xb2016)
