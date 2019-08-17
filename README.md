@@ -1,11 +1,11 @@
 <p align="center">
-<img src="https://img.fczbl.vip/images/2018/10/21/kratos-demo.jpg" alt="KRATOS">
+<img src="https://img.fczbl.vip/images/2018/10/21/kratos-demo.jpg" alt="KRATOS"/>
 </p>
 
 <p align="center">
-<a href="https://www.fczbl.vip"><img alt="Author" src="https://img.shields.io/badge/Author-Moedog-blue.svg?style=flat-square"></a>
-<a href="https://github.com/xb2016/kratos-pjax/releases"><img alt="Version" height="20" src="https://badge.fury.io/gh/xb2016%2Fkratos-pjax.svg"></a>
-<img alt="License" src="https://img.shields.io/badge/license-GPL3-red.svg"/>
+<a href="https://moedog.org"><img alt="Author" src="https://img.shields.io/badge/Author-Moedog-blue.svg?style=flat-square"/></a>
+<a href="https://github.com/xb2016/kratos-pjax/releases"><img alt="Version" src="https://img.shields.io/github/release/xb2016/kratos-pjax.svg?style=flat-square"/></a>
+<img alt="License" src="https://img.shields.io/github/license/xb2016/kratos-pjax.svg?style=flat-square"/>
 </p>
 
  > :icecream: Wow, such a lovely WordPress theme
@@ -25,7 +25,7 @@ Star this project please, thank you!
 ## Supports
 
 **Docs**
-- [https://www.fczbl.vip/787.html](https://www.fczbl.vip/787.html)
+- [https://moedog.org/787.html](https://moedog.org/787.html)
 
 **Suggestions and BUG report**
 - [https://github.com/xb2016/kratos-pjax/issues](https://github.com/xb2016/kratos-pjax/issues)
@@ -76,4 +76,4 @@ I accept donations through: Alipay / Wechat Pay / QQ Pay , thank you!
 
 **Kratos-pjax** © [Vtrois](https://github.com/Vtrois), [Moedog](https://github.com/xb2016), Released under the [GPL-3.0](./LICENSE) License.<br>
 
-> Blog [fczbl.vip](https://www.fczbl.vip) · GitHub [@xb2016](https://github.com/xb2016) · Twitter [@moesdog](https://twitter.com/moesdog) · Telegram [@xb2016](https://t.me/xb2016)
+> Blog [moedog.org](https://moedog.org) · GitHub [@xb2016](https://github.com/xb2016) · Twitter [@moesdog](https://twitter.com/moesdog) · Telegram [@xb2016](https://t.me/xb2016)
