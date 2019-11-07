@@ -476,7 +476,7 @@ textarea{overflow:auto}
 .kratos-post-inner-new header .label{display:inline-block;padding:4px 6px;font-size:12px;font-weight:700;line-height:14px;color:#fff;vertical-align:baseline;white-space:nowrap;background-color:#51aded;margin-right:5px;position:relative;top:-3px;cursor:url(../images/pointer.cur),auto}
 .kratos-post-inner-new header .label:after{position:absolute;width:0;height:0;vertical-align:top;content:"";top:8px;right:-3px;border-left:4px solid #51aded;border-top:4px solid transparent;border-bottom:4px solid transparent}
 .kratos-post-inner-new header .label:hover{color:#fff!important}
-.kratos-post-content,.kratos-post-content-l{word-break:break-all;word-wrap:break-word;margin:10px}
+.kratos-post-content,.kratos-post-content-l{word-wrap:break-word;margin:10px}
 .kratos-post-content p{margin-bottom:1em;font-size:16px;color:#333}
 .kratos-post-content img,.kratos-status-post img{height:auto;max-width:100%;display:block}
 .kratos-post-content embed{max-width:100%}
@@ -673,6 +673,9 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 .cd-tool span{display:table-cell;vertical-align:middle;color:#fff;width:40px;height:40px;font-size:18px}
 .edit-box{bottom:130px;background:#848484;opacity:.7}
 .edit-box.edit-box2{bottom:180px}
+.edit-box.edit-box3{bottom:230px}
+.waifu-btn{display:none;bottom:130px;background:#848484;opacity:.7}
+.waifu-btn.waifu-btn2{bottom:180px}
 .gotop-box{bottom:80px;visibility:hidden;opacity:0;-webkit-transition:.5s;transition:.5s}
 .gotop-box.gotop-box2{bottom:130px}
 .gotop-box.active{visibility:visible;opacity:.7}
