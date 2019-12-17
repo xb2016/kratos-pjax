@@ -46,6 +46,7 @@ We encourage everyone to help with localization. The following is how to do:
   - **zh_CN** [Moedog](https://github.com/xb2016)
   - **en_US** [Moedog](https://github.com/xb2016), [hifocus](https://github.com/hifocus)
   - **ru_RU** [JuniorDEV](https://github.com/jun-dev)
+  - **zh_TW** [RexTg](https://github.com/rexx0520)
 
 ## Donate
 
