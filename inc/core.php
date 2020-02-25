@@ -352,7 +352,7 @@ function spam_protection($commentdata){
     if($_POST['co_num1']+$_POST['co_num2']-3!=$_POST['code']) kratos_comment_err(__('验证码错误','moedog'));
     return $commentdata;
 }
-add_filter('preprocess_comment','spam_protection');
+add_filter('pre_comment_on_post','spam_protection');
 function kratos_comment_callback(){
     $comment = wp_handle_comment_submission(wp_unslash($_POST));
     if(is_wp_error($comment)){
