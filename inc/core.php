@@ -329,7 +329,6 @@ function cmhello_users_search_order($obj){
 }
 //Enable comments <img>
 function sig_allowed_html_tags_in_comments(){
-   define('CUSTOM_TAGS',true);
    global $allowedtags;
    $allowedtags = array(
       'img'=> array(
@@ -350,12 +349,10 @@ function kratos_comment_err($a){
     exit;
 }
 function spam_protection($commentdata){
-    if($_POST['co_num1']+$_POST['co_num2']!=$_POST['code']) kratos_comment_err(__('验证码错误','moedog'));
+    if($_POST['co_num1']+$_POST['co_num2']-3!=$_POST['code']) kratos_comment_err(__('验证码错误','moedog'));
     return $commentdata;
 }
-if($comment_data['comment_type']==''){
-    add_filter('preprocess_comment','spam_protection');
-}
+add_filter('preprocess_comment','spam_protection');
 function kratos_comment_callback(){
     $comment = wp_handle_comment_submission(wp_unslash($_POST));
     if(is_wp_error($comment)){
