@@ -349,7 +349,9 @@ function kratos_comment_err($a){
     exit;
 }
 function spam_protection($commentdata){
-    if($_POST['co_num1']+$_POST['co_num2']-3!=$_POST['code']) kratos_comment_err(__('验证码错误','moedog'));
+    if(!is_user_logged_in()){
+        if($_POST['co_num1']+$_POST['co_num2']-3!=$_POST['code']) kratos_comment_err(__('验证码错误','moedog'));
+    }
     return $commentdata;
 }
 add_filter('pre_comment_on_post','spam_protection');
