@@ -220,7 +220,7 @@ function kratos_description(){
     if(is_home()||is_front_page()){echo trim(kratos_option('site_description'));}
     elseif(is_category()){$description = strip_tags(category_description());echo trim($description);}
     elseif(is_single()){ 
-        if(get_the_excerpt()){echo get_the_excerpt();}
+        if(has_excerpt() && get_the_excerpt()){echo get_the_excerpt();}
         else{global $post;$description = trim(str_replace(array("\r\n","\r","\n","　"," ")," ",str_replace("\"","'",strip_tags(do_shortcode($post->post_content)))));echo mb_substr($description,0,220,'utf-8');}
     }
     elseif(is_search()){echo '“';the_search_query();global $wp_query;echo '”'.sprintf(__('为您找到结果 %s 个','moedog'),$wp_query->found_posts);}
