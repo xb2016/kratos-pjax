@@ -186,14 +186,14 @@ function youtube($atts,$content=null,$code=""){
 }
 add_shortcode('youtube','youtube');
 function bilibili($atts,$content=null,$code=""){
-    extract(shortcode_atts(array("cid"=>'0'),$atts));
+    extract(shortcode_atts(array("danmaku"=>'1'),$atts));
     extract(shortcode_atts(array("page"=>'1'),$atts));
-    $return = '<div class="video-container"><iframe src="https://player.bilibili.com/player.html?aid=';
+    $return = '<div class="video-container"><iframe src="https://player.bilibili.com/player.html?bvid=';
     $return .= $content;
-    $return .= '&cid=';
-    $return .= $cid;
     $return .= '&page=';
     $return .= $page;
+    $return .= '&high_quality=1&danmaku=';
+    $return .= $danmaku;
     $return .= '" allowtransparency="true" width="100%" height="498" scrolling="no" frameborder="0" ></iframe></div>';
     return $return;
 }
