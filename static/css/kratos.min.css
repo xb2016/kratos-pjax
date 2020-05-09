@@ -878,3 +878,44 @@ body{background:#fff!important}
 #kratos-header,.kratos-start,#kratos-widget-area,.comments-area .avatar,#respond,.cd-tool{display:none}
 .comments-area .comment-awaiting-moderation,.comments-area .comment-meta,.comments-area .fn{margin-left:0}
 }
+/* 
+ * 请尊重萌娘百科版权，以下代码除非注明均是管理员手敲出来的！！！复制需要注明源自萌娘百科，并且附上URL地址http://zh.moegirl.org/MediaWiki:Common.css
+ * 版权协定：知识共享 署名-非商业性使用-相同方式共享 3.0
+ * 复制之后请把图片换成自己网站上URL地址！
+ */
+span.heimu a.external,
+span.heimu a.external:visited,
+span.heimu a.extiw,
+span.heimu a.extiw:visited {
+    color: #252525;
+}
+.heimu,
+.heimu a,
+a .heimu,
+.heimu a.new {
+    background-color: #252525;
+    color: #252525;
+    text-shadow: none;
+}
+body:not(.heimu_toggle_on) .heimu:hover,
+body:not(.heimu_toggle_on) .heimu:active,
+body:not(.heimu_toggle_on) .heimu.off {
+    transition: color .13s linear;
+    color: white;
+}
+body:not(.heimu_toggle_on) .heimu:hover a,
+body:not(.heimu_toggle_on) a:hover .heimu,
+body:not(.heimu_toggle_on) .heimu.off a,
+body:not(.heimu_toggle_on) a:hover .heimu.off {
+    transition: color .13s linear;
+    color: lightblue;
+}
+body:not(.heimu_toggle_on) .heimu.off .new,
+body:not(.heimu_toggle_on) .heimu.off .new:hover,
+body:not(.heimu_toggle_on) .new:hover .heimu.off,
+body:not(.heimu_toggle_on) .heimu.off .new,
+body:not(.heimu_toggle_on) .heimu.off .new:hover,
+body:not(.heimu_toggle_on) .new:hover .heimu.off {
+    transition: color .13s linear;
+    color: #BA0000;
+}
