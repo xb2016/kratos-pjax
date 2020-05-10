@@ -320,7 +320,7 @@
                 title : '哔哩哔哩',
                 image : url+'/images/bilibili.png',
                 onclick : function() {
-                     ed.selection.setContent('[bilibili cid="" page="1"]' + ed.selection.getContent() + '[/bilibili]');
+                     ed.selection.setContent('[bilibili danmaku="1" page="1"]' + ed.selection.getContent() + '[/bilibili]');
                 }
             });
         },
