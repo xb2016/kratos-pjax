@@ -429,7 +429,7 @@ function user_agent_display_comment(){
     global $comment;
     remove_filter('comment_text','user_agent');
     apply_filters('get_comment_text',$comment->comment_content);
-    if(empty($_POST['comment_post_ID'])||is_admin()) echo apply_filters('comment_text',$comment->comment_content);
+    if(empty($_POST['comment_post_ID'])||is_admin()) echo convert_smilies(apply_filters('get_comment_text',$comment->comment_content));
 }
 function user_agent(){
     echo user_agent_show();

@@ -1,13 +1,25 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: Kratos-pjax\n"
+"POT-Creation-Date: 2020-09-06 15:56+0800\n"
+"PO-Revision-Date: 2020-09-06 15:58+0800\n"
+"Last-Translator: Leko <leko@leko.moe>\n"
+"Language-Team: Leko <leko@leko.moe>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: Kratos-pjax\n"
-"Language: zh-TW\n"
-"Last-Translator: Leko <leko@leko.moe>\n"
-"Language-Team: Leko <leko@leko.moe>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:21
 msgid "欸？我的萝莉怎么不见了？！"
@@ -62,8 +74,14 @@ msgid "移除本地头像"
 msgstr "移除本地頭貼"
 
 #: inc/avatars.php:52
-msgid "如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头像。"
-msgstr "如需要修改本地頭貼，請重新上傳新頭貼。如需要移除本地頭貼，請選中上方的“移除本地頭貼”複選框並更新個人資料即可。<br/>移除本地頭貼後，將恢復使用 Gravatar 頭貼。"
+msgid ""
+"如需要修改本地头像，请重新上传新头像。如需要移除本地头像，请选中上方的“移除本"
+"地头像”复选框并更新个人资料即可。<br/>移除本地头像后，将恢复使用 Gravatar 头"
+"像。"
+msgstr ""
+"如需要修改本地頭貼，請重新上傳新頭貼。如需要移除本地頭貼，請選中上方的“移除本"
+"地頭貼”複選框並更新個人資料即可。<br/>移除本地頭貼後，將恢復使用 Gravatar 頭"
+"貼。"
 
 #: inc/avatars.php:54
 msgid "尚未设置本地头像，请在 Gravatar.com 网站设置头像。"
@@ -118,6 +136,7 @@ msgid "顶部菜单"
 msgstr "頂部選單"
 
 #: inc/core.php:226
+#, php-format
 msgid "为您找到结果 %s 个"
 msgstr "為您找到結果 %s 個"
 
@@ -137,20 +156,22 @@ msgstr "登錄IP"
 msgid "验证码错误"
 msgstr "驗證碼錯誤"
 
-#: inc/core.php:381
+#: inc/core.php:380
 msgid "您的评论正在等待审核。"
 msgstr "您的評論正在等待審核。"
 
-#: inc/core.php:460 options.php:44
+#: inc/core.php:459 options.php:33
 msgid "站点地图"
 msgstr "網站地圖"
 
-#: inc/core.php:536
+#: inc/core.php:535
 msgid "最后更新于"
 msgstr "最後更新於"
 
 #: inc/imgcfg.php:110 inc/imgcfg.php:111
-msgid "从URL新增"
+#, fuzzy
+#| msgid "从URL新增"
+msgid "从URL添加"
 msgstr "從URL新增"
 
 #: inc/imgcfg.php:122
@@ -162,7 +183,9 @@ msgid "从URL导入"
 msgstr "從URL導入"
 
 #: inc/imgcfg.php:143
-msgid "从URL新增媒体项目"
+#, fuzzy
+#| msgid "从URL新增媒体项目"
+msgid "从URL添加媒体项目"
 msgstr "從URL新增媒體文件"
 
 #: inc/imgcfg.php:149
@@ -186,8 +209,8 @@ msgid "清除"
 msgstr "清除"
 
 #: inc/imgcfg.php:163
-msgid "新增"
-msgstr "新增"
+msgid "添加"
+msgstr ""
 
 #: inc/imgcfg.php:165
 msgid "取消"
@@ -234,10 +257,12 @@ msgid "<strong>错误</strong>：验证码错误，请重试。"
 msgstr "<strong>錯誤</strong>：驗證碼錯誤，請重試。"
 
 #: inc/logincfg.php:248
+#, php-format
 msgid "%d 小时"
 msgstr "%d 小時"
 
 #: inc/logincfg.php:253
+#, php-format
 msgid "%d 分钟"
 msgstr "%d 分鐘"
 
@@ -246,14 +271,17 @@ msgid "登录失败次数过多"
 msgstr "登錄失敗次數過多"
 
 #: inc/logincfg.php:257
+#, php-format
 msgid "失败登录次数：%d ，IP：%s"
 msgstr "失敗登錄次數：%d ，IP：%s"
 
 #: inc/logincfg.php:260
+#, php-format
 msgid "最后一次尝试登录的用户名：%s"
 msgstr "最後一次嘗試登錄的使用者名稱：%s"
 
 #: inc/logincfg.php:263
+#, php-format
 msgid "此 IP 已被封锁，封锁时长：%s"
 msgstr "此 IP 已被封鎖，封鎖時長：%s"
 
@@ -266,16 +294,21 @@ msgid "请稍候再试。"
 msgstr "請稍候再試。"
 
 #: inc/logincfg.php:278
+#, php-format
 msgid "请在 %d 小时后重试。"
 msgstr "請在 %d 小時後重試。"
 
 #: inc/logincfg.php:280
+#, php-format
 msgid "请在 %d 分钟后重试。"
 msgstr "請在 %d 分鐘後重試。"
 
 #: inc/logincfg.php:292
-msgid "<strong>错误</strong>：账号或密码有误，您还有<strong>%d</strong>次尝试机会。"
-msgstr "<strong>錯誤</strong>：帳號或密碼有誤，您還有<strong>%d</strong>次嘗試機會。"
+#, php-format
+msgid ""
+"<strong>错误</strong>：账号或密码有误，您还有<strong>%d</strong>次尝试机会。"
+msgstr ""
+"<strong>錯誤</strong>：帳號或密碼有誤，您還有<strong>%d</strong>次嘗試機會。"
 
 #: inc/post.php:58
 msgid "这是一篇受保护的文章，请输入阅读密码！"
@@ -317,20 +350,30 @@ msgid "标题内容"
 msgstr "標題內容"
 
 #: inc/shortcode.php:101
-msgid "抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本文发表评论才能阅读隐藏内容"
-msgstr "抱歉，只有<a href=\"%s\" rel=\"nofollow\">登錄</a>並在本文發表評論才能閱讀隱藏內容"
+#, php-format
+msgid ""
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本文发表评论才能阅读隐"
+"藏内容"
+msgstr ""
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登錄</a>並在本文發表評論才能閱讀隱"
+"藏內容"
 
 #: inc/shortcode.php:108
-msgid "抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本站任一文章发表评论才能阅读隐藏内容"
-msgstr "抱歉，只有<a href=\"%s\" rel=\"nofollow\">登錄</a>並在本站任一文章發表評論才能閱讀隱藏內容"
+#, php-format
+msgid ""
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登录</a>并在本站任一文章发表评论才"
+"能阅读隐藏内容"
+msgstr ""
+"抱歉，只有<a href=\"%s\" rel=\"nofollow\">登錄</a>並在本站任一文章發表評論才"
+"能閱讀隱藏內容"
 
 #: inc/shortcode.php:110
 msgid "以下为隐藏内容："
 msgstr "以下為隱藏內容："
 
 #: inc/shortcode.php:295
-msgid "新增表情"
-msgstr "新增表情"
+msgid "添加表情"
+msgstr ""
 
 #: inc/shortcode.php:303
 msgid "代码高亮"
@@ -401,8 +444,14 @@ msgid "下一篇"
 msgstr "下一篇"
 
 #: inc/single-templates/single.php:31 page.php:21 pages/page-notitle.php:22
-msgid "本作品采用 <a rel=\"license nofollow\" target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可"
-msgstr "本作品採用 <a rel=\"license nofollow\" target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\">知識共享署名-相同方式共享 4.0 國際許可協議</a> 進行許可"
+msgid ""
+"本作品采用 <a rel=\"license nofollow\" target=\"_blank\" href=\"http://"
+"creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0 国际"
+"许可协议</a> 进行许可"
+msgstr ""
+"本作品採用 <a rel=\"license nofollow\" target=\"_blank\" href=\"http://"
+"creativecommons.org/licenses/by-sa/4.0/\">知識共享署名-相同方式共享 4.0 國際"
+"許可協議</a> 進行許可"
 
 #: inc/single-templates/single.php:36 page.php:27 pages/page-archives.php:60
 #: pages/page-notitle.php:28
@@ -773,7 +822,7 @@ msgstr "降序"
 msgid "升序"
 msgstr "升序"
 
-#: inc/widgets.php:305 inc/widgets.php:334 options.php:228
+#: inc/widgets.php:305 inc/widgets.php:334 options.php:217
 msgid "随机"
 msgstr "隨機"
 
@@ -850,896 +899,894 @@ msgid "站点图标"
 msgstr "網站圖示"
 
 #: options.php:21
-msgid "通知设置"
-msgstr "通知設定"
-
-#: options.php:22
-msgid "选择后台主题通知 (更新/帮助等) 的出现位置"
-msgstr "選擇後台主題通知 (更新/幫助等) 的出現位置"
-
-#: options.php:28
-msgid "后台全局"
-msgstr "後台全局"
-
-#: options.php:29
-msgid "仪表盘首页"
-msgstr "儀表盤首頁"
-
-#: options.php:30
-msgid "隐藏全部[不建议]"
-msgstr "隱藏全部[不建議]"
-
-#: options.php:32
 msgid "Gravatar头像服务器地址"
 msgstr "Gravatar頭貼伺服器地址"
 
-#: options.php:33
+#: options.php:22
 msgid "不确定请勿更改"
 msgstr "不確定請勿更改"
 
-#: options.php:38
+#: options.php:27
 msgid "PJAX"
 msgstr "PJAX"
 
-#: options.php:39
+#: options.php:28
 msgid "是否启用页面PJAX加载"
 msgstr "是否啟用頁面PJAX載入"
 
-#: options.php:45
+#: options.php:34
 msgid "是否启用站点地图(更新文章时生成，需要/目录的写权限)"
 msgstr "是否啟用網站地圖(更新文章時生成，需要/目錄的寫權限)"
 
-#: options.php:50
+#: options.php:39
 msgid "背景类型"
 msgstr "背景類型"
 
-#: options.php:51
+#: options.php:40
 msgid "选择您喜欢的背景类型并修改其对应选项"
 msgstr "選擇您喜歡的背景類型並修改其對應選項"
 
-#: options.php:57 options.php:288
+#: options.php:46 options.php:277
 msgid "纯色"
 msgstr "純色"
 
-#: options.php:58 options.php:287
+#: options.php:47 options.php:276
 msgid "图片"
 msgstr "圖片"
 
-#: options.php:60
+#: options.php:49
 msgid "背景颜色"
 msgstr "背景顏色"
 
-#: options.php:61
+#: options.php:50
 msgid "整个站点背景颜色控制(背景类型选择为纯色才有效)"
 msgstr "整個網站背景顏色控制(背景類型選擇為純色才有效)"
 
-#: options.php:66
+#: options.php:55
 msgid "背景图片"
 msgstr "背景圖片"
 
-#: options.php:67
+#: options.php:56
 msgid "整个站点背景图片控制(背景类型选择为图片才有效)"
 msgstr "整個網站背景圖片控制(背景類型選擇為圖片才有效)"
 
-#: options.php:72
-msgid "主页佈局"
-msgstr "首頁佈局"
+#: options.php:61
+msgid "主页布局"
+msgstr ""
 
-#: options.php:73
-msgid "选择[主页]佈局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
+#: options.php:62
+#, fuzzy
+#| msgid "选择[主页]佈局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
+msgid "选择[主页]布局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
 msgstr "選擇[首頁]佈局(顯示左邊欄，無邊欄，右邊欄)，默認顯示右邊欄"
 
-#: options.php:82
-msgid "文章列表佈局"
+#: options.php:71
+#, fuzzy
+#| msgid "文章列表佈局"
+msgid "文章列表布局"
 msgstr "文章列表佈局"
 
-#: options.php:83
-msgid "选择你喜欢的列表佈局，默认显示新式列表佈局"
+#: options.php:72
+#, fuzzy
+#| msgid "选择你喜欢的列表佈局，默认显示新式列表佈局"
+msgid "选择你喜欢的列表布局，默认显示新式列表布局"
 msgstr "選擇你喜歡的列表佈局，默認顯示新式列表佈局"
 
-#: options.php:91
+#: options.php:80
 msgid "主页文章摘要字数"
 msgstr "首頁文章摘要字數"
 
-#: options.php:92
+#: options.php:81
 msgid "中文建议110，英文建议40，搭配文章内的more标签使用"
 msgstr "中文建議110，英文建議40，搭配文章內的more標籤使用"
 
-#: options.php:97
+#: options.php:86
 msgid "分类页面"
 msgstr "分類頁面"
 
-#: options.php:98
+#: options.php:87
 msgid "是否启用分类页面的名称以及简介功能"
 msgstr "是否啟用分類頁面的名稱以及簡介功能"
 
-#: options.php:103
+#: options.php:92
 msgid "标签页面"
 msgstr "標籤頁面"
 
-#: options.php:104
+#: options.php:93
 msgid "是否启用标签页面的名称以及简介功能"
 msgstr "是否啟用標籤頁面的名稱以及簡介功能"
 
-#: options.php:109
+#: options.php:98
 msgid "头像本地上传"
 msgstr "頭貼本地上傳"
 
-#: options.php:110
+#: options.php:99
 msgid "是否允许普通用户上传本地头像"
 msgstr "是否允許普通用戶上傳本地頭貼"
 
-#: options.php:115
+#: options.php:104
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
-#: options.php:116
+#: options.php:105
 msgid "是否使用Gutenberg编辑器"
 msgstr "是否使用Gutenberg編輯器"
 
-#: options.php:121
+#: options.php:110
 msgid "侧边栏随动"
 msgstr "側邊欄隨動"
 
-#: options.php:122
+#: options.php:111
 msgid "是否启用侧边栏小工具随动功能"
 msgstr "是否啟用側邊欄小工具隨動功能"
 
-#: options.php:127
+#: options.php:116
 msgid "评论UA"
 msgstr "評論UA"
 
-#: options.php:128
+#: options.php:117
 msgid "是否在评论区显示评论者UA信息"
 msgstr "是否在評論區顯示評論者UA訊息"
 
-#: options.php:133
+#: options.php:122
 msgid "复制弹窗"
 msgstr "複製跳出視窗"
 
-#: options.php:134
+#: options.php:123
 msgid "是否启用复制文章内容后弹窗提醒"
 msgstr "是否啟用複製文章內容後跳出視窗提醒"
 
-#: options.php:139
+#: options.php:128
 msgid "页面伪静态"
 msgstr "頁面偽靜態"
 
-#: options.php:140
+#: options.php:129
 msgid "是否启用自定义页面伪静态功能"
 msgstr "是否啟用自訂頁面偽靜態功能"
 
-#: options.php:145
+#: options.php:134
 msgid "组件配置"
 msgstr "組件設定"
 
-#: options.php:148
+#: options.php:137
 msgid "自定义Font Awesome"
 msgstr "自訂Font Awesome"
 
-#: options.php:149
+#: options.php:138
 msgid "自定义Font Awesome 4.7字体库链接，留空将从本地加载"
 msgstr "自訂Font Awesome 4.7字體庫連結，留空將從本地載入"
 
-#: options.php:154
+#: options.php:143
 msgid "自定义jQuery"
 msgstr "自訂jQuery"
 
-#: options.php:155
+#: options.php:144
 msgid "自定义jQuery链接，留空将从本地加载"
 msgstr "自訂jQuery連結，留空將從本地載入"
 
-#: options.php:160
+#: options.php:149
 msgid "主题JS"
 msgstr "主題JS"
 
-#: options.php:161
+#: options.php:150
 msgid "从jsdelivr加载主题JS"
 msgstr "從jsdelivr載入主題JS"
 
-#: options.php:166
+#: options.php:155
 msgid "附加JS"
 msgstr "附加JS"
 
-#: options.php:171
+#: options.php:160
 msgid "主题CSS"
 msgstr "主題CSS"
 
-#: options.php:172
+#: options.php:161
 msgid "从jsdelivr加载主题CSS"
 msgstr "從jsdelivr載入主題CSS"
 
-#: options.php:177
+#: options.php:166
 msgid "附加CSS"
 msgstr "附加CSS"
 
-#: options.php:182
+#: options.php:171
 msgid "表情包"
 msgstr "表情包"
 
-#: options.php:183
+#: options.php:172
 msgid "从jsdelivr加载主题表情包"
 msgstr "從jsdelivr載入主題表情包"
 
-#: options.php:188
-msgid "特色图片(仅针对新式佈局)"
+#: options.php:177
+#, fuzzy
+#| msgid "特色图片(仅针对新式佈局)"
+msgid "特色图片(仅针对新式布局)"
 msgstr "特色圖片(僅針對新式佈局)"
 
-#: options.php:189
+#: options.php:178
 msgid "选择你喜欢的默认特色图片(留空使用随机图片20张)"
 msgstr "選擇你喜歡的默認特色圖片(留空使用隨機圖片20張)"
 
-#: options.php:193
+#: options.php:182
 msgid "APlayer全局播放器"
 msgstr "APlayer全局播放器"
 
-#: options.php:194
+#: options.php:183
 msgid "启用页面左下角播放器(建议开启PJAX使用)"
 msgstr "啟用頁面左下角播放器(建議開啟PJAX使用)"
 
-#: options.php:199
+#: options.php:188
 msgid "歌单JSON地址"
 msgstr "歌單JSON地址"
 
-#: options.php:200
-msgid "借助API可解析网易云歌单，如https://api.fczbl.vip/163/?type=playlist&id=2003373695"
-msgstr "借助API可解析網易雲歌單，如https://api.fczbl.vip/163/?type=playlist&id=2003373695"
+#: options.php:189
+msgid "借助API可解析网易云歌单，参考https://github.com/injahow/meting"
+msgstr "借助API可解析網易雲歌單，参考https://github.com/injahow/meting"
 
-#: options.php:205
+#: options.php:194
 msgid "自动播放"
 msgstr "自動播放"
 
-#: options.php:206
+#: options.php:195
 msgid "启用APlayer自动播放，个人不喜欢"
 msgstr "啟用APlayer自動播放，個人不喜歡"
 
-#: options.php:211
+#: options.php:200
 msgid "循环模式"
 msgstr "循環模式"
 
-#: options.php:217
+#: options.php:206
 msgid "全部循环"
 msgstr "全部循環"
 
-#: options.php:218
+#: options.php:207
 msgid "单曲循环"
 msgstr "單曲循環"
 
-#: options.php:219
+#: options.php:208
 msgid "未定义"
 msgstr "未定義"
 
-#: options.php:221
+#: options.php:210
 msgid "播放顺序"
 msgstr "播放順序"
 
-#: options.php:227
+#: options.php:216
 msgid "列表"
 msgstr "列表"
 
-#: options.php:230
+#: options.php:219
 msgid "看板娘"
 msgstr "看板娘"
 
-#: options.php:231
+#: options.php:220
 msgid "是否启用2233Live2D看板娘"
 msgstr "是否啟用2233Live2D看板娘"
 
-#: options.php:236
+#: options.php:225
 msgid "微信展示"
 msgstr "微信展示"
 
-#: options.php:237
+#: options.php:226
 msgid "是否启用微信展示按钮功能"
 msgstr "是否啟用微信展示按鈕功能"
 
-#: options.php:242
+#: options.php:231
 msgid "微信二维码"
 msgstr "微信二維碼"
 
-#: options.php:243
+#: options.php:232
 msgid "上传你的微信二维码图片，尺寸要大于等于150px"
 msgstr "上傳你的微信二維碼圖片，尺寸要大於等於150px"
 
-#: options.php:248
+#: options.php:237
 msgid "微信收款码"
 msgstr "微信收款碼"
 
-#: options.php:249
+#: options.php:238
 msgid "上传你的微信收款二维码图片，图片尺寸要大于200px"
 msgstr "上傳你的微信收款二維碼圖片，圖片尺寸要大於200px"
 
-#: options.php:254
+#: options.php:243
 msgid "支付婊收款码"
 msgstr "支付婊收款碼"
 
-#: options.php:255
+#: options.php:244
 msgid "上传你的支付婊收款二维码图片，图片尺寸要大于200px"
 msgstr "上傳你的支付婊收款二維碼圖片，圖片尺寸要大於200px"
 
-#: options.php:260
+#: options.php:249
 msgid "SEO配置"
 msgstr "SEO設定"
 
-#: options.php:263
+#: options.php:252
 msgid "关键词"
 msgstr "關鍵字"
 
-#: options.php:264
+#: options.php:253
 msgid "每个关键词之间用英文逗号分割"
 msgstr "每個關鍵字之間用英文逗號分割"
 
-#: options.php:268
+#: options.php:257
 msgid "站点描述"
 msgstr "網站描述"
 
-#: options.php:273
+#: options.php:262
 msgid "站点统计(不要包括SCRIPT标签)"
 msgstr "網站統計(不要包括SCRIPT標籤)"
 
-#: options.php:278
+#: options.php:267
 msgid "顶部配置"
 msgstr "頂部設定"
 
-#: options.php:281
+#: options.php:270
 msgid "顶部显示模式"
 msgstr "頂部顯示模式"
 
-#: options.php:290
+#: options.php:279
 msgid "以下为图片Header的设置"
 msgstr "以下為圖片Header的設定"
 
-#: options.php:291
+#: options.php:280
 msgid "只有顶部显示模式为图片才有效。"
 msgstr "只有頂部顯示模式為圖片才有效。"
 
-#: options.php:293
+#: options.php:282
 msgid "顶部图片"
 msgstr "頂部圖片"
 
-#: options.php:298
+#: options.php:287
 msgid "移动端顶部图片(可留空)"
 msgstr "移動端頂部圖片(可留空)"
 
-#: options.php:302
+#: options.php:291
 msgid "图片文字-1(可做文字标题)"
 msgstr "圖片文字-1(可做文字標題)"
 
-#: options.php:307
+#: options.php:296
 msgid "图片文字-2(可做站点描述)"
 msgstr "圖片文字-2(可做網站描述)"
 
-#: options.php:312
+#: options.php:301
 msgid "移动端菜单显示模式"
 msgstr "移動端菜單顯示模式"
 
-#: options.php:318
+#: options.php:307
 msgid "顶部"
 msgstr "頂部"
 
-#: options.php:319
+#: options.php:308
 msgid "侧栏"
 msgstr "側欄"
 
-#: options.php:321
+#: options.php:310
 msgid "以下为纯色Header设置"
 msgstr "以下為純色Header設定"
 
-#: options.php:322
+#: options.php:311
 msgid "只有顶部显示模式为纯色才有效。"
 msgstr "只有頂部顯示模式為純色才有效。"
 
-#: options.php:324
+#: options.php:313
 msgid "Nav Bar颜色"
 msgstr "Nav Bar顏色"
 
-#: options.php:325
+#: options.php:314
 msgid "请使用RGBA格式表示，默认22,23,26,.9"
 msgstr "請使用RGBA格式表示，默認22,23,26,.9"
 
-#: options.php:330
+#: options.php:319
 msgid "移动端侧边栏菜单颜色"
 msgstr "移動端側邊欄菜單顏色"
 
-#: options.php:331
+#: options.php:320
 msgid "请使用RGBA格式表示，默认42,42,42,.9"
 msgstr "請使用RGBA格式表示，默認42,42,42,.9"
 
-#: options.php:336
+#: options.php:325
 msgid "图片Logo"
 msgstr "圖片Logo"
 
-#: options.php:337
+#: options.php:326
 msgid "高40px，宽最大200px，不设置将显示文字Logo"
 msgstr "高40px，寬最大200px，不設定將顯示文字Logo"
 
-#: options.php:341
+#: options.php:330
 msgid "底部配置"
 msgstr "底部設定"
 
-#: options.php:344
+#: options.php:333
 msgid "建站时间"
 msgstr "建站時間"
 
-#: options.php:345
+#: options.php:334
 msgid "输入你的建站时间，格式MM/DD/YYYY hh:mm:ss"
 msgstr "輸入你的建站時間，格式MM/DD/YYYY hh:mm:ss"
 
-#: options.php:350
+#: options.php:339
 msgid "Footer颜色"
 msgstr "Footer顏色"
 
-#: options.php:351
+#: options.php:340
 msgid "请使用RGBA格式表示，默认35,40,45,1"
 msgstr "請使用RGBA格式表示，默認35,40,45,1"
 
-#: options.php:356
+#: options.php:345
 msgid "工信部备案信息"
 msgstr "工信部備案訊息"
 
-#: options.php:357
+#: options.php:346
 msgid "输入您的工信部备案号，针对国际版没有备案信息栏目的功能"
 msgstr "輸入您的工信部備案號，針對國際版沒有備案訊息欄目的功能"
 
-#: options.php:361
+#: options.php:350
 msgid "公安网备案信息"
 msgstr "公安網備案訊息"
 
-#: options.php:362
+#: options.php:351
 msgid "输入您的公安网备案号"
 msgstr "輸入您的公安網備案號"
 
-#: options.php:366
+#: options.php:355
 msgid "公安网备案连接"
 msgstr "公安網備案連接"
 
-#: options.php:367
+#: options.php:356
 msgid "输入您的公安网备案的链接地址"
 msgstr "輸入您的公安網備案的連結地址"
 
-#: options.php:371
+#: options.php:360
 msgid "新浪微博"
 msgstr "新浪微博"
 
-#: options.php:372 options.php:378 options.php:384 options.php:390
-#: options.php:396 options.php:402
+#: options.php:361 options.php:367 options.php:373 options.php:379
+#: options.php:385 options.php:391
 msgid "连接前要带有 http:// 或者 https:// "
 msgstr "連接前要帶有 http:// 或者 https:// "
 
-#: options.php:377
+#: options.php:366
 msgid "腾讯微博"
 msgstr "騰訊微博"
 
-#: options.php:383
+#: options.php:372
 msgid "Twitter"
 msgstr "Twitter"
 
-#: options.php:389
+#: options.php:378
 msgid "FaceBook"
 msgstr "FaceBook"
 
-#: options.php:395
+#: options.php:384
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: options.php:401
+#: options.php:390
 msgid "GayHub"
 msgstr "GayHub"
 
-#: options.php:407
+#: options.php:396
 msgid "Mail"
 msgstr "Mail"
 
-#: options.php:408
+#: options.php:397
 msgid "连接前要带有mailto: "
 msgstr "連結前要帶有mailto: "
 
-#: options.php:413
+#: options.php:402
 msgid "文章设置"
 msgstr "文章設定"
 
-#: options.php:416
-msgid "文章页面佈局"
+#: options.php:405
+#, fuzzy
+#| msgid "文章页面佈局"
+msgid "文章页面布局"
 msgstr "文章頁面佈局"
 
-#: options.php:417
-msgid "选择[文章]页面佈局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
+#: options.php:406
+#, fuzzy
+#| msgid "选择[文章]页面佈局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
+msgid "选择[文章]页面布局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
 msgstr "選擇[文章]頁面佈局(顯示左邊欄，無邊欄，右邊欄)，默認顯示右邊欄"
 
-#: options.php:426 options.php:457
+#: options.php:415 options.php:446
 msgid "版权声明"
 msgstr "版權聲明"
 
-#: options.php:427 options.php:458
+#: options.php:416 options.php:447
 msgid "是否启用 CC BY-SA 4.0 声明"
 msgstr "是否啟用 CC BY-SA 4.0 聲明"
 
-#: options.php:432 options.php:463
+#: options.php:421 options.php:452
 msgid "分享按钮"
 msgstr "分享按鈕"
 
-#: options.php:433
+#: options.php:422
 msgid "是否启用文章分享功能"
 msgstr "是否啟用文章分享功能"
 
-#: options.php:438 options.php:469
+#: options.php:427 options.php:458
 msgid "打赏按钮"
 msgstr "贊助按鈕"
 
-#: options.php:439
+#: options.php:428
 msgid "是否启用文章打赏功能"
 msgstr "是否啟用文章贊助功能"
 
-#: options.php:444
+#: options.php:433
 msgid "页面设置"
 msgstr "頁面設定"
 
-#: options.php:447
-msgid "页面佈局"
-msgstr "頁面佈局"
+#: options.php:436
+msgid "页面布局"
+msgstr "頁面布局"
 
-#: options.php:448
-msgid "选择[页面]佈局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
+#: options.php:437
+#, fuzzy
+#| msgid "选择[页面]佈局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
+msgid "选择[页面]布局(显示左边栏，无边栏，右边栏)，默认显示右边栏"
 msgstr "選擇[頁面]佈局(顯示左邊欄，無邊欄，右邊欄)，默認顯示右邊欄"
 
-#: options.php:464
+#: options.php:453
 msgid "是否启用页面分享功能"
 msgstr "是否啟用頁面分享功能"
 
-#: options.php:470
+#: options.php:459
 msgid "是否启用页面打赏功能"
 msgstr "是否啟用頁面贊助功能"
 
-#: options.php:475
+#: options.php:464
 msgid "轮播设置"
 msgstr "輪播設定"
 
-#: options.php:478
+#: options.php:467
 msgid "主页轮播"
 msgstr "首頁輪播"
 
-#: options.php:479
+#: options.php:468
 msgid "是否启用轮播功能"
 msgstr "是否啟用輪播功能"
 
-#: options.php:484
+#: options.php:473
 msgid "注意："
 msgstr "注意："
 
-#: options.php:485
+#: options.php:474
 msgid "图片宽度建议大于750px，所有图片比例须一致"
 msgstr "圖片寬度建議大於750px，所有圖片比例須一致"
 
-#: options.php:487
+#: options.php:476
 msgid "轮播图片-1"
 msgstr "輪播圖片-1"
 
-#: options.php:491
+#: options.php:480
 msgid "轮播链接-1"
 msgstr "輪播連結-1"
 
-#: options.php:492 options.php:502 options.php:512 options.php:522
-#: options.php:532
+#: options.php:481 options.php:491 options.php:501 options.php:511
+#: options.php:521
 msgid "链接可以留空"
 msgstr "連結可以留空"
 
-#: options.php:497
+#: options.php:486
 msgid "轮播图片-2"
 msgstr "輪播圖片-2"
 
-#: options.php:501
+#: options.php:490
 msgid "链接2"
 msgstr "連結2"
 
-#: options.php:507
+#: options.php:496
 msgid "轮播图片-3"
 msgstr "輪播圖片-3"
 
-#: options.php:511
+#: options.php:500
 msgid "链接3"
 msgstr "連結3"
 
-#: options.php:517
+#: options.php:506
 msgid "轮播图片-4"
 msgstr "輪播圖片-4"
 
-#: options.php:521
+#: options.php:510
 msgid "链接4"
 msgstr "連結4"
 
-#: options.php:527
+#: options.php:516
 msgid "轮播图片-5"
 msgstr "輪播圖片-5"
 
-#: options.php:531
+#: options.php:520
 msgid "链接5"
 msgstr "連結5"
 
-#: options.php:537
+#: options.php:526
 msgid "邮件设置"
 msgstr "郵件設定"
 
-#: options.php:540
+#: options.php:529
 msgid "SMTP服务"
 msgstr "SMTP服務"
 
-#: options.php:541
+#: options.php:530
 msgid "是否启用SMTP邮件发送服务"
 msgstr "是否啟用SMTP郵件發送服務"
 
-#: options.php:546
+#: options.php:535
 msgid "发信人"
 msgstr "發信人"
 
-#: options.php:547
+#: options.php:536
 msgid "请填写发件人姓名"
 msgstr "請填寫發件人姓名"
 
-#: options.php:552
+#: options.php:541
 msgid "邮件服务器"
 msgstr "郵件伺服器"
 
-#: options.php:553
+#: options.php:542
 msgid "请填写SMTP服务器地址"
 msgstr "請填寫SMTP伺服器地址"
 
-#: options.php:558
+#: options.php:547
 msgid "服务器端口"
 msgstr "伺服器埠"
 
-#: options.php:559
+#: options.php:548
 msgid "请填写SMTP服务器端口"
 msgstr "請填寫SMTP伺服器埠"
 
-#: options.php:564
+#: options.php:553
 msgid "邮箱帐号"
 msgstr "信箱帳號"
 
-#: options.php:565
+#: options.php:554
 msgid "请填写邮箱账号"
 msgstr "請填寫信箱帳號"
 
-#: options.php:570
+#: options.php:559
 msgid "邮箱密码"
 msgstr "信箱密碼"
 
-#: options.php:571
+#: options.php:560
 msgid "请填写邮箱密码"
 msgstr "請填寫信箱密碼"
 
-#: options.php:576
+#: options.php:565
 msgid "启用SMTPAuth服务"
 msgstr "啟用SMTPAuth服務"
 
-#: options.php:577
+#: options.php:566
 msgid "是否启用SMTPAuth服务"
 msgstr "是否啟用SMTPAuth服務"
 
-#: options.php:582
+#: options.php:571
 msgid "SMTPSecure设置"
 msgstr "SMTPSecure設定"
 
-#: options.php:583
-msgid "若启用SMTPAuth服务则填写ssl，若不启用则留空；office365的邮箱请填写STARTTLS"
-msgstr "若啟用SMTPAuth服務則填寫ssl，若不啟用則留空；office365的信箱請填寫STARTTLS"
+#: options.php:572
+msgid ""
+"若启用SMTPAuth服务则填写ssl，若不启用则留空；office365的邮箱请填写STARTTLS"
+msgstr ""
+"若啟用SMTPAuth服務則填寫ssl，若不啟用則留空；office365的信箱請填寫STARTTLS"
 
-#: options.php:588
+#: options.php:577
 msgid "雪花设置"
 msgstr "雪花設定"
 
-#: options.php:591
+#: options.php:580
 msgid "站点雪花"
 msgstr "網站雪花"
 
-#: options.php:592
+#: options.php:581
 msgid "是否启用站点雪花功能"
 msgstr "是否啟用網站雪花功能"
 
-#: options.php:597
+#: options.php:586
 msgid "移动端是否显示"
 msgstr "移動端是否顯示"
 
-#: options.php:598
+#: options.php:587
 msgid "配置移动端是否显示，默认是"
 msgstr "設定移動端是否顯示，預設是"
 
-#: options.php:603
+#: options.php:592
 msgid "雪花数量"
 msgstr "雪花數量"
 
-#: options.php:604
+#: options.php:593
 msgid "数值越大雪花数量越多，默认150"
 msgstr "數值越大雪花數量越多，默認150"
 
-#: options.php:609
+#: options.php:598
 msgid "雪花大小"
 msgstr "雪花大小"
 
-#: options.php:610
+#: options.php:599
 msgid "为基准值，数值越大雪花越大，默认2"
 msgstr "為基準值，數值越大雪花越大，默認2"
 
-#: options.php:615
+#: options.php:604
 msgid "雪花距离"
 msgstr "雪花距離"
 
-#: options.php:616
+#: options.php:605
 msgid "雪花距离鼠标指针的最小值，小于这个距离的雪花将受到鼠标的排斥，默认100"
 msgstr "雪花距離滑鼠指針的最小值，小於這個距離的雪花將受到滑鼠的排斥，默認100"
 
-#: options.php:621
+#: options.php:610
 msgid "雪花速度"
 msgstr "雪花速度"
 
-#: options.php:622
+#: options.php:611
 msgid "为基准值，数值越大雪花速度越快，默认0.5"
 msgstr "為基準值，數值越大雪花速度越快，默認0.5"
 
-#: options.php:627
+#: options.php:616
 msgid "雪花横移度"
 msgstr "雪花橫移度"
 
-#: options.php:628
+#: options.php:617
 msgid "为基准值，数值越大雪花横移幅度越大，0为竖直下落，默认1"
 msgstr "為基準值，數值越大雪花橫移幅度越大，0為豎直下落，默認1"
 
-#: options.php:633
+#: options.php:622
 msgid "雪花颜色"
 msgstr "雪花顏色"
 
-#: options.php:634
+#: options.php:623
 msgid "请用RGB格式表示，默认255,255,255"
 msgstr "請用RGB格式表示，默認255,255,255"
 
-#: options.php:639
+#: options.php:628
 msgid "雪花不透明度"
 msgstr "雪花不透明度"
 
-#: options.php:640
+#: options.php:629
 msgid "为基准值，范围0~1，1为不透明，默认0.3"
 msgstr "為基準值，範圍0~1，1為不透明，默認0.3"
 
-#: options.php:645
+#: options.php:634
 msgid "注册登录设置"
 msgstr "註冊登錄設定"
 
-#: options.php:648
+#: options.php:637
 msgid "注册登录页面背景"
 msgstr "註冊登錄頁面背景"
 
-#: options.php:649
-msgid "因为默认使用了Bing每日美图API，所以这里只能手动写链接了..."
-msgstr "因為預設使用了Bing每日美圖API，所以這裡只能手動寫連結了..."
+#: options.php:638
+#, fuzzy
+#| msgid "注册登录页面背景"
+msgid "注册登录页面背景图片"
+msgstr "註冊登錄頁面背景"
 
-#: options.php:654
+#: options.php:643
 msgid "注册登录页面站点图标"
 msgstr "註冊登錄頁面網站圖示"
 
-#: options.php:659
+#: options.php:648
 msgid "以下为用户注册部分的设置"
 msgstr "以下為用戶註冊部分的設定"
 
-#: options.php:661
+#: options.php:650
 msgid "使用密码注册"
 msgstr "使用密碼註冊"
 
-#: options.php:662
+#: options.php:651
 msgid "是否允许用户输入密码注册(免邮箱验证)"
 msgstr "是否允許用戶輸入密碼註冊(免信箱驗證)"
 
-#: options.php:667
+#: options.php:656
 msgid "域名限制模式"
 msgstr "域名限制模式"
 
-#: options.php:668
+#: options.php:657
 msgid "如果不想限制邮箱，请将此部分设置保持默认。"
 msgstr "如果不想限制信箱，請將此部分設定保持默認。"
 
-#: options.php:674
+#: options.php:663
 msgid "白名单模式"
 msgstr "白名單模式"
 
-#: options.php:675
+#: options.php:664
 msgid "黑名单模式"
 msgstr "黑名單模式"
 
-#: options.php:677
+#: options.php:666
 msgid "域名白名单列表(一行一个)"
 msgstr "域名白名單列表(一行一個)"
 
-#: options.php:682
+#: options.php:671
 msgid "域名黑名单列表(一行一个)"
 msgstr "域名黑名單列表(一行一個)"
 
-#: options.php:687
+#: options.php:676
 msgid "错误信息"
 msgstr "錯誤訊息"
 
-#: options.php:688
+#: options.php:677
 msgid "用户域名被阻止时的提示信息"
 msgstr "用戶域名被阻止時的提示訊息"
 
-#: options.php:690
+#: options.php:679
 msgid "本站禁止此域名的邮箱注册，请更换邮箱再试。"
 msgstr "本站禁止此域名的信箱註冊，請更換信箱再試。"
 
-#: options.php:693
+#: options.php:682
 msgid "以下为用户登录限制部分设置"
 msgstr "以下為用戶登錄限制部分設定"
 
-#: options.php:694
+#: options.php:683
 msgid "默认不启用，但是建议手动启用此功能"
 msgstr "默認不啟用，但是建議手動啟用此功能"
 
-#: options.php:696
+#: options.php:685
 msgid "用户登录限制"
 msgstr "用戶登錄限制"
 
-#: options.php:697
+#: options.php:686
 msgid "是否启用登录限制功能(只有启用此项，下面的设置才有效)"
 msgstr "是否啟用登錄限制功能(只有啟用此項，下面的設定才有效)"
 
-#: options.php:702
+#: options.php:691
 msgid "登录尝试机会"
 msgstr "登錄嘗試機會"
 
-#: options.php:703
+#: options.php:692
 msgid "允许输错密码的次数，默认3"
 msgstr "允許輸錯密碼的次數，默認3"
 
-#: options.php:708
+#: options.php:697
 msgid "初始锁定时间"
 msgstr "初始鎖定時間"
 
-#: options.php:709
+#: options.php:698
 msgid "单位秒，不应小于60，默认1200(20分钟)"
 msgstr "單位秒，不應小於60，默認1200(20分鐘)"
 
-#: options.php:714
+#: options.php:703
 msgid "增加锁定时间所需锁定次数"
 msgstr "增加鎖定時間所需鎖定次數"
 
-#: options.php:715
+#: options.php:704
 msgid "默认3次"
 msgstr "默認3次"
 
-#: options.php:720
+#: options.php:709
 msgid "增加后的锁定时间"
 msgstr "增加後的鎖定時間"
 
-#: options.php:721
+#: options.php:710
 msgid "单位秒，不应小于3600，默认86400(24小时)"
 msgstr "單位秒，不應小於3600，默認86400(24小時)"
 
-#: options.php:726
+#: options.php:715
 msgid "自动清除锁定IP的时间"
 msgstr "自動清除鎖定IP的時間"
 
-#: options.php:727
+#: options.php:716
 msgid "单位秒，默认43200(12小时)"
 msgstr "單位秒，默認43200(12小時)"
 
-#: options.php:732
+#: options.php:721
 msgid "控制Cookie登录"
 msgstr "控制Cookie登錄"
 
-#: options.php:733
+#: options.php:722
 msgid "是否控制Cookie登录"
 msgstr "是否控制Cookie登錄"
 
-#: options.php:738
+#: options.php:727
 msgid "邮件提醒"
 msgstr "郵件提醒"
 
-#: options.php:739
+#: options.php:728
 msgid "是否启用锁定邮件提醒功能(请在下方设置提醒阈值)"
 msgstr "是否啟用鎖定郵件提醒功能(請在下方設定提醒閾值)"
 
-#: options.php:744
+#: options.php:733
 msgid "锁定提醒阈值"
 msgstr "鎖定提醒閾值"
 
-#: options.php:745
+#: options.php:734
 msgid "默认2次(启用上方的邮件提醒功能才有效)"
 msgstr "默認2次(啟用上方的郵件提醒功能才有效)"
 
@@ -1780,27 +1827,57 @@ msgid "自己的项目"
 msgstr "自己的項目"
 
 #. Theme Name of the plugin/theme
-#: 
 msgid "Kratos-pjax"
 msgstr "Kratos-pjax"
 
 #. Theme URI of the plugin/theme
-#: 
 msgid "https://github.com/xb2016/kratos-pjax"
 msgstr "https://github.com/xb2016/kratos-pjax"
 
 #. Description of the plugin/theme
-#: 
-msgid "Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为小白-白(www.fczbl.vip)的二次开发版本。"
-msgstr "Kratos 是一款專注於個人部落格的主題，提供了一套可自訂的積木式頁面設定組件，可以透過使用小工具、導航、社交組件、網站標識、自定顏色等來個性化你的網站。此為小白-白(www.fczbl.vip)的二次開發版本。"
+msgid ""
+"Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可"
+"以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。此为"
+"小白-白(moedog.org)的二次开发版本。"
+msgstr ""
+"Kratos 是一款專注於個人部落格的主題，提供了一套可自訂的積木式頁面設定組件，可"
+"以透過使用小工具、導航、社交組件、網站標識、自定顏色等來個性化你的網站。此為"
+"小白-白(moedog.org)的二次開發版本。"
 
 #. Author of the plugin/theme
-#: 
 msgid "Vtrois(Modified by 小白-白)"
 msgstr "Vtrois(Modified by 小白-白)"
 
 #. Author URI of the plugin/theme
-#: 
 msgid "https://www.vtrois.com/"
 msgstr "https://www.vtrois.com/"
 
+#~ msgid "新增"
+#~ msgstr "新增"
+
+#~ msgid "新增表情"
+#~ msgstr "新增表情"
+
+#~ msgid "通知设置"
+#~ msgstr "通知設定"
+
+#~ msgid "选择后台主题通知 (更新/帮助等) 的出现位置"
+#~ msgstr "選擇後台主題通知 (更新/幫助等) 的出現位置"
+
+#~ msgid "后台全局"
+#~ msgstr "後台全局"
+
+#~ msgid "仪表盘首页"
+#~ msgstr "儀表盤首頁"
+
+#~ msgid "隐藏全部[不建议]"
+#~ msgstr "隱藏全部[不建議]"
+
+#~ msgid "主页佈局"
+#~ msgstr "首頁佈局"
+
+#~ msgid "页面佈局"
+#~ msgstr "頁面佈局"
+
+#~ msgid "因为默认使用了Bing每日美图API，所以这里只能手动写链接了..."
+#~ msgstr "因為預設使用了Bing每日美圖API，所以這裡只能手動寫連結了..."

@@ -18,17 +18,6 @@ function optionsframework_options(){
         'std'=>'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION.'/static/images/favicon.ico',
         'type'=>'upload');
     $options[] = array(
-        'name'=>__('通知设置','moedog'),
-        'desc'=>__('选择后台主题通知 (更新/帮助等) 的出现位置','moedog'),
-        'id'=>'kratos_notice',
-        'std'=>'global',
-        'type'=>'select',
-        'class'=>'mini',
-        'options'=>array(
-            'global'=>__('后台全局','moedog'),
-            'welcome'=>__('仪表盘首页','moedog'),
-            'none'=>__('隐藏全部[不建议]','moedog')));
-    $options[] = array(
         'name'=>__('Gravatar头像服务器地址','moedog'),
         'desc'=>__('不确定请勿更改','moedog'),
         'id'=>'gravatar_url',
@@ -197,9 +186,9 @@ function optionsframework_options(){
         'type'=>'checkbox');
     $options[] = array(
         'name'=>__('歌单JSON地址','moedog'),
-        'desc'=>__('借助API可解析网易云歌单，如https://api.fczbl.vip/163/?type=playlist&id=2003373695','moedog'),
+        'desc'=>__('借助API可解析网易云歌单，参考https://github.com/injahow/meting','moedog'),
         'id'=>'ap_json',
-        'std'=>'https://api.fczbl.vip/163/?type=playlist&id=2003373695',
+        'std'=>'',
         'type'=>'text');
     $options[] = array(
         'name'=>__('自动播放','moedog'),
@@ -242,7 +231,7 @@ function optionsframework_options(){
         'name'=>__('微信二维码','moedog'),
         'desc'=>__('上传你的微信二维码图片，尺寸要大于等于150px','moedog'),
         'id'=>'weixin_image',
-        'std'=>'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION.'/static/images/weixin.png',
+        'std'=>'',
         'type'=>'upload');
     $options[] = array(
         'name'=>__('微信收款码','moedog'),
@@ -646,10 +635,10 @@ function optionsframework_options(){
         'type'=>'heading');
     $options[] = array(
         'name'=>__('注册登录页面背景','moedog'),
-        'desc'=>__('因为默认使用了Bing每日美图API，所以这里只能手动写链接了...','moedog'),
+        'desc'=>__('注册登录页面背景图片','moedog'),
         'id'=>'login_bak',
-        'std'=>'https://api.fczbl.vip/bing',
-        'type'=>'text');
+        'std'=>'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION.'/static/images/thumb/thumb_9.jpg',
+        'type'=>'upload');
     $options[] = array(
         'name'=>__('注册登录页面站点图标','moedog'),
         'id'=>'login_logo',

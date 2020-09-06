@@ -23,7 +23,8 @@
         </div>
         <div class="footer">
             <br> © <script>document.write(new Date().getFullYear())</script> <a href="https://prprpr.love" target="_blank">MOEDOG</a>
-            <script src="https://api.fczbl.vip/hitokoto/?charset=utf-8&encode=js"></script>
+            <div class="hitokoto"></div>
+            <script src="https://v1.hitokoto.cn/?encode=js"></script>
             <p id="hitokoto"><script>hitokoto()</script></p>
         </div>
     </body>

@@ -179,6 +179,21 @@
         },
     });
     tinymce.PluginManager.add('hide', tinymce.plugins.hide);
+    tinymce.create('tinymce.plugins.heimu', {
+        init : function(ed, url) {
+            ed.addButton('heimu', {
+                title : '黑幕',
+                image : url+'/images/heimu.png',
+                onclick : function() {
+                     ed.selection.setContent('[heimu]' + ed.selection.getContent() + '[/heimu]');
+                }
+            });
+        },
+        createControl : function(n, cm) {
+            return null;
+        },
+    });
+    tinymce.PluginManager.add('heimu', tinymce.plugins.heimu);
     tinymce.create('tinymce.plugins.kbd', {
         init : function(ed, url) {
             ed.addButton('kbd', {

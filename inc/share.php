@@ -30,7 +30,7 @@
                 <i class="fa fa-weixin"></i>
             </div>
             <div class="share-int">
-                <div class="qrcode"><img src="https://api.fczbl.vip/qr/?m=0&url=<?php the_permalink() ?>" width="150" height="150"></div>
+                <div class="qrcode" data-url="<?php the_permalink() ?>"></div>
                 <p><?php _e('打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮','moedog'); ?></p>
             </div>
         </a>
