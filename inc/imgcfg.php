@@ -6,11 +6,11 @@ function kratos_banner(){
         $kratos_banner_on = kratos_option("kratos_banner")&&kratos_option("kratos_banner1")?1:0;
         if($kratos_banner_on){
             for($i=1; $i<6; $i++){
-                $kratos_banner{$i} = kratos_option("kratos_banner{$i}")?kratos_option("kratos_banner{$i}"):"";
-                $kratos_banner_url{$i} = kratos_option("kratos_banner_url{$i}")?kratos_option("kratos_banner_url{$i}"):"";
-                if($kratos_banner{$i}){
-                    $banners[] = $kratos_banner{$i};
-                    $banners_url[] = $kratos_banner_url{$i};
+                $kratos_banner[$i] = kratos_option("kratos_banner{$i}")?kratos_option("kratos_banner{$i}"):"";
+                $kratos_banner_url[$i] = kratos_option("kratos_banner_url{$i}")?kratos_option("kratos_banner_url{$i}"):"";
+                if($kratos_banner[$i]){
+                    $banners[] = $kratos_banner[$i];
+                    $banners_url[] = $kratos_banner_url[$i];
                 }
             }
             $count = count($banners);
