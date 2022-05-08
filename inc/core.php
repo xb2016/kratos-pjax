@@ -77,25 +77,19 @@ function kratos_excerpt_more($more){return '……';}
 add_filter('excerpt_more','kratos_excerpt_more');
 //Load scripts
 function kratos_theme_scripts(){
-    $url1 = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION;
-    $url2 = get_bloginfo('template_directory');
-    if(kratos_option('js_out')) $jsdir = $url1; else $jsdir = $url2;
-    if(kratos_option('css_out')) $cssdir = $url1; else $cssdir = $url2;
-    if(kratos_option('owo_out')) $owodir = $url1; else $owodir = $url2;
-    if(kratos_option('fa_url')) $fadir = kratos_option('fa_url'); else $fadir = $url2.'/static/css/font-awesome.min.css';
-    if(kratos_option('jq_url')) $jqdir = kratos_option('jq_url'); else $jqdir = $url2.'/static/js/jquery.min.js';
     if(!is_admin()){
-        wp_enqueue_style('fontawe',$fadir,array(),'4.7.0');
-        wp_enqueue_style('kratos',$cssdir.'/static/css/kratos.min.css',array(),KRATOS_VERSION);
-        wp_enqueue_script('theme-jq',$jqdir,array(),'2.1.4');
-        wp_enqueue_script('theme',$jsdir.'/static/js/theme.min.js',array(),KRATOS_VERSION);
-        wp_enqueue_script('kratos',$jsdir.'/static/js/kratos.js',array(),KRATOS_VERSION);
-        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',$jsdir.'/static/js/pjax.js',array(),KRATOS_VERSION);
+        wp_enqueue_style('fontawe',get_bloginfo('template_directory').'/static/css/font-awesome.min.css',array(),'4.7.0');
+        wp_enqueue_style('kratos',get_bloginfo('template_directory').'/static/css/kratos.min.css',array(),KRATOS_VERSION);
+        wp_enqueue_script('theme-jq',get_bloginfo('template_directory').'/static/js/jquery.min.js',array(),'2.1.4');
+        wp_enqueue_script('theme',get_bloginfo('template_directory').'/static/js/theme.min.js',array(),KRATOS_VERSION);
+        wp_enqueue_script('kratos',get_bloginfo('template_directory').'/static/js/kratos.js',array(),KRATOS_VERSION);
+        if(kratos_option('page_pjax')) wp_enqueue_script('pjax',get_bloginfo('template_directory').'/static/js/pjax.js',array(),KRATOS_VERSION);
     }
     if(kratos_option('site_girl')&&!wp_is_mobile()){
-        wp_enqueue_script('live2d',$jsdir.'/static/js/live2d.js',array(),'l2d');
-        wp_enqueue_script('waifu',$jsdir.'/static/js/waifu-tips.js',array(),'1.3');
+        wp_enqueue_script('live2d',get_bloginfo('template_directory').'/static/js/live2d.js',array(),'l2d');
+        wp_enqueue_script('waifu',get_bloginfo('template_directory').'/static/js/waifu-tips.js',array(),'1.3');
     }
+    $site_sa_h = 0;
     if(kratos_option('site_sa')&&!wp_is_mobile()){if(kratos_option('head_mode')=='pic') $site_sa_h = 61; else $site_sa_h = 103;}
     $d2kratos = array(
          'thome'=> get_stylesheet_directory_uri(),
@@ -105,7 +99,7 @@ function kratos_theme_scripts(){
           'copy'=> kratos_option('copy_notice'),
       'ajax_url'=> admin_url('admin-ajax.php'),
          'order'=> get_option('comment_order'),
-           'owo'=> $owodir,
+           'owo'=> get_bloginfo('template_directory'),
        'site_sh'=> $site_sa_h
     );
     wp_localize_script('kratos','xb',$d2kratos);
@@ -137,9 +131,10 @@ remove_filter('wp_mail','wp_staticize_emoji_for_email');
 add_filter('emoji_svg_url','__return_false');
 add_filter('show_admin_bar','__return_false');
 add_action('wp_enqueue_scripts','mt_enqueue_scripts',1);
-add_filter('rest_enabled','_return_false');
-add_filter('rest_jsonp_enabled','_return_false');
+//add_filter('rest_enabled','_return_false');
+//add_filter('rest_jsonp_enabled','_return_false');
 function mt_enqueue_scripts(){wp_deregister_script('jquery');}
+
 function disable_embeds_init(){
     global $wp;
     $wp->public_query_vars = array_diff($wp->public_query_vars,array('embed'));
@@ -169,6 +164,7 @@ function disable_embeds_flush_rewrite_rules(){
     flush_rewrite_rules();
 }
 register_deactivation_hook(__FILE__,'disable_embeds_flush_rewrite_rules');
+
 if(!kratos_option('use_gutenberg')){
     add_filter('use_block_editor_for_post','__return_false');
     remove_action('wp_enqueue_scripts','wp_common_block_scripts_and_styles');
@@ -322,7 +318,7 @@ function cmhello_users_sortable_columns($sortable_columns){
 }
 add_action( 'pre_user_query','cmhello_users_search_order');
 function cmhello_users_search_order($obj){
-    if(!isset($_REQUEST['orderby'])||$_REQUEST['orderby']=='reg_time'){
+    if(isset($_REQUEST['order'])&&(!isset($_REQUEST['orderby'])||$_REQUEST['orderby']=='reg_time')){
         if(!in_array($_REQUEST['order'],array('asc','desc'))) $_REQUEST['order'] = 'desc';
         $obj->query_orderby = "ORDER BY user_registered ".$_REQUEST['order']."";
     }
@@ -341,7 +337,7 @@ function sig_allowed_html_tags_in_comments(){
    );
 }
 add_action('init','sig_allowed_html_tags_in_comments',10);
-//Comment ajax
+//Comment
 function kratos_comment_err($a){
     header('HTTP/1.0 500 Internal Server Error');
     header('Content-Type: text/plain;charset=UTF-8');

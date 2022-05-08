@@ -115,7 +115,7 @@ class kratos_widget_ad extends WP_Widget {
         }
         if(!empty($imgurl)){ ?>
             <a href="<?php echo $aurl; ?>" target="_blank">
-                <img class="carousel-inner img-responsive img-rounded" src="<?php echo $imgurl; ?>" />
+                <img alt="Ads" class="carousel-inner img-responsive img-rounded" src="<?php echo $imgurl; ?>" />
             </a><?php
         }
         echo $after_widget;

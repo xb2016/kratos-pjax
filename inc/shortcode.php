@@ -90,6 +90,7 @@ add_shortcode('collapse','xcollapse');
 function hide($atts,$content=null,$code=""){
     extract(shortcode_atts(array("reply_to_this"=>'true'),$atts));
     global $current_user;
+    $email = null; $comments = null;
     get_currentuserinfo();
     if($current_user->ID) $email = $current_user->user_email;
     if($reply_to_this=='true'){
@@ -291,11 +292,11 @@ function add_more_buttons($buttons){
 add_filter("mce_buttons_2","add_more_buttons");
 function fa_get_wpsmiliestrans(){
     global $wpsmiliestrans;
+    $output = "";
     $wpsmilies = array_unique($wpsmiliestrans);
-    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
     foreach($wpsmilies as $alt => $src_path){
         $traimgna = substr($alt,1,-1);
-        $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img src="'.$owodir.'/static/images/smilies/'.$traimgna.'.png"></a>';
+        $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img src="'.get_bloginfo('template_directory').'/static/images/smilies/'.$traimgna.'.png"></a>';
     }
     return $output;
 }

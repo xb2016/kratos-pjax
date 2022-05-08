@@ -6,8 +6,8 @@ function kratos_banner(){
         $kratos_banner_on = kratos_option("kratos_banner")&&kratos_option("kratos_banner1")?1:0;
         if($kratos_banner_on){
             for($i=1; $i<6; $i++){
-                $kratos_banner[$i] = kratos_option("kratos_banner{$i}")?kratos_option("kratos_banner{$i}"):"";
-                $kratos_banner_url[$i] = kratos_option("kratos_banner_url{$i}")?kratos_option("kratos_banner_url{$i}"):"";
+                $kratos_banner[$i] = kratos_option("kratos_banner[$i]")?kratos_option("kratos_banner[$i]"):"";
+                $kratos_banner_url[$i] = kratos_option("kratos_banner_url[$i]")?kratos_option("kratos_banner_url[$i]"):"";
                 if($kratos_banner[$i]){
                     $banners[] = $kratos_banner[$i];
                     $banners_url[] = $kratos_banner_url[$i];
@@ -61,9 +61,9 @@ function kratos_blog_thumbnail_new(){
     global $post;
     $img_id = get_post_thumbnail_id();
     $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
-    $img_url = $img_url[0];
+    $img_url = is_array($img_url) ? $img_url[0] : $img_url;
     $title = get_the_title();
-    if(has_post_thumbnail()){
+    if(has_post_thumbnail() && $img_url){
         echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" alt="'.$title.'"></a>';
     }else{
         $content = $post->post_content;
@@ -84,7 +84,7 @@ function kratos_blog_thumbnail_new(){
 function share_post_image(){
     global $post;
     if(has_post_thumbnail($post->ID)){
-        $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+        $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
         $img = wp_get_attachment_image_src($post_thumbnail_id,'full');
         $img = $img[0];
     }else{
@@ -142,18 +142,18 @@ function print_media_new_panel($is_in_upload_ui){
       <div class="url-row">
         <label><?php _e('从URL添加媒体项目','moedog'); ?></label>
         <span id="emwi-url-input-wrapper">
-          <input id="emwi-url" name="url" type="url" required placeholder="Image URL" value="<?php echo esc_url($_GET['url']); ?>">
+          <input id="emwi-url" name="url" type="url" required placeholder="Image URL" value="<?php echo esc_url(isset($_GET['url'])?$_GET['url']:""); ?>">
         </span>
       </div>
       <div id="emwi-hidden" <?php if($is_in_upload_ui||empty($_GET['error'])): ?>style="display: none"<?php endif; ?>>
-        <div><span id="emwi-error"><?php echo esc_html($_GET['error']); ?></span><?php _e('请手动指定图像大小与格式','moedog'); ?></div>
+        <div><span id="emwi-error"><?php echo esc_html(isset($_GET['error'])?$_GET['error']:""); ?></span><?php _e('请手动指定图像大小与格式','moedog'); ?></div>
         <div id="emwi-properties">
           <label><?php _e('宽','moedog'); ?></label>
-          <input id="emwi-width" name="width" type="number" value="<?php echo esc_html($_GET['width']); ?>">
+          <input id="emwi-width" name="width" type="number" value="<?php echo esc_html(isset($_GET['width'])?$_GET['width']:""); ?>">
           <label><?php _e('高','moedog'); ?></label>
-          <input id="emwi-height" name="height" type="number" value="<?php echo esc_html($_GET['height']); ?>">
+          <input id="emwi-height" name="height" type="number" value="<?php echo esc_html(isset($_GET['height'])?$_GET['height']:""); ?>">
           <label><?php _e('MIME类型','moedog'); ?></label>
-          <input id="emwi-mime-type" name="mime-type" type="text" value="<?php echo esc_html($_GET['mime-type']); ?>">
+          <input id="emwi-mime-type" name="mime-type" type="text" value="<?php echo esc_html(isset($_GET['mime-type'])?$_GET['mime-type']:""); ?>">
         </div>
       </div>
       <div id="emwi-buttons-row">

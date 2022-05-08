@@ -13,7 +13,7 @@ $arc_tags = wp_tag_cloud(array(
     'echo'=>FALSE
 ));
 $the_query = new WP_Query('posts_per_page=-1&ignore_sticky_posts=1');
-$year=0;
+$year=0; $output="";
 while($the_query->have_posts()):
     $the_query->the_post();
     $year_tmp = get_the_time('Y');

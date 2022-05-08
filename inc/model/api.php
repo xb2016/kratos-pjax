@@ -29,8 +29,10 @@ $modellist = array(
     "2018.bls-winter"       => array("texture_01.png","texture_02.png","texture_03.png"),
     "2018.lover"            => array("texture_01.png","texture_02.png","texture_03.png"),
     "2018.spring"           => array("texture_01.png","texture_02.png","texture_03.png"),
-    "2019.deluxe"           => array("texture_01.png","texture_02.png","texture_03.png"),
+    "2019.deluxe"           => array("texture_01.png","texture_02.png",array("texture_03_1.png","texture_03_2.png")),
     "2019.summer"           => array("texture_01.png","texture_02.png","texture_03.png"),
+    "2019.bls"              => array("texture_01.png","texture_02.png","texture_03.png"),
+    "2020.newyear"          => array("texture_01.png","texture_02.png","texture_03.png"),
     "2018.playwater"        => array("texture_01.png","texture_02.png","texture_03.png")
 );
 $modelname = array_keys($modellist);

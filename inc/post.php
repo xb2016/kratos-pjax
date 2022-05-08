@@ -69,8 +69,7 @@ return $o;
 //Comments face
 add_filter('smilies_src','custom_smilies_src',1,10);
 function custom_smilies_src($img_src,$img,$siteurl){
-    if(kratos_option('owo_out')) $owodir = 'https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@'.KRATOS_VERSION; else $owodir = get_bloginfo('template_directory');
-    return $owodir.'/static/images/smilies/'.$img;
+    return get_bloginfo('template_directory').'/static/images/smilies/'.$img;
 }
 function smilies_reset(){
     global $wpsmiliestrans,$wp_smiliessearch,$wp_version;
