@@ -421,7 +421,7 @@ function user_agent_show(){
         $bcode = 'msie';
     }
     if($title&&$btitle){
-        return '<div class="useragent"><img src="'.get_bloginfo('template_directory').'/static/images/ua/'.$bcode.'.png" style="margin-top:-3px;width:16px;height:16px"> '.$btitle.' <img src="'.$uapic.'/static/images/ua/'.$code.'.png" style="margin-left:5px;margin-top:-3px;width:16px;height:16px"> '.$title.' '.$version.'</div>';
+        return '<div class="useragent"><img src="'.get_bloginfo('template_directory').'/static/images/ua/'.$bcode.'.png" style="margin-top:-3px;width:16px;height:16px"> '.$btitle.' <img src="'.get_bloginfo('template_directory').'/static/images/ua/'.$code.'.png" style="margin-left:5px;margin-top:-3px;width:16px;height:16px"> '.$title.' '.$version.'</div>';
     }else return null;
 }
 function user_agent_display_comment(){
