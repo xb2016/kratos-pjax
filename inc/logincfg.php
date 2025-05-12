@@ -1,4 +1,5 @@
 <?php
+add_filter('login_display_language_dropdown', '__return_false');
 //Custom login
 function custom_login(){
     echo '<link rel="stylesheet" id="wp-admin-css" href="'.get_bloginfo('template_directory').'/static/css/customlogin.min.css" type="text/css" />';

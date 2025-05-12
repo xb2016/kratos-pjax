@@ -268,12 +268,14 @@
     }
     //pjax reload
     $.fn.kratos_pjax_reload = function(){
+        hljs.highlightAll();
         sidebaraffix();
         showPhotos();
         OwOcfg();
         QRCode();
     }
     $(function(){
+        hljs.highlightAll();
         gotop();
         sidebaraffix();
         offcanvas();
@@ -376,8 +378,6 @@ jQuery(document).ready(function(jQuery) {
         }
     }
 });
-//highlight
-hljs.initHighlightingOnLoad();
 //time
 var now = new Date();
 function createtime(){

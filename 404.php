@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="footer">
-            <br> © <script>document.write(new Date().getFullYear())</script> <a href="https://prprpr.love" target="_blank">MOEDOG</a>
+            <br> © <script>document.write(new Date().getFullYear())</script> <a href="https://loli.beer/" target="_blank">MOEDOG</a>
             <div class="hitokoto"></div>
             <script src="https://v1.hitokoto.cn/?encode=js"></script>
             <p id="hitokoto"><script>hitokoto()</script></p>

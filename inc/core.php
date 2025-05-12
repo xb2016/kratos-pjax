@@ -549,6 +549,23 @@ if(kratos_option('sitemap')&&defined('ABSPATH')){
     add_action('edit_post','kratos_sitemap_refresh');
     add_action('delete_post','kratos_sitemap_refresh');
 }
+//RSS
+function rssinfo(){
+    if(is_category()){
+        $rsstitle=get_bloginfo('name').' &raquo; '.single_cat_title('',false);
+        $category_id=get_cat_ID(single_cat_title('',false));
+        $rssurl=get_category_link($category_id);
+    }elseif(is_single()||is_page()){
+        $rsstitle=get_bloginfo('name').' &raquo; '.get_the_title().' [Comments]';
+        $rssurl=get_permalink();
+    }else{
+        $rsstitle=get_bloginfo('name');
+        $rssurl=get_bloginfo('home');
+    }
+    echo '<link rel="alternate" type="application/rss+xml" title="'.$rsstitle.' &raquo; RSS 2.0" href="'.$rssurl.'/feed/" />
+    <link rel="alternate" type="application/atom+xml" title="'.$rsstitle.' &raquo; ATOM 1.0" href="'.$rssurl.'/atom/" />
+';
+}
 //New window-comment author link
 function comment_author_link_window(){
     global $comment;

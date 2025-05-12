@@ -25,6 +25,7 @@ input{font-size:14px;font-family:-apple-system,BlinkMacSystemFont,opensans,Optim
 #login #nav{text-shadow:none;margin:16px 20px 0 0;padding:0}
 #login #backtoblog{text-shadow:none;margin:16px 0 40px 16px;padding:0}
 #login #backtoblog{float:left}
+#login .privacy-policy-page-link{display:none}
 #login #nav{float:right}
 #login #backtoblog a,.login #nav a{color:#FFF!important;text-decoration:none}
 #login #backtoblog a:hover,.login #nav a:hover{color:rgba(91,157,217,1)!important;text-decoration:none}
