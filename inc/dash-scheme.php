@@ -3,7 +3,7 @@
  * 移植自 https://github.com/mashirozx/sakura/blob/3.x/inc/dash-scheme.php
  * 下游分支 https://github.com/KJZH001/Moe-kratos-pjax
  * 将 樱花庄 主题 移植到 moe-kratos-pjax
- * by 晓空 2025.11.20
+ * by 晓空 2025.11.21
  * https://2heng.xin/wp-content/themes/Sakura/inc/dash-schame.php?color_1=&color_2=&color_3=&color_4=
  */
 

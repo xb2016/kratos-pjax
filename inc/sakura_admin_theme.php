@@ -3,7 +3,7 @@
  * 后台主题移植自 https://github.com/mashirozx/sakura
  * 下游分支 https://github.com/KJZH001/Moe-kratos-pjax
  * 将 樱花庄 主题 移植到 moe-kratos-pjax
- * by 晓空 2025.11.20
+ * by 晓空 2025.11.21
  */
 
 // 注册后台配色方案
