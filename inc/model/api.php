@@ -38,7 +38,7 @@ $modellist = array(
 $modelname = array_keys($modellist);
 $modelnum = count($modellist);
 if(!$r18) $modelnum -= 1;
-if(!is_numeric($id_)) $default_id !== NULL ? $id_ = $default_id : $id_ = mt_rand(1,$modelnum);
+if(!is_numeric($id_) || $id_ < 0) $default_id !== NULL ? $id_ = $default_id : $id_ = mt_rand(1,$modelnum);
 //参数转化
 $person_ == "22" || $person_ == "33" ? $person = $person_ : $person = ["22","33"][mt_rand(0,1)];
 $id = $id_ % $modelnum;
