@@ -605,7 +605,7 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 .OwO .OwO-logo:hover span{display:inline-block;-webkit-animation:a 5s infinite ease-in-out;animation:a 5s infinite ease-in-out}
 .OwO .OwO-body{display:none;position:absolute;width:400px;background:#fff;border:1px solid #ddd;z-index:3;top:26px;border-radius:0 4px 4px 4px}
 .OwO .OwO-body .OwO-items{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:none;overflow:auto;padding:10px;margin:0;font-size:0}
-.OwO .OwO-body .OwO-items .OwO-item{list-style-type:none;background:#f7f7f7;padding:5px 10px;border-radius:5px;box-shadow:none;-webkit-box-shadow:none;display:inline-block;font-size:12px;line-height:14px;margin:5px 6px;-webkit-transition:.3s;transition:.3s}
+.OwO .OwO-body .OwO-items .OwO-item{list-style-type:none;background:#f7f7f7!important;padding:5px 10px;border-radius:5px;box-shadow:none;-webkit-box-shadow:none;display:inline-block;font-size:12px;line-height:14px;margin:5px 6px;-webkit-transition:.3s;transition:.3s}
 .OwO .OwO-body .OwO-items .OwO-item:hover{background:#eee;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);-webkit-animation:a 5s infinite ease-in-out;animation:a 5s infinite ease-in-out}
 .OwO .OwO-body .OwO-items-emoji .OwO-item{font-size:20px;line-height:19px}
 .OwO .OwO-body .OwO-items-image .OwO-item{box-sizing:border-box}
@@ -613,10 +613,10 @@ a.comment-reply-link,a.comment-reply-login{text-decoration:none;padding:2px 5px;
 .OwO .OwO-body .OwO-items-show{display:block}
 .OwO .OwO-body .OwO-bar{width:100%;height:30px;border-top:1px solid #ddd;background:#fff;border-radius:0 0 4px 4px;color:#444}
 .OwO .OwO-body .OwO-bar .OwO-packages{margin:0;padding:0;font-size:0}
-.OwO .OwO-body .OwO-bar .OwO-packages li{list-style-type:none;display:inline-block;line-height:30px;font-size:14px;padding:0 10px;margin-right:3px;margin-top:0;background:#fff;box-shadow:unset}
+.OwO .OwO-body .OwO-bar .OwO-packages li{list-style-type:none;display:inline-block;line-height:30px;font-size:14px;padding:0 10px;margin-right:3px;margin-top:0;background:#fff!important;box-shadow:unset}
 .OwO .OwO-body .OwO-bar .OwO-packages li:nth-child(1){border-radius:0 0 0 3px}
 .OwO .OwO-body .OwO-bar .OwO-packages li:hover{background:#eee}
-.OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active{background:#eee;-webkit-transition:.3s;transition:.3s}
+.OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active{background:#eee!important;-webkit-transition:.3s;transition:.3s}
 .affix-top{position:relative}
 .affix{position:fixed;top:92px}
 .affix,.affix-bottom{width:293.31px}
