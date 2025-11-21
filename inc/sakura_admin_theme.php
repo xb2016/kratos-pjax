@@ -41,6 +41,7 @@ function kratos_sakura_admin_assets( $hook_suffix ) {
     wp_enqueue_style( 'dashicons' );
 
     // 2. 通用后台修正样式（对应 Sakura 的 dashboard-fix.css）
+    // 启用后会带来半透明的卡片效果，但是字体颜色会很难辨认，不建议开启
     // wp_enqueue_style(
     //     'kratos-sakura-admin-dashboard-fix',
     //     get_template_directory_uri() . '/static/css/dashboard-fix.css',
