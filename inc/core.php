@@ -339,9 +339,9 @@ function sig_allowed_html_tags_in_comments(){
 add_action('init','sig_allowed_html_tags_in_comments',10);
 //Comment
 function kratos_comment_err($a){
-    header('HTTP/1.0 500 Internal Server Error');
-    header('Content-Type: text/plain;charset=UTF-8');
-    echo $a;
+    header('Content-Type: application/json;charset=UTF-8');
+    http_response_code(400);
+    echo json_encode(['error' => $a, 'success' => false]);
     exit;
 }
 function spam_protection($commentdata){
